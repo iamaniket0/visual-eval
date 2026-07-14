@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="280" viewBox="0 0 700 280">
+  <defs>
+    <linearGradient id="sbg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#161b22"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ffd700"/>
+      <stop offset="100%" style="stop-color:#ffaa00"/>
+    </linearGradient>
+    <linearGradient id="silver" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#c0c0c0"/>
+      <stop offset="100%" style="stop-color:#a0a0a0"/>
+    </linearGradient>
+    <linearGradient id="bronze" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#cd7f32"/>
+      <stop offset="100%" style="stop-color:#b8692d"/>
+    </linearGradient>
+    <linearGradient id="bar4" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#58a6ff"/>
+      <stop offset="100%" style="stop-color:#1f6feb"/>
+    </linearGradient>
+    <linearGradient id="bar5" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#7ee787"/>
+      <stop offset="100%" style="stop-color:#3fb950"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="700" height="280" fill="url(#sbg)" rx="12"/>
+
+  <!-- Title -->
+  <text x="350" y="32" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#e6edf3" font-weight="600" letter-spacing="1">T2I GENERATION  ·  HARD PROMPTS  ·  GM SCORE</text>
+
+  <!-- Row 1: Aurora -->
+  <text x="30" y="72" font-family="system-ui, sans-serif" font-size="12" fill="#ffd700" font-weight="600">1</text>
+  <text x="50" y="72" font-family="system-ui, sans-serif" font-size="12" fill="#e6edf3">Aurora (xAI)</text>
+  <rect x="195" y="58" width="0" height="22" rx="4" fill="url(#gold)" opacity="0.85">
+    <animate attributeName="width" from="0" to="369" dur="1.2s" fill="freeze" begin="0.2s"/>
+  </rect>
+  <text x="570" y="73" font-family="'SF Mono', 'Fira Code', monospace" font-size="13" fill="#ffd700" font-weight="700" opacity="0">0.821
+    <animate attributeName="opacity" from="0" to="1" dur="0.3s" fill="freeze" begin="1.4s"/>
+  </text>
+  <text x="630" y="73" font-family="system-ui, sans-serif" font-size="10" fill="#484f58">100%</text>
+
+  <!-- Row 2: GPT Image 2 -->
+  <text x="30" y="112" font-family="system-ui, sans-serif" font-size="12" fill="#c0c0c0" font-weight="600">2</text>
+  <text x="50" y="112" font-family="system-ui, sans-serif" font-size="12" fill="#e6edf3">GPT Image 2</text>
+  <rect x="195" y="98" width="0" height="22" rx="4" fill="url(#silver)" opacity="0.85">
+    <animate attributeName="width" from="0" to="364" dur="1.2s" fill="freeze" begin="0.4s"/>
+  </rect>
+  <text x="570" y="113" font-family="'SF Mono', 'Fira Code', monospace" font-size="13" fill="#c0c0c0" font-weight="700" opacity="0">0.810
+    <animate attributeName="opacity" from="0" to="1" dur="0.3s" fill="freeze" begin="1.6s"/>
+  </text>
+  <text x="630" y="113" font-family="system-ui, sans-serif" font-size="10" fill="#484f58">100%</text>
+
+  <!-- Row 3: GPT Image 1.5 -->
+  <text x="30" y="152" font-family="system-ui, sans-serif" font-size="12" fill="#cd7f32" font-weight="600">3</text>
+  <text x="50" y="152" font-family="system-ui, sans-serif" font-size="12" fill="#e6edf3">GPT Image 1.5</text>
+  <rect x="195" y="138" width="0" height="22" rx="4" fill="url(#bronze)" opacity="0.85">
+    <animate attributeName="width" from="0" to="353" dur="1.2s" fill="freeze" begin="0.6s"/>
+  </rect>
+  <text x="570" y="153" font-family="'SF Mono', 'Fira Code', monospace" font-size="13" fill="#cd7f32" font-weight="700" opacity="0">0.785
+    <animate attributeName="opacity" from="0" to="1" dur="0.3s" fill="freeze" begin="1.8s"/>
+  </text>
+  <text x="630" y="153" font-family="system-ui, sans-serif" font-size="10" fill="#484f58">100%</text>
+
+  <!-- Row 4: Bria FIBO -->
+  <text x="30" y="192" font-family="system-ui, sans-serif" font-size="12" fill="#58a6ff" font-weight="600">4</text>
+  <text x="50" y="192" font-family="system-ui, sans-serif" font-size="12" fill="#e6edf3">Bria FIBO</text>
+  <rect x="195" y="178" width="0" height="22" rx="4" fill="url(#bar4)" opacity="0.85">
+    <animate attributeName="width" from="0" to="324" dur="1.2s" fill="freeze" begin="0.8s"/>
+  </rect>
+  <text x="570" y="193" font-family="'SF Mono', 'Fira Code', monospace" font-size="13" fill="#58a6ff" font-weight="700" opacity="0">0.721
+    <animate attributeName="opacity" from="0" to="1" dur="0.3s" fill="freeze" begin="2s"/>
+  </text>
+  <text x="630" y="193" font-family="system-ui, sans-serif" font-size="10" fill="#484f58">100%</text>
+
+  <!-- Row 5: FLUX 2 Max -->
+  <text x="30" y="232" font-family="system-ui, sans-serif" font-size="12" fill="#7ee787" font-weight="600">5</text>
+  <text x="50" y="232" font-family="system-ui, sans-serif" font-size="12" fill="#e6edf3">FLUX 2 Max</text>
+  <rect x="195" y="218" width="0" height="22" rx="4" fill="url(#bar5)" opacity="0.85">
+    <animate attributeName="width" from="0" to="336" dur="1.2s" fill="freeze" begin="1s"/>
+  </rect>
+  <text x="570" y="233" font-family="'SF Mono', 'Fira Code', monospace" font-size="13" fill="#7ee787" font-weight="700" opacity="0">0.748*
+    <animate attributeName="opacity" from="0" to="1" dur="0.3s" fill="freeze" begin="2.2s"/>
+  </text>
+  <text x="630" y="233" font-family="system-ui, sans-serif" font-size="10" fill="#484f58">73%</text>
+
+  <!-- Scale markers -->
+  <line x1="195" y1="250" x2="195" y2="255" stroke="#30363d" stroke-width="1"/>
+  <text x="195" y="268" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#484f58">0.0</text>
+  <line x1="420" y1="250" x2="420" y2="255" stroke="#30363d" stroke-width="1"/>
+  <text x="420" y="268" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#484f58">0.5</text>
+  <line x1="555" y1="250" x2="555" y2="255" stroke="#30363d" stroke-width="1"/>
+  <text x="555" y="268" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#484f58">0.8</text>
+</svg>

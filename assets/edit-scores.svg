@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="240" viewBox="0 0 700 240">
+  <defs>
+    <linearGradient id="ebg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#161b22"/>
+    </linearGradient>
+    <linearGradient id="instGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f778ba"/>
+      <stop offset="100%" style="stop-color:#f85149"/>
+    </linearGradient>
+    <linearGradient id="visGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#58a6ff"/>
+      <stop offset="100%" style="stop-color:#1f6feb"/>
+    </linearGradient>
+    <linearGradient id="detGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#7ee787"/>
+      <stop offset="100%" style="stop-color:#3fb950"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="700" height="240" fill="url(#ebg)" rx="12"/>
+
+  <!-- Title -->
+  <text x="350" y="30" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#e6edf3" font-weight="600" letter-spacing="1">IMAGE EDITING  ·  3-AXIS EVALUATION  ·  AM SCORE</text>
+
+  <!-- Legend -->
+  <rect x="140" y="40" width="10" height="10" rx="2" fill="url(#instGrad)"/>
+  <text x="155" y="49" font-family="system-ui, sans-serif" font-size="10" fill="#8b949e">Instruction Following</text>
+  <rect x="310" y="40" width="10" height="10" rx="2" fill="url(#visGrad)"/>
+  <text x="325" y="49" font-family="system-ui, sans-serif" font-size="10" fill="#8b949e">Visual Consistency</text>
+  <rect x="470" y="40" width="10" height="10" rx="2" fill="url(#detGrad)"/>
+  <text x="485" y="49" font-family="system-ui, sans-serif" font-size="10" fill="#8b949e">Detail Preservation</text>
+
+  <!-- Flux2 Flex -->
+  <text x="30" y="85" font-family="system-ui, sans-serif" font-size="12" fill="#e6edf3" font-weight="500">Flux2 Flex</text>
+  <rect x="135" y="73" width="0" height="8" rx="2" fill="url(#instGrad)" opacity="0.85">
+    <animate attributeName="width" from="0" to="291" dur="1s" fill="freeze" begin="0.3s"/>
+  </rect>
+  <rect x="135" y="84" width="0" height="8" rx="2" fill="url(#visGrad)" opacity="0.85">
+    <animate attributeName="width" from="0" to="130" dur="1s" fill="freeze" begin="0.3s"/>
+  </rect>
+  <rect x="135" y="95" width="0" height="8" rx="2" fill="url(#detGrad)" opacity="0.85">
+    <animate attributeName="width" from="0" to="236" dur="1s" fill="freeze" begin="0.3s"/>
+  </rect>
+  <text x="555" y="88" font-family="'SF Mono', monospace" font-size="10" fill="#8b949e" opacity="0">0.71 / 0.32 / 0.57
+    <animate attributeName="opacity" from="0" to="1" dur="0.3s" fill="freeze" begin="1.3s"/>
+  </text>
+
+  <!-- Bria Edit -->
+  <text x="30" y="135" font-family="system-ui, sans-serif" font-size="12" fill="#e6edf3" font-weight="500">Bria Edit</text>
+  <rect x="135" y="123" width="0" height="8" rx="2" fill="url(#instGrad)" opacity="0.85">
+    <animate attributeName="width" from="0" to="253" dur="1s" fill="freeze" begin="0.5s"/>
+  </rect>
+  <rect x="135" y="134" width="0" height="8" rx="2" fill="url(#visGrad)" opacity="0.85">
+    <animate attributeName="width" from="0" to="142" dur="1s" fill="freeze" begin="0.5s"/>
+  </rect>
+  <rect x="135" y="145" width="0" height="8" rx="2" fill="url(#detGrad)" opacity="0.85">
+    <animate attributeName="width" from="0" to="113" dur="1s" fill="freeze" begin="0.5s"/>
+  </rect>
+  <text x="555" y="138" font-family="'SF Mono', monospace" font-size="10" fill="#8b949e" opacity="0">0.62 / 0.35 / 0.28
+    <animate attributeName="opacity" from="0" to="1" dur="0.3s" fill="freeze" begin="1.5s"/>
+  </text>
+
+  <!-- Flux Kontext -->
+  <text x="30" y="185" font-family="system-ui, sans-serif" font-size="12" fill="#e6edf3" font-weight="500">Flux Kontext</text>
+  <rect x="135" y="173" width="0" height="8" rx="2" fill="url(#instGrad)" opacity="0.85">
+    <animate attributeName="width" from="0" to="142" dur="1s" fill="freeze" begin="0.7s"/>
+  </rect>
+  <rect x="135" y="184" width="0" height="8" rx="2" fill="url(#visGrad)" opacity="0.85">
+    <animate attributeName="width" from="0" to="169" dur="1s" fill="freeze" begin="0.7s"/>
+  </rect>
+  <rect x="135" y="195" width="0" height="8" rx="2" fill="url(#detGrad)" opacity="0.85">
+    <animate attributeName="width" from="0" to="128" dur="1s" fill="freeze" begin="0.7s"/>
+  </rect>
+  <text x="555" y="188" font-family="'SF Mono', monospace" font-size="10" fill="#8b949e" opacity="0">0.34 / 0.41 / 0.31
+    <animate attributeName="opacity" from="0" to="1" dur="0.3s" fill="freeze" begin="1.7s"/>
+  </text>
+
+  <!-- Picsart -->
+  <text x="30" y="228" font-family="system-ui, sans-serif" font-size="12" fill="#e6edf3" font-weight="500">Picsart</text>
+  <rect x="135" y="216" width="0" height="8" rx="2" fill="url(#instGrad)" opacity="0.85">
+    <animate attributeName="width" from="0" to="0" dur="1s" fill="freeze" begin="0.9s"/>
+  </rect>
+  <rect x="135" y="227" width="0" height="8" rx="2" fill="url(#visGrad)" opacity="0.85">
+    <animate attributeName="width" from="0" to="323" dur="1s" fill="freeze" begin="0.9s"/>
+  </rect>
+  <rect x="135" y="238" width="0" height="8" rx="2" fill="url(#detGrad)" opacity="0.85">
+    <animate attributeName="width" from="0" to="34" dur="1s" fill="freeze" begin="0.9s"/>
+  </rect>
+  <text x="555" y="231" font-family="'SF Mono', monospace" font-size="10" fill="#8b949e" opacity="0">0.00 / 0.79 / 0.08
+    <animate attributeName="opacity" from="0" to="1" dur="0.3s" fill="freeze" begin="1.9s"/>
+  </text>
+
+  <!-- Scale line -->
+  <line x1="135" y1="64" x2="135" y2="245" stroke="#30363d" stroke-width="0.5" stroke-dasharray="2,4"/>
+  <line x1="545" y1="64" x2="545" y2="245" stroke="#30363d" stroke-width="0.5" stroke-dasharray="2,4"/>
+</svg>

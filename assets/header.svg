@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="200" viewBox="0 0 800 200">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0c29">
+        <animate attributeName="stop-color" values="#0f0c29;#302b63;#24243e;#0f0c29" dur="8s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="50%" style="stop-color:#302b63">
+        <animate attributeName="stop-color" values="#302b63;#24243e;#0f0c29;#302b63" dur="8s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#24243e">
+        <animate attributeName="stop-color" values="#24243e;#0f0c29;#302b63;#24243e" dur="8s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#a8edea">
+        <animate attributeName="stop-color" values="#a8edea;#fed6e3;#d299c2;#a8edea" dur="6s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#fed6e3">
+        <animate attributeName="stop-color" values="#fed6e3;#d299c2;#a8edea;#fed6e3" dur="6s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#667eea">
+        <animate attributeName="stop-color" values="#667eea;#764ba2;#f093fb;#667eea" dur="5s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#764ba2">
+        <animate attributeName="stop-color" values="#764ba2;#f093fb;#667eea;#764ba2" dur="5s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="200" fill="url(#grad1)" rx="12"/>
+
+  <!-- Floating particles -->
+  <circle cx="100" cy="50" r="2" fill="#a8edea" opacity="0.4">
+    <animate attributeName="cy" values="50;30;50" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.4;0.8;0.4" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="250" cy="150" r="1.5" fill="#fed6e3" opacity="0.3">
+    <animate attributeName="cy" values="150;130;150" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.3;0.7;0.3" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="500" cy="40" r="2.5" fill="#667eea" opacity="0.3">
+    <animate attributeName="cy" values="40;25;40" dur="5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.3;0.6;0.3" dur="5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="650" cy="160" r="1.8" fill="#f093fb" opacity="0.35">
+    <animate attributeName="cy" values="160;140;160" dur="3.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.35;0.7;0.35" dur="3.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="720" cy="60" r="2" fill="#a8edea" opacity="0.25">
+    <animate attributeName="cy" values="60;45;60" dur="4.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.25;0.6;0.25" dur="4.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="350" cy="100" r="1.2" fill="#d299c2" opacity="0.3">
+    <animate attributeName="cy" values="100;85;100" dur="3.8s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Eye icon -->
+  <g transform="translate(400, 65)" opacity="0.9">
+    <ellipse cx="0" cy="0" rx="28" ry="16" fill="none" stroke="url(#textGrad)" stroke-width="2.5"/>
+    <circle cx="0" cy="0" r="8" fill="url(#textGrad)">
+      <animate attributeName="r" values="8;10;8" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="0" cy="0" r="3" fill="#0f0c29"/>
+  </g>
+
+  <!-- Title -->
+  <text x="400" y="115" text-anchor="middle" font-family="'Segoe UI', system-ui, -apple-system, sans-serif" font-size="38" font-weight="700" fill="url(#textGrad)" letter-spacing="3">
+    VISUAL EVAL
+  </text>
+
+  <!-- Subtitle -->
+  <text x="400" y="148" text-anchor="middle" font-family="'Segoe UI', system-ui, -apple-system, sans-serif" font-size="14" fill="url(#accentGrad)" letter-spacing="1.5" opacity="0.9">
+    BENCHMARKING FRONTIER IMAGE GENERATION &amp; EDITING
+  </text>
+
+  <!-- Bottom accent line -->
+  <rect x="280" y="165" width="240" height="2" rx="1" fill="url(#accentGrad)" opacity="0.6">
+    <animate attributeName="width" values="240;280;240" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="x" values="280;260;280" dur="4s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Wave at bottom -->
+  <path d="M0,185 Q100,175 200,185 T400,185 T600,185 T800,185 L800,200 L0,200 Z" fill="#0f0c29" opacity="0.3">
+    <animate attributeName="d" values="M0,185 Q100,175 200,185 T400,185 T600,185 T800,185 L800,200 L0,200 Z;M0,185 Q100,195 200,185 T400,185 T600,185 T800,185 L800,200 L0,200 Z;M0,185 Q100,175 200,185 T400,185 T600,185 T800,185 L800,200 L0,200 Z" dur="6s" repeatCount="indefinite"/>
+  </path>
+</svg>
