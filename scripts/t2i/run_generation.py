@@ -56,6 +56,9 @@ async def main_async(args):
     prompts = load_prompt_set()
     if args.layer in (1, 2):
         prompts = [p for p in prompts if p["layer"] == args.layer]
+    if args.prompt_ids:
+        ids = set(args.prompt_ids.split(","))
+        prompts = [p for p in prompts if p["prompt_id"] in ids]
     log.info("Loaded %d prompts (layer filter: %s)", len(prompts), args.layer)
 
     cfg_all = load_models_config()
@@ -125,6 +128,12 @@ def main():
         type=int,
         default=None,
         help="Seeds per prompt (default: settings.yaml generation.seeds_per_prompt)",
+    )
+    ap.add_argument(
+        "--prompt-ids",
+        type=str,
+        default=None,
+        help="Comma-separated prompt IDs to generate (overrides layer filter)",
     )
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()

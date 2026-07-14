@@ -45,6 +45,9 @@ hitl:
   sample_fraction: 0.10
   target_cohen_kappa: 0.6
 
+api_routing:
+  judge: openrouter
+
 scoring:
   primary_metric: gm
   report_dimensions: true

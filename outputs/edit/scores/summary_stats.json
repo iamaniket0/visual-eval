@@ -1,0 +1,83 @@
+{
+  "n_models": 4,
+  "n_prompts_judged": 12,
+  "n_total_judgments": 47,
+  "mean_score_am_overall": 0.3942,
+  "mean_score_gm_overall": 0.1138,
+  "leaderboard_top3": [
+    {
+      "model": "flux_kontext",
+      "overall_am": 0.3723,
+      "overall_gm": 0.1706,
+      "std_dev_am": 0.3237,
+      "std_dev_gm": 0.3381,
+      "n_total": 11,
+      "overall_am_covered": 0.3723,
+      "overall_gm_covered": 0.1706,
+      "n_covered": 11,
+      "coverage_rate": 1.0
+    },
+    {
+      "model": "bria_edit",
+      "overall_am": 0.4162,
+      "overall_gm": 0.1665,
+      "std_dev_am": 0.2971,
+      "std_dev_gm": 0.2892,
+      "n_total": 12,
+      "overall_am_covered": 0.4162,
+      "overall_gm_covered": 0.1665,
+      "n_covered": 12,
+      "coverage_rate": 1.0
+    },
+    {
+      "model": "flux2_flex",
+      "overall_am": 0.4708,
+      "overall_gm": 0.1185,
+      "std_dev_am": 0.2079,
+      "std_dev_gm": 0.1584,
+      "n_total": 12,
+      "overall_am_covered": 0.4708,
+      "overall_gm_covered": 0.1185,
+      "n_covered": 12,
+      "coverage_rate": 1.0
+    }
+  ],
+  "dimensions": [
+    {
+      "model": "flux2_flex",
+      "instruction_following_am": 0.6639,
+      "instruction_following_gm": 0.1853,
+      "visual_consistency_am": 0.2662,
+      "visual_consistency_gm": 0.0094,
+      "detail_preservation_am": 0.4823,
+      "detail_preservation_gm": 0.0456
+    },
+    {
+      "model": "bria_edit",
+      "instruction_following_am": 0.6031,
+      "instruction_following_gm": 0.0681,
+      "visual_consistency_am": 0.3616,
+      "visual_consistency_gm": 0.0332,
+      "detail_preservation_am": 0.2838,
+      "detail_preservation_gm": 0.0108
+    },
+    {
+      "model": "flux_kontext",
+      "instruction_following_am": 0.2781,
+      "instruction_following_gm": 0.0035,
+      "visual_consistency_am": 0.529,
+      "visual_consistency_gm": 0.0838,
+      "detail_preservation_am": 0.3098,
+      "detail_preservation_gm": 0.0143
+    },
+    {
+      "model": "picsart",
+      "instruction_following_am": 0.0,
+      "instruction_following_gm": 0.0,
+      "visual_consistency_am": 0.8638,
+      "visual_consistency_gm": 0.841,
+      "detail_preservation_am": 0.0834,
+      "detail_preservation_gm": 0.0002
+    }
+  ]
+}

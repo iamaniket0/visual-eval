@@ -398,7 +398,7 @@ def layer_comparison(df: pd.DataFrame) -> pd.DataFrame:
                 rename_map[col] = f"layer2_proprietary_{col_prefix}"
         piece = piece.rename(columns=rename_map)
         # Drop any leftover layer columns (e.g., layer 3 if it slipped through)
-        piece = piece[[c for c in piece.columns if c.startswith("layer")]].copy()
+        piece = piece[[c for c in piece.columns if str(c).startswith("layer")]].copy()
         l1 = f"layer1_gold_{col_prefix}"
         l2 = f"layer2_proprietary_{col_prefix}"
         if l1 in piece.columns and l2 in piece.columns:

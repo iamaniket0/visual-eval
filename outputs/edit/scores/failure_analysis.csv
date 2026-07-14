@@ -1,0 +1,13 @@
+model,q_type,dimension,failure_rate,n
+bria_edit,quality,detail_preservation,0.75,12
+bria_edit,preservation,visual_consistency,0.6667,12
+bria_edit,instruction,instruction_following,0.4167,12
+flux2_flex,preservation,visual_consistency,0.75,12
+flux2_flex,quality,detail_preservation,0.5833,12
+flux2_flex,instruction,instruction_following,0.3333,12
+flux_kontext,instruction,instruction_following,0.7273,11
+flux_kontext,quality,detail_preservation,0.6364,11
+flux_kontext,preservation,visual_consistency,0.4545,11
+picsart,instruction,instruction_following,1.0,12
+picsart,quality,detail_preservation,0.9167,12
+picsart,preservation,visual_consistency,0.0833,12
