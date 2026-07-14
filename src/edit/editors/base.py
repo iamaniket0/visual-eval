@@ -15,6 +15,7 @@ All editors share:
     - PNG normalization on save
     - Source image validation before API call
 """
+
 from __future__ import annotations
 
 import asyncio
@@ -62,9 +63,19 @@ class EditResult:
 
 
 _FILTER_MARKERS = (
-    "content policy", "content_policy", "safety", "not allowed", "nsfw",
-    "moderation", "violates", "blocked", "inappropriate", "unsafe",
-    "prohibited", "sensitive_content", "safety_system",
+    "content policy",
+    "content_policy",
+    "safety",
+    "not allowed",
+    "nsfw",
+    "moderation",
+    "violates",
+    "blocked",
+    "inappropriate",
+    "unsafe",
+    "prohibited",
+    "sensitive_content",
+    "safety_system",
 )
 
 
@@ -79,8 +90,7 @@ class BaseEditor(ABC):
     model_id: str = ""
     provider: str = ""
 
-    def __init__(self, config: dict[str, Any], cost_tracker: CostTracker,
-                 concurrency: int = 4):
+    def __init__(self, config: dict[str, Any], cost_tracker: CostTracker, concurrency: int = 4):
         self.config = config
         self.cost_tracker = cost_tracker
         self.log = get_logger(f"edit.{self.model_id}")
@@ -110,24 +120,33 @@ class BaseEditor(ABC):
     # Public entry point — single-turn edit
     # ------------------------------------------------------------------
 
-    async def edit(self, prompt_id: str, source_image_path: str,
-                   edit_instruction: str, output_dir: Path,
-                   mask_path: str | None = None,
-                   turn: int = 1) -> EditResult:
+    async def edit(
+        self,
+        prompt_id: str,
+        source_image_path: str,
+        edit_instruction: str,
+        output_dir: Path,
+        mask_path: str | None = None,
+        turn: int = 1,
+    ) -> EditResult:
         started = datetime.now(timezone.utc)
 
         if not self.api_key:
             return EditResult(
-                prompt_id=prompt_id, model=self.model_id,
-                status=EditStatus.SKIPPED, turn=turn,
+                prompt_id=prompt_id,
+                model=self.model_id,
+                status=EditStatus.SKIPPED,
+                turn=turn,
                 source_image_path=source_image_path,
                 error=f"{self.config['api_key_env']} not set",
             )
 
         if not self.cost_tracker.check_cap():
             return EditResult(
-                prompt_id=prompt_id, model=self.model_id,
-                status=EditStatus.SKIPPED, turn=turn,
+                prompt_id=prompt_id,
+                model=self.model_id,
+                status=EditStatus.SKIPPED,
+                turn=turn,
                 source_image_path=source_image_path,
                 error="Cost cap reached",
             )
@@ -135,8 +154,10 @@ class BaseEditor(ABC):
         src_path = Path(source_image_path)
         if not src_path.exists():
             return EditResult(
-                prompt_id=prompt_id, model=self.model_id,
-                status=EditStatus.ERROR, turn=turn,
+                prompt_id=prompt_id,
+                model=self.model_id,
+                status=EditStatus.ERROR,
+                turn=turn,
                 source_image_path=source_image_path,
                 error=f"Source image not found: {source_image_path}",
             )
@@ -144,18 +165,24 @@ class BaseEditor(ABC):
         async with self.semaphore:
             try:
                 image_bytes, raw_meta = await self._edit_with_retry(
-                    source_image_path, edit_instruction, mask_path)
+                    source_image_path, edit_instruction, mask_path
+                )
             except _ContentFiltered as e:
                 return EditResult(
-                    prompt_id=prompt_id, model=self.model_id,
-                    status=EditStatus.FILTERED, turn=turn,
+                    prompt_id=prompt_id,
+                    model=self.model_id,
+                    status=EditStatus.FILTERED,
+                    turn=turn,
                     source_image_path=source_image_path,
-                    error=str(e), raw_metadata=e.metadata,
+                    error=str(e),
+                    raw_metadata=e.metadata,
                 )
             except Exception as e:
                 return EditResult(
-                    prompt_id=prompt_id, model=self.model_id,
-                    status=EditStatus.ERROR, turn=turn,
+                    prompt_id=prompt_id,
+                    model=self.model_id,
+                    status=EditStatus.ERROR,
+                    turn=turn,
                     source_image_path=source_image_path,
                     error=f"{type(e).__name__}: {e}",
                 )
@@ -168,7 +195,8 @@ class BaseEditor(ABC):
 
         duration = (datetime.now(timezone.utc) - started).total_seconds()
         return EditResult(
-            prompt_id=prompt_id, model=self.model_id,
+            prompt_id=prompt_id,
+            model=self.model_id,
             status=EditStatus.SUCCESS,
             image_path=str(out_path),
             source_image_path=source_image_path,
@@ -182,9 +210,13 @@ class BaseEditor(ABC):
     # Multi-turn edit — chains turns sequentially
     # ------------------------------------------------------------------
 
-    async def edit_multi_turn(self, prompt_id: str, source_image_path: str,
-                              instructions: list[str], output_dir: Path,
-                              ) -> list[EditResult]:
+    async def edit_multi_turn(
+        self,
+        prompt_id: str,
+        source_image_path: str,
+        instructions: list[str],
+        output_dir: Path,
+    ) -> list[EditResult]:
         results: list[EditResult] = []
         current_source = source_image_path
 
@@ -201,7 +233,11 @@ class BaseEditor(ABC):
             if result.status != EditStatus.SUCCESS:
                 self.log.warning(
                     "Multi-turn chain broken at turn %d/%d for %s: %s",
-                    turn_idx, len(instructions), prompt_id, result.error)
+                    turn_idx,
+                    len(instructions),
+                    prompt_id,
+                    result.error,
+                )
                 break
 
             current_source = result.image_path
@@ -212,9 +248,9 @@ class BaseEditor(ABC):
     # Retry wrapper
     # ------------------------------------------------------------------
 
-    async def _edit_with_retry(self, source_path: str, instruction: str,
-                                mask_path: str | None = None,
-                                max_retries: int = 3) -> tuple[bytes, dict]:
+    async def _edit_with_retry(
+        self, source_path: str, instruction: str, mask_path: str | None = None, max_retries: int = 3
+    ) -> tuple[bytes, dict]:
         last_exc: Exception | None = None
         for attempt in range(max_retries):
             try:
@@ -225,19 +261,21 @@ class BaseEditor(ABC):
                 code = e.response.status_code
                 body_snippet = e.response.text[:500] if e.response is not None else ""
                 if looks_like_filter(body_snippet):
-                    raise _ContentFiltered(f"Content filter: {body_snippet[:200]}",
-                                            metadata={"status_code": code}) from e
+                    raise _ContentFiltered(
+                        f"Content filter: {body_snippet[:200]}", metadata={"status_code": code}
+                    ) from e
                 if code in (429, 500, 502, 503, 504) and attempt < max_retries - 1:
-                    delay = 2 ** attempt
-                    self.log.warning("HTTP %d, retrying in %ds (%s)",
-                                     code, delay, body_snippet[:120])
+                    delay = 2**attempt
+                    self.log.warning(
+                        "HTTP %d, retrying in %ds (%s)", code, delay, body_snippet[:120]
+                    )
                     await asyncio.sleep(delay)
                     last_exc = e
                     continue
                 raise
             except (httpx.TimeoutException, httpx.TransportError) as e:
                 if attempt < max_retries - 1:
-                    await asyncio.sleep(2 ** attempt)
+                    await asyncio.sleep(2**attempt)
                     last_exc = e
                     continue
                 raise
@@ -250,8 +288,9 @@ class BaseEditor(ABC):
     # ------------------------------------------------------------------
 
     @abstractmethod
-    async def _do_edit(self, source_image_path: str, instruction: str,
-                       mask_path: str | None = None) -> tuple[bytes, dict]:
+    async def _do_edit(
+        self, source_image_path: str, instruction: str, mask_path: str | None = None
+    ) -> tuple[bytes, dict]:
         """Return (edited_image_bytes, raw_metadata). May raise _ContentFiltered."""
 
     # ------------------------------------------------------------------
@@ -281,11 +320,15 @@ class BaseEditor(ABC):
         r.raise_for_status()
         return r.content
 
-    async def _poll_until_ready(self, url: str, headers: dict[str, str],
-                                 poll_interval: float = 2.0,
-                                 max_wait: float = 120.0,
-                                 ready_check=None,
-                                 failed_check=None) -> dict:
+    async def _poll_until_ready(
+        self,
+        url: str,
+        headers: dict[str, str],
+        poll_interval: float = 2.0,
+        max_wait: float = 120.0,
+        ready_check=None,
+        failed_check=None,
+    ) -> dict:
         elapsed = 0.0
         while elapsed < max_wait:
             r = await self.client.get(url, headers=headers)
@@ -320,14 +363,15 @@ def register(model_id: str):
         cls.model_id = model_id
         _REGISTRY[model_id] = cls
         return cls
+
     return deco
 
 
-def get_editor(model_id: str, config: dict[str, Any],
-               cost_tracker: CostTracker, concurrency: int = 4) -> BaseEditor:
+def get_editor(
+    model_id: str, config: dict[str, Any], cost_tracker: CostTracker, concurrency: int = 4
+) -> BaseEditor:
     if model_id not in _REGISTRY:
-        raise ValueError(f"No editor registered for '{model_id}'. "
-                         f"Available: {list(_REGISTRY)}")
+        raise ValueError(f"No editor registered for '{model_id}'. Available: {list(_REGISTRY)}")
     instance = _REGISTRY[model_id](config, cost_tracker, concurrency)
     instance.model_id = model_id
     instance.log = get_logger(f"edit.{model_id}")
@@ -339,7 +383,13 @@ def all_registered() -> list[str]:
 
 
 from . import (  # noqa: E402,F401
-    flux_kontext, flux2_flex, bria_edit, firefly, photoroom, picsart, canva_leonardo,
+    flux_kontext,
+    flux2_flex,
+    bria_edit,
+    firefly,
+    photoroom,
+    picsart,
+    canva_leonardo,
 )
 
 

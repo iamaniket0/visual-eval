@@ -4,6 +4,7 @@ Pattern: async_poll
 POST /v2/image/edit with source image + edit prompt → request_id + status_url
 Poll status_url until status == "completed" → result URL
 """
+
 from __future__ import annotations
 
 import asyncio
@@ -15,8 +16,9 @@ from .base import BaseEditor, register
 class BriaEditEditor(BaseEditor):
     provider = "bria"
 
-    async def _do_edit(self, source_image_path: str, instruction: str,
-                       mask_path: str | None = None) -> tuple[bytes, dict]:
+    async def _do_edit(
+        self, source_image_path: str, instruction: str, mask_path: str | None = None
+    ) -> tuple[bytes, dict]:
         headers = {
             "api_token": self.api_key,
             "Content-Type": "application/json",
@@ -54,9 +56,11 @@ class BriaEditEditor(BaseEditor):
                     result = result[0] if result else {}
                 url = None
                 if isinstance(result, dict):
-                    url = (result.get("image_url")
-                           or result.get("url")
-                           or (result.get("urls") or [None])[0])
+                    url = (
+                        result.get("image_url")
+                        or result.get("url")
+                        or (result.get("urls") or [None])[0]
+                    )
                 elif isinstance(result, str):
                     url = result
                 if not url:

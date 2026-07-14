@@ -10,6 +10,7 @@ Usage:
     visual-eval edit aggregate
     visual-eval dashboard
 """
+
 from __future__ import annotations
 
 import subprocess
@@ -36,6 +37,7 @@ def _run_module(module: str, extra_args: list[str] | None = None):
 
 
 # ─── T2I Commands ──────────────────────────────────────────────
+
 
 @t2i_app.command()
 def generate(
@@ -87,6 +89,7 @@ def hitl():
 
 # ─── Edit Commands ─────────────────────────────────────────────
 
+
 @edit_app.command("run")
 def edit_run(
     models: str = typer.Option("full", help="Model profile: sanity, available, or full"),
@@ -124,6 +127,7 @@ def download_images():
 
 
 # ─── Top-level Commands ───────────────────────────────────────
+
 
 @app.command()
 def dashboard():

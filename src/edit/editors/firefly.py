@@ -4,6 +4,7 @@ Pattern: sync
 POST /v3/images/edit with source image + prompt → edited image
 Requires Adobe IMS access token from client credentials flow.
 """
+
 from __future__ import annotations
 
 from src.core.utils import get_api_key
@@ -14,8 +15,9 @@ from .base import BaseEditor, register
 class FireflyEditor(BaseEditor):
     provider = "adobe"
 
-    async def _do_edit(self, source_image_path: str, instruction: str,
-                       mask_path: str | None = None) -> tuple[bytes, dict]:
+    async def _do_edit(
+        self, source_image_path: str, instruction: str, mask_path: str | None = None
+    ) -> tuple[bytes, dict]:
         access_token = await self._get_access_token()
         headers = {
             "Authorization": f"Bearer {access_token}",

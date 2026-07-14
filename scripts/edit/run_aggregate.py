@@ -3,6 +3,7 @@
 Usage:
     python -m scripts.run_aggregate
 """
+
 from src.edit.aggregator import run_aggregation
 from src.core.utils import get_logger
 

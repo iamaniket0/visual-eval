@@ -19,6 +19,7 @@ Prompt schema:
       ]
     }
 """
+
 from __future__ import annotations
 
 import json
@@ -52,10 +53,12 @@ def load_layer2_proprietary(path: Path | None = None) -> list[dict[str, Any]]:
 def load_all_prompts() -> list[dict[str, Any]]:
     """Load and merge both prompt layers."""
     prompts = load_layer1_gold() + load_layer2_proprietary()
-    log.info("Loaded %d prompts (L1=%d, L2=%d)",
-             len(prompts),
-             sum(1 for p in prompts if p.get("layer") == 1),
-             sum(1 for p in prompts if p.get("layer") == 2))
+    log.info(
+        "Loaded %d prompts (L1=%d, L2=%d)",
+        len(prompts),
+        sum(1 for p in prompts if p.get("layer") == 1),
+        sum(1 for p in prompts if p.get("layer") == 2),
+    )
     return prompts
 
 

@@ -6,6 +6,7 @@ Pattern: async_poll
 3. POST /api/rest/v1/generations with init_image_id + prompt → generation_id
 4. GET  /api/rest/v1/generations/{id} until status == "COMPLETE" → image URL
 """
+
 from __future__ import annotations
 
 import asyncio
@@ -18,8 +19,9 @@ from .base import BaseEditor, register
 class CanvaLeonardoEditor(BaseEditor):
     provider = "leonardo"
 
-    async def _do_edit(self, source_image_path: str, instruction: str,
-                       mask_path: str | None = None) -> tuple[bytes, dict]:
+    async def _do_edit(
+        self, source_image_path: str, instruction: str, mask_path: str | None = None
+    ) -> tuple[bytes, dict]:
         headers = {
             "Authorization": f"Bearer {self.api_key}",
             "Content-Type": "application/json",

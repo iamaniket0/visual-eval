@@ -1,4 +1,5 @@
 """Tests for T2I generator base class (no API calls)."""
+
 import pytest
 
 from src.t2i.generators import all_registered, get_generator
@@ -8,9 +9,17 @@ from src.core.utils import CostTracker
 
 def test_all_models_registered():
     expected = {
-        "flux2_max", "stable_image_ultra", "bria_fibo", "freepik_mystic",
-        "xai_aurora", "nano_banana_pro", "gpt_image_15", "gpt_image_2",
-        "canva_lucid_origin", "adobe_firefly_5", "midjourney_v8",
+        "flux2_max",
+        "stable_image_ultra",
+        "bria_fibo",
+        "freepik_mystic",
+        "xai_aurora",
+        "nano_banana_pro",
+        "gpt_image_15",
+        "gpt_image_2",
+        "canva_lucid_origin",
+        "adobe_firefly_5",
+        "midjourney_v8",
     }
     assert expected.issubset(set(all_registered()))
 

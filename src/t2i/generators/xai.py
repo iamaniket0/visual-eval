@@ -10,6 +10,7 @@ internal sampling stochasticity, so this adapter inherits the default
 Run the full seed loop via `scripts.run_generation --seeds N`; the outputs
 will differ across seeds even though no seed value is explicitly sent.
 """
+
 from __future__ import annotations
 
 from .base import BaseGenerator, register

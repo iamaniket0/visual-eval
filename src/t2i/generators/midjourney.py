@@ -7,6 +7,7 @@ Pattern: async_poll
   POST /api/v1/task        -> { data: { task_id } }
   GET  /api/v1/task/{id}   -> { data: { status, output: { image_url(s) } } }
 """
+
 from __future__ import annotations
 
 from .base import BaseGenerator, register
@@ -50,10 +51,12 @@ class MidjourneyGenerator(BaseGenerator):
             return None
 
         final = await self._poll_until_ready(
-            poll_url, headers=headers,
+            poll_url,
+            headers=headers,
             poll_interval=self.config.get("poll_interval_sec", 5),
             max_wait=self.config.get("max_poll_wait_sec", 300),
-            ready_check=ready, failed_check=failed,
+            ready_check=ready,
+            failed_check=failed,
         )
         output = final.get("data", {}).get("output", {})
         url = output.get("image_url") or (output.get("image_urls") or [None])[0]

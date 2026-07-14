@@ -19,6 +19,7 @@ Usage:
 
 Completes in < 3 minutes on a 210-prompt set with the default concurrency.
 """
+
 from __future__ import annotations
 
 import asyncio
@@ -105,6 +106,7 @@ Return the JSON tag list now."""
 # JSON extraction (tolerant of fences / preamble)
 # ---------------------------------------------------------------------------
 
+
 def _extract_json(text: str) -> dict:
     text = text.strip()
     text = re.sub(r"^```(?:json)?\s*", "", text)
@@ -119,10 +121,9 @@ def _extract_json(text: str) -> dict:
 # Taxonomy extraction (single call, all prompts)
 # ---------------------------------------------------------------------------
 
+
 async def extract_taxonomy(client, model: str, prompts: list[dict]) -> list[dict]:
-    joined = "\n".join(
-        f"- {p['prompt_id']}: {p['prompt_text']}" for p in prompts
-    )
+    joined = "\n".join(f"- {p['prompt_id']}: {p['prompt_text']}" for p in prompts)
     resp = await client.chat.completions.create(
         model=model,
         temperature=0.0,
@@ -130,8 +131,7 @@ async def extract_taxonomy(client, model: str, prompts: list[dict]) -> list[dict
         extra_headers=OPENROUTER_HEADERS,
         messages=[
             {"role": "system", "content": TAXONOMY_SYSTEM},
-            {"role": "user", "content": TAXONOMY_USER_TEMPLATE.format(
-                prompts_block=joined)},
+            {"role": "user", "content": TAXONOMY_USER_TEMPLATE.format(prompts_block=joined)},
         ],
     )
     raw = resp.choices[0].message.content or ""
@@ -140,8 +140,7 @@ async def extract_taxonomy(client, model: str, prompts: list[dict]) -> list[dict
     if not isinstance(themes, list):
         raise ValueError(f"Taxonomy payload missing 'themes' list: {parsed!r}")
     if not (15 <= len(themes) <= 25):
-        log.warning("Taxonomy returned %d themes (spec: 15-25). Continuing.",
-                    len(themes))
+        log.warning("Taxonomy returned %d themes (spec: 15-25). Continuing.", len(themes))
     # Enforce minimal shape
     out = []
     for t in themes:
@@ -156,9 +155,15 @@ async def extract_taxonomy(client, model: str, prompts: list[dict]) -> list[dict
 # Per-prompt tagging (async, bounded concurrency)
 # ---------------------------------------------------------------------------
 
-async def tag_prompt(client, sema: asyncio.Semaphore, model: str,
-                     taxonomy_blob: str, prompt: dict,
-                     valid_ids: set[str]) -> tuple[str, list[str]]:
+
+async def tag_prompt(
+    client,
+    sema: asyncio.Semaphore,
+    model: str,
+    taxonomy_blob: str,
+    prompt: dict,
+    valid_ids: set[str],
+) -> tuple[str, list[str]]:
     async with sema:
         try:
             resp = await client.chat.completions.create(
@@ -168,9 +173,12 @@ async def tag_prompt(client, sema: asyncio.Semaphore, model: str,
                 extra_headers=OPENROUTER_HEADERS,
                 messages=[
                     {"role": "system", "content": TAGGING_SYSTEM},
-                    {"role": "user", "content": TAGGING_USER_TEMPLATE.format(
-                        taxonomy=taxonomy_blob,
-                        prompt_text=prompt["prompt_text"])},
+                    {
+                        "role": "user",
+                        "content": TAGGING_USER_TEMPLATE.format(
+                            taxonomy=taxonomy_blob, prompt_text=prompt["prompt_text"]
+                        ),
+                    },
                 ],
             )
             raw = resp.choices[0].message.content or ""
@@ -190,16 +198,16 @@ async def tag_prompt(client, sema: asyncio.Semaphore, model: str,
     return prompt["prompt_id"], clean
 
 
-async def tag_all(client, model: str, taxonomy: list[dict],
-                   prompts: list[dict]) -> dict[str, list[str]]:
+async def tag_all(
+    client, model: str, taxonomy: list[dict], prompts: list[dict]
+) -> dict[str, list[str]]:
     taxonomy_blob = json.dumps(
         [{"id": t["id"], "description": t["description"]} for t in taxonomy],
         indent=0,
     )
     valid_ids = {t["id"] for t in taxonomy}
     sema = asyncio.Semaphore(CONCURRENCY)
-    tasks = [tag_prompt(client, sema, model, taxonomy_blob, p, valid_ids)
-             for p in prompts]
+    tasks = [tag_prompt(client, sema, model, taxonomy_blob, p, valid_ids) for p in prompts]
     results = await asyncio.gather(*tasks)
     return dict(results)
 
@@ -207,6 +215,7 @@ async def tag_all(client, model: str, taxonomy: list[dict],
 # ---------------------------------------------------------------------------
 # Orchestration
 # ---------------------------------------------------------------------------
+
 
 async def run_async():
     settings = load_settings()
@@ -216,27 +225,23 @@ async def run_async():
 
     api_key = get_api_key("OPENROUTER_API_KEY")
     if not api_key:
-        raise RuntimeError(
-            "OPENROUTER_API_KEY not set. Themes require OpenRouter access."
-        )
+        raise RuntimeError("OPENROUTER_API_KEY not set. Themes require OpenRouter access.")
 
     prompts_path = PROMPTS_DIR / "prompt_set.json"
     if not prompts_path.exists():
-        raise RuntimeError(
-            f"{prompts_path} not found. Run scripts.run_prompt_set first."
-        )
+        raise RuntimeError(f"{prompts_path} not found. Run scripts.run_prompt_set first.")
     with open(prompts_path) as f:
         prompts = json.load(f)
     log.info("Loaded %d prompts from %s", len(prompts), prompts_path)
 
     from openai import AsyncOpenAI
+
     client = AsyncOpenAI(api_key=api_key, base_url=OPENROUTER_BASE_URL)
     try:
         t0 = time.time()
         log.info("Extracting theme taxonomy...")
         taxonomy = await extract_taxonomy(client, model, prompts)
-        log.info("Taxonomy: %d themes extracted in %.1fs",
-                 len(taxonomy), time.time() - t0)
+        log.info("Taxonomy: %d themes extracted in %.1fs", len(taxonomy), time.time() - t0)
 
         PROMPTS_DIR.mkdir(parents=True, exist_ok=True)
         with open(TAXONOMY_PATH, "w") as f:
@@ -244,8 +249,7 @@ async def run_async():
         log.info("Wrote %s", TAXONOMY_PATH)
 
         t1 = time.time()
-        log.info("Tagging %d prompts (concurrency=%d)...",
-                 len(prompts), CONCURRENCY)
+        log.info("Tagging %d prompts (concurrency=%d)...", len(prompts), CONCURRENCY)
         tagged = await tag_all(client, model, taxonomy, prompts)
         log.info("Tagged %d prompts in %.1fs", len(tagged), time.time() - t1)
     finally:
@@ -254,13 +258,15 @@ async def run_async():
     # Diagnose + write results
     n_untagged = sum(1 for v in tagged.values() if not v)
     if n_untagged:
-        log.warning("%d prompts received 0 themes (API/JSON failure).",
-                    n_untagged)
+        log.warning("%d prompts received 0 themes (API/JSON failure).", n_untagged)
     tag_counts = [len(v) for v in tagged.values()]
     if tag_counts:
-        log.info("Tags per prompt: min=%d, max=%d, mean=%.1f",
-                 min(tag_counts), max(tag_counts),
-                 sum(tag_counts) / len(tag_counts))
+        log.info(
+            "Tags per prompt: min=%d, max=%d, mean=%.1f",
+            min(tag_counts),
+            max(tag_counts),
+            sum(tag_counts) / len(tag_counts),
+        )
 
     with open(THEMES_PATH, "w") as f:
         json.dump(tagged, f, indent=2)
@@ -268,6 +274,7 @@ async def run_async():
 
     # Compact summary line (handy when piped through tail)
     from collections import Counter
+
     theme_use = Counter(t for tags in tagged.values() for t in tags)
     print(f"Taxonomy: {len(taxonomy)} themes  |  Tagged: {len(tagged)} prompts")
     print("Top 10 themes by usage:")

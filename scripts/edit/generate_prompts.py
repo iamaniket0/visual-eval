@@ -8,6 +8,7 @@ Usage:
     python scripts/generate_prompts.py
     python scripts/generate_prompts.py --dry-run
 """
+
 from __future__ import annotations
 
 import argparse
@@ -25,16 +26,49 @@ L2_OUTPUT = ROOT / "prompts" / "layer2_proprietary.json"
 
 # ── Which categories apply to each image group ──
 GROUP_CATS = {
-    "person": ["color_material", "object_replace", "background_change", "style_transfer",
-               "lighting_weather", "spatial_pose", "anatomy_identity", "multi_turn"],
-    "object": ["color_material", "object_add", "object_remove", "object_replace",
-               "background_change", "style_transfer", "lighting_weather", "physics",
-               "text_editing", "multi_turn"],
-    "scene":  ["color_material", "object_add", "object_remove", "object_replace",
-               "background_change", "style_transfer", "lighting_weather", "spatial_pose",
-               "physics", "text_editing", "multi_turn"],
-    "style":  ["color_material", "object_add", "style_transfer", "lighting_weather",
-               "physics", "multi_turn"],
+    "person": [
+        "color_material",
+        "object_replace",
+        "background_change",
+        "style_transfer",
+        "lighting_weather",
+        "spatial_pose",
+        "anatomy_identity",
+        "multi_turn",
+    ],
+    "object": [
+        "color_material",
+        "object_add",
+        "object_remove",
+        "object_replace",
+        "background_change",
+        "style_transfer",
+        "lighting_weather",
+        "physics",
+        "text_editing",
+        "multi_turn",
+    ],
+    "scene": [
+        "color_material",
+        "object_add",
+        "object_remove",
+        "object_replace",
+        "background_change",
+        "style_transfer",
+        "lighting_weather",
+        "spatial_pose",
+        "physics",
+        "text_editing",
+        "multi_turn",
+    ],
+    "style": [
+        "color_material",
+        "object_add",
+        "style_transfer",
+        "lighting_weather",
+        "physics",
+        "multi_turn",
+    ],
 }
 
 # ═══════════════════════════════════════════════════════════════
@@ -43,32 +77,41 @@ GROUP_CATS = {
 # Each takes image_info dict → (edit_instruction, atoms, turns)
 # ═══════════════════════════════════════════════════════════════
 
+
 def _objs(info):
     return info.get("objects", info.get("typical_objects", []))
+
 
 def _first_obj(info):
     objs = _objs(info)
     return objs[0] if objs else "the main object"
 
+
 def _second_obj(info):
     objs = _objs(info)
     return objs[1] if len(objs) > 1 else "the secondary element"
+
 
 def _mat(info):
     mats = info.get("materials", [])
     return mats[0] if mats else "wood"
 
+
 def _desc(info):
     return info.get("description_full", info.get("primary_subject", "the scene"))
 
+
 def _person_type(info):
     cat = info.get("category", "")
-    if "portrait" in cat: return "portrait"
-    if "group" in cat: return "group"
+    if "portrait" in cat:
+        return "portrait"
+    if "group" in cat:
+        return "group"
     return "fullbody"
 
 
 # ── Color/Material ──
+
 
 def cm_easy_1(info):
     obj = _first_obj(info)
@@ -80,8 +123,9 @@ def cm_easy_1(info):
             ("instruction_following", "instruction", f"Is the {obj} now {c}?"),
             ("visual_consistency", "preservation", "Is the rest of the scene unchanged?"),
         ],
-        1
+        1,
     )
+
 
 def cm_easy_2(info):
     obj = _first_obj(info)
@@ -93,13 +137,18 @@ def cm_easy_2(info):
             ("instruction_following", "instruction", f"Does the {obj} have a {t} finish?"),
             ("visual_consistency", "preservation", "Is the background unchanged?"),
         ],
-        1
+        1,
     )
+
 
 def cm_medium_1(info):
     obj = _first_obj(info)
-    materials = [("wooden", "brushed steel"), ("metal", "weathered stone"),
-                 ("plastic", "ceramic"), ("concrete", "red brick")]
+    materials = [
+        ("wooden", "brushed steel"),
+        ("metal", "weathered stone"),
+        ("plastic", "ceramic"),
+        ("concrete", "red brick"),
+    ]
     old, new = random.choice(materials)
     return (
         f"Change the {obj} from {old} to {new} while keeping its shape and size",
@@ -109,20 +158,26 @@ def cm_medium_1(info):
             ("detail_preservation", "quality", f"Does the {new} texture look realistic?"),
             ("visual_consistency", "preservation", "Is the surrounding area unchanged?"),
         ],
-        1
+        1,
     )
+
 
 def cm_medium_2(info):
     obj = _first_obj(info)
     return (
         f"Convert all {_mat(info)} surfaces in the scene to polished marble, keeping object shapes",
         [
-            ("instruction_following", "instruction", "Are the specified surfaces now polished marble?"),
+            (
+                "instruction_following",
+                "instruction",
+                "Are the specified surfaces now polished marble?",
+            ),
             ("visual_consistency", "structure", "Are all object shapes preserved?"),
             ("detail_preservation", "quality", "Does the marble show realistic veining and sheen?"),
         ],
-        1
+        1,
     )
+
 
 def cm_hard_1(info):
     obj = _first_obj(info)
@@ -130,16 +185,22 @@ def cm_hard_1(info):
         f"Transform the {obj} from its current material to weathered copper with green verdigris patina in the crevices, while maintaining all surface details, reflections consistent with copper, and correct shadow coloring",
         [
             ("instruction_following", "instruction", f"Is the {obj} now copper-colored?"),
-            ("instruction_following", "instruction", "Is there green verdigris patina visible in crevices?"),
+            (
+                "instruction_following",
+                "instruction",
+                "Is there green verdigris patina visible in crevices?",
+            ),
             ("visual_consistency", "structure", f"Are all surface details of the {obj} preserved?"),
             ("detail_preservation", "quality", "Are reflections consistent with a copper surface?"),
             ("detail_preservation", "lighting", "Is shadow coloring correct for a copper object?"),
             ("visual_consistency", "preservation", "Is the background unchanged?"),
         ],
-        1
+        1,
     )
 
+
 # ── Object Add ──
+
 
 def oa_easy_1(info):
     objects = ["a potted plant", "a coffee mug", "a pair of sunglasses", "a small clock", "a book"]
@@ -150,13 +211,17 @@ def oa_easy_1(info):
             ("instruction_following", "instruction", f"Is {new_obj} now visible in the scene?"),
             ("visual_consistency", "preservation", "Are all original objects unchanged?"),
         ],
-        1
+        1,
     )
+
 
 def oa_medium_1(info):
     desc = _desc(info)[:50]
     items = [
-        ("a red fire extinguisher on the floor to the left", "a red fire extinguisher on the left side"),
+        (
+            "a red fire extinguisher on the floor to the left",
+            "a red fire extinguisher on the left side",
+        ),
         ("a sleeping cat curled up on the nearest surface", "a sleeping cat on a surface"),
         ("a vintage radio on the shelf in the background", "a vintage radio in the background"),
     ]
@@ -165,28 +230,55 @@ def oa_medium_1(info):
         f"Add {full}",
         [
             ("instruction_following", "instruction", f"Is {short} now visible?"),
-            ("instruction_following", "instruction", "Is it placed in the correct position described?"),
+            (
+                "instruction_following",
+                "instruction",
+                "Is it placed in the correct position described?",
+            ),
             ("detail_preservation", "quality", "Does the added object match the scene's lighting?"),
             ("visual_consistency", "preservation", "Are all original objects undisturbed?"),
         ],
-        1
+        1,
     )
+
 
 def oa_hard_1(info):
     return (
         f"Add a large ornate mirror leaning against the back wall, with correct reflections of the foreground objects and lighting visible in the mirror surface",
         [
-            ("instruction_following", "instruction", "Is a large ornate mirror visible leaning against the back wall?"),
-            ("instruction_following", "instruction", "Does the mirror show reflections of foreground objects?"),
-            ("detail_preservation", "quality", "Are the reflections optically consistent with the scene geometry?"),
-            ("detail_preservation", "lighting", "Does the mirror reflect the scene's actual lighting?"),
+            (
+                "instruction_following",
+                "instruction",
+                "Is a large ornate mirror visible leaning against the back wall?",
+            ),
+            (
+                "instruction_following",
+                "instruction",
+                "Does the mirror show reflections of foreground objects?",
+            ),
+            (
+                "detail_preservation",
+                "quality",
+                "Are the reflections optically consistent with the scene geometry?",
+            ),
+            (
+                "detail_preservation",
+                "lighting",
+                "Does the mirror reflect the scene's actual lighting?",
+            ),
             ("visual_consistency", "preservation", "Are all original objects unchanged?"),
-            ("visual_consistency", "structure", "Is the spatial scale of the mirror consistent with the scene?"),
+            (
+                "visual_consistency",
+                "structure",
+                "Is the spatial scale of the mirror consistent with the scene?",
+            ),
         ],
-        1
+        1,
     )
 
+
 # ── Object Remove ──
+
 
 def or_easy_1(info):
     obj = _first_obj(info)
@@ -196,8 +288,9 @@ def or_easy_1(info):
             ("instruction_following", "instruction", f"Is the {obj} removed from the scene?"),
             ("visual_consistency", "preservation", "Is the area where it was naturally filled in?"),
         ],
-        1
+        1,
     )
+
 
 def or_medium_1(info):
     obj = _first_obj(info)
@@ -208,10 +301,15 @@ def or_medium_1(info):
             ("instruction_following", "instruction", f"Is the {obj} removed?"),
             ("visual_consistency", "preservation", f"Is the {obj2} completely unchanged?"),
             ("detail_preservation", "quality", "Is the infilled area seamless and natural?"),
-            ("visual_consistency", "preservation", "Is the background behind the removed object intact?"),
+            (
+                "visual_consistency",
+                "preservation",
+                "Is the background behind the removed object intact?",
+            ),
         ],
-        1
+        1,
     )
+
 
 def or_hard_1(info):
     obj = _first_obj(info)
@@ -220,69 +318,130 @@ def or_hard_1(info):
         [
             ("instruction_following", "instruction", f"Is the {obj} completely removed?"),
             ("detail_preservation", "quality", "Is the reconstructed background seamless?"),
-            ("detail_preservation", "quality", "Does the texture continuity match surrounding areas?"),
-            ("detail_preservation", "lighting", "Is the lighting gradient consistent across the filled area?"),
-            ("visual_consistency", "structure", "Is perspective correct in the reconstructed region?"),
+            (
+                "detail_preservation",
+                "quality",
+                "Does the texture continuity match surrounding areas?",
+            ),
+            (
+                "detail_preservation",
+                "lighting",
+                "Is the lighting gradient consistent across the filled area?",
+            ),
+            (
+                "visual_consistency",
+                "structure",
+                "Is perspective correct in the reconstructed region?",
+            ),
             ("visual_consistency", "preservation", "Are all other objects undisturbed?"),
         ],
-        1
+        1,
     )
+
 
 # ── Object Replace ──
 
+
 def rp_easy_1(info):
     obj = _first_obj(info)
-    replacements = {"mug": "glass bottle", "chair": "stool", "table": "desk",
-                    "car": "truck", "flower": "cactus", "lamp": "candle",
-                    "bicycle": "motorcycle", "book": "tablet"}
+    replacements = {
+        "mug": "glass bottle",
+        "chair": "stool",
+        "table": "desk",
+        "car": "truck",
+        "flower": "cactus",
+        "lamp": "candle",
+        "bicycle": "motorcycle",
+        "book": "tablet",
+    }
     for k, v in replacements.items():
         if k in obj.lower():
             return (
                 f"Replace the {obj} with a {v}",
                 [
-                    ("instruction_following", "instruction", f"Is there now a {v} where the {obj} was?"),
+                    (
+                        "instruction_following",
+                        "instruction",
+                        f"Is there now a {v} where the {obj} was?",
+                    ),
                     ("visual_consistency", "preservation", "Is the background unchanged?"),
                 ],
-                1
+                1,
             )
     return (
         f"Replace the {obj} with a potted plant",
         [
-            ("instruction_following", "instruction", f"Is there a potted plant where the {obj} was?"),
+            (
+                "instruction_following",
+                "instruction",
+                f"Is there a potted plant where the {obj} was?",
+            ),
             ("visual_consistency", "preservation", "Is the rest of the scene unchanged?"),
         ],
-        1
+        1,
     )
+
 
 def rp_medium_1(info):
     obj = _first_obj(info)
     return (
         f"Replace the {obj} with a vintage version of the same type, maintaining identical size and position",
         [
-            ("instruction_following", "instruction", f"Is the {obj} replaced with a vintage-style alternative?"),
-            ("visual_consistency", "structure", "Is the replacement the same size as the original?"),
+            (
+                "instruction_following",
+                "instruction",
+                f"Is the {obj} replaced with a vintage-style alternative?",
+            ),
+            (
+                "visual_consistency",
+                "structure",
+                "Is the replacement the same size as the original?",
+            ),
             ("visual_consistency", "structure", "Is the replacement in the exact same position?"),
             ("detail_preservation", "quality", "Does the vintage style look authentic?"),
         ],
-        1
+        1,
     )
+
 
 def rp_hard_1(info):
     obj = _first_obj(info)
     return (
         f"Replace the {obj} with a transparent glass version of the same shape, showing correct refraction of background elements through the glass, caustic light patterns on the surface below, and specular highlights matching the scene lighting",
         [
-            ("instruction_following", "instruction", f"Is the {obj} replaced with a glass version?"),
-            ("instruction_following", "instruction", "Is the glass version the same shape as the original?"),
-            ("detail_preservation", "quality", "Is refraction of background visible through the glass?"),
-            ("detail_preservation", "quality", "Are caustic light patterns visible on the surface below?"),
-            ("detail_preservation", "lighting", "Are specular highlights consistent with scene lighting?"),
+            (
+                "instruction_following",
+                "instruction",
+                f"Is the {obj} replaced with a glass version?",
+            ),
+            (
+                "instruction_following",
+                "instruction",
+                "Is the glass version the same shape as the original?",
+            ),
+            (
+                "detail_preservation",
+                "quality",
+                "Is refraction of background visible through the glass?",
+            ),
+            (
+                "detail_preservation",
+                "quality",
+                "Are caustic light patterns visible on the surface below?",
+            ),
+            (
+                "detail_preservation",
+                "lighting",
+                "Are specular highlights consistent with scene lighting?",
+            ),
             ("visual_consistency", "preservation", "Is the rest of the scene unchanged?"),
         ],
-        1
+        1,
     )
 
+
 # ── Background Change ──
+
 
 def bg_easy_1(info):
     bgs = ["a tropical beach", "a plain white studio", "a city skyline at dusk", "a forest path"]
@@ -293,8 +452,9 @@ def bg_easy_1(info):
             ("instruction_following", "instruction", f"Is the background now {bg}?"),
             ("visual_consistency", "preservation", "Is the foreground subject unchanged?"),
         ],
-        1
+        1,
     )
+
 
 def bg_medium_1(info):
     return (
@@ -303,10 +463,15 @@ def bg_medium_1(info):
             ("instruction_following", "instruction", "Is the background now a rainy urban street?"),
             ("visual_consistency", "preservation", "Is the foreground subject completely intact?"),
             ("detail_preservation", "quality", "Are the subject's edges clean without fringing?"),
-            ("detail_preservation", "lighting", "Is the lighting on the subject consistent with the new rainy scene?"),
+            (
+                "detail_preservation",
+                "lighting",
+                "Is the lighting on the subject consistent with the new rainy scene?",
+            ),
         ],
-        1
+        1,
     )
+
 
 def bg_hard_1(info):
     return (
@@ -314,16 +479,26 @@ def bg_hard_1(info):
         [
             ("instruction_following", "instruction", "Is the ground now red Martian terrain?"),
             ("instruction_following", "instruction", "Is the sky salmon-pink?"),
-            ("instruction_following", "instruction", "Are distant mountains visible on the horizon?"),
+            (
+                "instruction_following",
+                "instruction",
+                "Are distant mountains visible on the horizon?",
+            ),
             ("detail_preservation", "quality", "Is there atmospheric haze visible?"),
             ("detail_preservation", "lighting", "Are shadows consistent with the new sun angle?"),
             ("visual_consistency", "preservation", "Are all foreground objects preserved?"),
-            ("visual_consistency", "structure", "Is the spatial arrangement of existing objects intact?"),
+            (
+                "visual_consistency",
+                "structure",
+                "Is the spatial arrangement of existing objects intact?",
+            ),
         ],
-        1
+        1,
     )
 
+
 # ── Style Transfer ──
+
 
 def st_easy_1(info):
     styles = ["a pencil sketch", "a watercolor painting", "a pop art poster", "an oil painting"]
@@ -334,36 +509,64 @@ def st_easy_1(info):
             ("instruction_following", "instruction", f"Does the image look like {s}?"),
             ("visual_consistency", "structure", "Is the original composition preserved?"),
         ],
-        1
+        1,
     )
+
 
 def st_medium_1(info):
     return (
         f"Convert to a 1970s Kodachrome film photograph look: warm color cast, slight grain, slightly faded shadows, high saturation reds and greens",
         [
-            ("instruction_following", "instruction", "Does the image have a warm vintage color cast?"),
+            (
+                "instruction_following",
+                "instruction",
+                "Does the image have a warm vintage color cast?",
+            ),
             ("instruction_following", "instruction", "Is film grain visible?"),
             ("instruction_following", "instruction", "Are reds and greens highly saturated?"),
             ("visual_consistency", "structure", "Is the composition and content preserved?"),
         ],
-        1
+        1,
     )
+
 
 def st_hard_1(info):
     return (
         f"Transform into a Japanese Ukiyo-e woodblock print: flat color planes with no gradient shading, strong black outlines around all forms, traditional compositional rules with foreground/midground/background layers clearly separated, wave patterns in any water, and a cartouche with Japanese text in the upper corner",
         [
-            ("instruction_following", "instruction", "Are flat color planes used with no gradient shading?"),
-            ("instruction_following", "instruction", "Are strong black outlines visible around forms?"),
-            ("instruction_following", "instruction", "Is a text cartouche visible in the upper corner?"),
-            ("detail_preservation", "quality", "Are foreground/midground/background clearly layered?"),
+            (
+                "instruction_following",
+                "instruction",
+                "Are flat color planes used with no gradient shading?",
+            ),
+            (
+                "instruction_following",
+                "instruction",
+                "Are strong black outlines visible around forms?",
+            ),
+            (
+                "instruction_following",
+                "instruction",
+                "Is a text cartouche visible in the upper corner?",
+            ),
+            (
+                "detail_preservation",
+                "quality",
+                "Are foreground/midground/background clearly layered?",
+            ),
             ("visual_consistency", "structure", "Is the original scene composition recognizable?"),
-            ("detail_preservation", "quality", "Does the style look authentically Ukiyo-e, not generic?"),
+            (
+                "detail_preservation",
+                "quality",
+                "Does the style look authentically Ukiyo-e, not generic?",
+            ),
         ],
-        1
+        1,
     )
 
+
 # ── Lighting/Weather ──
+
 
 def lw_easy_1(info):
     changes = ["nighttime", "sunset", "overcast and cloudy", "bright midday"]
@@ -374,20 +577,26 @@ def lw_easy_1(info):
             ("instruction_following", "instruction", f"Does the scene look like {c}?"),
             ("visual_consistency", "preservation", "Are all objects in the scene preserved?"),
         ],
-        1
+        1,
     )
+
 
 def lw_medium_1(info):
     return (
         f"Change to golden hour lighting with warm tones, long shadows stretching to the right, and a warm color cast on all surfaces",
         [
-            ("instruction_following", "instruction", "Does the scene have warm golden hour lighting?"),
+            (
+                "instruction_following",
+                "instruction",
+                "Does the scene have warm golden hour lighting?",
+            ),
             ("instruction_following", "instruction", "Are long shadows cast to the right?"),
             ("detail_preservation", "lighting", "Is there a warm color cast on surfaces?"),
             ("visual_consistency", "preservation", "Are all objects and structures unchanged?"),
         ],
-        1
+        1,
     )
+
 
 def lw_hard_1(info):
     return (
@@ -398,12 +607,18 @@ def lw_hard_1(info):
             ("instruction_following", "instruction", "Are wet reflections on flat surfaces?"),
             ("detail_preservation", "quality", "Do puddles form in plausible low areas?"),
             ("detail_preservation", "lighting", "Are shadows softened to match diffused lighting?"),
-            ("visual_consistency", "preservation", "Are all objects still present and recognizable?"),
+            (
+                "visual_consistency",
+                "preservation",
+                "Are all objects still present and recognizable?",
+            ),
         ],
-        1
+        1,
     )
 
+
 # ── Spatial/Pose ──
+
 
 def sp_easy_1(info):
     return (
@@ -412,8 +627,9 @@ def sp_easy_1(info):
             ("instruction_following", "instruction", "Is the image mirrored left-to-right?"),
             ("visual_consistency", "structure", "Are all objects intact after flipping?"),
         ],
-        1
+        1,
     )
+
 
 def sp_medium_1(info):
     obj = _first_obj(info)
@@ -421,28 +637,59 @@ def sp_medium_1(info):
         f"Move the {obj} to the opposite side of the scene and adjust its shadow to match the new position",
         [
             ("instruction_following", "instruction", f"Is the {obj} now on the opposite side?"),
-            ("detail_preservation", "lighting", "Is the shadow direction correct for the new position?"),
+            (
+                "detail_preservation",
+                "lighting",
+                "Is the shadow direction correct for the new position?",
+            ),
             ("detail_preservation", "quality", "Is the original location naturally infilled?"),
             ("visual_consistency", "preservation", "Are all other objects undisturbed?"),
         ],
-        1
+        1,
     )
+
 
 def sp_hard_1(info):
     return (
         f"Shift the camera viewpoint 30 degrees to the right: reveal the hidden side of objects, adjust all perspective lines converging to the new vanishing point, update parallax between foreground and background layers, and ensure all shadows remain consistent with the same light source",
         [
-            ("instruction_following", "instruction", "Has the viewpoint shifted to reveal previously hidden sides?"),
-            ("detail_preservation", "quality", "Do perspective lines converge to a consistent vanishing point?"),
-            ("detail_preservation", "quality", "Is there correct parallax between foreground and background?"),
-            ("detail_preservation", "lighting", "Are shadows still consistent with the original light source?"),
-            ("visual_consistency", "structure", "Are all objects present with correct relative positions?"),
-            ("visual_consistency", "preservation", "Are object identities and appearances preserved?"),
+            (
+                "instruction_following",
+                "instruction",
+                "Has the viewpoint shifted to reveal previously hidden sides?",
+            ),
+            (
+                "detail_preservation",
+                "quality",
+                "Do perspective lines converge to a consistent vanishing point?",
+            ),
+            (
+                "detail_preservation",
+                "quality",
+                "Is there correct parallax between foreground and background?",
+            ),
+            (
+                "detail_preservation",
+                "lighting",
+                "Are shadows still consistent with the original light source?",
+            ),
+            (
+                "visual_consistency",
+                "structure",
+                "Are all objects present with correct relative positions?",
+            ),
+            (
+                "visual_consistency",
+                "preservation",
+                "Are object identities and appearances preserved?",
+            ),
         ],
-        1
+        1,
     )
 
+
 # ── Anatomy/Identity (person only) ──
+
 
 def ai_easy_1(info):
     changes = ["smile", "frown", "look surprised", "close their eyes"]
@@ -450,11 +697,20 @@ def ai_easy_1(info):
     return (
         f"Make the person {c}",
         [
-            ("instruction_following", "instruction", f"Is the person's expression now a {c.split()[0] if ' ' not in c else c}?"),
-            ("visual_consistency", "identity", "Is the person still recognizable as the same individual?"),
+            (
+                "instruction_following",
+                "instruction",
+                f"Is the person's expression now a {c.split()[0] if ' ' not in c else c}?",
+            ),
+            (
+                "visual_consistency",
+                "identity",
+                "Is the person still recognizable as the same individual?",
+            ),
         ],
-        1
+        1,
     )
+
 
 def ai_medium_1(info):
     pt = _person_type(info)
@@ -467,19 +723,28 @@ def ai_medium_1(info):
                 ("visual_consistency", "preservation", "Is the skin tone unchanged?"),
                 ("detail_preservation", "quality", "Does the hair look natural, not painted on?"),
             ],
-            1
+            1,
         )
     else:
         return (
             f"Change the person's outfit to a formal business suit while preserving their pose, body proportions, and face",
             [
-                ("instruction_following", "instruction", "Is the person wearing a formal business suit?"),
+                (
+                    "instruction_following",
+                    "instruction",
+                    "Is the person wearing a formal business suit?",
+                ),
                 ("visual_consistency", "identity", "Is the person's face unchanged?"),
                 ("visual_consistency", "structure", "Are body proportions and pose preserved?"),
-                ("detail_preservation", "quality", "Does the suit fabric look realistic with proper folds?"),
+                (
+                    "detail_preservation",
+                    "quality",
+                    "Does the suit fabric look realistic with proper folds?",
+                ),
             ],
-            1
+            1,
         )
+
 
 def ai_hard_1(info):
     pt = _person_type(info)
@@ -488,29 +753,51 @@ def ai_hard_1(info):
             f"Age everyone in the group by 30 years: add age-appropriate wrinkles, grey/white hair, slightly changed posture for each person, while preserving each individual's identity and their relative positions",
             [
                 ("instruction_following", "instruction", "Do all people appear ~30 years older?"),
-                ("instruction_following", "instruction", "Is hair grey or white for all individuals?"),
+                (
+                    "instruction_following",
+                    "instruction",
+                    "Is hair grey or white for all individuals?",
+                ),
                 ("instruction_following", "instruction", "Are wrinkles visible on all faces?"),
-                ("visual_consistency", "identity", "Is each person still recognizable as the same individual?"),
+                (
+                    "visual_consistency",
+                    "identity",
+                    "Is each person still recognizable as the same individual?",
+                ),
                 ("visual_consistency", "structure", "Are relative positions of people preserved?"),
-                ("detail_preservation", "quality", "Do the aging effects look natural, not like a filter?"),
+                (
+                    "detail_preservation",
+                    "quality",
+                    "Do the aging effects look natural, not like a filter?",
+                ),
             ],
-            1
+            1,
         )
     else:
         return (
             f"Age the person by 30 years with realistic aging: add wrinkles around eyes and mouth, grey hair with receding hairline, slight skin sagging, age spots on hands, while keeping their identity recognizable and clothing unchanged",
             [
                 ("instruction_following", "instruction", "Does the person appear ~30 years older?"),
-                ("instruction_following", "instruction", "Are wrinkles visible around eyes and mouth?"),
-                ("instruction_following", "instruction", "Is the hair grey with receding hairline?"),
+                (
+                    "instruction_following",
+                    "instruction",
+                    "Are wrinkles visible around eyes and mouth?",
+                ),
+                (
+                    "instruction_following",
+                    "instruction",
+                    "Is the hair grey with receding hairline?",
+                ),
                 ("visual_consistency", "identity", "Is the person still recognizable?"),
                 ("visual_consistency", "preservation", "Is the clothing unchanged?"),
                 ("detail_preservation", "quality", "Does the aging look natural, not artificial?"),
             ],
-            1
+            1,
         )
 
+
 # ── Physics ──
+
 
 def ph_easy_1(info):
     obj = _first_obj(info)
@@ -518,23 +805,37 @@ def ph_easy_1(info):
         f"Add a realistic shadow under the {obj}",
         [
             ("instruction_following", "instruction", f"Is there a shadow under the {obj}?"),
-            ("detail_preservation", "lighting", "Is the shadow direction consistent with scene lighting?"),
+            (
+                "detail_preservation",
+                "lighting",
+                "Is the shadow direction consistent with scene lighting?",
+            ),
         ],
-        1
+        1,
     )
+
 
 def ph_medium_1(info):
     obj = _first_obj(info)
     return (
         f"Change the {obj} from matte to a chrome mirror finish, with correct reflections of the surrounding environment visible on its surface",
         [
-            ("instruction_following", "instruction", f"Does the {obj} have a chrome mirror finish?"),
-            ("detail_preservation", "quality", "Are reflections of surroundings visible on the surface?"),
+            (
+                "instruction_following",
+                "instruction",
+                f"Does the {obj} have a chrome mirror finish?",
+            ),
+            (
+                "detail_preservation",
+                "quality",
+                "Are reflections of surroundings visible on the surface?",
+            ),
             ("detail_preservation", "quality", "Are the reflections geometrically plausible?"),
             ("visual_consistency", "structure", f"Is the {obj}'s shape unchanged?"),
         ],
-        1
+        1,
     )
+
 
 def ph_hard_1(info):
     return (
@@ -545,12 +846,18 @@ def ph_hard_1(info):
             ("detail_preservation", "quality", "Are reflections elongated and distorted by flow?"),
             ("detail_preservation", "quality", "Is mist or spray visible near turbulent areas?"),
             ("detail_preservation", "lighting", "Are wet marks visible on nearby surfaces?"),
-            ("visual_consistency", "preservation", "Are bank-side objects and landscape preserved?"),
+            (
+                "visual_consistency",
+                "preservation",
+                "Are bank-side objects and landscape preserved?",
+            ),
         ],
-        1
+        1,
     )
 
+
 # ── Text Editing ──
+
 
 def te_easy_1(info):
     texts = ["OPEN", "HELLO", "2025", "SALE"]
@@ -561,8 +868,9 @@ def te_easy_1(info):
             ("instruction_following", "instruction", f"Does the text now read '{t}'?"),
             ("visual_consistency", "preservation", "Is the sign/label surface unchanged?"),
         ],
-        1
+        1,
     )
+
 
 def te_medium_1(info):
     return (
@@ -570,27 +878,46 @@ def te_medium_1(info):
         [
             ("instruction_following", "instruction", "Does the text now read 'GRAND OPENING'?"),
             ("detail_preservation", "quality", "Is the font style similar to the original?"),
-            ("detail_preservation", "quality", "Does the text follow the same perspective distortion?"),
+            (
+                "detail_preservation",
+                "quality",
+                "Does the text follow the same perspective distortion?",
+            ),
             ("visual_consistency", "preservation", "Is the surface and background unchanged?"),
         ],
-        1
+        1,
     )
+
 
 def te_hard_1(info):
     return (
         f"Change all visible text to Chinese characters: translate each piece of text, match the original font weight and style for each instance, follow the surface curvature and perspective of each sign/label, and ensure text rendering resolution matches the rest of the image",
         [
-            ("instruction_following", "instruction", "Is all visible text now in Chinese characters?"),
-            ("instruction_following", "instruction", "Does each text instance match its original font weight?"),
+            (
+                "instruction_following",
+                "instruction",
+                "Is all visible text now in Chinese characters?",
+            ),
+            (
+                "instruction_following",
+                "instruction",
+                "Does each text instance match its original font weight?",
+            ),
             ("detail_preservation", "quality", "Does text follow surface curvature correctly?"),
-            ("detail_preservation", "quality", "Is text rendering resolution consistent with the image?"),
+            (
+                "detail_preservation",
+                "quality",
+                "Is text rendering resolution consistent with the image?",
+            ),
             ("visual_consistency", "preservation", "Are all non-text elements unchanged?"),
             ("visual_consistency", "structure", "Are sign and label surfaces undistorted?"),
         ],
-        1
+        1,
     )
 
+
 # ── Multi-turn ──
+
 
 def mt_easy_1(info):
     if info["group"] == "person":
@@ -601,7 +928,7 @@ def mt_easy_1(info):
                 ("instruction_following", "instruction", "Is the background now plain grey?"),
                 ("visual_consistency", "identity", "Is the person's face and body preserved?"),
             ],
-            ["Remove the person's accessories", "Change the background to plain grey"]
+            ["Remove the person's accessories", "Change the background to plain grey"],
         )
     obj = _first_obj(info)
     return (
@@ -611,8 +938,9 @@ def mt_easy_1(info):
             ("instruction_following", "instruction", "Is a vase of flowers now in that location?"),
             ("visual_consistency", "preservation", "Is the rest of the scene unchanged?"),
         ],
-        [f"Remove the {obj}", "Add a vase of flowers in its place"]
+        [f"Remove the {obj}", "Add a vase of flowers in its place"],
     )
+
 
 def mt_medium_1(info):
     if info["group"] == "person":
@@ -625,7 +953,11 @@ def mt_medium_1(info):
                 ("visual_consistency", "identity", "Is the person recognizable?"),
                 ("detail_preservation", "quality", "Is the contrast appropriately high?"),
             ],
-            ["Change the clothing to all black", "Add dramatic side lighting", "Convert to high-contrast black and white"]
+            [
+                "Change the clothing to all black",
+                "Add dramatic side lighting",
+                "Convert to high-contrast black and white",
+            ],
         )
     obj = _first_obj(info)
     return (
@@ -636,8 +968,9 @@ def mt_medium_1(info):
             ("instruction_following", "instruction", "Is the background blurred?"),
             ("visual_consistency", "structure", f"Is the {obj}'s shape unchanged?"),
         ],
-        [f"Change the {obj} color to red", "Add a spotlight on it", "Blur the background"]
+        [f"Change the {obj} color to red", "Add a spotlight on it", "Blur the background"],
     )
+
 
 def mt_hard_1(info):
     if info["group"] == "person":
@@ -645,16 +978,34 @@ def mt_hard_1(info):
             "Remove all people from the scene → Change the setting to a post-apocalyptic overgrown version → Add a single deer standing in the center → Change to foggy dawn with muted desaturated colors",
             [
                 ("instruction_following", "instruction", "Are all original people removed?"),
-                ("instruction_following", "instruction", "Does the setting look post-apocalyptic and overgrown?"),
-                ("instruction_following", "instruction", "Is a single deer standing in the center?"),
-                ("instruction_following", "instruction", "Is the atmosphere foggy dawn with muted colors?"),
-                ("visual_consistency", "structure", "Is the original architectural layout recognizable?"),
+                (
+                    "instruction_following",
+                    "instruction",
+                    "Does the setting look post-apocalyptic and overgrown?",
+                ),
+                (
+                    "instruction_following",
+                    "instruction",
+                    "Is a single deer standing in the center?",
+                ),
+                (
+                    "instruction_following",
+                    "instruction",
+                    "Is the atmosphere foggy dawn with muted colors?",
+                ),
+                (
+                    "visual_consistency",
+                    "structure",
+                    "Is the original architectural layout recognizable?",
+                ),
                 ("detail_preservation", "quality", "Does the overgrown vegetation look natural?"),
             ],
-            ["Remove all people from the scene",
-             "Change the setting to a post-apocalyptic overgrown version",
-             "Add a single deer standing in the center",
-             "Change to foggy dawn with muted desaturated colors"]
+            [
+                "Remove all people from the scene",
+                "Change the setting to a post-apocalyptic overgrown version",
+                "Add a single deer standing in the center",
+                "Change to foggy dawn with muted desaturated colors",
+            ],
         )
     obj = _first_obj(info)
     return (
@@ -662,15 +1013,29 @@ def mt_hard_1(info):
         [
             ("instruction_following", "instruction", f"Is the {obj} removed?"),
             ("instruction_following", "instruction", "Is there snow on all surfaces?"),
-            ("instruction_following", "instruction", "Is a person in winter clothing visible in the distance?"),
+            (
+                "instruction_following",
+                "instruction",
+                "Is a person in winter clothing visible in the distance?",
+            ),
             ("instruction_following", "instruction", "Are lampposts with warm lighting visible?"),
-            ("visual_consistency", "structure", "Is the original scene layout preserved under snow?"),
-            ("detail_preservation", "lighting", "Do lamppost lights create realistic warm pools on snow?"),
+            (
+                "visual_consistency",
+                "structure",
+                "Is the original scene layout preserved under snow?",
+            ),
+            (
+                "detail_preservation",
+                "lighting",
+                "Do lamppost lights create realistic warm pools on snow?",
+            ),
         ],
-        [f"Remove the {obj}",
-         "Change the season to deep winter with snow on all surfaces",
-         "Add a person in winter clothing walking in the distance",
-         "Add warm lamppost lighting along the path"]
+        [
+            f"Remove the {obj}",
+            "Change the season to deep winter with snow on all surfaces",
+            "Add a person in winter clothing walking in the distance",
+            "Add warm lamppost lighting along the path",
+        ],
     )
 
 
@@ -679,49 +1044,57 @@ def mt_hard_1(info):
 # ═══════════════════════════════════════════════════════════════
 
 TEMPLATES = {
-    ("color_material", "easy"):   [cm_easy_1, cm_easy_2],
+    ("color_material", "easy"): [cm_easy_1, cm_easy_2],
     ("color_material", "medium"): [cm_medium_1, cm_medium_2],
-    ("color_material", "hard"):   [cm_hard_1],
-    ("object_add", "easy"):       [oa_easy_1],
-    ("object_add", "medium"):     [oa_medium_1],
-    ("object_add", "hard"):       [oa_hard_1],
-    ("object_remove", "easy"):    [or_easy_1],
-    ("object_remove", "medium"):  [or_medium_1],
-    ("object_remove", "hard"):    [or_hard_1],
-    ("object_replace", "easy"):   [rp_easy_1],
+    ("color_material", "hard"): [cm_hard_1],
+    ("object_add", "easy"): [oa_easy_1],
+    ("object_add", "medium"): [oa_medium_1],
+    ("object_add", "hard"): [oa_hard_1],
+    ("object_remove", "easy"): [or_easy_1],
+    ("object_remove", "medium"): [or_medium_1],
+    ("object_remove", "hard"): [or_hard_1],
+    ("object_replace", "easy"): [rp_easy_1],
     ("object_replace", "medium"): [rp_medium_1],
-    ("object_replace", "hard"):   [rp_hard_1],
-    ("background_change", "easy"):   [bg_easy_1],
+    ("object_replace", "hard"): [rp_hard_1],
+    ("background_change", "easy"): [bg_easy_1],
     ("background_change", "medium"): [bg_medium_1],
-    ("background_change", "hard"):   [bg_hard_1],
-    ("style_transfer", "easy"):   [st_easy_1],
+    ("background_change", "hard"): [bg_hard_1],
+    ("style_transfer", "easy"): [st_easy_1],
     ("style_transfer", "medium"): [st_medium_1],
-    ("style_transfer", "hard"):   [st_hard_1],
-    ("lighting_weather", "easy"):   [lw_easy_1],
+    ("style_transfer", "hard"): [st_hard_1],
+    ("lighting_weather", "easy"): [lw_easy_1],
     ("lighting_weather", "medium"): [lw_medium_1],
-    ("lighting_weather", "hard"):   [lw_hard_1],
-    ("spatial_pose", "easy"):   [sp_easy_1],
+    ("lighting_weather", "hard"): [lw_hard_1],
+    ("spatial_pose", "easy"): [sp_easy_1],
     ("spatial_pose", "medium"): [sp_medium_1],
-    ("spatial_pose", "hard"):   [sp_hard_1],
-    ("anatomy_identity", "easy"):   [ai_easy_1],
+    ("spatial_pose", "hard"): [sp_hard_1],
+    ("anatomy_identity", "easy"): [ai_easy_1],
     ("anatomy_identity", "medium"): [ai_medium_1],
-    ("anatomy_identity", "hard"):   [ai_hard_1],
-    ("physics", "easy"):   [ph_easy_1],
+    ("anatomy_identity", "hard"): [ai_hard_1],
+    ("physics", "easy"): [ph_easy_1],
     ("physics", "medium"): [ph_medium_1],
-    ("physics", "hard"):   [ph_hard_1],
-    ("text_editing", "easy"):   [te_easy_1],
+    ("physics", "hard"): [ph_hard_1],
+    ("text_editing", "easy"): [te_easy_1],
     ("text_editing", "medium"): [te_medium_1],
-    ("text_editing", "hard"):   [te_hard_1],
-    ("multi_turn", "easy"):   [mt_easy_1],
+    ("text_editing", "hard"): [te_hard_1],
+    ("multi_turn", "easy"): [mt_easy_1],
     ("multi_turn", "medium"): [mt_medium_1],
-    ("multi_turn", "hard"):   [mt_hard_1],
+    ("multi_turn", "hard"): [mt_hard_1],
 }
 
 CAT_ABBREV = {
-    "color_material": "CM", "object_add": "OA", "object_remove": "OR",
-    "object_replace": "RP", "background_change": "BG", "style_transfer": "ST",
-    "lighting_weather": "LW", "spatial_pose": "SP", "anatomy_identity": "AI",
-    "physics": "PH", "text_editing": "TE", "multi_turn": "MT",
+    "color_material": "CM",
+    "object_add": "OA",
+    "object_remove": "OR",
+    "object_replace": "RP",
+    "background_change": "BG",
+    "style_transfer": "ST",
+    "lighting_weather": "LW",
+    "spatial_pose": "SP",
+    "anatomy_identity": "AI",
+    "physics": "PH",
+    "text_editing": "TE",
+    "multi_turn": "MT",
 }
 
 
@@ -826,16 +1199,18 @@ def generate_prompt(img_info: dict, cat_id: str, difficulty: str) -> dict:
 
     atoms = []
     for i, (dim, atype, question) in enumerate(raw_atoms):
-        atoms.append({
-            "q_id": f"q{i+1}",
-            "question": question,
-            "type": atype,
-            "dimension": dim,
-        })
+        atoms.append(
+            {
+                "q_id": f"q{i + 1}",
+                "question": question,
+                "type": atype,
+                "dimension": dim,
+            }
+        )
 
     path = img_info["local_path"]
     if path.startswith("prompts/"):
-        path = path[len("prompts/"):]
+        path = path[len("prompts/") :]
 
     result = {
         "source_image": path,

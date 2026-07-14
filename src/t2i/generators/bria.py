@@ -7,6 +7,7 @@ v1 fallback: POST /v1/text-to-image -> { result: [{ urls: [...] }] }
 
 The adapter auto-detects which version to use based on `api_url` in config.
 """
+
 from __future__ import annotations
 
 import asyncio
@@ -57,9 +58,11 @@ class BriaGenerator(BaseGenerator):
                     result = result[0] if result else {}
                 url = None
                 if isinstance(result, dict):
-                    url = (result.get("image_url")
-                           or result.get("url")
-                           or (result.get("urls") or [None])[0])
+                    url = (
+                        result.get("image_url")
+                        or result.get("url")
+                        or (result.get("urls") or [None])[0]
+                    )
                 elif isinstance(result, str):
                     url = result
                 if not url:

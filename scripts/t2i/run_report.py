@@ -4,6 +4,7 @@ Usage:
     python -m scripts.run_report            # aggregate + all cards
     python -m scripts.run_report --model flux2_max   # single card
 """
+
 import argparse
 
 from src.t2i.report import build_aggregate_report, build_all_reports, build_model_card

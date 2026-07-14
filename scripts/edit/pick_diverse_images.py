@@ -12,6 +12,7 @@ Usage:
     python scripts/pick_diverse_images.py --download      # download selected images
     python scripts/pick_diverse_images.py --download --total 165  # custom total
 """
+
 import argparse
 import boto3
 import json
@@ -42,39 +43,71 @@ OUT_DIR = Path(__file__).resolve().parent.parent / "prompts" / "source_images"
 CATEGORY_MAP = {
     # OBJECT categories (~30%)
     "object": [
-        "vehicles_cars", "vehicles_motorcycles", "vehicles_bicycles",
-        "vehicles_boats_ships", "vehicles_aircraft", "vehicles_trains",
+        "vehicles_cars",
+        "vehicles_motorcycles",
+        "vehicles_bicycles",
+        "vehicles_boats_ships",
+        "vehicles_aircraft",
+        "vehicles_trains",
         "vehicles_trucks_heavy",
-        "food_desserts_sweets", "food_prepared_meals", "food_street_food",
+        "food_desserts_sweets",
+        "food_prepared_meals",
+        "food_street_food",
         "food_ingredients",
-        "beverages_hot", "beverages_cold", "beverages_alcoholic",
+        "beverages_hot",
+        "beverages_cold",
+        "beverages_alcoholic",
         "fruits_vegetables",
-        "cosmetics_beauty", "fashion_clothing", "shoes_footwear",
+        "cosmetics_beauty",
+        "fashion_clothing",
+        "shoes_footwear",
         "hats_headwear",
-        "kitchen_cookware", "tools_hardware", "gardening_tools",
-        "toys_games", "music_instruments",
-        "technology_circuits_hardware", "technology_wearables",
+        "kitchen_cookware",
+        "tools_hardware",
+        "gardening_tools",
+        "toys_games",
+        "music_instruments",
+        "technology_circuits_hardware",
+        "technology_wearables",
         "technology_robotics",
-        "flowers_roses", "flowers_tropical", "flowers_wildflowers",
+        "flowers_roses",
+        "flowers_tropical",
+        "flowers_wildflowers",
         "flowers_arrangements",
         "plants_succulents_cacti",
-        "art_sculpture", "art_photography_equipment",
+        "art_sculpture",
+        "art_photography_equipment",
     ],
     # SCENE categories (~20%)
     "scene": [
-        "architecture_modern", "architecture_classical", "architecture_bridges",
-        "architecture_skyscrapers", "architecture_ruins_ancient",
+        "architecture_modern",
+        "architecture_classical",
+        "architecture_bridges",
+        "architecture_skyscrapers",
+        "architecture_ruins_ancient",
         "architecture_religious",
-        "urban_street_scenes", "urban_night_city", "urban_markets_bazaars",
-        "landscape_mountains", "landscape_forest", "landscape_tropical",
-        "landscape_arctic_tundra", "landscape_meadow_plains",
-        "waterscape_lakes", "waterscape_rivers_streams",
+        "urban_street_scenes",
+        "urban_night_city",
+        "urban_markets_bazaars",
+        "landscape_mountains",
+        "landscape_forest",
+        "landscape_tropical",
+        "landscape_arctic_tundra",
+        "landscape_meadow_plains",
+        "waterscape_lakes",
+        "waterscape_rivers_streams",
         "marine_nautical",
-        "workspace_desk", "restaurant_dining", "caf_coffee_shop",
-        "hotel_hospitality", "retail_shopping",
-        "fitness_gym", "cinema_theater",
-        "construction_building", "industrial_manufacturing",
-        "medical_healthcare", "science_laboratory",
+        "workspace_desk",
+        "restaurant_dining",
+        "caf_coffee_shop",
+        "hotel_hospitality",
+        "retail_shopping",
+        "fitness_gym",
+        "cinema_theater",
+        "construction_building",
+        "industrial_manufacturing",
+        "medical_healthcare",
+        "science_laboratory",
         "education_classroom",
         "camping_outdoors",
         "playground_recreation",
@@ -82,9 +115,13 @@ CATEGORY_MAP = {
     # STYLE categories (~10%) — scenes good for style/global edits
     "style": [
         "art_painting",
-        "holiday_christmas", "holiday_halloween", "holiday_general_celebrations",
-        "dance_performance", "music_performance",
-        "gardens_landscaping", "trees_foliage",
+        "holiday_christmas",
+        "holiday_halloween",
+        "holiday_general_celebrations",
+        "dance_performance",
+        "music_performance",
+        "gardens_landscaping",
+        "trees_foliage",
         "rural_countryside",
         "energy_renewable",
     ],
@@ -130,7 +167,9 @@ def list_person_images(s3, subcat: str, limit: int = 200) -> list[str]:
     prefix = f"{PERSON_PREFIX}{subcat}/"
     keys = []
     paginator = s3.get_paginator("list_objects_v2")
-    for page in paginator.paginate(Bucket=BUCKET, Prefix=prefix, PaginationConfig={"MaxItems": limit}):
+    for page in paginator.paginate(
+        Bucket=BUCKET, Prefix=prefix, PaginationConfig={"MaxItems": limit}
+    ):
         for obj in page.get("Contents", []):
             k = obj["Key"]
             if any(k.lower().endswith(e) for e in [".jpg", ".jpeg", ".png", ".webp"]):
@@ -159,15 +198,17 @@ def pick_diverse_set(s3, total: int = 165) -> dict:
     for subcat in PERSON_SUBCATS:
         keys = list_person_images(s3, subcat, limit=500)
         for k in keys:
-            person_pool.append({
-                "s3_key": k,
-                "group": "person",
-                "category": f"person_{subcat}",
-                "description": f"{subcat} portrait from hub production data",
-                "filename": k.split("/")[-1],
-            })
+            person_pool.append(
+                {
+                    "s3_key": k,
+                    "group": "person",
+                    "category": f"person_{subcat}",
+                    "description": f"{subcat} portrait from hub production data",
+                    "filename": k.split("/")[-1],
+                }
+            )
     random.shuffle(person_pool)
-    selection["person"] = person_pool[:counts["person"]]
+    selection["person"] = person_pool[: counts["person"]]
     print(f"  Found {len(person_pool)} person images, picked {len(selection['person'])}")
 
     # --- Object / Scene / Style images ---
@@ -185,13 +226,15 @@ def pick_diverse_set(s3, total: int = 165) -> dict:
                 continue
             random.shuffle(scenes)
             for img in scenes[:per_cat]:
-                pool.append({
-                    "s3_key": f"{SCENE_PREFIX}{cat}/{img['filename']}",
-                    "group": group,
-                    "category": cat,
-                    "description": img.get("description", cat),
-                    "filename": img["filename"],
-                })
+                pool.append(
+                    {
+                        "s3_key": f"{SCENE_PREFIX}{cat}/{img['filename']}",
+                        "group": group,
+                        "category": cat,
+                        "description": img.get("description", cat),
+                        "filename": img["filename"],
+                    }
+                )
 
         random.shuffle(pool)
         # Deduplicate by category — pick at most 2 per category for diversity
@@ -202,8 +245,10 @@ def pick_diverse_set(s3, total: int = 165) -> dict:
                 diverse_pool.append(item)
                 seen_cats[item["category"]] += 1
 
-        selection[group] = diverse_pool[:counts[group]]
-        print(f"  Scanned {len(categories)} categories, {len(pool)} full scenes, picked {len(selection[group])}")
+        selection[group] = diverse_pool[: counts[group]]
+        print(
+            f"  Scanned {len(categories)} categories, {len(pool)} full scenes, picked {len(selection[group])}"
+        )
 
     return selection
 
@@ -230,7 +275,9 @@ def download_and_resize(s3, s3_key: str, dest_path: Path, max_dim: int = 1024):
 def main():
     parser = argparse.ArgumentParser(description="Pick diverse benchmark images from hub S3")
     parser.add_argument("--total", type=int, default=165, help="Total images to pick")
-    parser.add_argument("--download", action="store_true", help="Actually download (otherwise dry run)")
+    parser.add_argument(
+        "--download", action="store_true", help="Actually download (otherwise dry run)"
+    )
     parser.add_argument("--seed", type=int, default=42, help="Random seed for reproducibility")
     args = parser.parse_args()
 
@@ -291,7 +338,7 @@ def main():
         except Exception as e:
             status = f"✗ {e}"
         if (i + 1) % 20 == 0 or i == 0:
-            print(f"  [{i+1}/{len(all_items)}] {status} {dest.name}")
+            print(f"  [{i + 1}/{len(all_items)}] {status} {dest.name}")
 
     # Update manifest with local paths
     with open(manifest_path, "w") as f:

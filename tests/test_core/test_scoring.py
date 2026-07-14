@@ -1,12 +1,16 @@
 """Tests for core Soft-TIFA scoring math."""
+
 import math
 import random
 
 import pytest
 
 from src.core.scoring import (
-    soft_tifa_am, soft_tifa_gm, probabilities_from_answers,
-    extract_yes_probability, DEFAULT_LOGPROB_FLOOR,
+    soft_tifa_am,
+    soft_tifa_gm,
+    probabilities_from_answers,
+    extract_yes_probability,
+    DEFAULT_LOGPROB_FLOOR,
 )
 
 

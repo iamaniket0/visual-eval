@@ -4,6 +4,7 @@ Pattern: async_poll
 POST /v1/flux-kontext-pro with source image (base64) + prompt → job id
 GET  /v1/get_result?id=... until status == "Ready" → image URL
 """
+
 from __future__ import annotations
 
 import asyncio
@@ -15,8 +16,9 @@ from .base import BaseEditor, register
 class FluxKontextEditor(BaseEditor):
     provider = "bfl"
 
-    async def _do_edit(self, source_image_path: str, instruction: str,
-                       mask_path: str | None = None) -> tuple[bytes, dict]:
+    async def _do_edit(
+        self, source_image_path: str, instruction: str, mask_path: str | None = None
+    ) -> tuple[bytes, dict]:
         headers = {
             "X-Key": self.api_key,
             "Content-Type": "application/json",
