@@ -11,6 +11,7 @@ Usage:
 
 See `src/judge.py` for the three judge backends and the Soft-TIFA rationale.
 """
+
 import argparse
 import asyncio
 import json
@@ -45,7 +46,9 @@ async def main_async(args):
     for mid in model_ids:
         log.info("=== Judging %s with backend=%s ===", mid, backend)
         await judge_model_generations(
-            mid, prompts, cost,
+            mid,
+            prompts,
+            cost,
             judge_model=args.judge,
             backend=backend,
         )
@@ -56,17 +59,25 @@ async def main_async(args):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--models", default="full",
-                    help="Profile name ('sanity', 'full', 'all') or comma-separated model IDs")
-    ap.add_argument("--judge", default=None,
-                    help="Explicit display-name override for the judge identity "
-                         "in JSONL records. Omit to use the backend's real identity "
-                         "(recommended - prevents provenance labels from drifting "
-                         "off the actual backend).")
-    ap.add_argument("--backend", default=None,
-                    choices=[None, "gpt4o_hard", "gpt4o_soft",
-                              "qwen_soft", "qwen_together_soft"],
-                    help="Judge backend override (default: settings.yaml judge.backend)")
+    ap.add_argument(
+        "--models",
+        default="full",
+        help="Profile name ('sanity', 'full', 'all') or comma-separated model IDs",
+    )
+    ap.add_argument(
+        "--judge",
+        default=None,
+        help="Explicit display-name override for the judge identity "
+        "in JSONL records. Omit to use the backend's real identity "
+        "(recommended - prevents provenance labels from drifting "
+        "off the actual backend).",
+    )
+    ap.add_argument(
+        "--backend",
+        default=None,
+        choices=[None, "gpt4o_hard", "gpt4o_soft", "qwen_soft", "qwen_together_soft"],
+        help="Judge backend override (default: settings.yaml judge.backend)",
+    )
     args = ap.parse_args()
     # Previously defaulted to settings.judge.primary ("gpt-4o"), which silently
     # relabeled every Qwen judgment as gpt-4o. Leave unset now so the backend

@@ -1,4 +1,5 @@
 """Tests for T2I prompt loader."""
+
 import json
 
 import pytest

@@ -51,6 +51,7 @@ aggregator and report can cite the exact probability the judge emitted.
 Legacy records without these new fields remain readable - the aggregator
 degrades gracefully by deriving probability from `answer` when it's absent.
 """
+
 from __future__ import annotations
 
 import asyncio
@@ -64,7 +65,14 @@ from pathlib import Path
 from typing import Any, Iterable
 
 from src.core.utils import CostTracker, append_jsonl, get_api_key, get_logger, read_jsonl
-from src.core.scoring import extract_yes_probability, DEFAULT_LOGPROB_FLOOR, YES_TOKEN_VARIANTS, NO_TOKEN_VARIANTS, soft_tifa_am, soft_tifa_gm
+from src.core.scoring import (
+    extract_yes_probability,
+    DEFAULT_LOGPROB_FLOOR,
+    YES_TOKEN_VARIANTS,
+    NO_TOKEN_VARIANTS,
+    soft_tifa_am,
+    soft_tifa_gm,
+)
 from src.t2i import OUTPUTS_DIR, load_settings
 
 log = get_logger("judge")
@@ -116,6 +124,7 @@ SOFT_JUDGE_USER_TEMPLATE = (
 # Dataclasses
 # ---------------------------------------------------------------------------
 
+
 @dataclass
 class JudgeResult:
     """Single-image judgment record.
@@ -124,6 +133,7 @@ class JudgeResult:
     runs may lack `score_am` / `score_gm` / per-atom `probability` - the
     aggregator is written to fall back on `score` + `answer` in that case.
     """
+
     prompt_id: str
     model: str
     image_path: str | None
@@ -131,7 +141,7 @@ class JudgeResult:
     # Each atom carries: q_id, question, type, answer ("yes"/"no"),
     # probability (float in [0, 1]; 1.0 or 0.0 under hard judge).
     answers: list[dict[str, Any]]
-    score: float          # AM of hard verdicts == score_am for soft judge
+    score: float  # AM of hard verdicts == score_am for soft judge
     score_am: float = 0.0
     score_gm: float = 0.0
     cost_usd: float = 0.0
@@ -164,9 +174,7 @@ OPENROUTER_HEADERS = {
 
 
 def _format_questions(questions: list[dict[str, str]]) -> str:
-    return "\n".join(
-        f'  - {q["q_id"]}: {q["question"]}' for q in questions
-    )
+    return "\n".join(f"  - {q['q_id']}: {q['question']}" for q in questions)
 
 
 def _extract_json(text: str) -> dict[str, Any]:
@@ -197,6 +205,7 @@ _NO_TOKEN_VARIANTS = NO_TOKEN_VARIANTS
 # Base judge client (shared routing / auth / client-bootstrap logic)
 # ---------------------------------------------------------------------------
 
+
 class _BaseOpenAICompatClient:
     """Shared OpenAI-compatible client setup. Concrete judges inherit.
 
@@ -206,8 +215,7 @@ class _BaseOpenAICompatClient:
     on first use.
     """
 
-    def __init__(self, model: str, cost_tracker: CostTracker | None,
-                 concurrency: int):
+    def __init__(self, model: str, cost_tracker: CostTracker | None, concurrency: int):
         self.model = model
         self.cost_tracker = cost_tracker
         self.semaphore = asyncio.Semaphore(concurrency)
@@ -222,9 +230,11 @@ class _BaseOpenAICompatClient:
         if self._client is not None:
             return
         if not self.api_key:
-            raise RuntimeError(f"{self._key_env} not set; cannot run judge "
-                               f"(backend={type(self).__name__})")
+            raise RuntimeError(
+                f"{self._key_env} not set; cannot run judge (backend={type(self).__name__})"
+            )
         from openai import AsyncOpenAI
+
         kwargs: dict[str, Any] = {"api_key": self.api_key}
         if self._base_url:
             kwargs["base_url"] = self._base_url
@@ -240,6 +250,7 @@ class _BaseOpenAICompatClient:
 # GPT-4o HARD judge (legacy TIFA behaviour preserved verbatim)
 # ---------------------------------------------------------------------------
 
+
 class GPT4oHardJudge(_BaseOpenAICompatClient):
     """Original hard-TIFA behaviour: one call per image, JSON yes/no output.
 
@@ -250,8 +261,9 @@ class GPT4oHardJudge(_BaseOpenAICompatClient):
 
     backend_name = "gpt4o_hard"
 
-    def __init__(self, model: str = "gpt-4o", cost_tracker: CostTracker | None = None,
-                 concurrency: int = 16):
+    def __init__(
+        self, model: str = "gpt-4o", cost_tracker: CostTracker | None = None, concurrency: int = 16
+    ):
         super().__init__(model, cost_tracker, concurrency)
         settings = load_settings()
         self.routing = settings.get("api_routing", {}).get("judge", "openai")
@@ -270,20 +282,38 @@ class GPT4oHardJudge(_BaseOpenAICompatClient):
             self._extra_headers = None
 
         self.cost_per_judgment = settings.get("judge", {}).get(
-            "cost_per_judgment_estimate", 0.004,
+            "cost_per_judgment_estimate",
+            0.004,
         )
 
-    async def judge_image(self, prompt_id: str, model: str, prompt_text: str,
-                           image_path: str, questions: list[dict[str, str]],
-                           seed: int = 0) -> JudgeResult:
+    async def judge_image(
+        self,
+        prompt_id: str,
+        model: str,
+        prompt_text: str,
+        image_path: str,
+        questions: list[dict[str, str]],
+        seed: int = 0,
+    ) -> JudgeResult:
         if not image_path or not Path(image_path).exists():
             return JudgeResult(
-                prompt_id=prompt_id, model=model, image_path=image_path,
+                prompt_id=prompt_id,
+                model=model,
+                image_path=image_path,
                 judge_model=self.model,
-                answers=[{"q_id": q["q_id"], "answer": "no",
-                           "probability": 0.0, "type": q.get("type", "")}
-                          for q in questions],
-                score=0.0, score_am=0.0, score_gm=0.0, seed=seed,
+                answers=[
+                    {
+                        "q_id": q["q_id"],
+                        "answer": "no",
+                        "probability": 0.0,
+                        "type": q.get("type", ""),
+                    }
+                    for q in questions
+                ],
+                score=0.0,
+                score_am=0.0,
+                score_gm=0.0,
+                seed=seed,
                 error="image_missing_or_filtered",
             )
 
@@ -295,9 +325,15 @@ class GPT4oHardJudge(_BaseOpenAICompatClient):
 
         if parsed is None:
             return JudgeResult(
-                prompt_id=prompt_id, model=model, image_path=image_path,
-                judge_model=self.model, answers=[],
-                score=0.0, score_am=0.0, score_gm=0.0, seed=seed,
+                prompt_id=prompt_id,
+                model=model,
+                image_path=image_path,
+                judge_model=self.model,
+                answers=[],
+                score=0.0,
+                score_am=0.0,
+                score_gm=0.0,
+                seed=seed,
                 error=f"JUDGE_ERROR: {raw_err}",
             )
 
@@ -307,13 +343,15 @@ class GPT4oHardJudge(_BaseOpenAICompatClient):
             qid = a.get("q_id")
             ans_raw = str(a.get("answer", "")).strip().lower()
             ans = "yes" if ans_raw.startswith("y") else "no"
-            answers.append({
-                "q_id": qid,
-                "question": q_by_id.get(qid, {}).get("question", ""),
-                "type": q_by_id.get(qid, {}).get("type", ""),
-                "answer": ans,
-                "probability": 1.0 if ans == "yes" else 0.0,
-            })
+            answers.append(
+                {
+                    "q_id": qid,
+                    "question": q_by_id.get(qid, {}).get("question", ""),
+                    "type": q_by_id.get(qid, {}).get("type", ""),
+                    "answer": ans,
+                    "probability": 1.0 if ans == "yes" else 0.0,
+                }
+            )
 
         score_am = _am([a["probability"] for a in answers])
         score_gm = _gm([a["probability"] for a in answers], -10.0)
@@ -322,25 +360,28 @@ class GPT4oHardJudge(_BaseOpenAICompatClient):
             self.cost_tracker.add(self.cost_per_judgment, model=model, stage="judge")
 
         return JudgeResult(
-            prompt_id=prompt_id, model=model, image_path=image_path,
-            judge_model=self.model, answers=answers,
+            prompt_id=prompt_id,
+            model=model,
+            image_path=image_path,
+            judge_model=self.model,
+            answers=answers,
             score=round(score_am, 4),
             score_am=round(score_am, 4),
             score_gm=round(score_gm, 4),
-            cost_usd=self.cost_per_judgment, seed=seed,
+            cost_usd=self.cost_per_judgment,
+            seed=seed,
         )
 
-    async def _call_with_retry(self, prompt_text: str,
-                                questions: list[dict[str, str]],
-                                img_b64: str) -> tuple[dict | None, str | None]:
+    async def _call_with_retry(
+        self, prompt_text: str, questions: list[dict[str, str]], img_b64: str
+    ) -> tuple[dict | None, str | None]:
         user_msg = JUDGE_USER_TEMPLATE.format(
             prompt_text=prompt_text,
             questions_block=_format_questions(questions),
         )
         content = [
             {"type": "text", "text": user_msg},
-            {"type": "image_url",
-             "image_url": {"url": f"data:image/png;base64,{img_b64}"}},
+            {"type": "image_url", "image_url": {"url": f"data:image/png;base64,{img_b64}"}},
         ]
 
         last_err = None
@@ -377,31 +418,51 @@ JudgeClient = GPT4oHardJudge
 # Soft-TIFA shared base (per-atom logprobs extraction)
 # ---------------------------------------------------------------------------
 
+
 class _BaseSoftJudge(_BaseOpenAICompatClient):
     """Common Soft-TIFA machinery: per-atom calls, logprobs -> P(Yes), AM+GM."""
 
     backend_name = "soft"  # overridden by concrete subclasses
 
-    def __init__(self, model: str, cost_tracker: CostTracker | None,
-                 concurrency: int, logprob_floor: float):
+    def __init__(
+        self, model: str, cost_tracker: CostTracker | None, concurrency: int, logprob_floor: float
+    ):
         super().__init__(model, cost_tracker, concurrency)
         self.logprob_floor = float(logprob_floor)
         settings = load_settings()
         self.cost_per_judgment = settings.get("judge", {}).get(
-            "cost_per_judgment_estimate", 0.004,
+            "cost_per_judgment_estimate",
+            0.004,
         )
 
-    async def judge_image(self, prompt_id: str, model: str, prompt_text: str,
-                           image_path: str, questions: list[dict[str, str]],
-                           seed: int = 0) -> JudgeResult:
+    async def judge_image(
+        self,
+        prompt_id: str,
+        model: str,
+        prompt_text: str,
+        image_path: str,
+        questions: list[dict[str, str]],
+        seed: int = 0,
+    ) -> JudgeResult:
         if not image_path or not Path(image_path).exists():
             return JudgeResult(
-                prompt_id=prompt_id, model=model, image_path=image_path,
+                prompt_id=prompt_id,
+                model=model,
+                image_path=image_path,
                 judge_model=self.model,
-                answers=[{"q_id": q["q_id"], "answer": "no",
-                           "probability": 0.0, "type": q.get("type", "")}
-                          for q in questions],
-                score=0.0, score_am=0.0, score_gm=0.0, seed=seed,
+                answers=[
+                    {
+                        "q_id": q["q_id"],
+                        "answer": "no",
+                        "probability": 0.0,
+                        "type": q.get("type", ""),
+                    }
+                    for q in questions
+                ],
+                score=0.0,
+                score_am=0.0,
+                score_gm=0.0,
+                seed=seed,
                 error="image_missing_or_filtered",
             )
 
@@ -412,12 +473,10 @@ class _BaseSoftJudge(_BaseOpenAICompatClient):
         # first (and only - max_tokens=1) output token, from which we read
         # P("Yes"). We gather the N calls concurrently subject to the shared
         # semaphore so a single-prompt judgment takes ~= 1 call wall-clock.
-        coros = [
-            self._score_atom(prompt_text, q, img_b64)
-            for q in questions
-        ]
+        coros = [self._score_atom(prompt_text, q, img_b64) for q in questions]
         atom_results: list[tuple[float, str | None]] = await asyncio.gather(
-            *coros, return_exceptions=False,
+            *coros,
+            return_exceptions=False,
         )
 
         answers: list[dict[str, Any]] = []
@@ -435,13 +494,15 @@ class _BaseSoftJudge(_BaseOpenAICompatClient):
                 # math still produces a finite number - but flag the error.
                 p = math.exp(self.logprob_floor)
             hard = "yes" if p >= 0.5 else "no"
-            answers.append({
-                "q_id": q["q_id"],
-                "question": q.get("question", ""),
-                "type": q.get("type", ""),
-                "answer": hard,
-                "probability": round(float(p), 6),
-            })
+            answers.append(
+                {
+                    "q_id": q["q_id"],
+                    "question": q.get("question", ""),
+                    "type": q.get("type", ""),
+                    "answer": hard,
+                    "probability": round(float(p), 6),
+                }
+            )
             probs.append(float(p))
 
         score_am = _am(probs)
@@ -451,12 +512,16 @@ class _BaseSoftJudge(_BaseOpenAICompatClient):
             # Soft-TIFA fires one call per atom, so cost scales with atom count.
             self.cost_tracker.add(
                 self.cost_per_judgment * max(1, len(questions)),
-                model=model, stage="judge",
+                model=model,
+                stage="judge",
             )
 
         return JudgeResult(
-            prompt_id=prompt_id, model=model, image_path=image_path,
-            judge_model=self.model, answers=answers,
+            prompt_id=prompt_id,
+            model=model,
+            image_path=image_path,
+            judge_model=self.model,
+            answers=answers,
             score=round(score_am, 4),
             score_am=round(score_am, 4),
             score_gm=round(score_gm, 4),
@@ -484,16 +549,17 @@ class _BaseSoftJudge(_BaseOpenAICompatClient):
         """
         return None
 
-    async def _score_atom(self, prompt_text: str, question: dict[str, str],
-                           img_b64: str) -> tuple[float, str | None]:
+    async def _score_atom(
+        self, prompt_text: str, question: dict[str, str], img_b64: str
+    ) -> tuple[float, str | None]:
         """Return (probability_of_Yes, error_or_None) for a single atom."""
         user_text = SOFT_JUDGE_USER_TEMPLATE.format(
-            prompt_text=prompt_text, question=question["question"],
+            prompt_text=prompt_text,
+            question=question["question"],
         )
         content = [
             {"type": "text", "text": user_text},
-            {"type": "image_url",
-             "image_url": {"url": f"data:image/png;base64,{img_b64}"}},
+            {"type": "image_url", "image_url": {"url": f"data:image/png;base64,{img_b64}"}},
         ]
 
         async with self.semaphore:
@@ -541,6 +607,7 @@ class _BaseSoftJudge(_BaseOpenAICompatClient):
 # GPT-4o SOFT judge (uses OpenRouter Azure/OpenAI providers - logprobs work)
 # ---------------------------------------------------------------------------
 
+
 class GPT4oSoftJudge(_BaseSoftJudge):
     """Soft-TIFA via gpt-4o through OpenRouter.
 
@@ -559,8 +626,13 @@ class GPT4oSoftJudge(_BaseSoftJudge):
 
     backend_name = "gpt4o_soft"
 
-    def __init__(self, model: str = "gpt-4o", cost_tracker: CostTracker | None = None,
-                 concurrency: int = 16, logprob_floor: float = -10.0):
+    def __init__(
+        self,
+        model: str = "gpt-4o",
+        cost_tracker: CostTracker | None = None,
+        concurrency: int = 16,
+        logprob_floor: float = -10.0,
+    ):
         super().__init__(model, cost_tracker, concurrency, logprob_floor)
         settings = load_settings()
         self.routing = settings.get("api_routing", {}).get("judge", "openai")
@@ -581,6 +653,7 @@ class GPT4oSoftJudge(_BaseSoftJudge):
 # ---------------------------------------------------------------------------
 # Qwen SOFT judge (preferred methodology; blocked by OpenRouter as of now)
 # ---------------------------------------------------------------------------
+
 
 class TogetherQwen35SoftJudge(_BaseSoftJudge):
     """Soft-TIFA via Qwen3.5 VL models on Together AI (serverless).
@@ -611,10 +684,13 @@ class TogetherQwen35SoftJudge(_BaseSoftJudge):
 
     backend_name = "qwen_together_soft"
 
-    def __init__(self, model: str = "Qwen/Qwen3.5-397B-A17B",
-                 cost_tracker: CostTracker | None = None,
-                 concurrency: int = 8,
-                 logprob_floor: float = -10.0):
+    def __init__(
+        self,
+        model: str = "Qwen/Qwen3.5-397B-A17B",
+        cost_tracker: CostTracker | None = None,
+        concurrency: int = 8,
+        logprob_floor: float = -10.0,
+    ):
         super().__init__(model, cost_tracker, concurrency, logprob_floor)
         self.api_key = get_api_key("TOGETHER_API_KEY")
         self._base_url = "https://api.together.xyz/v1"
@@ -657,10 +733,13 @@ class QwenSoftJudge(_BaseSoftJudge):
 
     backend_name = "qwen_soft"
 
-    def __init__(self, model: str = "qwen/qwen3-vl-235b-a22b-instruct",
-                 cost_tracker: CostTracker | None = None,
-                 concurrency: int = 8,  # Qwen VL endpoints tend to rate-limit faster
-                 logprob_floor: float = -10.0):
+    def __init__(
+        self,
+        model: str = "qwen/qwen3-vl-235b-a22b-instruct",
+        cost_tracker: CostTracker | None = None,
+        concurrency: int = 8,  # Qwen VL endpoints tend to rate-limit faster
+        logprob_floor: float = -10.0,
+    ):
         super().__init__(model, cost_tracker, concurrency, logprob_floor)
         self.api_key = get_api_key("OPENROUTER_API_KEY")
         self._base_url = OPENROUTER_BASE_URL
@@ -674,9 +753,12 @@ class QwenSoftJudge(_BaseSoftJudge):
 # Backend factory (reads settings.yaml -> judge.backend)
 # ---------------------------------------------------------------------------
 
-def judge_client_factory(cost_tracker: CostTracker | None = None,
-                          concurrency: int = 16,
-                          override_backend: str | None = None):
+
+def judge_client_factory(
+    cost_tracker: CostTracker | None = None,
+    concurrency: int = 16,
+    override_backend: str | None = None,
+):
     """Return the judge client configured in `config/settings.yaml`.
 
     Settings shape:
@@ -727,10 +809,14 @@ def judge_client_factory(cost_tracker: CostTracker | None = None,
 # CLI entry point helper (dispatch over all generated images for one model)
 # ---------------------------------------------------------------------------
 
-async def judge_model_generations(model_id: str, prompts_by_id: dict[str, dict],
-                                    cost_tracker: CostTracker,
-                                    judge_model: str | None = None,
-                                    backend: str | None = None) -> Path:
+
+async def judge_model_generations(
+    model_id: str,
+    prompts_by_id: dict[str, dict],
+    cost_tracker: CostTracker,
+    judge_model: str | None = None,
+    backend: str | None = None,
+) -> Path:
     """Judge every successful generation for a given model.
 
     Reads outputs/metadata/generation_log.jsonl to find this model's outputs,
@@ -758,19 +844,21 @@ async def judge_model_generations(model_id: str, prompts_by_id: dict[str, dict],
         prompt = prompts_by_id.get(rec["prompt_id"])
         if not prompt:
             continue
-        tasks.append(judge.judge_image(
-            prompt_id=rec["prompt_id"],
-            model=model_id,
-            prompt_text=prompt["prompt_text"],
-            image_path=rec.get("image_path") or "",
-            questions=prompt["atomic_questions"],
-            seed=int(rec.get("seed") or 0),
-        ))
+        tasks.append(
+            judge.judge_image(
+                prompt_id=rec["prompt_id"],
+                model=model_id,
+                prompt_text=prompt["prompt_text"],
+                image_path=rec.get("image_path") or "",
+                questions=prompt["atomic_questions"],
+                seed=int(rec.get("seed") or 0),
+            )
+        )
 
     from tqdm.asyncio import tqdm_asyncio
+
     results = await tqdm_asyncio.gather(*tasks, desc=f"judging {model_id}")
     for r in results:
         append_jsonl(out_path, r.to_dict())
-    log.info("Wrote %d judgments to %s (backend=%s)",
-             len(results), out_path, type(judge).__name__)
+    log.info("Wrote %d judgments to %s (backend=%s)", len(results), out_path, type(judge).__name__)
     return out_path

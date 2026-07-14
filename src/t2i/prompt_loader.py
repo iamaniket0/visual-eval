@@ -16,6 +16,7 @@ Prompt schema (stored as JSON):
       ]
     }
 """
+
 from __future__ import annotations
 
 import json
@@ -40,6 +41,7 @@ SUB_CATEGORIES = ["numeracy", "complex_compositions", "spatial_3d"]
 # Layer 1: T2I-CompBench++ extraction
 # ---------------------------------------------------------------------------
 
+
 def ensure_compbench_cloned() -> Path:
     """Clone T2I-CompBench if not already present locally."""
     if T2I_COMPBENCH_LOCAL.exists():
@@ -49,7 +51,9 @@ def ensure_compbench_cloned() -> Path:
     try:
         subprocess.run(
             ["git", "clone", "--depth", "1", T2I_COMPBENCH_REPO, str(T2I_COMPBENCH_LOCAL)],
-            check=True, capture_output=True, text=True,
+            check=True,
+            capture_output=True,
+            text=True,
         )
     except subprocess.CalledProcessError as e:
         log.error("Failed to clone T2I-CompBench: %s", e.stderr)
@@ -120,8 +124,8 @@ def stratified_sample(prompts: list[str], n: int, seed: int = 42) -> list[str]:
     by_len = sorted(prompts, key=len)
     tercile = len(by_len) // 3
     short = by_len[:tercile]
-    med = by_len[tercile:2 * tercile]
-    long = by_len[2 * tercile:]
+    med = by_len[tercile : 2 * tercile]
+    long = by_len[2 * tercile :]
     per_bucket = n // 3
     remainder = n - per_bucket * 3
     samples = (
@@ -156,7 +160,9 @@ Return ONLY JSON in this exact shape:
   ]
 }"""
 
-DECOMPOSITION_USER_TEMPLATE = 'Prompt: "{prompt}"\nSub-category: {sub_category}\n\nDecompose into atomic binary questions.'
+DECOMPOSITION_USER_TEMPLATE = (
+    'Prompt: "{prompt}"\nSub-category: {sub_category}\n\nDecompose into atomic binary questions.'
+)
 
 
 def _extract_json(text: str) -> dict[str, Any]:
@@ -177,15 +183,18 @@ OPENROUTER_HEADERS = {
 }
 
 
-def _decompose_via_openrouter(model: str, prompt_text: str,
-                               sub_category: str) -> list[dict[str, Any]]:
+def _decompose_via_openrouter(
+    model: str, prompt_text: str, sub_category: str
+) -> list[dict[str, Any]]:
     """Call an Anthropic model through OpenRouter's OpenAI-compatible API."""
     api_key = get_api_key("OPENROUTER_API_KEY")
     if not api_key:
-        log.warning("OPENROUTER_API_KEY not set; using placeholder decomposition for: %s",
-                    prompt_text[:60])
+        log.warning(
+            "OPENROUTER_API_KEY not set; using placeholder decomposition for: %s", prompt_text[:60]
+        )
         return []
     from openai import OpenAI
+
     client = OpenAI(api_key=api_key, base_url=OPENROUTER_BASE_URL)
     or_model = model if "/" in model else f"anthropic/{model}"
     resp = client.chat.completions.create(
@@ -195,37 +204,46 @@ def _decompose_via_openrouter(model: str, prompt_text: str,
         extra_headers=OPENROUTER_HEADERS,
         messages=[
             {"role": "system", "content": DECOMPOSITION_SYSTEM},
-            {"role": "user",
-             "content": DECOMPOSITION_USER_TEMPLATE.format(
-                 prompt=prompt_text, sub_category=sub_category,
-             )},
+            {
+                "role": "user",
+                "content": DECOMPOSITION_USER_TEMPLATE.format(
+                    prompt=prompt_text,
+                    sub_category=sub_category,
+                ),
+            },
         ],
     )
     raw = resp.choices[0].message.content or ""
     return _extract_json(raw).get("questions", [])
 
 
-def _decompose_via_anthropic(model: str, prompt_text: str,
-                              sub_category: str) -> list[dict[str, Any]]:
+def _decompose_via_anthropic(
+    model: str, prompt_text: str, sub_category: str
+) -> list[dict[str, Any]]:
     """Call Claude directly via the native Anthropic SDK."""
     api_key = get_api_key("ANTHROPIC_API_KEY")
     if not api_key:
-        log.warning("ANTHROPIC_API_KEY not set; using placeholder decomposition for: %s",
-                    prompt_text[:60])
+        log.warning(
+            "ANTHROPIC_API_KEY not set; using placeholder decomposition for: %s", prompt_text[:60]
+        )
         return []
     import anthropic
+
     client = anthropic.Anthropic(api_key=api_key)
     resp = client.messages.create(
         model=model,
         max_tokens=800,
         temperature=0.0,
         system=DECOMPOSITION_SYSTEM,
-        messages=[{
-            "role": "user",
-            "content": DECOMPOSITION_USER_TEMPLATE.format(
-                prompt=prompt_text, sub_category=sub_category,
-            ),
-        }],
+        messages=[
+            {
+                "role": "user",
+                "content": DECOMPOSITION_USER_TEMPLATE.format(
+                    prompt=prompt_text,
+                    sub_category=sub_category,
+                ),
+            }
+        ],
     )
     raw = resp.content[0].text
     return _extract_json(raw).get("questions", [])
@@ -251,8 +269,12 @@ def generate_decomposition(prompt_text: str, sub_category: str) -> list[dict[str
         else:
             questions = _decompose_via_anthropic(model, prompt_text, sub_category)
     except Exception as e:
-        log.warning("Decomposition (%s) failed for '%s': %s. Using placeholder.",
-                    routing, prompt_text[:60], e)
+        log.warning(
+            "Decomposition (%s) failed for '%s': %s. Using placeholder.",
+            routing,
+            prompt_text[:60],
+            e,
+        )
         return _placeholder_decomposition(prompt_text)
 
     if not questions:
@@ -260,26 +282,31 @@ def generate_decomposition(prompt_text: str, sub_category: str) -> list[dict[str
 
     out = []
     for i, q in enumerate(questions, start=1):
-        out.append({
-            "q_id": f"q{i}",
-            "question": q["question"],
-            "type": q.get("type", "presence"),
-        })
+        out.append(
+            {
+                "q_id": f"q{i}",
+                "question": q["question"],
+                "type": q.get("type", "presence"),
+            }
+        )
     return out
 
 
 def _placeholder_decomposition(prompt_text: str) -> list[dict[str, str]]:
     """Lightweight fallback used only when Claude is unavailable."""
     return [
-        {"q_id": "q1",
-         "question": f'Does the image match the prompt: "{prompt_text}"?',
-         "type": "presence"},
+        {
+            "q_id": "q1",
+            "question": f'Does the image match the prompt: "{prompt_text}"?',
+            "type": "presence",
+        },
     ]
 
 
 # ---------------------------------------------------------------------------
 # Layer 2: proprietary prompts
 # ---------------------------------------------------------------------------
+
 
 def load_layer2_proprietary() -> list[dict[str, Any]]:
     path = PROMPTS_DIR / "layer2_proprietary.json"
@@ -293,6 +320,7 @@ def load_layer2_proprietary() -> list[dict[str, Any]]:
 # ---------------------------------------------------------------------------
 # Orchestration
 # ---------------------------------------------------------------------------
+
 
 def _prompt_id(layer: int, sub_category: str, idx: int) -> str:
     code = {
@@ -322,14 +350,16 @@ def build_prompt_set(skip_decomposition: bool = False) -> list[dict[str, Any]]:
         for i, text in enumerate(sampled, start=1):
             pid = _prompt_id(1, sub, i)
             questions = [] if skip_decomposition else generate_decomposition(text, sub)
-            all_prompts.append({
-                "prompt_id": pid,
-                "layer": 1,
-                "sub_category": sub,
-                "difficulty": "auto",
-                "prompt_text": text,
-                "atomic_questions": questions,
-            })
+            all_prompts.append(
+                {
+                    "prompt_id": pid,
+                    "layer": 1,
+                    "sub_category": sub,
+                    "difficulty": "auto",
+                    "prompt_text": text,
+                    "atomic_questions": questions,
+                }
+            )
 
     # Layer 2
     l2 = load_layer2_proprietary()
@@ -337,10 +367,12 @@ def build_prompt_set(skip_decomposition: bool = False) -> list[dict[str, Any]]:
         # Trust any decomposition that came with the Layer 2 file.
         all_prompts.append(item)
 
-    log.info("Built prompt set: %d total (%d Layer 1, %d Layer 2)",
-             len(all_prompts),
-             sum(1 for p in all_prompts if p["layer"] == 1),
-             sum(1 for p in all_prompts if p["layer"] == 2))
+    log.info(
+        "Built prompt set: %d total (%d Layer 1, %d Layer 2)",
+        len(all_prompts),
+        sum(1 for p in all_prompts if p["layer"] == 1),
+        sum(1 for p in all_prompts if p["layer"] == 2),
+    )
     return all_prompts
 
 

@@ -3,6 +3,7 @@
 Pattern: sync
   POST /v1beta/models/{model}:predict?key=... -> { predictions: [{ bytesBase64Encoded }] }
 """
+
 from __future__ import annotations
 
 from .base import BaseGenerator, _ContentFiltered, looks_like_filter, register

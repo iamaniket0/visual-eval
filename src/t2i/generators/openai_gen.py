@@ -21,6 +21,7 @@ endpoint was actually queried is captured in raw_metadata and surfaced
 via `config.model_label_{direct,openrouter}` so the report can label it
 honestly.
 """
+
 from __future__ import annotations
 
 from typing import Any

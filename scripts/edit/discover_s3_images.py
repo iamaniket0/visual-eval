@@ -3,6 +3,7 @@
 Scan benchmark-source-images S3 bucket, discover all top-level prefixes,
 and report what image categories exist beyond adobe-human-image-editing.
 """
+
 import boto3
 from collections import Counter
 
@@ -13,6 +14,7 @@ SECRET_KEY = "K005M/xHme7keBbhzSVl2SqM2LmUHwc"
 REGION = "us-east-005"
 
 IMAGE_EXTS = {".jpg", ".jpeg", ".png", ".webp", ".gif"}
+
 
 def main():
     s3 = boto3.client(
@@ -49,7 +51,7 @@ def main():
                     if len(sample_keys) < 3:
                         sample_keys.append(key)
                 # Track sub-prefixes (second level)
-                remainder = key[len(prefix):]
+                remainder = key[len(prefix) :]
                 if "/" in remainder:
                     sub_prefixes.add(remainder.split("/")[0])
             break  # only first page (500 keys) for speed
@@ -64,8 +66,14 @@ def main():
 
     # Also check for accepted/rejected structure
     print("\n=== Checking known prefixes with accepted/ subdirs ===\n")
-    known = [p for p in prefixes if any(kw in p.lower() for kw in
-             ["adobe", "edit", "image", "photo", "product", "object", "scene"])]
+    known = [
+        p
+        for p in prefixes
+        if any(
+            kw in p.lower()
+            for kw in ["adobe", "edit", "image", "photo", "product", "object", "scene"]
+        )
+    ]
 
     if not known:
         print("  No obvious image-editing prefixes found. Listing all with images:")
@@ -73,17 +81,14 @@ def main():
 
     for prefix in known:
         # Check for accepted/ subdir
-        resp2 = s3.list_objects_v2(
-            Bucket=BUCKET, Prefix=f"{prefix}accepted/", MaxKeys=10
-        )
+        resp2 = s3.list_objects_v2(Bucket=BUCKET, Prefix=f"{prefix}accepted/", MaxKeys=10)
         n = resp2.get("KeyCount", 0)
         print(f"  {prefix}accepted/ → {n} objects (sampled)")
 
-        resp3 = s3.list_objects_v2(
-            Bucket=BUCKET, Prefix=f"{prefix}rejected/", MaxKeys=10
-        )
+        resp3 = s3.list_objects_v2(Bucket=BUCKET, Prefix=f"{prefix}rejected/", MaxKeys=10)
         n2 = resp3.get("KeyCount", 0)
         print(f"  {prefix}rejected/ → {n2} objects (sampled)")
+
 
 if __name__ == "__main__":
     main()

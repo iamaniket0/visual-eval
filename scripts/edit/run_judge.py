@@ -9,6 +9,7 @@ Usage:
 The judge receives BOTH the source image AND the edited image to evaluate
 instruction following, visual consistency, and detail preservation.
 """
+
 import argparse
 import asyncio
 import json
@@ -48,11 +49,13 @@ async def main_async(args):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--models", default="full",
-                    help="Profile name or comma-separated model IDs")
-    ap.add_argument("--backend", default=None,
-                    choices=[None, "qwen_together_soft"],
-                    help="Judge backend override")
+    ap.add_argument("--models", default="full", help="Profile name or comma-separated model IDs")
+    ap.add_argument(
+        "--backend",
+        default=None,
+        choices=[None, "qwen_together_soft"],
+        help="Judge backend override",
+    )
     args = ap.parse_args()
     asyncio.run(main_async(args))
 

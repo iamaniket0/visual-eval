@@ -14,6 +14,7 @@ Usage:
     python scripts/validate_prompt_difficulty.py
     python scripts/validate_prompt_difficulty.py --fix   # auto-reclassify mismatches
 """
+
 from __future__ import annotations
 
 import argparse
@@ -27,13 +28,43 @@ ROOT = Path(__file__).resolve().parent.parent
 TAXONOMY_PATH = ROOT / "config" / "prompt_taxonomy.yaml"
 
 VALID_DIMENSIONS = {"instruction_following", "visual_consistency", "detail_preservation"}
-VALID_ATOM_TYPES = {"instruction", "preservation", "identity", "structure", "quality", "lighting", "placement"}
+VALID_ATOM_TYPES = {
+    "instruction",
+    "preservation",
+    "identity",
+    "structure",
+    "quality",
+    "lighting",
+    "placement",
+}
 
 COMPLEXITY_MARKERS = {
-    "spatial": ["left", "right", "behind", "in front", "above", "below", "next to",
-                "opposite side", "viewpoint", "perspective", "parallax", "vanishing point"],
-    "physics": ["shadow", "reflection", "refraction", "caustic", "mirror", "chrome",
-                "transparent", "water flow", "motion blur", "wet"],
+    "spatial": [
+        "left",
+        "right",
+        "behind",
+        "in front",
+        "above",
+        "below",
+        "next to",
+        "opposite side",
+        "viewpoint",
+        "perspective",
+        "parallax",
+        "vanishing point",
+    ],
+    "physics": [
+        "shadow",
+        "reflection",
+        "refraction",
+        "caustic",
+        "mirror",
+        "chrome",
+        "transparent",
+        "water flow",
+        "motion blur",
+        "wet",
+    ],
     "multi_object": ["all ", "every ", "each ", "both ", "everyone"],
     "compound": [" and ", " while ", " with correct", " matching the", " consistent with"],
 }
@@ -94,23 +125,28 @@ def validate_prompt(prompt: dict, diff_config: dict) -> list[str]:
         if has_complexity(instr, "spatial") and "flip" not in instr.lower():
             # Allow simple directional mentions like "shadow under"
             spatial_words = [m for m in COMPLEXITY_MARKERS["spatial"] if m in instr.lower()]
-            non_trivial = [w for w in spatial_words if w not in ("left", "right", "behind", "above", "below")]
+            non_trivial = [
+                w for w in spatial_words if w not in ("left", "right", "behind", "above", "below")
+            ]
             if non_trivial:
                 warnings.append(f"{pid}: EASY but has spatial complexity markers: {non_trivial}")
         if has_complexity(instr, "physics"):
             # Allow simple shadow/reflection additions — they ARE easy (C1)
             physics_words = [m for m in COMPLEXITY_MARKERS["physics"] if m in instr.lower()]
-            is_simple_shadow = (len(physics_words) == 1 and physics_words[0] == "shadow"
-                                and atomic_ops <= 2)
+            is_simple_shadow = (
+                len(physics_words) == 1 and physics_words[0] == "shadow" and atomic_ops <= 2
+            )
             if not is_simple_shadow:
                 warnings.append(f"{pid}: EASY but has physics complexity markers: {physics_words}")
 
     # Hard prompts should have complexity
     if diff == "hard":
-        has_any = (has_complexity(instr, "spatial") or
-                   has_complexity(instr, "physics") or
-                   has_complexity(instr, "multi_object") or
-                   has_complexity(instr, "compound"))
+        has_any = (
+            has_complexity(instr, "spatial")
+            or has_complexity(instr, "physics")
+            or has_complexity(instr, "multi_object")
+            or has_complexity(instr, "compound")
+        )
         if not has_any:
             warnings.append(f"{pid}: HARD but no spatial/physics/multi-object/compound markers")
 
@@ -160,9 +196,9 @@ def main(args):
             continue
 
         prompts = json.loads(path.read_text())
-        print(f"\n{'='*60}")
+        print(f"\n{'=' * 60}")
         print(f"Validating {fname}: {len(prompts)} prompts")
-        print(f"{'='*60}")
+        print(f"{'=' * 60}")
 
         file_warnings = []
         for p in prompts:
@@ -186,9 +222,9 @@ def main(args):
         all_warnings.extend(file_warnings)
 
     # Category-difficulty coverage matrix
-    print(f"\n{'='*60}")
+    print(f"\n{'=' * 60}")
     print("Coverage Matrix (category × difficulty)")
-    print(f"{'='*60}")
+    print(f"{'=' * 60}")
 
     all_prompts = []
     for fname in ["prompts/layer1_gold.json", "prompts/layer2_proprietary.json"]:
@@ -228,25 +264,30 @@ def main(args):
     print(f"{'TOTAL':<20} {totals['easy']:>6} {totals['medium']:>8} {totals['hard']:>6} {grand:>7}")
 
     # Image group coverage
-    print(f"\n{'='*60}")
+    print(f"\n{'=' * 60}")
     print("Image Group Coverage")
-    print(f"{'='*60}")
+    print(f"{'=' * 60}")
     group_dist = {}
     for p in all_prompts:
         si = p.get("source_image", "")
-        if "/person/" in si: g = "person"
-        elif "/object/" in si: g = "object"
-        elif "/scene/" in si: g = "scene"
-        elif "/style/" in si: g = "style"
-        else: g = "unknown"
+        if "/person/" in si:
+            g = "person"
+        elif "/object/" in si:
+            g = "object"
+        elif "/scene/" in si:
+            g = "scene"
+        elif "/style/" in si:
+            g = "style"
+        else:
+            g = "unknown"
         group_dist[g] = group_dist.get(g, 0) + 1
     for g in sorted(group_dist):
         print(f"  {g}: {group_dist[g]}")
 
     # Summary
-    print(f"\n{'='*60}")
+    print(f"\n{'=' * 60}")
     print("SUMMARY")
-    print(f"{'='*60}")
+    print(f"{'=' * 60}")
     print(f"Total prompts: {total}")
     print(f"Clean: {stats['clean']}")
     print(f"With warnings: {stats['warnings']}")

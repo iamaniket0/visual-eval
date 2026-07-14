@@ -8,6 +8,7 @@ This produces image_analysis.json consumed by the prompt generator.
 Usage:
     python scripts/analyze_images_for_prompts.py
 """
+
 from __future__ import annotations
 
 import json
@@ -25,9 +26,14 @@ PERSON_TEMPLATES = {
         "primary_subject": "person portrait (head and shoulders)",
         "has_people": True,
         "editable_regions": [
-            "hair color/style", "eye color", "skin tone", "facial expression",
-            "clothing/top", "accessories (glasses, jewelry, hat)",
-            "background behind subject", "lighting/mood"
+            "hair color/style",
+            "eye color",
+            "skin tone",
+            "facial expression",
+            "clothing/top",
+            "accessories (glasses, jewelry, hat)",
+            "background behind subject",
+            "lighting/mood",
         ],
         "typical_objects": ["clothing", "accessories", "background elements"],
     },
@@ -36,21 +42,37 @@ PERSON_TEMPLATES = {
         "primary_subject": "person full body shot",
         "has_people": True,
         "editable_regions": [
-            "hair color/style", "top/shirt", "bottom/pants/skirt", "shoes/footwear",
-            "accessories (bag, watch, hat)", "pose/stance",
-            "background/environment", "ground surface", "lighting/shadows"
+            "hair color/style",
+            "top/shirt",
+            "bottom/pants/skirt",
+            "shoes/footwear",
+            "accessories (bag, watch, hat)",
+            "pose/stance",
+            "background/environment",
+            "ground surface",
+            "lighting/shadows",
         ],
-        "typical_objects": ["clothing items", "footwear", "bag/accessories", "ground", "background structures"],
+        "typical_objects": [
+            "clothing items",
+            "footwear",
+            "bag/accessories",
+            "ground",
+            "background structures",
+        ],
     },
     "person_group": {
         "scene_type": "outdoor/indoor",
         "primary_subject": "group of people",
         "has_people": True,
         "editable_regions": [
-            "specific person's clothing", "add/remove a person",
-            "background environment", "group arrangement",
-            "lighting/time of day", "foreground objects",
-            "individual accessories", "ground surface"
+            "specific person's clothing",
+            "add/remove a person",
+            "background environment",
+            "group arrangement",
+            "lighting/time of day",
+            "foreground objects",
+            "individual accessories",
+            "ground surface",
         ],
         "typical_objects": ["multiple people", "clothing items", "background structures", "ground"],
     },
@@ -72,21 +94,64 @@ def parse_description(desc: str) -> dict:
             if item:
                 objects.append(item)
 
-    has_people = any(w in desc.lower() for w in [
-        "person", "people", "man", "woman", "child", "worker", "chef",
-        "farmer", "tourist", "dancer", "musician"
-    ])
+    has_people = any(
+        w in desc.lower()
+        for w in [
+            "person",
+            "people",
+            "man",
+            "woman",
+            "child",
+            "worker",
+            "chef",
+            "farmer",
+            "tourist",
+            "dancer",
+            "musician",
+        ]
+    )
 
-    for mat_word in ["wooden", "metal", "glass", "stone", "brick", "concrete",
-                     "marble", "steel", "plastic", "leather", "fabric", "ceramic",
-                     "bronze", "copper", "aluminum", "iron"]:
+    for mat_word in [
+        "wooden",
+        "metal",
+        "glass",
+        "stone",
+        "brick",
+        "concrete",
+        "marble",
+        "steel",
+        "plastic",
+        "leather",
+        "fabric",
+        "ceramic",
+        "bronze",
+        "copper",
+        "aluminum",
+        "iron",
+    ]:
         if mat_word in desc.lower():
             materials.append(mat_word)
 
     return {
-        "scene_type": "outdoor" if any(w in desc.lower() for w in
-            ["outdoor", "street", "garden", "farm", "beach", "mountain",
-             "lake", "river", "forest", "park", "road", "highway"]) else "indoor",
+        "scene_type": "outdoor"
+        if any(
+            w in desc.lower()
+            for w in [
+                "outdoor",
+                "street",
+                "garden",
+                "farm",
+                "beach",
+                "mountain",
+                "lake",
+                "river",
+                "forest",
+                "park",
+                "road",
+                "highway",
+            ]
+        )
+        else "indoor",
         "primary_subject": scene_part[:100],
         "has_people": has_people,
         "objects": objects[:15],

@@ -7,6 +7,7 @@ Usage:
     python -m scripts.run_generation --models flux2_max,xai_aurora --layer 2
     python -m scripts.run_generation --dry-run
 """
+
 import argparse
 import asyncio
 import os
@@ -29,8 +30,9 @@ def _seed_path(out_dir: Path, prompt_id: str, seed: int) -> Path:
     return out_dir / fname
 
 
-async def run_model(model_id: str, cfg: dict, prompts: list[dict],
-                     cost: CostTracker, concurrency: int, seeds: int):
+async def run_model(
+    model_id: str, cfg: dict, prompts: list[dict], cost: CostTracker, concurrency: int, seeds: int
+):
     out_dir = OUTPUTS_DIR / "generations" / model_id
     out_dir.mkdir(parents=True, exist_ok=True)
     async with get_generator(model_id, cfg, cost, concurrency=concurrency) as gen:
@@ -41,11 +43,9 @@ async def run_model(model_id: str, cfg: dict, prompts: list[dict],
             for seed in range(seeds):
                 if _seed_path(out_dir, p["prompt_id"], seed).exists():
                     continue
-                tasks.append(gen.generate(
-                    p["prompt_id"], p["prompt_text"], out_dir, seed=seed))
+                tasks.append(gen.generate(p["prompt_id"], p["prompt_text"], out_dir, seed=seed))
         if not tasks:
-            log.info("[%s] all prompts x seeds already generated; skipping",
-                     model_id)
+            log.info("[%s] all prompts x seeds already generated; skipping", model_id)
             return
         results = await tqdm_asyncio.gather(*tasks, desc=f"gen:{model_id}")
         for r in results:
@@ -64,8 +64,7 @@ async def main_async(args):
     profiles = cfg_all.get("profiles", {})
     settings = load_settings()
     cap = float(os.getenv("MAX_TOTAL_COST_USD", settings["cost"]["hard_cap_usd"]))
-    cost = CostTracker(hard_cap_usd=cap,
-                        alert_at_fraction=settings["cost"]["alert_at_fraction"])
+    cost = CostTracker(hard_cap_usd=cap, alert_at_fraction=settings["cost"]["alert_at_fraction"])
 
     # Seeds per prompt: CLI flag overrides settings.yaml. Seed 0 is the
     # legacy single-shot filename; seeds >=1 get the __s{N}.png suffix.
@@ -86,33 +85,47 @@ async def main_async(args):
     selected = [m for m in selected if m in available]
 
     if args.dry_run:
-        est = sum(model_cfgs[m]["cost_per_image"] * len(prompts) * seeds_n
-                   for m in selected)
+        est = sum(model_cfgs[m]["cost_per_image"] * len(prompts) * seeds_n for m in selected)
         total_imgs = len(prompts) * len(selected) * seeds_n
-        print(f"Would generate {len(prompts)} prompts x {len(selected)} models "
-              f"x {seeds_n} seeds = {total_imgs} images")
+        print(
+            f"Would generate {len(prompts)} prompts x {len(selected)} models "
+            f"x {seeds_n} seeds = {total_imgs} images"
+        )
         print(f"Estimated cost: ${est:.2f} (cap ${cap})")
         return
 
     for model_id in selected:
         cfg = model_cfgs[model_id]
         conc = concurrency_map.get(cfg["provider"], 4)
-        log.info("=== Running %s (provider=%s, concurrency=%d, seeds=%d) ===",
-                 model_id, cfg["provider"], conc, seeds_n)
+        log.info(
+            "=== Running %s (provider=%s, concurrency=%d, seeds=%d) ===",
+            model_id,
+            cfg["provider"],
+            conc,
+            seeds_n,
+        )
         await run_model(model_id, cfg, prompts, cost, conc, seeds_n)
 
     print("\nCost summary:")
     import json
+
     print(json.dumps(cost.summary(), indent=2))
 
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--models", default="full",
-                    help="Profile name ('sanity', 'full', 'all') or comma-separated model IDs")
+    ap.add_argument(
+        "--models",
+        default="full",
+        help="Profile name ('sanity', 'full', 'all') or comma-separated model IDs",
+    )
     ap.add_argument("--layer", type=int, default=0, help="1, 2, or 0 (both)")
-    ap.add_argument("--seeds", type=int, default=None,
-                    help="Seeds per prompt (default: settings.yaml generation.seeds_per_prompt)")
+    ap.add_argument(
+        "--seeds",
+        type=int,
+        default=None,
+        help="Seeds per prompt (default: settings.yaml generation.seeds_per_prompt)",
+    )
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
     asyncio.run(main_async(args))

@@ -3,6 +3,7 @@
 Pattern: sync
 POST /tools/1.0/edit with source image + prompt → edited image URL
 """
+
 from __future__ import annotations
 
 from .base import BaseEditor, register
@@ -12,8 +13,9 @@ from .base import BaseEditor, register
 class PicsartEditor(BaseEditor):
     provider = "picsart"
 
-    async def _do_edit(self, source_image_path: str, instruction: str,
-                       mask_path: str | None = None) -> tuple[bytes, dict]:
+    async def _do_edit(
+        self, source_image_path: str, instruction: str, mask_path: str | None = None
+    ) -> tuple[bytes, dict]:
         headers = {
             "X-Picsart-API-Key": self.api_key,
         }

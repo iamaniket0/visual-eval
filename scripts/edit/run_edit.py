@@ -7,6 +7,7 @@ Usage:
     python -m scripts.run_edit --layer 2
     python -m scripts.run_edit --dry-run
 """
+
 import argparse
 import asyncio
 import json
@@ -21,8 +22,9 @@ from src.edit import OUTPUTS_DIR, load_models_config, load_settings
 log = get_logger("run_edit")
 
 
-async def run_model(model_id: str, cfg: dict, prompts: list[dict],
-                     cost: CostTracker, concurrency: int):
+async def run_model(
+    model_id: str, cfg: dict, prompts: list[dict], cost: CostTracker, concurrency: int
+):
     out_dir = OUTPUTS_DIR / "edits" / model_id
     out_dir.mkdir(parents=True, exist_ok=True)
 
@@ -38,8 +40,9 @@ async def run_model(model_id: str, cfg: dict, prompts: list[dict],
             turns = p.get("turns", 1)
             if isinstance(turns, list) and len(turns) > 1:
                 if not editor.supports_multi_turn:
-                    log.warning("[%s] skipping multi-turn prompt %s (not supported)",
-                                model_id, prompt_id)
+                    log.warning(
+                        "[%s] skipping multi-turn prompt %s (not supported)", model_id, prompt_id
+                    )
                     continue
                 results = await editor.edit_multi_turn(
                     prompt_id=prompt_id,
@@ -80,8 +83,8 @@ async def main_async(args):
             picked.extend(bucket[:per_cat])
         remaining = args.num_prompts - len(picked)
         rest = [p for p in prompts if p not in picked]
-        picked.extend(rest[:max(0, remaining)])
-        prompts = picked[:args.num_prompts]
+        picked.extend(rest[: max(0, remaining)])
+        prompts = picked[: args.num_prompts]
 
     log.info("Loaded %d prompts (layer filter: %s)", len(prompts), args.layer)
 
@@ -91,8 +94,7 @@ async def main_async(args):
     profiles = cfg_all.get("profiles", {})
     settings = load_settings()
     cap = float(os.getenv("MAX_TOTAL_COST_USD", settings["cost"]["hard_cap_usd"]))
-    cost = CostTracker(hard_cap_usd=cap,
-                        alert_at_fraction=settings["cost"]["alert_at_fraction"])
+    cost = CostTracker(hard_cap_usd=cap, alert_at_fraction=settings["cost"]["alert_at_fraction"])
 
     if args.models in profiles:
         selected = list(profiles[args.models])
@@ -117,8 +119,9 @@ async def main_async(args):
     for model_id in selected:
         cfg = model_cfgs[model_id]
         conc = concurrency_map.get(cfg["provider"], 4)
-        log.info("=== Running %s (provider=%s, concurrency=%d) ===",
-                 model_id, cfg["provider"], conc)
+        log.info(
+            "=== Running %s (provider=%s, concurrency=%d) ===", model_id, cfg["provider"], conc
+        )
         await run_model(model_id, cfg, prompts, cost, conc)
 
     print("\nCost summary:")
@@ -127,13 +130,24 @@ async def main_async(args):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--models", default="full",
-                    help="Profile name ('sanity', 'full') or comma-separated model IDs")
+    ap.add_argument(
+        "--models",
+        default="full",
+        help="Profile name ('sanity', 'full') or comma-separated model IDs",
+    )
     ap.add_argument("--layer", type=int, default=0, help="1, 2, or 0 (both)")
-    ap.add_argument("--num-prompts", type=int, default=None,
-                    help="Limit to N prompts (balanced across sub-categories)")
-    ap.add_argument("--prompt-ids", type=str, default=None,
-                    help="Comma-separated prompt IDs to run (overrides --num-prompts)")
+    ap.add_argument(
+        "--num-prompts",
+        type=int,
+        default=None,
+        help="Limit to N prompts (balanced across sub-categories)",
+    )
+    ap.add_argument(
+        "--prompt-ids",
+        type=str,
+        default=None,
+        help="Comma-separated prompt IDs to run (overrides --num-prompts)",
+    )
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
     asyncio.run(main_async(args))

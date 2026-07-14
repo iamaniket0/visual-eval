@@ -21,6 +21,7 @@ Soft-TIFA migration:
       compute AM/GM from those. Old single-score runs become readable
       under the new aggregator without re-judging.
 """
+
 from __future__ import annotations
 
 import json
@@ -33,7 +34,9 @@ import pandas as pd
 
 from src.core.utils import get_logger, read_jsonl
 from src.core.scoring import (
-    soft_tifa_am, soft_tifa_gm, probabilities_from_answers,
+    soft_tifa_am,
+    soft_tifa_gm,
+    probabilities_from_answers,
     DEFAULT_LOGPROB_FLOOR,
 )
 from src.t2i import OUTPUTS_DIR, PROMPTS_DIR
@@ -50,6 +53,7 @@ _probabilities_from_answers = probabilities_from_answers
 # ---------------------------------------------------------------------------
 # Loading
 # ---------------------------------------------------------------------------
+
 
 def _load_prompt_themes() -> dict[str, list[str]]:
     """Load the optional prompt -> themes mapping."""
@@ -101,21 +105,32 @@ def _load_all_judgments() -> pd.DataFrame:
                 probs = _probabilities_from_answers(answers)
                 score_am = soft_tifa_am(probs) if score_am is None else float(score_am)
                 score_gm = soft_tifa_gm(probs) if score_gm is None else float(score_gm)
-            rows.append({
-                "prompt_id": rec["prompt_id"],
-                "model": model,
-                "seed": int(rec.get("seed") or 0),
-                "score": legacy_score if legacy_score is not None else score_am,
-                "score_am": float(score_am),
-                "score_gm": float(score_gm),
-                "judge_error": rec.get("error"),
-                "answers": answers,
-            })
+            rows.append(
+                {
+                    "prompt_id": rec["prompt_id"],
+                    "model": model,
+                    "seed": int(rec.get("seed") or 0),
+                    "score": legacy_score if legacy_score is not None else score_am,
+                    "score_am": float(score_am),
+                    "score_gm": float(score_gm),
+                    "judge_error": rec.get("error"),
+                    "answers": answers,
+                }
+            )
     if not rows:
         log.warning("No judgments found")
-        return pd.DataFrame(columns=["prompt_id", "model", "seed", "score",
-                                       "score_am", "score_gm",
-                                       "judge_error", "answers"])
+        return pd.DataFrame(
+            columns=[
+                "prompt_id",
+                "model",
+                "seed",
+                "score",
+                "score_am",
+                "score_gm",
+                "judge_error",
+                "answers",
+            ]
+        )
     return pd.DataFrame(rows)
 
 
@@ -151,16 +166,25 @@ def _collapse_seeds(df: pd.DataFrame) -> pd.DataFrame:
     bad = df[err_mask]
 
     if not good.empty:
-        good_agg = (good.groupby(["model", "prompt_id"], as_index=False)
-                      .agg(score_am=("score_am", "mean"),
-                           score_gm=("score_gm", "mean"),
-                           seed_std_dev_am=("score_am", "std"),
-                           seed_std_dev_gm=("score_gm", "std"),
-                           n_seeds=("seed", "count")))
+        good_agg = good.groupby(["model", "prompt_id"], as_index=False).agg(
+            score_am=("score_am", "mean"),
+            score_gm=("score_gm", "mean"),
+            seed_std_dev_am=("score_am", "std"),
+            seed_std_dev_gm=("score_gm", "std"),
+            n_seeds=("seed", "count"),
+        )
     else:
-        good_agg = pd.DataFrame(columns=["model", "prompt_id", "score_am",
-                                          "score_gm", "seed_std_dev_am",
-                                          "seed_std_dev_gm", "n_seeds"])
+        good_agg = pd.DataFrame(
+            columns=[
+                "model",
+                "prompt_id",
+                "score_am",
+                "score_gm",
+                "seed_std_dev_am",
+                "seed_std_dev_gm",
+                "n_seeds",
+            ]
+        )
 
     # Every (model, prompt_id) that appears in the raw frame must appear in
     # the collapsed output, even if every seed errored: downstream aggregators
@@ -172,8 +196,7 @@ def _collapse_seeds(df: pd.DataFrame) -> pd.DataFrame:
     agg = full_idx.merge(good_agg, on=["model", "prompt_id"], how="left")
 
     if not bad.empty:
-        bad_err = (bad.groupby(["model", "prompt_id"])["judge_error"]
-                      .first().reset_index())
+        bad_err = bad.groupby(["model", "prompt_id"])["judge_error"].first().reset_index()
         agg = agg.merge(bad_err, on=["model", "prompt_id"], how="left")
     else:
         agg["judge_error"] = None
@@ -199,8 +222,7 @@ def _collapse_seeds(df: pd.DataFrame) -> pd.DataFrame:
 
     answers_rows = []
     for (m, pid), grp in df.groupby(["model", "prompt_id"]):
-        answers_rows.append({"model": m, "prompt_id": pid,
-                              "answers": _pick_answers(grp)})
+        answers_rows.append({"model": m, "prompt_id": pid, "answers": _pick_answers(grp)})
     answers_col = pd.DataFrame(answers_rows)
     agg = agg.merge(answers_col, on=["model", "prompt_id"], how="left")
     return agg
@@ -214,18 +236,24 @@ def _load_generation_log() -> pd.DataFrame:
 
 
 def _merge(judgments: pd.DataFrame, prompts: list[dict]) -> pd.DataFrame:
-    prompt_df = pd.DataFrame([{
-        "prompt_id": p["prompt_id"],
-        "layer": p["layer"],
-        "sub_category": p["sub_category"],
-        "difficulty": p.get("difficulty", "auto"),
-    } for p in prompts])
+    prompt_df = pd.DataFrame(
+        [
+            {
+                "prompt_id": p["prompt_id"],
+                "layer": p["layer"],
+                "sub_category": p["sub_category"],
+                "difficulty": p.get("difficulty", "auto"),
+            }
+            for p in prompts
+        ]
+    )
     return judgments.merge(prompt_df, on="prompt_id", how="left")
 
 
 # ---------------------------------------------------------------------------
 # Downstream aggregations (all emit AM + GM columns)
 # ---------------------------------------------------------------------------
+
 
 def _covered_mask(df: pd.DataFrame) -> pd.Series:
     """Per-row boolean: True if the prompt was actually scored by the judge.
@@ -292,11 +320,22 @@ def leaderboard(df: pd.DataFrame) -> pd.DataFrame:
 
     # Primary sort: covered GM (falls back to full GM for 0-coverage rows).
     out["_sort_key"] = out["overall_gm_covered"].fillna(out["overall_gm"])
-    out = out.sort_values("_sort_key", ascending=False).drop(columns="_sort_key").reset_index(drop=True)
+    out = (
+        out.sort_values("_sort_key", ascending=False)
+        .drop(columns="_sort_key")
+        .reset_index(drop=True)
+    )
 
-    for col in ["overall_am", "overall_gm", "std_dev_am", "std_dev_gm",
-                "seed_std_dev_am", "seed_std_dev_gm",
-                "overall_am_covered", "overall_gm_covered"]:
+    for col in [
+        "overall_am",
+        "overall_gm",
+        "std_dev_am",
+        "std_dev_gm",
+        "seed_std_dev_am",
+        "seed_std_dev_gm",
+        "overall_am_covered",
+        "overall_gm_covered",
+    ]:
         if col in out.columns:
             out[col] = out[col].round(4)
 
@@ -317,15 +356,21 @@ def per_subcategory(df: pd.DataFrame) -> pd.DataFrame:
     """
     if df.empty:
         return pd.DataFrame()
-    pivot_am = (df.groupby(["model", "sub_category"])["score_am"]
-                   .mean().unstack("sub_category").round(4))
-    pivot_gm = (df.groupby(["model", "sub_category"])["score_gm"]
-                   .mean().unstack("sub_category").round(4))
+    pivot_am = (
+        df.groupby(["model", "sub_category"])["score_am"].mean().unstack("sub_category").round(4)
+    )
+    pivot_gm = (
+        df.groupby(["model", "sub_category"])["score_gm"].mean().unstack("sub_category").round(4)
+    )
     pivot_am.columns = [f"{c}__am" for c in pivot_am.columns]
     pivot_gm.columns = [f"{c}__gm" for c in pivot_gm.columns]
     pivot = pivot_am.join(pivot_gm, how="outer")
-    pivot["overall_am"] = pivot[[c for c in pivot.columns if c.endswith("__am")]].mean(axis=1).round(4)
-    pivot["overall_gm"] = pivot[[c for c in pivot.columns if c.endswith("__gm")]].mean(axis=1).round(4)
+    pivot["overall_am"] = (
+        pivot[[c for c in pivot.columns if c.endswith("__am")]].mean(axis=1).round(4)
+    )
+    pivot["overall_gm"] = (
+        pivot[[c for c in pivot.columns if c.endswith("__gm")]].mean(axis=1).round(4)
+    )
     return pivot.sort_values("overall_gm", ascending=False).reset_index()
 
 
@@ -347,9 +392,7 @@ def layer_comparison(df: pd.DataFrame) -> pd.DataFrame:
         df_l12 = df
     pieces: list[pd.DataFrame] = []
     for metric, col_prefix in [("score_am", "am"), ("score_gm", "gm")]:
-        piece = (df_l12.groupby(["model", "layer"])[metric].mean()
-                    .unstack("layer")
-                    .round(4))
+        piece = df_l12.groupby(["model", "layer"])[metric].mean().unstack("layer").round(4)
         rename_map = {}
         for col in piece.columns:
             if col in (1, "1", "layer1_gold"):
@@ -369,9 +412,11 @@ def layer_comparison(df: pd.DataFrame) -> pd.DataFrame:
     # Back-compat: the old schema had bare `layer1_gold` / `layer2_proprietary`
     # / `divergence` columns. Alias those to the AM variants so old consumers
     # keep working without edits.
-    alias_map = {"layer1_gold_am": "layer1_gold",
-                  "layer2_proprietary_am": "layer2_proprietary",
-                  "divergence_am": "divergence"}
+    alias_map = {
+        "layer1_gold_am": "layer1_gold",
+        "layer2_proprietary_am": "layer2_proprietary",
+        "divergence_am": "divergence",
+    }
     for src, dst in alias_map.items():
         if src in out.columns and dst not in out.columns:
             out[dst] = out[src]
@@ -389,26 +434,29 @@ def failure_analysis(df: pd.DataFrame) -> pd.DataFrame:
     """
     rows = []
     for _, rec in df.iterrows():
-        for a in (rec.get("answers") or []):
-            rows.append({
-                "model": rec["model"],
-                "sub_category": rec.get("sub_category"),
-                "q_type": a.get("type") or "unknown",
-                "answer": a.get("answer"),
-            })
+        for a in rec.get("answers") or []:
+            rows.append(
+                {
+                    "model": rec["model"],
+                    "sub_category": rec.get("sub_category"),
+                    "q_type": a.get("type") or "unknown",
+                    "answer": a.get("answer"),
+                }
+            )
     if not rows:
         return pd.DataFrame(columns=["model", "q_type", "failure_rate", "n"])
     qdf = pd.DataFrame(rows)
     qdf["is_fail"] = (qdf["answer"] == "no").astype(int)
-    out = (qdf.groupby(["model", "q_type"])
-              .agg(failure_rate=("is_fail", "mean"), n=("is_fail", "count"))
-              .round(4)
-              .reset_index())
+    out = (
+        qdf.groupby(["model", "q_type"])
+        .agg(failure_rate=("is_fail", "mean"), n=("is_fail", "count"))
+        .round(4)
+        .reset_index()
+    )
     return out.sort_values(["model", "failure_rate"], ascending=[True, False])
 
 
-def theme_breakdown(df: pd.DataFrame,
-                     prompt_themes: dict[str, list[str]]) -> pd.DataFrame:
+def theme_breakdown(df: pd.DataFrame, prompt_themes: dict[str, list[str]]) -> pd.DataFrame:
     """Per-model, per-theme mean AM and GM with std + count.
 
     Columns: model, theme,
@@ -417,47 +465,62 @@ def theme_breakdown(df: pd.DataFrame,
              n_prompts,
              mean_score, std_dev    (back-compat aliases == AM).
     """
-    cols = ["model", "theme",
-            "mean_score_am", "std_dev_am",
-            "mean_score_gm", "std_dev_gm",
-            "n_prompts",
-            "mean_score", "std_dev"]
+    cols = [
+        "model",
+        "theme",
+        "mean_score_am",
+        "std_dev_am",
+        "mean_score_gm",
+        "std_dev_gm",
+        "n_prompts",
+        "mean_score",
+        "std_dev",
+    ]
     if not prompt_themes or df.empty:
         return pd.DataFrame(columns=cols)
 
     rows = []
     for _, rec in df.iterrows():
         for theme in prompt_themes.get(rec["prompt_id"], []) or []:
-            rows.append({
-                "model": rec["model"],
-                "theme": theme,
-                "score_am": float(rec["score_am"]),
-                "score_gm": float(rec["score_gm"]),
-            })
+            rows.append(
+                {
+                    "model": rec["model"],
+                    "theme": theme,
+                    "score_am": float(rec["score_am"]),
+                    "score_gm": float(rec["score_gm"]),
+                }
+            )
     if not rows:
         return pd.DataFrame(columns=cols)
 
     qdf = pd.DataFrame(rows)
-    out = (qdf.groupby(["model", "theme"])
-              .agg(mean_score_am=("score_am", "mean"),
-                   std_dev_am=("score_am", "std"),
-                   mean_score_gm=("score_gm", "mean"),
-                   std_dev_gm=("score_gm", "std"),
-                   n_prompts=("score_am", "count"))
-              .reset_index())
+    out = (
+        qdf.groupby(["model", "theme"])
+        .agg(
+            mean_score_am=("score_am", "mean"),
+            std_dev_am=("score_am", "std"),
+            mean_score_gm=("score_gm", "mean"),
+            std_dev_gm=("score_gm", "std"),
+            n_prompts=("score_am", "count"),
+        )
+        .reset_index()
+    )
     for c in ["mean_score_am", "std_dev_am", "mean_score_gm", "std_dev_gm"]:
         out[c] = out[c].round(4)
     out["n_prompts"] = out["n_prompts"].astype(int)
     # Back-compat aliases.
     out["mean_score"] = out["mean_score_am"]
     out["std_dev"] = out["std_dev_am"]
-    return out.sort_values(["model", "mean_score_gm"],
-                            ascending=[True, False]).reset_index(drop=True)
+    return out.sort_values(["model", "mean_score_gm"], ascending=[True, False]).reset_index(
+        drop=True
+    )
 
 
-def filter_rates(gen_df: pd.DataFrame,
-                   covered_by_model: dict[str, int] | None = None,
-                   total_prompts: int | None = None) -> pd.DataFrame:
+def filter_rates(
+    gen_df: pd.DataFrame,
+    covered_by_model: dict[str, int] | None = None,
+    total_prompts: int | None = None,
+) -> pd.DataFrame:
     """Per-model reliability table.
 
     Separates three failure modes a customer would see if they called the
@@ -473,15 +536,28 @@ def filter_rates(gen_df: pd.DataFrame,
     count: a prompt that eventually got an image on a retry is covered.
     """
     if gen_df.empty and not covered_by_model:
-        return pd.DataFrame(columns=["model", "filtered", "errored",
-                                       "n_covered", "n_total",
-                                       "uncovered", "uncovered_rate",
-                                       "filter_rate"])
+        return pd.DataFrame(
+            columns=[
+                "model",
+                "filtered",
+                "errored",
+                "n_covered",
+                "n_total",
+                "uncovered",
+                "uncovered_rate",
+                "filter_rate",
+            ]
+        )
     if not gen_df.empty:
-        summary = (gen_df.assign(
-            filtered=(gen_df["status"] == "FILTERED").astype(int),
-            errored=(gen_df["status"] == "ERROR").astype(int),
-        ).groupby("model")[["filtered", "errored"]].sum().reset_index())
+        summary = (
+            gen_df.assign(
+                filtered=(gen_df["status"] == "FILTERED").astype(int),
+                errored=(gen_df["status"] == "ERROR").astype(int),
+            )
+            .groupby("model")[["filtered", "errored"]]
+            .sum()
+            .reset_index()
+        )
     else:
         summary = pd.DataFrame({"model": list(covered_by_model or {})})
         summary["filtered"] = 0
@@ -491,7 +567,9 @@ def filter_rates(gen_df: pd.DataFrame,
         summary["n_covered"] = summary["model"].map(covered_by_model).fillna(0).astype(int)
         summary["n_total"] = int(total_prompts)
         summary["uncovered"] = (summary["n_total"] - summary["n_covered"]).clip(lower=0)
-        summary["uncovered_rate"] = (summary["uncovered"] / summary["n_total"].clip(lower=1)).round(4)
+        summary["uncovered_rate"] = (summary["uncovered"] / summary["n_total"].clip(lower=1)).round(
+            4
+        )
     else:
         summary["n_covered"] = 0
         summary["n_total"] = 0
@@ -501,8 +579,9 @@ def filter_rates(gen_df: pd.DataFrame,
     # Keep legacy `filter_rate` for back-compat with existing report code.
     # Uses `n_total` when available to avoid the misleading attempts-based
     # denominator (attempts include multi-seed and retries).
-    denom = summary["n_total"].where(summary["n_total"] > 0,
-                                       summary[["filtered", "errored"]].sum(axis=1).clip(lower=1))
+    denom = summary["n_total"].where(
+        summary["n_total"] > 0, summary[["filtered", "errored"]].sum(axis=1).clip(lower=1)
+    )
     summary["filter_rate"] = (summary["filtered"] / denom).round(4)
     return summary.sort_values("uncovered_rate", ascending=False).reset_index(drop=True)
 
@@ -510,6 +589,7 @@ def filter_rates(gen_df: pd.DataFrame,
 # ---------------------------------------------------------------------------
 # Orchestration
 # ---------------------------------------------------------------------------
+
 
 def run_aggregation() -> dict[str, Path]:
     SCORES_DIR.mkdir(parents=True, exist_ok=True)
@@ -546,12 +626,11 @@ def run_aggregation() -> dict[str, Path]:
     # Coverage map per model comes from the covered view of the same judgments
     # that feed the leaderboard, so the reliability row in filter_rates always
     # agrees with the leaderboard's n_covered/n_total columns.
-    covered_counts = (merged[_covered_mask(merged)]
-                        .groupby("model")["prompt_id"].nunique().to_dict())
+    covered_counts = merged[_covered_mask(merged)].groupby("model")["prompt_id"].nunique().to_dict()
     n_prompts_total = len({p["prompt_id"] for p in prompts})
-    fr = filter_rates(_load_generation_log(),
-                       covered_by_model=covered_counts,
-                       total_prompts=n_prompts_total)
+    fr = filter_rates(
+        _load_generation_log(), covered_by_model=covered_counts, total_prompts=n_prompts_total
+    )
     fr.to_csv(SCORES_DIR / "filter_rates.csv", index=False)
     paths["filter_rates"] = SCORES_DIR / "filter_rates.csv"
 
@@ -571,7 +650,8 @@ def run_aggregation() -> dict[str, Path]:
         "leaderboard_top3": lb.head(3).to_dict(orient="records"),
         # Wedge candidates remain based on GM (the stricter metric).
         "layer_wedge_candidates_gm": [
-            row for row in lc.to_dict(orient="records")
+            row
+            for row in lc.to_dict(orient="records")
             if row.get("divergence_gm") is not None and row["divergence_gm"] > 0.1
         ],
     }
@@ -588,6 +668,7 @@ def worst_examples_for_model(model: str, n: int = 5) -> list[dict]:
     prompts_by_id = {p["prompt_id"]: p for p in load_prompt_set()}
     judgments = read_jsonl(OUTPUTS_DIR / "judgments" / f"{model}.jsonl")
     judgments = [j for j in judgments if j.get("image_path")]
+
     # GM is the stricter metric - rank on it so failure examples line up
     # with the primary metric shown in the rest of the report.
     def _gm_score(j):
@@ -595,18 +676,21 @@ def worst_examples_for_model(model: str, n: int = 5) -> list[dict]:
         if gm is None:
             gm = soft_tifa_gm(_probabilities_from_answers(j.get("answers", [])))
         return gm
+
     judgments.sort(key=_gm_score)
     out = []
     for j in judgments[:n]:
         p = prompts_by_id.get(j["prompt_id"], {})
-        out.append({
-            "prompt_id": j["prompt_id"],
-            "prompt_text": p.get("prompt_text", ""),
-            "sub_category": p.get("sub_category", ""),
-            "image_path": j.get("image_path"),
-            "score": j.get("score", 0.0),
-            "score_am": j.get("score_am", j.get("score", 0.0)),
-            "score_gm": j.get("score_gm", _gm_score(j)),
-            "answers": j.get("answers", []),
-        })
+        out.append(
+            {
+                "prompt_id": j["prompt_id"],
+                "prompt_text": p.get("prompt_text", ""),
+                "sub_category": p.get("sub_category", ""),
+                "image_path": j.get("image_path"),
+                "score": j.get("score", 0.0),
+                "score_am": j.get("score_am", j.get("score", 0.0)),
+                "score_gm": j.get("score_gm", _gm_score(j)),
+                "answers": j.get("answers", []),
+            }
+        )
     return out

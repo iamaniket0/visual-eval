@@ -12,6 +12,7 @@ Categories:
   - multi_turn (55): portraits with accessories, scenes with removable elements
   - fine_detail (55): products with text labels, textured objects, fine edges
 """
+
 import argparse
 import asyncio
 import json
@@ -50,8 +51,9 @@ SEARCH_QUERIES = {
 }
 
 
-async def download_unsplash(prompt_id: str, query: str, output_path: Path,
-                             client: httpx.AsyncClient, api_key: str) -> bool:
+async def download_unsplash(
+    prompt_id: str, query: str, output_path: Path, client: httpx.AsyncClient, api_key: str
+) -> bool:
     """Download a single image from Unsplash."""
     try:
         resp = await client.get(
@@ -77,9 +79,14 @@ async def download_unsplash(prompt_id: str, query: str, output_path: Path,
         return False
 
 
-async def download_pexels(prompt_id: str, query: str, output_path: Path,
-                           client: httpx.AsyncClient, api_key: str,
-                           page: int = 1) -> bool:
+async def download_pexels(
+    prompt_id: str,
+    query: str,
+    output_path: Path,
+    client: httpx.AsyncClient,
+    api_key: str,
+    page: int = 1,
+) -> bool:
     """Download a single image from Pexels."""
     try:
         resp = await client.get(
@@ -113,6 +120,7 @@ async def download_placeholder(prompt_id: str, output_path: Path) -> bool:
     """Create a placeholder image when no API key is available."""
     try:
         from PIL import Image, ImageDraw, ImageFont
+
         img = Image.new("RGB", (1024, 1024), color=(200, 200, 200))
         draw = ImageDraw.Draw(img)
         text = f"SOURCE\n{prompt_id}"
@@ -172,6 +180,7 @@ async def main_async(args):
     success = 0
 
     async with httpx.AsyncClient(timeout=30.0) as client:
+
         async def _download(pid, subcat, out_path, idx):
             nonlocal success
             queries = SEARCH_QUERIES.get(subcat, SEARCH_QUERIES["instruction_boundary"])
@@ -181,7 +190,9 @@ async def main_async(args):
                 if use_api == "unsplash":
                     ok = await download_unsplash(pid, query, out_path, client, unsplash_key)
                 elif use_api == "pexels":
-                    ok = await download_pexels(pid, query, out_path, client, pexels_key, page=idx+1)
+                    ok = await download_pexels(
+                        pid, query, out_path, client, pexels_key, page=idx + 1
+                    )
                 else:
                     ok = await download_placeholder(pid, out_path)
                 if ok:
@@ -195,8 +206,12 @@ async def main_async(args):
 
 def main():
     ap = argparse.ArgumentParser(description="Download source images for edit benchmark")
-    ap.add_argument("--api", choices=["unsplash", "pexels", "placeholder", "auto"],
-                    default="auto", help="Image API to use")
+    ap.add_argument(
+        "--api",
+        choices=["unsplash", "pexels", "placeholder", "auto"],
+        default="auto",
+        help="Image API to use",
+    )
     ap.add_argument("--force", action="store_true", help="Re-download existing images")
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()

@@ -3,6 +3,7 @@
 Pattern: sync
 POST /v1/edit with multipart form data (source image + prompt) → edited image bytes
 """
+
 from __future__ import annotations
 
 from .base import BaseEditor, register
@@ -12,8 +13,9 @@ from .base import BaseEditor, register
 class PhotoroomEditor(BaseEditor):
     provider = "photoroom"
 
-    async def _do_edit(self, source_image_path: str, instruction: str,
-                       mask_path: str | None = None) -> tuple[bytes, dict]:
+    async def _do_edit(
+        self, source_image_path: str, instruction: str, mask_path: str | None = None
+    ) -> tuple[bytes, dict]:
         headers = {
             "x-api-key": self.api_key,
         }

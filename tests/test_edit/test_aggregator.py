@@ -1,4 +1,5 @@
 """Tests for the edit-eval aggregator scoring math."""
+
 import math
 
 from src.core.scoring import soft_tifa_am, soft_tifa_gm, probabilities_from_answers

@@ -1,4 +1,5 @@
 """Integration test for the T2I aggregator using synthetic judgments."""
+
 import json
 
 import pandas as pd
@@ -21,17 +22,28 @@ def fake_outputs(tmp_path, monkeypatch):
     monkeypatch.setattr(aggregator, "PROMPTS_DIR", prompts_dir)
 
     prompts = [
-        {"prompt_id": "L1_NUM_001", "layer": 1, "sub_category": "numeracy",
-         "difficulty": "auto", "prompt_text": "three cats",
-         "atomic_questions": [{"q_id": "q1", "question": "cats?", "type": "presence"}]},
-        {"prompt_id": "L2_NUM_001", "layer": 2, "sub_category": "numeracy",
-         "difficulty": "medium", "prompt_text": "seven bottles",
-         "atomic_questions": [{"q_id": "q1", "question": "bottles?", "type": "presence"}]},
+        {
+            "prompt_id": "L1_NUM_001",
+            "layer": 1,
+            "sub_category": "numeracy",
+            "difficulty": "auto",
+            "prompt_text": "three cats",
+            "atomic_questions": [{"q_id": "q1", "question": "cats?", "type": "presence"}],
+        },
+        {
+            "prompt_id": "L2_NUM_001",
+            "layer": 2,
+            "sub_category": "numeracy",
+            "difficulty": "medium",
+            "prompt_text": "seven bottles",
+            "atomic_questions": [{"q_id": "q1", "question": "bottles?", "type": "presence"}],
+        },
     ]
     with open(prompts_dir / "prompt_set.json", "w") as f:
         json.dump(prompts, f)
 
     from src.t2i import prompt_loader
+
     monkeypatch.setattr(prompt_loader, "PROMPTS_DIR", prompts_dir)
 
     def write_jsonl(path, records):
@@ -39,32 +51,61 @@ def fake_outputs(tmp_path, monkeypatch):
             for r in records:
                 f.write(json.dumps(r) + "\n")
 
-    write_jsonl(outputs / "judgments" / "model_a.jsonl", [
-        {"prompt_id": "L1_NUM_001", "model": "model_a", "image_path": "x.png",
-         "score": 0.9,
-         "answers": [{"q_id": "q1", "question": "cats?", "type": "presence",
-                      "answer": "yes"}]},
-        {"prompt_id": "L2_NUM_001", "model": "model_a", "image_path": "x.png",
-         "score": 0.3,
-         "answers": [{"q_id": "q1", "question": "bottles?", "type": "presence",
-                      "answer": "no"}]},
-    ])
-    write_jsonl(outputs / "judgments" / "model_b.jsonl", [
-        {"prompt_id": "L1_NUM_001", "model": "model_b", "image_path": "y.png",
-         "score": 0.5,
-         "answers": [{"q_id": "q1", "question": "cats?", "type": "presence",
-                      "answer": "no"}]},
-        {"prompt_id": "L2_NUM_001", "model": "model_b", "image_path": "y.png",
-         "score": 0.5,
-         "answers": [{"q_id": "q1", "question": "bottles?", "type": "presence",
-                      "answer": "yes"}]},
-    ])
+    write_jsonl(
+        outputs / "judgments" / "model_a.jsonl",
+        [
+            {
+                "prompt_id": "L1_NUM_001",
+                "model": "model_a",
+                "image_path": "x.png",
+                "score": 0.9,
+                "answers": [
+                    {"q_id": "q1", "question": "cats?", "type": "presence", "answer": "yes"}
+                ],
+            },
+            {
+                "prompt_id": "L2_NUM_001",
+                "model": "model_a",
+                "image_path": "x.png",
+                "score": 0.3,
+                "answers": [
+                    {"q_id": "q1", "question": "bottles?", "type": "presence", "answer": "no"}
+                ],
+            },
+        ],
+    )
+    write_jsonl(
+        outputs / "judgments" / "model_b.jsonl",
+        [
+            {
+                "prompt_id": "L1_NUM_001",
+                "model": "model_b",
+                "image_path": "y.png",
+                "score": 0.5,
+                "answers": [
+                    {"q_id": "q1", "question": "cats?", "type": "presence", "answer": "no"}
+                ],
+            },
+            {
+                "prompt_id": "L2_NUM_001",
+                "model": "model_b",
+                "image_path": "y.png",
+                "score": 0.5,
+                "answers": [
+                    {"q_id": "q1", "question": "bottles?", "type": "presence", "answer": "yes"}
+                ],
+            },
+        ],
+    )
 
     with open(prompts_dir / "prompt_themes.json", "w") as f:
-        json.dump({
-            "L1_NUM_001": ["animals", "few-objects", "counting"],
-            "L2_NUM_001": ["objects", "dense", "material-heavy", "counting"],
-        }, f)
+        json.dump(
+            {
+                "L1_NUM_001": ["animals", "few-objects", "counting"],
+                "L2_NUM_001": ["objects", "dense", "material-heavy", "counting"],
+            },
+            f,
+        )
 
     return outputs
 

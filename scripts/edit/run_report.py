@@ -9,6 +9,7 @@ Reads from outputs/scores/ and prints a summary report. For the full PDF
 report pipeline, see the T2I eval's report.py — this MVP emits a text/JSON
 summary with the key tables.
 """
+
 import argparse
 import json
 from pathlib import Path
@@ -75,7 +76,14 @@ def main():
 
     if lb is not None:
         print("\n--- LEADERBOARD (by GM, covered prompts) ---")
-        cols = ["model", "overall_gm_covered", "overall_am_covered", "n_covered", "n_total", "coverage_rate"]
+        cols = [
+            "model",
+            "overall_gm_covered",
+            "overall_am_covered",
+            "n_covered",
+            "n_total",
+            "coverage_rate",
+        ]
         avail = [c for c in cols if c in lb.columns]
         print(lb[avail].to_string(index=False))
 

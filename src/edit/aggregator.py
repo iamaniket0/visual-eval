@@ -15,6 +15,7 @@ Dimensions map to GEditBench v2's three-axis evaluation:
     - visual_consistency: are unedited regions unchanged?
     - detail_preservation: are fine details (text, textures, edges) intact?
 """
+
 from __future__ import annotations
 
 import json
@@ -48,6 +49,7 @@ _probabilities_from_answers = probabilities_from_answers
 # Loading
 # ---------------------------------------------------------------------------
 
+
 def load_prompt_set(path: Path | None = None) -> list[dict[str, Any]]:
     """Load prompts from both layer files."""
     prompts: list[dict[str, Any]] = []
@@ -71,28 +73,36 @@ def _load_all_judgments() -> pd.DataFrame:
                 probs = _probabilities_from_answers(answers)
                 score_am = soft_tifa_am(probs) if score_am is None else float(score_am)
                 score_gm = soft_tifa_gm(probs) if score_gm is None else float(score_gm)
-            rows.append({
-                "prompt_id": rec["prompt_id"],
-                "model": model,
-                "score_am": float(score_am),
-                "score_gm": float(score_gm),
-                "judge_error": rec.get("error"),
-                "answers": answers,
-            })
+            rows.append(
+                {
+                    "prompt_id": rec["prompt_id"],
+                    "model": model,
+                    "score_am": float(score_am),
+                    "score_gm": float(score_gm),
+                    "judge_error": rec.get("error"),
+                    "answers": answers,
+                }
+            )
     if not rows:
         log.warning("No judgments found")
-        return pd.DataFrame(columns=["prompt_id", "model", "score_am",
-                                       "score_gm", "judge_error", "answers"])
+        return pd.DataFrame(
+            columns=["prompt_id", "model", "score_am", "score_gm", "judge_error", "answers"]
+        )
     return pd.DataFrame(rows)
 
 
 def _merge(judgments: pd.DataFrame, prompts: list[dict]) -> pd.DataFrame:
-    prompt_df = pd.DataFrame([{
-        "prompt_id": p["prompt_id"],
-        "layer": p["layer"],
-        "sub_category": p["sub_category"],
-        "difficulty": p.get("difficulty", "auto"),
-    } for p in prompts])
+    prompt_df = pd.DataFrame(
+        [
+            {
+                "prompt_id": p["prompt_id"],
+                "layer": p["layer"],
+                "sub_category": p["sub_category"],
+                "difficulty": p.get("difficulty", "auto"),
+            }
+            for p in prompts
+        ]
+    )
     return judgments.merge(prompt_df, on="prompt_id", how="left")
 
 
@@ -107,6 +117,7 @@ def _covered_mask(df: pd.DataFrame) -> pd.Series:
 # Per-dimension scoring — the key differentiator from T2I eval
 # ---------------------------------------------------------------------------
 
+
 def per_dimension(df: pd.DataFrame) -> pd.DataFrame:
     """Per-model scoring broken down by evaluation dimension.
 
@@ -115,20 +126,23 @@ def per_dimension(df: pd.DataFrame) -> pd.DataFrame:
     """
     rows = []
     for _, rec in df.iterrows():
-        for a in (rec.get("answers") or []):
+        for a in rec.get("answers") or []:
             dim = a.get("dimension", "unknown")
             prob = a.get("probability")
             if prob is None:
                 ans = str(a.get("answer", "")).strip().lower()
                 prob = 1.0 if ans.startswith("y") else math.exp(DEFAULT_LOGPROB_FLOOR)
-            rows.append({
-                "model": rec["model"],
-                "dimension": dim,
-                "probability": float(prob),
-            })
+            rows.append(
+                {
+                    "model": rec["model"],
+                    "dimension": dim,
+                    "probability": float(prob),
+                }
+            )
     if not rows:
-        return pd.DataFrame(columns=["model"] + [f"{d}_am" for d in DIMENSIONS] +
-                                     [f"{d}_gm" for d in DIMENSIONS])
+        return pd.DataFrame(
+            columns=["model"] + [f"{d}_am" for d in DIMENSIONS] + [f"{d}_gm" for d in DIMENSIONS]
+        )
     qdf = pd.DataFrame(rows)
 
     result_rows = []
@@ -150,6 +164,7 @@ def per_dimension(df: pd.DataFrame) -> pd.DataFrame:
 # ---------------------------------------------------------------------------
 # Standard aggregations (matching T2I eval patterns)
 # ---------------------------------------------------------------------------
+
 
 def leaderboard(df: pd.DataFrame) -> pd.DataFrame:
     covered_df = df[_covered_mask(df)].copy()
@@ -174,10 +189,20 @@ def leaderboard(df: pd.DataFrame) -> pd.DataFrame:
     out["coverage_rate"] = (out["n_covered"] / out["n_total"].clip(lower=1)).round(4)
 
     out["_sort_key"] = out["overall_gm_covered"].fillna(out["overall_gm"])
-    out = out.sort_values("_sort_key", ascending=False).drop(columns="_sort_key").reset_index(drop=True)
+    out = (
+        out.sort_values("_sort_key", ascending=False)
+        .drop(columns="_sort_key")
+        .reset_index(drop=True)
+    )
 
-    for col in ["overall_am", "overall_gm", "std_dev_am", "std_dev_gm",
-                "overall_am_covered", "overall_gm_covered"]:
+    for col in [
+        "overall_am",
+        "overall_gm",
+        "std_dev_am",
+        "std_dev_gm",
+        "overall_am_covered",
+        "overall_gm_covered",
+    ]:
         if col in out.columns:
             out[col] = out[col].round(4)
 
@@ -187,15 +212,21 @@ def leaderboard(df: pd.DataFrame) -> pd.DataFrame:
 def per_subcategory(df: pd.DataFrame) -> pd.DataFrame:
     if df.empty:
         return pd.DataFrame()
-    pivot_am = (df.groupby(["model", "sub_category"])["score_am"]
-                   .mean().unstack("sub_category").round(4))
-    pivot_gm = (df.groupby(["model", "sub_category"])["score_gm"]
-                   .mean().unstack("sub_category").round(4))
+    pivot_am = (
+        df.groupby(["model", "sub_category"])["score_am"].mean().unstack("sub_category").round(4)
+    )
+    pivot_gm = (
+        df.groupby(["model", "sub_category"])["score_gm"].mean().unstack("sub_category").round(4)
+    )
     pivot_am.columns = [f"{c}__am" for c in pivot_am.columns]
     pivot_gm.columns = [f"{c}__gm" for c in pivot_gm.columns]
     pivot = pivot_am.join(pivot_gm, how="outer")
-    pivot["overall_am"] = pivot[[c for c in pivot.columns if c.endswith("__am")]].mean(axis=1).round(4)
-    pivot["overall_gm"] = pivot[[c for c in pivot.columns if c.endswith("__gm")]].mean(axis=1).round(4)
+    pivot["overall_am"] = (
+        pivot[[c for c in pivot.columns if c.endswith("__am")]].mean(axis=1).round(4)
+    )
+    pivot["overall_gm"] = (
+        pivot[[c for c in pivot.columns if c.endswith("__gm")]].mean(axis=1).round(4)
+    )
     return pivot.sort_values("overall_gm", ascending=False).reset_index()
 
 
@@ -204,9 +235,7 @@ def layer_comparison(df: pd.DataFrame) -> pd.DataFrame:
         return pd.DataFrame()
     pieces: list[pd.DataFrame] = []
     for metric, col_prefix in [("score_am", "am"), ("score_gm", "gm")]:
-        piece = (df.groupby(["model", "layer"])[metric].mean()
-                    .unstack("layer")
-                    .round(4))
+        piece = df.groupby(["model", "layer"])[metric].mean().unstack("layer").round(4)
         rename_map = {}
         for col in piece.columns:
             if col in (1, "1", "layer1_gold"):
@@ -227,51 +256,60 @@ def layer_comparison(df: pd.DataFrame) -> pd.DataFrame:
 def failure_analysis(df: pd.DataFrame) -> pd.DataFrame:
     rows = []
     for _, rec in df.iterrows():
-        for a in (rec.get("answers") or []):
-            rows.append({
-                "model": rec["model"],
-                "sub_category": rec.get("sub_category"),
-                "q_type": a.get("type") or "unknown",
-                "dimension": a.get("dimension") or "unknown",
-                "answer": a.get("answer"),
-            })
+        for a in rec.get("answers") or []:
+            rows.append(
+                {
+                    "model": rec["model"],
+                    "sub_category": rec.get("sub_category"),
+                    "q_type": a.get("type") or "unknown",
+                    "dimension": a.get("dimension") or "unknown",
+                    "answer": a.get("answer"),
+                }
+            )
     if not rows:
         return pd.DataFrame(columns=["model", "q_type", "dimension", "failure_rate", "n"])
     qdf = pd.DataFrame(rows)
     qdf["is_fail"] = (qdf["answer"] == "no").astype(int)
-    out = (qdf.groupby(["model", "q_type", "dimension"])
-              .agg(failure_rate=("is_fail", "mean"), n=("is_fail", "count"))
-              .round(4)
-              .reset_index())
+    out = (
+        qdf.groupby(["model", "q_type", "dimension"])
+        .agg(failure_rate=("is_fail", "mean"), n=("is_fail", "count"))
+        .round(4)
+        .reset_index()
+    )
     return out.sort_values(["model", "failure_rate"], ascending=[True, False])
 
 
 def filter_rates(prompts: list[dict], judgments_df: pd.DataFrame) -> pd.DataFrame:
     n_total = len({p["prompt_id"] for p in prompts})
     if judgments_df.empty:
-        return pd.DataFrame(columns=["model", "n_covered", "n_total",
-                                       "uncovered", "uncovered_rate"])
+        return pd.DataFrame(
+            columns=["model", "n_covered", "n_total", "uncovered", "uncovered_rate"]
+        )
 
-    covered = (judgments_df[_covered_mask(judgments_df)]
-                .groupby("model")["prompt_id"].nunique().to_dict())
+    covered = (
+        judgments_df[_covered_mask(judgments_df)].groupby("model")["prompt_id"].nunique().to_dict()
+    )
 
     models = judgments_df["model"].unique()
     rows = []
     for m in models:
         n_cov = covered.get(m, 0)
-        rows.append({
-            "model": m,
-            "n_covered": n_cov,
-            "n_total": n_total,
-            "uncovered": n_total - n_cov,
-            "uncovered_rate": round((n_total - n_cov) / max(n_total, 1), 4),
-        })
+        rows.append(
+            {
+                "model": m,
+                "n_covered": n_cov,
+                "n_total": n_total,
+                "uncovered": n_total - n_cov,
+                "uncovered_rate": round((n_total - n_cov) / max(n_total, 1), 4),
+            }
+        )
     return pd.DataFrame(rows).sort_values("uncovered_rate", ascending=False).reset_index(drop=True)
 
 
 # ---------------------------------------------------------------------------
 # Orchestration
 # ---------------------------------------------------------------------------
+
 
 def run_aggregation() -> dict[str, Path]:
     SCORES_DIR.mkdir(parents=True, exist_ok=True)

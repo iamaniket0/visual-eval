@@ -1,4 +1,5 @@
 """Tests for the editor registry."""
+
 from src.edit.editors import all_registered
 
 

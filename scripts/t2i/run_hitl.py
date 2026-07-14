@@ -8,6 +8,7 @@ Usage:
 
 Internal guidance specifies 10% stratified sample, Cohen's kappa > 0.6 target.
 """
+
 import argparse
 
 from src.t2i.hitl import build_sample, compute_agreement, export_csv, import_csv, save_sample
@@ -39,6 +40,7 @@ def main():
 
     elif args.action == "web":
         from src.t2i.hitl_webui import main as web_main
+
         web_main()
 
 

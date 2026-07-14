@@ -4,6 +4,7 @@ Usage:
     python -m scripts.generate_design_report
     python -m scripts.generate_design_report --model lucid_origin
 """
+
 from __future__ import annotations
 
 import argparse
@@ -25,6 +26,7 @@ if sys.platform == "darwin":
     # cffi checks ctypes.util.find_library which doesn't honour DYLD_FALLBACK;
     # monkeypatch it so it finds the Homebrew dylibs.
     _orig_find = ctypes.util.find_library
+
     def _patched_find(name):
         result = _orig_find(name)
         if result:
@@ -35,6 +37,7 @@ if sys.platform == "darwin":
         for p in Path(_brew_lib).glob(f"lib{name}*dylib"):
             return str(p)
         return None
+
     ctypes.util.find_library = _patched_find
 
 import subprocess
@@ -53,13 +56,13 @@ REPORTS_DIR = OUTPUTS_DIR / "reports" / "designed"
 SCORES_DIR = OUTPUTS_DIR / "scores"
 
 COMPANY_COLORS = {
-    "lucid_origin":       {"hex": "#00C4CC", "rgb": "0, 196, 204"},
-    "xai_aurora":         {"hex": "#FAFAFA", "rgb": "250, 250, 250"},
-    "gpt_image_15":       {"hex": "#10A37F", "rgb": "16, 163, 127"},
-    "gpt_image_2":        {"hex": "#10A37F", "rgb": "16, 163, 127"},
-    "flux2_max":          {"hex": "#8B5CF6", "rgb": "139, 92, 246"},
-    "bria_fibo":          {"hex": "#F59E0B", "rgb": "245, 158, 11"},
-    "default":            {"hex": "#1ED760", "rgb": "30, 215, 96"},
+    "lucid_origin": {"hex": "#00C4CC", "rgb": "0, 196, 204"},
+    "xai_aurora": {"hex": "#FAFAFA", "rgb": "250, 250, 250"},
+    "gpt_image_15": {"hex": "#10A37F", "rgb": "16, 163, 127"},
+    "gpt_image_2": {"hex": "#10A37F", "rgb": "16, 163, 127"},
+    "flux2_max": {"hex": "#8B5CF6", "rgb": "139, 92, 246"},
+    "bria_fibo": {"hex": "#F59E0B", "rgb": "245, 158, 11"},
+    "default": {"hex": "#1ED760", "rgb": "30, 215, 96"},
 }
 
 DISPLAY_NAMES = {
@@ -150,6 +153,7 @@ def image_to_b64(path: str | Path, max_width: int = 400) -> str:
             img = img.resize((max_width, int(img.height * ratio)), Image.LANCZOS)
         img = img.convert("RGB")
         import io
+
         buf = io.BytesIO()
         img.save(buf, format="JPEG", quality=75)
         return base64.b64encode(buf.getvalue()).decode()
@@ -166,12 +170,14 @@ def build_leaderboard_bars(lb: pd.DataFrame, target: str, company_hex: str) -> l
         model = row["model"]
         score = row[col]
         is_target = model == target
-        bars.append({
-            "model": DISPLAY_NAMES.get(model, model),
-            "width": min(100, max(2, (score / max(max_score, 0.01)) * 95)),
-            "color": company_hex if is_target else "#A1A1AA",
-            "label": f"{score:.3f}",
-        })
+        bars.append(
+            {
+                "model": DISPLAY_NAMES.get(model, model),
+                "width": min(100, max(2, (score / max(max_score, 0.01)) * 95)),
+                "color": company_hex if is_target else "#A1A1AA",
+                "label": f"{score:.3f}",
+            }
+        )
     return bars
 
 
@@ -184,14 +190,16 @@ def build_leaderboard_table(lb: pd.DataFrame, target: str) -> list[dict]:
         model = row["model"]
         n_cov = int(row.get("n_covered", row.get("n_prompts", 210)))
         n_tot = int(row.get("n_total", row.get("n_prompts", 210)))
-        rows.append({
-            "model": DISPLAY_NAMES.get(model, model),
-            "gm_cov": f"{row[cov_col]:.3f}",
-            "am_cov": f"{row[am_col]:.3f}" if pd.notna(row.get(am_col)) else "—",
-            "gm_full": f"{row['overall_gm']:.3f}",
-            "coverage": f"{n_cov}/{n_tot}",
-            "is_target": model == target,
-        })
+        rows.append(
+            {
+                "model": DISPLAY_NAMES.get(model, model),
+                "gm_cov": f"{row[cov_col]:.3f}",
+                "am_cov": f"{row[am_col]:.3f}" if pd.notna(row.get(am_col)) else "—",
+                "gm_full": f"{row['overall_gm']:.3f}",
+                "coverage": f"{n_cov}/{n_tot}",
+                "is_target": model == target,
+            }
+        )
     return rows
 
 
@@ -204,12 +212,14 @@ def build_subcat_bars(psc: pd.DataFrame, target: str, company_hex: str) -> list[
     for col in sorted(gm_cols):
         name = col.replace("__gm", "")
         val = float(target_row[col].iloc[0])
-        bars.append({
-            "model": name,
-            "width": min(100, max(2, val * 95)),
-            "color": company_hex,
-            "label": f"{val:.2f}",
-        })
+        bars.append(
+            {
+                "model": name,
+                "width": min(100, max(2, val * 95)),
+                "color": company_hex,
+                "label": f"{val:.2f}",
+            }
+        )
     return bars
 
 
@@ -231,17 +241,19 @@ def build_subcat_table(psc: pd.DataFrame, target: str) -> list[dict]:
     rows = []
     for _, row in psc.sort_values(ov_col, ascending=False).iterrows():
         model = row["model"]
-        rows.append({
-            "model": DISPLAY_NAMES.get(model, model),
-            "numeracy": f"{row[num_col]:.3f}",
-            "spatial": f"{row[sp_col]:.3f}",
-            "complex": f"{row[cmp_col]:.3f}",
-            "overall": f"{row[ov_col]:.3f}",
-            "num_class": cell_class(row[num_col], num_vals),
-            "sp_class": cell_class(row[sp_col], sp_vals),
-            "cmp_class": cell_class(row[cmp_col], cmp_vals),
-            "is_target": model == target,
-        })
+        rows.append(
+            {
+                "model": DISPLAY_NAMES.get(model, model),
+                "numeracy": f"{row[num_col]:.3f}",
+                "spatial": f"{row[sp_col]:.3f}",
+                "complex": f"{row[cmp_col]:.3f}",
+                "overall": f"{row[ov_col]:.3f}",
+                "num_class": cell_class(row[num_col], num_vals),
+                "sp_class": cell_class(row[sp_col], sp_vals),
+                "cmp_class": cell_class(row[cmp_col], cmp_vals),
+                "is_target": model == target,
+            }
+        )
     return rows
 
 
@@ -271,30 +283,38 @@ def build_failures(model: str, n: int = 3) -> list[dict]:
         atoms = []
         for a in r.get("answers", []):
             prob = a.get("probability")
-            atoms.append({
-                "question": a.get("question", ""),
-                "prob": f"{prob:.2f}" if prob is not None else "?",
-                "passed": prob is not None and prob >= 0.50,
-            })
+            atoms.append(
+                {
+                    "question": a.get("question", ""),
+                    "prob": f"{prob:.2f}" if prob is not None else "?",
+                    "passed": prob is not None and prob >= 0.50,
+                }
+            )
 
-        weakest = min(atoms, key=lambda a: float(a["prob"]) if a["prob"] != "?" else 999) if atoms else None
+        weakest = (
+            min(atoms, key=lambda a: float(a["prob"]) if a["prob"] != "?" else 999)
+            if atoms
+            else None
+        )
         diagnosis = ""
         diagnosis_type = ""
         if weakest and not weakest["passed"]:
             diagnosis_type = "Primary failure"
-            diagnosis = f"Weakest atom: \"{weakest['question']}\" at p={weakest['prob']}."
+            diagnosis = f'Weakest atom: "{weakest["question"]}" at p={weakest["prob"]}.'
 
-        failures.append({
-            "prompt_id": pid,
-            "sub_category": p.get("sub_category", "unknown"),
-            "prompt_text": p.get("prompt_text", ""),
-            "gm": f"{r.get('score_gm', 0):.2f}",
-            "am": f"{r.get('score_am', 0):.2f}",
-            "image_b64": image_to_b64(img_path) if img_path else "",
-            "atoms": atoms,
-            "diagnosis": diagnosis,
-            "diagnosis_type": diagnosis_type,
-        })
+        failures.append(
+            {
+                "prompt_id": pid,
+                "sub_category": p.get("sub_category", "unknown"),
+                "prompt_text": p.get("prompt_text", ""),
+                "gm": f"{r.get('score_gm', 0):.2f}",
+                "am": f"{r.get('score_am', 0):.2f}",
+                "image_b64": image_to_b64(img_path) if img_path else "",
+                "atoms": atoms,
+                "diagnosis": diagnosis,
+                "diagnosis_type": diagnosis_type,
+            }
+        )
 
         if len(failures) >= n:
             break
@@ -390,7 +410,9 @@ def generate_model_report(model: str) -> Path:
         "uncovered_explanation": uncovered_explanation,
         "uncovered_rate": f"{100 * uncovered_count / max(n_total, 1):.0f}",
         "failures": build_failures(model, n=3),
-        "pitch_text": PITCH_TEXTS.get(model, "Targeted training data calibrated to this model's failure modes."),
+        "pitch_text": PITCH_TEXTS.get(
+            model, "Targeted training data calibrated to this model's failure modes."
+        ),
         "methodology_text": methodology_text,
         "disclosure_text": disclosure_text,
     }
@@ -418,11 +440,15 @@ def generate_model_report(model: str) -> Path:
             break
     if not chrome:
         import shutil
+
         chrome = shutil.which("google-chrome") or shutil.which("chromium")
 
     if chrome:
         cmd = [
-            chrome, "--headless", "--disable-gpu", "--no-sandbox",
+            chrome,
+            "--headless",
+            "--disable-gpu",
+            "--no-sandbox",
             "--print-to-pdf=" + str(pdf_path),
             "--print-to-pdf-no-header",
             "--no-pdf-header-footer",
@@ -461,6 +487,7 @@ def main():
         except Exception as e:
             log.error("Failed to generate report for %s: %s", model, e)
             import traceback
+
             traceback.print_exc()
 
 

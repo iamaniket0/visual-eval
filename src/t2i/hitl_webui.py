@@ -7,12 +7,22 @@ Each page shows one image with its atomic binary questions. Dani clicks
 yes/no for each, then Submit. Progress is persisted to
 outputs/t2i/hitl/hitl_human.jsonl on every submit.
 """
+
 from __future__ import annotations
 
 import json
 from pathlib import Path
 
-from flask import Flask, abort, jsonify, redirect, render_template_string, request, send_file, url_for
+from flask import (
+    Flask,
+    abort,
+    jsonify,
+    redirect,
+    render_template_string,
+    request,
+    send_file,
+    url_for,
+)
 
 from src.t2i.hitl import HITL_DIR, build_sample, compute_agreement, load_sample, save_sample
 from src.core.utils import append_jsonl, get_logger, read_jsonl
@@ -145,14 +155,15 @@ def page(idx: int):
     if idx >= total:
         agreement = compute_agreement()
         return render_template_string(
-            PAGE, done=True, n_annotated=len(_annotated_ids()),
+            PAGE,
+            done=True,
+            n_annotated=len(_annotated_ids()),
             kappa=agreement.get("cohen_kappa"),
             target_kappa=agreement.get("target_kappa", 0.6),
         )
     if idx < 0:
         abort(404)
-    return render_template_string(PAGE, done=False, idx=idx, total=total,
-                                   row=sample[idx])
+    return render_template_string(PAGE, done=False, idx=idx, total=total, row=sample[idx])
 
 
 @app.route("/submit/<int:idx>", methods=["POST"])
@@ -167,12 +178,15 @@ def submit(idx: int):
         if val not in ("yes", "no"):
             abort(400, f"Missing answer for {q['q_id']}")
         answers.append({"q_id": q["q_id"], "answer": val})
-    append_jsonl(HITL_DIR / "hitl_human.jsonl", {
-        "prompt_id": row.prompt_id,
-        "model": row.model,
-        "annotator": "dani",
-        "human_answers": answers,
-    })
+    append_jsonl(
+        HITL_DIR / "hitl_human.jsonl",
+        {
+            "prompt_id": row.prompt_id,
+            "model": row.model,
+            "annotator": "dani",
+            "human_answers": answers,
+        },
+    )
     return redirect(url_for("page", idx=idx + 1))
 
 
@@ -200,11 +214,13 @@ def reset():
 def status():
     sample = _sample_or_build()
     done = _annotated_ids()
-    return jsonify({
-        "total": len(sample),
-        "annotated": len(done),
-        "remaining": len(sample) - len(done),
-    })
+    return jsonify(
+        {
+            "total": len(sample),
+            "annotated": len(done),
+            "remaining": len(sample) - len(done),
+        }
+    )
 
 
 def main():

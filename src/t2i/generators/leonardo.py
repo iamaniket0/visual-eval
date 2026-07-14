@@ -4,6 +4,7 @@ Pattern: async_poll
   POST /api/rest/v1/generations         -> { sdGenerationJob: { generationId } }
   GET  /api/rest/v1/generations/{id}    -> { generations_by_pk: { status, generated_images } }
 """
+
 from __future__ import annotations
 
 from .base import BaseGenerator, register
@@ -19,8 +20,7 @@ class LeonardoGenerator(BaseGenerator):
         # variation via the provider's seed parameter.
         return await self._do_generate_with_seed(prompt_text, seed=0)
 
-    async def _do_generate_with_seed(self, prompt_text: str,
-                                      seed: int) -> tuple[bytes, dict]:
+    async def _do_generate_with_seed(self, prompt_text: str, seed: int) -> tuple[bytes, dict]:
         headers = {
             "Authorization": f"Bearer {self.api_key}",
             "Content-Type": "application/json",
@@ -57,10 +57,12 @@ class LeonardoGenerator(BaseGenerator):
             return None
 
         final = await self._poll_until_ready(
-            poll_url, headers=headers,
+            poll_url,
+            headers=headers,
             poll_interval=self.config.get("poll_interval_sec", 3),
             max_wait=self.config.get("max_poll_wait_sec", 180),
-            ready_check=ready, failed_check=failed,
+            ready_check=ready,
+            failed_check=failed,
         )
         imgs = final.get("generations_by_pk", {}).get("generated_images", [])
         if not imgs:

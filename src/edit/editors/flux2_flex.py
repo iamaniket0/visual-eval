@@ -6,6 +6,7 @@ GET  polling_url until status == "Ready" → image URL
 
 Uses the same API key and auth as FLUX.1 Kontext (x-key header).
 """
+
 from __future__ import annotations
 
 import asyncio
@@ -17,8 +18,9 @@ from .base import BaseEditor, register
 class Flux2FlexEditor(BaseEditor):
     provider = "bfl"
 
-    async def _do_edit(self, source_image_path: str, instruction: str,
-                       mask_path: str | None = None) -> tuple[bytes, dict]:
+    async def _do_edit(
+        self, source_image_path: str, instruction: str, mask_path: str | None = None
+    ) -> tuple[bytes, dict]:
         headers = {
             "X-Key": self.api_key,
             "Content-Type": "application/json",

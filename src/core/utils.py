@@ -1,4 +1,5 @@
 """Shared utilities: config loading, cost tracking, logging, JSONL I/O."""
+
 from __future__ import annotations
 
 import json
@@ -42,6 +43,7 @@ def get_api_key(env_var: str) -> str | None:
 @dataclass
 class CostTracker:
     """Thread-safe cost tracker with hard cap enforcement."""
+
     hard_cap_usd: float
     alert_at_fraction: float = 0.8
     total: float = 0.0
@@ -55,13 +57,13 @@ class CostTracker:
             self.total += amount
             self.by_model[model] = self.by_model.get(model, 0.0) + amount
             self.by_stage[stage] = self.by_stage.get(stage, 0.0) + amount
-            if (not self._alerted
-                    and self.total >= self.hard_cap_usd * self.alert_at_fraction):
+            if not self._alerted and self.total >= self.hard_cap_usd * self.alert_at_fraction:
                 self._alerted = True
                 logging.getLogger("cost").warning(
                     "Cost at %.0f%% of cap: $%.2f / $%.2f",
                     100 * self.total / self.hard_cap_usd,
-                    self.total, self.hard_cap_usd,
+                    self.total,
+                    self.hard_cap_usd,
                 )
 
     def check_cap(self) -> bool:

@@ -7,6 +7,7 @@ Note: requires IMS token exchange (client_id + client_secret) - we fetch it
 on first use and cache it. Note that Firefly results are shared
 only with Adobe per their customer agreement.
 """
+
 from __future__ import annotations
 
 import time

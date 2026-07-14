@@ -13,6 +13,7 @@ Each atom is tagged with a `dimension` field that maps to the three-axis
 evaluation from GEditBench v2, enabling per-dimension scoring in the
 aggregator.
 """
+
 from __future__ import annotations
 
 import asyncio
@@ -56,6 +57,7 @@ SOFT_JUDGE_USER_TEMPLATE = (
 # Dataclasses
 # ---------------------------------------------------------------------------
 
+
 @dataclass
 class JudgeResult:
     prompt_id: str
@@ -83,6 +85,7 @@ class SoftTifaLogprobsUnavailable(RuntimeError):
 # Helpers
 # ---------------------------------------------------------------------------
 
+
 def _image_to_b64(path: Path) -> str:
     with open(path, "rb") as f:
         return base64.b64encode(f.read()).decode()
@@ -91,6 +94,7 @@ def _image_to_b64(path: Path) -> str:
 # ---------------------------------------------------------------------------
 # Together Qwen3.5 Soft Judge (preferred backend)
 # ---------------------------------------------------------------------------
+
 
 class TogetherQwen35SoftJudge:
     """Soft-TIFA via Qwen3.5-397B-A17B on Together AI — dual-image variant.
@@ -101,10 +105,13 @@ class TogetherQwen35SoftJudge:
 
     backend_name = "qwen_together_soft"
 
-    def __init__(self, model: str = "Qwen/Qwen3.5-397B-A17B",
-                 cost_tracker: CostTracker | None = None,
-                 concurrency: int = 8,
-                 logprob_floor: float = -10.0):
+    def __init__(
+        self,
+        model: str = "Qwen/Qwen3.5-397B-A17B",
+        cost_tracker: CostTracker | None = None,
+        concurrency: int = 8,
+        logprob_floor: float = -10.0,
+    ):
         self.model = model
         self.cost_tracker = cost_tracker
         self.semaphore = asyncio.Semaphore(concurrency)
@@ -113,7 +120,8 @@ class TogetherQwen35SoftJudge:
         self._client = None
         settings = load_settings()
         self.cost_per_judgment = settings.get("judge", {}).get(
-            "cost_per_judgment_estimate", 0.004,
+            "cost_per_judgment_estimate",
+            0.004,
         )
 
     def _ensure_client(self):
@@ -122,45 +130,66 @@ class TogetherQwen35SoftJudge:
         if not self.api_key:
             raise RuntimeError("TOGETHER_API_KEY not set; cannot run judge")
         from openai import AsyncOpenAI
+
         self._client = AsyncOpenAI(
             api_key=self.api_key,
             base_url="https://api.together.xyz/v1",
         )
 
-    async def judge_edit(self, prompt_id: str, model: str,
-                         edit_instruction: str,
-                         source_image_path: str,
-                         edited_image_path: str,
-                         atoms: list[dict[str, str]]) -> JudgeResult:
+    async def judge_edit(
+        self,
+        prompt_id: str,
+        model: str,
+        edit_instruction: str,
+        source_image_path: str,
+        edited_image_path: str,
+        atoms: list[dict[str, str]],
+    ) -> JudgeResult:
         """Judge a single edited image against its source."""
 
         if not edited_image_path or not Path(edited_image_path).exists():
             return JudgeResult(
-                prompt_id=prompt_id, model=model,
+                prompt_id=prompt_id,
+                model=model,
                 source_image_path=source_image_path,
                 edited_image_path=edited_image_path,
                 judge_model=self.model,
-                answers=[{"q_id": f"q{i+1}", "answer": "no",
-                           "probability": 0.0,
-                           "type": a.get("type", ""),
-                           "dimension": a.get("dimension", "")}
-                          for i, a in enumerate(atoms)],
-                score=0.0, score_am=0.0, score_gm=0.0,
+                answers=[
+                    {
+                        "q_id": f"q{i + 1}",
+                        "answer": "no",
+                        "probability": 0.0,
+                        "type": a.get("type", ""),
+                        "dimension": a.get("dimension", ""),
+                    }
+                    for i, a in enumerate(atoms)
+                ],
+                score=0.0,
+                score_am=0.0,
+                score_gm=0.0,
                 error="edited_image_missing_or_filtered",
             )
 
         if not source_image_path or not Path(source_image_path).exists():
             return JudgeResult(
-                prompt_id=prompt_id, model=model,
+                prompt_id=prompt_id,
+                model=model,
                 source_image_path=source_image_path,
                 edited_image_path=edited_image_path,
                 judge_model=self.model,
-                answers=[{"q_id": f"q{i+1}", "answer": "no",
-                           "probability": 0.0,
-                           "type": a.get("type", ""),
-                           "dimension": a.get("dimension", "")}
-                          for i, a in enumerate(atoms)],
-                score=0.0, score_am=0.0, score_gm=0.0,
+                answers=[
+                    {
+                        "q_id": f"q{i + 1}",
+                        "answer": "no",
+                        "probability": 0.0,
+                        "type": a.get("type", ""),
+                        "dimension": a.get("dimension", ""),
+                    }
+                    for i, a in enumerate(atoms)
+                ],
+                score=0.0,
+                score_am=0.0,
+                score_gm=0.0,
                 error="source_image_missing",
             )
 
@@ -168,12 +197,10 @@ class TogetherQwen35SoftJudge:
         source_b64 = _image_to_b64(Path(source_image_path))
         edited_b64 = _image_to_b64(Path(edited_image_path))
 
-        coros = [
-            self._score_atom(edit_instruction, atom, source_b64, edited_b64)
-            for atom in atoms
-        ]
+        coros = [self._score_atom(edit_instruction, atom, source_b64, edited_b64) for atom in atoms]
         atom_results: list[tuple[float, str | None]] = await asyncio.gather(
-            *coros, return_exceptions=False,
+            *coros,
+            return_exceptions=False,
         )
 
         answers: list[dict[str, Any]] = []
@@ -181,17 +208,19 @@ class TogetherQwen35SoftJudge:
         errored_atoms = []
         for i, (atom, (p, err)) in enumerate(zip(atoms, atom_results)):
             if err:
-                errored_atoms.append((f"q{i+1}", err))
+                errored_atoms.append((f"q{i + 1}", err))
                 p = math.exp(self.logprob_floor)
             hard = "yes" if p >= 0.5 else "no"
-            answers.append({
-                "q_id": atom.get("q_id", f"q{i+1}"),
-                "question": atom.get("question", ""),
-                "type": atom.get("type", ""),
-                "dimension": atom.get("dimension", ""),
-                "answer": hard,
-                "probability": round(float(p), 6),
-            })
+            answers.append(
+                {
+                    "q_id": atom.get("q_id", f"q{i + 1}"),
+                    "question": atom.get("question", ""),
+                    "type": atom.get("type", ""),
+                    "dimension": atom.get("dimension", ""),
+                    "answer": hard,
+                    "probability": round(float(p), 6),
+                }
+            )
             probs.append(float(p))
 
         score_am = _am(probs)
@@ -200,14 +229,17 @@ class TogetherQwen35SoftJudge:
         if self.cost_tracker:
             self.cost_tracker.add(
                 self.cost_per_judgment * max(1, len(atoms)),
-                model=model, stage="judge",
+                model=model,
+                stage="judge",
             )
 
         return JudgeResult(
-            prompt_id=prompt_id, model=model,
+            prompt_id=prompt_id,
+            model=model,
             source_image_path=source_image_path,
             edited_image_path=edited_image_path,
-            judge_model=self.model, answers=answers,
+            judge_model=self.model,
+            answers=answers,
             score=round(score_am, 4),
             score_am=round(score_am, 4),
             score_gm=round(score_gm, 4),
@@ -215,10 +247,9 @@ class TogetherQwen35SoftJudge:
             error=(f"ATOM_ERRORS: {errored_atoms[:3]}" if errored_atoms else None),
         )
 
-    async def _score_atom(self, edit_instruction: str,
-                           atom: dict[str, str],
-                           source_b64: str,
-                           edited_b64: str) -> tuple[float, str | None]:
+    async def _score_atom(
+        self, edit_instruction: str, atom: dict[str, str], source_b64: str, edited_b64: str
+    ) -> tuple[float, str | None]:
         """Score a single atom with both images."""
         user_text = SOFT_JUDGE_USER_TEMPLATE.format(
             edit_instruction=edit_instruction,
@@ -226,10 +257,8 @@ class TogetherQwen35SoftJudge:
         )
         content = [
             {"type": "text", "text": user_text},
-            {"type": "image_url",
-             "image_url": {"url": f"data:image/png;base64,{source_b64}"}},
-            {"type": "image_url",
-             "image_url": {"url": f"data:image/png;base64,{edited_b64}"}},
+            {"type": "image_url", "image_url": {"url": f"data:image/png;base64,{source_b64}"}},
+            {"type": "image_url", "image_url": {"url": f"data:image/png;base64,{edited_b64}"}},
         ]
 
         async with self.semaphore:
@@ -253,8 +282,7 @@ class TogetherQwen35SoftJudge:
         content_logprobs = getattr(logp, "content", None) if logp else None
         if not logp or not content_logprobs:
             raise SoftTifaLogprobsUnavailable(
-                f"Together returned no logprobs for model={self.model}. "
-                "Soft-TIFA cannot proceed."
+                f"Together returned no logprobs for model={self.model}. Soft-TIFA cannot proceed."
             )
         first = content_logprobs[0]
         top = getattr(first, "top_logprobs", []) or []
@@ -266,9 +294,12 @@ class TogetherQwen35SoftJudge:
 # Backend factory
 # ---------------------------------------------------------------------------
 
-def judge_client_factory(cost_tracker: CostTracker | None = None,
-                          concurrency: int = 8,
-                          override_backend: str | None = None):
+
+def judge_client_factory(
+    cost_tracker: CostTracker | None = None,
+    concurrency: int = 8,
+    override_backend: str | None = None,
+):
     settings = load_settings()
     jcfg = settings.get("judge", {})
     backend = override_backend or jcfg.get("backend", "qwen_together_soft")
@@ -295,9 +326,13 @@ def judge_client_factory(cost_tracker: CostTracker | None = None,
 # CLI entry point helper
 # ---------------------------------------------------------------------------
 
-async def judge_model_edits(model_id: str, prompts_by_id: dict[str, dict],
-                             cost_tracker: CostTracker,
-                             backend: str | None = None) -> Path:
+
+async def judge_model_edits(
+    model_id: str,
+    prompts_by_id: dict[str, dict],
+    cost_tracker: CostTracker,
+    backend: str | None = None,
+) -> Path:
     """Judge every successful edit for a given model.
 
     Reads outputs/metadata/edit_log.jsonl to find this model's outputs,
@@ -343,16 +378,19 @@ async def judge_model_edits(model_id: str, prompts_by_id: dict[str, dict],
             if resolved.exists():
                 source_path = str(resolved)
 
-        tasks.append(judge.judge_edit(
-            prompt_id=pid,
-            model=model_id,
-            edit_instruction=edit_instruction,
-            source_image_path=source_path,
-            edited_image_path=rec.get("image_path", ""),
-            atoms=prompt.get("atoms", []),
-        ))
+        tasks.append(
+            judge.judge_edit(
+                prompt_id=pid,
+                model=model_id,
+                edit_instruction=edit_instruction,
+                source_image_path=source_path,
+                edited_image_path=rec.get("image_path", ""),
+                atoms=prompt.get("atoms", []),
+            )
+        )
 
     from tqdm.asyncio import tqdm_asyncio
+
     results = await tqdm_asyncio.gather(*tasks, desc=f"judging {model_id}")
     for r in results:
         append_jsonl(out_path, r.to_dict())

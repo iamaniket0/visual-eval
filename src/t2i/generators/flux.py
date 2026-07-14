@@ -4,6 +4,7 @@ Pattern: async_poll
   POST /v1/flux-pro-1.1  -> { id, polling_url }
   GET  polling_url        -> { status, result: { sample } }
 """
+
 from __future__ import annotations
 
 from typing import Any
@@ -41,15 +42,20 @@ class FluxGenerator(BaseGenerator):
             return None
 
         final = await self._poll_until_ready(
-            polling_url, headers=headers,
+            polling_url,
+            headers=headers,
             poll_interval=self.config.get("poll_interval_sec", 2),
             max_wait=self.config.get("max_poll_wait_sec", 120),
-            ready_check=ready, failed_check=failed,
+            ready_check=ready,
+            failed_check=failed,
         )
         result = final.get("result", {})
         sample = result.get("sample")
         if not sample:
             raise RuntimeError(f"No sample in final response: {final}")
-        img_bytes = await self._download(sample) if sample.startswith("http") \
+        img_bytes = (
+            await self._download(sample)
+            if sample.startswith("http")
             else self._b64_to_bytes(sample)
+        )
         return img_bytes, {"submit": submit, "final": final}

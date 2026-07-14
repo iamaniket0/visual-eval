@@ -3,6 +3,7 @@
 Pattern: sync (multipart/form-data)
   POST /v2beta/stable-image/generate/ultra -> image bytes directly
 """
+
 from __future__ import annotations
 
 from .base import BaseGenerator, _ContentFiltered, looks_like_filter, register
@@ -25,7 +26,10 @@ class StabilityGenerator(BaseGenerator):
             "aspect_ratio": "1:1",
         }
         r = await self.client.post(
-            self.config["api_url"], headers=headers, data=data, files=files,
+            self.config["api_url"],
+            headers=headers,
+            data=data,
+            files=files,
         )
         if r.status_code == 403 and looks_like_filter(r.text):
             raise _ContentFiltered(r.text[:300], metadata={"status": 403})

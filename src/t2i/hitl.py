@@ -8,6 +8,7 @@ produces two interfaces for Dani:
 Re-import uses outputs/t2i/hitl/hitl_human.jsonl. Cohen's kappa is computed
 judge-vs-human per answer.
 """
+
 from __future__ import annotations
 
 import json
@@ -32,6 +33,7 @@ HITL_DIR = OUTPUTS_DIR / "hitl"
 # Sampling
 # ---------------------------------------------------------------------------
 
+
 @dataclass
 class HitlSampleRow:
     prompt_id: str
@@ -39,7 +41,7 @@ class HitlSampleRow:
     sub_category: str
     image_path: str
     prompt_text: str
-    questions: list[dict[str, str]]   # [{q_id, question, type}]
+    questions: list[dict[str, str]]  # [{q_id, question, type}]
     judge_answers: list[dict[str, str]]  # [{q_id, answer}]
 
 
@@ -73,16 +75,19 @@ def build_sample(seed: int = 42) -> list[HitlSampleRow]:
         picks = rng.sample(recs, min(n, len(recs)))
         for rec in picks:
             p = prompts_by_id[rec["prompt_id"]]
-            sampled.append(HitlSampleRow(
-                prompt_id=rec["prompt_id"],
-                model=model,
-                sub_category=sub,
-                image_path=rec["image_path"],
-                prompt_text=p["prompt_text"],
-                questions=p["atomic_questions"],
-                judge_answers=[{"q_id": a["q_id"], "answer": a["answer"]}
-                               for a in rec.get("answers", [])],
-            ))
+            sampled.append(
+                HitlSampleRow(
+                    prompt_id=rec["prompt_id"],
+                    model=model,
+                    sub_category=sub,
+                    image_path=rec["image_path"],
+                    prompt_text=p["prompt_text"],
+                    questions=p["atomic_questions"],
+                    judge_answers=[
+                        {"q_id": a["q_id"], "answer": a["answer"]} for a in rec.get("answers", [])
+                    ],
+                )
+            )
     log.info("HITL sample: %d images across %d cells", len(sampled), len(by_cell))
     return sampled
 
@@ -108,6 +113,7 @@ def load_sample() -> list[HitlSampleRow]:
 # CSV export / re-import
 # ---------------------------------------------------------------------------
 
+
 def export_csv(sample: list[HitlSampleRow]) -> Path:
     """One row per (image, question). Dani fills the `human_answer` column."""
     HITL_DIR.mkdir(parents=True, exist_ok=True)
@@ -116,18 +122,20 @@ def export_csv(sample: list[HitlSampleRow]) -> Path:
     for s in sample:
         judge_map = {a["q_id"]: a["answer"] for a in s.judge_answers}
         for q in s.questions:
-            rows.append({
-                "prompt_id": s.prompt_id,
-                "model": s.model,
-                "sub_category": s.sub_category,
-                "image_path": s.image_path,
-                "prompt_text": s.prompt_text,
-                "q_id": q["q_id"],
-                "question": q["question"],
-                "judge_answer": judge_map.get(q["q_id"], ""),
-                "human_answer": "",   # Dani fills yes/no
-                "annotator": "",
-            })
+            rows.append(
+                {
+                    "prompt_id": s.prompt_id,
+                    "model": s.model,
+                    "sub_category": s.sub_category,
+                    "image_path": s.image_path,
+                    "prompt_text": s.prompt_text,
+                    "q_id": q["q_id"],
+                    "question": q["question"],
+                    "judge_answer": judge_map.get(q["q_id"], ""),
+                    "human_answer": "",  # Dani fills yes/no
+                    "annotator": "",
+                }
+            )
     pd.DataFrame(rows).to_csv(path, index=False)
     log.info("Wrote HITL CSV with %d rows to %s", len(rows), path)
     return path
@@ -151,8 +159,7 @@ def import_csv(csv_path: Path | None = None) -> Path:
             "model": model,
             "annotator": g["annotator"].iloc[0] if "annotator" in g else "dani",
             "human_answers": [
-                {"q_id": row["q_id"], "answer": row["human_answer"]}
-                for _, row in g.iterrows()
+                {"q_id": row["q_id"], "answer": row["human_answer"]} for _, row in g.iterrows()
             ],
         }
         append_jsonl(out_path, rec)
@@ -163,6 +170,7 @@ def import_csv(csv_path: Path | None = None) -> Path:
 # ---------------------------------------------------------------------------
 # Agreement analysis
 # ---------------------------------------------------------------------------
+
 
 def compute_agreement() -> dict[str, Any]:
     """Compare judge vs human on the overlapping (prompt_id, q_id) cells."""
@@ -195,11 +203,14 @@ def compute_agreement() -> dict[str, Any]:
                 matches += int(judge_ans == human_ans)
                 total += 1
             if total:
-                per_row.append({
-                    "prompt_id": pid, "model": model,
-                    "n_questions": total,
-                    "agreement": round(matches / total, 4),
-                })
+                per_row.append(
+                    {
+                        "prompt_id": pid,
+                        "model": model,
+                        "n_questions": total,
+                        "agreement": round(matches / total, 4),
+                    }
+                )
 
     if not pairs:
         log.warning("No overlap between judge and human answers")
@@ -220,6 +231,10 @@ def compute_agreement() -> dict[str, Any]:
     out_path = HITL_DIR / "agreement.json"
     with open(out_path, "w") as f:
         json.dump(out, f, indent=2)
-    log.info("Cohen's kappa: %.3f (target > %.2f) across %d answer pairs",
-             kappa, out["target_kappa"], len(pairs))
+    log.info(
+        "Cohen's kappa: %.3f (target > %.2f) across %d answer pairs",
+        kappa,
+        out["target_kappa"],
+        len(pairs),
+    )
     return out

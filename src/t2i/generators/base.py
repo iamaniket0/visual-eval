@@ -10,6 +10,7 @@ All generators share:
     - Cost accounting via CostTracker
     - PNG normalization on save
 """
+
 from __future__ import annotations
 
 import asyncio
@@ -31,9 +32,9 @@ from src.t2i import OUTPUTS_DIR
 
 class GenerationStatus(str, Enum):
     SUCCESS = "SUCCESS"
-    FILTERED = "FILTERED"       # blocked by provider content policy
-    ERROR = "ERROR"              # network/API failure after retries
-    SKIPPED = "SKIPPED"          # missing API key or cap reached
+    FILTERED = "FILTERED"  # blocked by provider content policy
+    ERROR = "ERROR"  # network/API failure after retries
+    SKIPPED = "SKIPPED"  # missing API key or cap reached
 
 
 @dataclass
@@ -61,9 +62,19 @@ class GenerationResult:
 # If any of these substrings appear in an error message, we log FILTERED and
 # do NOT retry (retrying a modified prompt would corrupt the benchmark).
 _FILTER_MARKERS = (
-    "content policy", "content_policy", "safety", "not allowed", "nsfw",
-    "moderation", "violates", "blocked", "inappropriate", "unsafe",
-    "prohibited", "sensitive_content", "safety_system",
+    "content policy",
+    "content_policy",
+    "safety",
+    "not allowed",
+    "nsfw",
+    "moderation",
+    "violates",
+    "blocked",
+    "inappropriate",
+    "unsafe",
+    "prohibited",
+    "sensitive_content",
+    "safety_system",
 )
 
 
@@ -75,11 +86,10 @@ def looks_like_filter(text: str) -> bool:
 class BaseGenerator(ABC):
     """Abstract base. Concrete subclasses implement one provider."""
 
-    model_id: str = ""         # our internal model key, e.g. "flux2_max"
+    model_id: str = ""  # our internal model key, e.g. "flux2_max"
     provider: str = ""
 
-    def __init__(self, config: dict[str, Any], cost_tracker: CostTracker,
-                 concurrency: int = 4):
+    def __init__(self, config: dict[str, Any], cost_tracker: CostTracker, concurrency: int = 4):
         self.config = config
         self.cost_tracker = cost_tracker
         self.log = get_logger(f"gen.{self.model_id}")
@@ -111,38 +121,47 @@ class BaseGenerator(ABC):
     # Public entry point
     # ------------------------------------------------------------------
 
-    async def generate(self, prompt_id: str, prompt_text: str,
-                       output_dir: Path, seed: int = 0) -> GenerationResult:
+    async def generate(
+        self, prompt_id: str, prompt_text: str, output_dir: Path, seed: int = 0
+    ) -> GenerationResult:
         started = datetime.now(timezone.utc)
 
         if not self.api_key:
             return GenerationResult(
-                prompt_id=prompt_id, model=self.model_id,
-                status=GenerationStatus.SKIPPED, seed=seed,
+                prompt_id=prompt_id,
+                model=self.model_id,
+                status=GenerationStatus.SKIPPED,
+                seed=seed,
                 error=f"{self.config['api_key_env']} not set",
             )
 
         if not self.cost_tracker.check_cap():
             return GenerationResult(
-                prompt_id=prompt_id, model=self.model_id,
-                status=GenerationStatus.SKIPPED, seed=seed,
+                prompt_id=prompt_id,
+                model=self.model_id,
+                status=GenerationStatus.SKIPPED,
+                seed=seed,
                 error="Cost cap reached",
             )
 
         async with self.semaphore:
             try:
-                image_bytes, raw_meta = await self._generate_with_retry(
-                    prompt_text, seed=seed)
+                image_bytes, raw_meta = await self._generate_with_retry(prompt_text, seed=seed)
             except _ContentFiltered as e:
                 return GenerationResult(
-                    prompt_id=prompt_id, model=self.model_id,
-                    status=GenerationStatus.FILTERED, seed=seed,
-                    error=str(e), raw_metadata=e.metadata,
+                    prompt_id=prompt_id,
+                    model=self.model_id,
+                    status=GenerationStatus.FILTERED,
+                    seed=seed,
+                    error=str(e),
+                    raw_metadata=e.metadata,
                 )
             except Exception as e:
                 return GenerationResult(
-                    prompt_id=prompt_id, model=self.model_id,
-                    status=GenerationStatus.ERROR, seed=seed,
+                    prompt_id=prompt_id,
+                    model=self.model_id,
+                    status=GenerationStatus.ERROR,
+                    seed=seed,
                     error=f"{type(e).__name__}: {e}",
                 )
 
@@ -156,7 +175,8 @@ class BaseGenerator(ABC):
 
         duration = (datetime.now(timezone.utc) - started).total_seconds()
         return GenerationResult(
-            prompt_id=prompt_id, model=self.model_id,
+            prompt_id=prompt_id,
+            model=self.model_id,
             status=GenerationStatus.SUCCESS,
             image_path=str(out_path),
             cost_usd=self.cost_per_image,
@@ -169,8 +189,9 @@ class BaseGenerator(ABC):
     # Retry wrapper
     # ------------------------------------------------------------------
 
-    async def _generate_with_retry(self, prompt_text: str, seed: int = 0,
-                                    max_retries: int = 3) -> tuple[bytes, dict]:
+    async def _generate_with_retry(
+        self, prompt_text: str, seed: int = 0, max_retries: int = 3
+    ) -> tuple[bytes, dict]:
         last_exc: Exception | None = None
         for attempt in range(max_retries):
             try:
@@ -181,19 +202,21 @@ class BaseGenerator(ABC):
                 code = e.response.status_code
                 body_snippet = e.response.text[:500] if e.response is not None else ""
                 if looks_like_filter(body_snippet):
-                    raise _ContentFiltered(f"Content filter: {body_snippet[:200]}",
-                                            metadata={"status_code": code}) from e
+                    raise _ContentFiltered(
+                        f"Content filter: {body_snippet[:200]}", metadata={"status_code": code}
+                    ) from e
                 if code in (429, 500, 502, 503, 504) and attempt < max_retries - 1:
-                    delay = 2 ** attempt
-                    self.log.warning("HTTP %d, retrying in %ds (%s)",
-                                     code, delay, body_snippet[:120])
+                    delay = 2**attempt
+                    self.log.warning(
+                        "HTTP %d, retrying in %ds (%s)", code, delay, body_snippet[:120]
+                    )
                     await asyncio.sleep(delay)
                     last_exc = e
                     continue
                 raise
             except (httpx.TimeoutException, httpx.TransportError) as e:
                 if attempt < max_retries - 1:
-                    await asyncio.sleep(2 ** attempt)
+                    await asyncio.sleep(2**attempt)
                     last_exc = e
                     continue
                 raise
@@ -206,11 +229,9 @@ class BaseGenerator(ABC):
                 # succeeds. Narrowly scoped - we only retry RuntimeErrors
                 # whose message starts with "No images" so we don't hide
                 # other bugs.
-                if (attempt < max_retries - 1
-                        and "no images" in str(e).lower()):
-                    delay = 2 ** attempt
-                    self.log.warning("Empty images response, retrying in %ds",
-                                     delay)
+                if attempt < max_retries - 1 and "no images" in str(e).lower():
+                    delay = 2**attempt
+                    self.log.warning("Empty images response, retrying in %ds", delay)
                     await asyncio.sleep(delay)
                     last_exc = e
                     continue
@@ -227,8 +248,7 @@ class BaseGenerator(ABC):
     async def _do_generate(self, prompt_text: str) -> tuple[bytes, dict]:
         """Return (image_bytes, raw_metadata). May raise _ContentFiltered."""
 
-    async def _do_generate_with_seed(self, prompt_text: str,
-                                      seed: int) -> tuple[bytes, dict]:
+    async def _do_generate_with_seed(self, prompt_text: str, seed: int) -> tuple[bytes, dict]:
         """Default seed-aware path: delegates to `_do_generate` and ignores
         the seed value. Appropriate for providers whose APIs don't accept an
         explicit seed (xAI, OpenAI DALL-E) - variance across "seeds" comes
@@ -263,11 +283,15 @@ class BaseGenerator(ABC):
         r.raise_for_status()
         return r.content
 
-    async def _poll_until_ready(self, url: str, headers: dict[str, str],
-                                 poll_interval: float = 2.0,
-                                 max_wait: float = 120.0,
-                                 ready_check=None,
-                                 failed_check=None) -> dict:
+    async def _poll_until_ready(
+        self,
+        url: str,
+        headers: dict[str, str],
+        poll_interval: float = 2.0,
+        max_wait: float = 120.0,
+        ready_check=None,
+        failed_check=None,
+    ) -> dict:
         """Generic poll helper for async_poll providers.
 
         ready_check(response_json) -> bool  : True when job is done.
@@ -311,18 +335,20 @@ def register(model_id: str):
     fallback, but `get_generator` always injects the looked-up key onto the
     instance after construction so each instance reports its correct name.
     """
+
     def deco(cls):
         cls.model_id = model_id
         _REGISTRY[model_id] = cls
         return cls
+
     return deco
 
 
-def get_generator(model_id: str, config: dict[str, Any],
-                   cost_tracker: CostTracker, concurrency: int = 4) -> BaseGenerator:
+def get_generator(
+    model_id: str, config: dict[str, Any], cost_tracker: CostTracker, concurrency: int = 4
+) -> BaseGenerator:
     if model_id not in _REGISTRY:
-        raise ValueError(f"No generator registered for '{model_id}'. "
-                         f"Available: {list(_REGISTRY)}")
+        raise ValueError(f"No generator registered for '{model_id}'. Available: {list(_REGISTRY)}")
     instance = _REGISTRY[model_id](config, cost_tracker, concurrency)
     # Override so this instance reports the exact key it was looked up with,
     # even when the underlying class is shared across multiple model_ids.
@@ -341,8 +367,16 @@ def all_registered() -> list[str]:
 
 # Import concrete generators so they register
 from . import (  # noqa: E402,F401
-    flux, stability, bria, freepik, xai, google_gen,
-    openai_gen, leonardo, adobe, midjourney,
+    flux,
+    stability,
+    bria,
+    freepik,
+    xai,
+    google_gen,
+    openai_gen,
+    leonardo,
+    adobe,
+    midjourney,
 )
 
 

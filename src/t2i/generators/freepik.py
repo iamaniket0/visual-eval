@@ -4,6 +4,7 @@ Pattern: async_poll
   POST /v1/ai/text-to-image (or /v1/ai/mystic) -> { data: { task_id, status } }
   GET  /v1/ai/mystic/{task_id}                 -> { data: { status, generated: [...] } }
 """
+
 from __future__ import annotations
 
 from .base import BaseGenerator, register
@@ -44,10 +45,12 @@ class FreepikGenerator(BaseGenerator):
             return None
 
         final = await self._poll_until_ready(
-            poll_url, headers=headers,
+            poll_url,
+            headers=headers,
             poll_interval=self.config.get("poll_interval_sec", 3),
             max_wait=self.config.get("max_poll_wait_sec", 180),
-            ready_check=ready, failed_check=failed,
+            ready_check=ready,
+            failed_check=failed,
         )
         urls = final.get("data", {}).get("generated", [])
         if not urls:

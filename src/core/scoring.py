@@ -6,6 +6,7 @@ GM = exp(mean(log(p_i))), clipped to exp(logprob_floor) to avoid log(0).
 
 Reference: Kamath et al., GenEval 2, arXiv 2512.16853v1, Dec 2025.
 """
+
 from __future__ import annotations
 
 import math
@@ -24,8 +25,7 @@ def soft_tifa_am(probabilities: list[float]) -> float:
     return float(sum(probabilities) / len(probabilities))
 
 
-def soft_tifa_gm(probabilities: list[float],
-                  logprob_floor: float = DEFAULT_LOGPROB_FLOOR) -> float:
+def soft_tifa_gm(probabilities: list[float], logprob_floor: float = DEFAULT_LOGPROB_FLOOR) -> float:
     """Geometric mean of per-atom probabilities.
 
     Mathematical invariant: GM <= AM for any set of probabilities in [0, 1].
@@ -37,9 +37,9 @@ def soft_tifa_gm(probabilities: list[float],
     return float(math.exp(sum(math.log(p) for p in clamped) / len(clamped)))
 
 
-def probabilities_from_answers(answers: list[dict[str, Any]],
-                                logprob_floor: float = DEFAULT_LOGPROB_FLOOR
-                                ) -> list[float]:
+def probabilities_from_answers(
+    answers: list[dict[str, Any]], logprob_floor: float = DEFAULT_LOGPROB_FLOOR
+) -> list[float]:
     """Extract per-atom probability list from a judgment's answers.
 
     Preferred source: the probability field written by Soft-TIFA judges.
@@ -60,8 +60,7 @@ def probabilities_from_answers(answers: list[dict[str, Any]],
     return probs
 
 
-def extract_yes_probability(top_logprobs: Iterable[Any],
-                             logprob_floor: float) -> float:
+def extract_yes_probability(top_logprobs: Iterable[Any], logprob_floor: float) -> float:
     """Scan a top_logprobs list for any Yes-token variant and return exp(logprob).
 
     Returns exp(logprob_floor) if no variant is present in the top-k.

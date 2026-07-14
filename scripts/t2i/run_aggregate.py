@@ -1,4 +1,5 @@
 """CLI: aggregate scores into leaderboard + per-category CSVs + summary JSON."""
+
 from src.t2i.aggregator import run_aggregation
 
 
