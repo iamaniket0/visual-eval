@@ -1,0 +1,41 @@
+# Environment
+.env
+.venv/
+venv/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.coverage
+
+# Node (hitl-webapp)
+node_modules/
+.next/
+.vercel/
+
+# OS
+.DS_Store
+
+# Large generated outputs (reproducible via pipeline)
+outputs/generations/
+outputs/metadata/
+
+# External cloned repos (re-clone via git)
+external/
+
+# Cursor IDE
+.cursor/
+
+# Reports with embedded images (too large for git)
+outputs/reports/*.pdf
+outputs/reports/designed/
+outputs/reports/charts/
+
+# HITL webapp build artifacts
+hitl-webapp/node_modules/
+hitl-webapp/.next/
+hitl-webapp/.vercel/
+hitl-webapp/public/images/
+hitl-webapp/sample_full.json
