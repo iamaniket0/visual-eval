@@ -1,6 +1,6 @@
 model,filtered,errored,n_covered,n_total,uncovered,uncovered_rate,filter_rate
-flux2_max,1,3,11,622,611,0.9823,0.0016
+flux2_max,2,4,11,622,611,0.9823,0.0032
 bria_fibo,0,0,15,622,607,0.9759,0.0
 gpt_image_15,0,0,15,622,607,0.9759,0.0
 gpt_image_2,0,0,15,622,607,0.9759,0.0
-xai_aurora,0,0,15,622,607,0.9759,0.0
+xai_aurora,0,0,50,622,572,0.9196,0.0

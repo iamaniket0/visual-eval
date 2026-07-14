@@ -1,11 +1,9 @@
 <p align="center">
-  <a href="https://github.com/your-org/visual-eval/actions/workflows/ci.yml"><img src="https://github.com/your-org/visual-eval/actions/workflows/ci.yml/badge.svg" alt="CI" /></a>
   <img src="https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/Models-17+-FF6F61?style=for-the-badge&logo=openai&logoColor=white" />
-  <img src="https://img.shields.io/badge/Judge-Qwen3.5--397B-00D4AA?style=for-the-badge&logo=huggingface&logoColor=white" />
+  <img src="https://img.shields.io/badge/Models-9%20evaluated-FF6F61?style=for-the-badge&logo=openai&logoColor=white" />
   <img src="https://img.shields.io/badge/Scoring-Soft--TIFA-FFD700?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Tests-51%20passing-brightgreen?style=for-the-badge&logo=pytest&logoColor=white" />
-  <img src="https://img.shields.io/badge/Docker-Ready-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
+  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" />
 </p>
 
 <h1 align="center">Visual Eval</h1>
@@ -15,14 +13,14 @@
 </p>
 
 <p align="center">
-  <a href="#-t2i-evaluation">T2I Eval</a> · <a href="#-edit-evaluation">Edit Eval</a> · <a href="#-scoring-methodology">Scoring</a> · <a href="#-quick-start">Quick Start</a> · <a href="#-cli">CLI</a> · <a href="#-dashboard">Dashboard</a> · <a href="#-architecture">Architecture</a>
+  <a href="#overview">Overview</a> · <a href="#results">Results</a> · <a href="#scoring-methodology">Scoring</a> · <a href="#quick-start">Quick Start</a> · <a href="#cli">CLI</a> · <a href="#dashboard">Dashboard</a> · <a href="#architecture">Architecture</a>
 </p>
 
 ---
 
 ## Overview
 
-Visual Eval benchmarks **10+ T2I generation models** and **7 image editing models** on compositional faithfulness using [Soft-TIFA](https://arxiv.org/abs/2512.16853) scoring with an open-source MLLM judge. Two-layer prompt design (public benchmark gold + proprietary adversarial), multi-seed variance analysis, per-model scorecards, and human-in-the-loop validation.
+Visual Eval benchmarks **T2I generation models** and **image editing models** on compositional faithfulness using [Soft-TIFA](https://arxiv.org/abs/2512.16853) scoring with an MLLM judge. Multi-layer prompt design (public benchmark gold + proprietary adversarial), per-model scorecards, and human-in-the-loop validation.
 
 ### Why This Exists
 
@@ -41,8 +39,8 @@ Frontier image models score >90% on standard benchmarks, but fail catastrophical
     │   │  Loader   │    │ / Edit   │    │  (MLLM)  │    │ & Report │     │
     │   └──────────┘    └──────────┘    └──────────┘    └──────────┘     │
     │        │               │               │               │           │
-    │   L1: Gold        10+ T2I         Qwen3.5-397B    Soft-TIFA       │
-    │   L2: Proprietary  7 Editors      4 backends      AM + GM         │
+    │   L1: Gold        5 T2I models    GPT-4o /        Soft-TIFA       │
+    │   L2: Proprietary  4 Editors     Qwen3.5-397B    AM + GM         │
     │   L3: Adversarial  async+retry    logprob P(Yes)  PDF reports     │
     │                                                                     │
     └─────────────────────────────────────────────────────────────────────┘
@@ -50,7 +48,38 @@ Frontier image models score >90% on standard benchmarks, but fail catastrophical
 
 ---
 
-## Models Benchmarked
+## Results
+
+Evaluated on **50 hard adversarial prompts** (L3) for T2I and **24 hard prompts** for editing. These prompts test compositional understanding: attribute binding, counting, negation, spatial reasoning, causal physics, and rare combinations.
+
+### T2I Generation Leaderboard (Hard Prompts)
+
+| Rank | Model | GM | AM | Coverage |
+|:-----|:------|:---|:---|:---------|
+| 1 | Aurora (xAI) | **0.821** | 0.946 | 100% |
+| 2 | GPT Image 2 | 0.810 | 0.950 | 100% |
+| 3 | GPT Image 1.5 | 0.785 | 0.943 | 100% |
+| 4 | Bria FIBO | 0.721 | 0.906 | 100% |
+| 5 | FLUX 2 Max | 0.748* | 0.938* | 73% |
+
+*\*Covered prompts only — FLUX 2 Max filtered 27% of adversarial prompts (content moderation + timeouts).*
+
+**Key finding**: Aurora leads on hard compositional prompts with 0.82 GM across 50 prompts. All models maintain >0.90 AM — the gap between AM and GM reveals that models fail completely on specific atoms rather than performing poorly across the board.
+
+### Image Editing Leaderboard (Hard Prompts)
+
+| Rank | Model | Instruction Following (AM) | Visual Consistency (AM) | Detail Preservation (AM) |
+|:-----|:------|:---------------------------|:------------------------|:-------------------------|
+| 1 | Flux2 Flex | 0.708 | 0.316 | 0.574 |
+| 2 | Bria Edit | 0.615 | 0.345 | 0.275 |
+| 3 | Flux Kontext | 0.344 | 0.411 | 0.312 |
+| 4 | Picsart | 0.000 | 0.785 | 0.083 |
+
+**Key finding**: No model excels at all three dimensions simultaneously. Flux2 Flex leads on instruction following but struggles with visual consistency. Picsart preserves visual consistency but fails at following edit instructions — revealing a fundamental tension in current editing architectures.
+
+---
+
+## Models Supported
 
 ### T2I Generation
 
@@ -60,13 +89,11 @@ Frontier image models score >90% on standard benchmarks, but fail catastrophical
 | FLUX 2 Max | BFL | Diffusion |
 | Stable Diffusion 3.5 | Stability AI | Diffusion |
 | GPT Image 1.5 | OpenAI | Autoregressive |
+| GPT Image 2 | OpenAI | Autoregressive |
 | Firefly Image 3 | Adobe | Diffusion |
-| Midjourney v8 | Midjourney | Diffusion |
 | Bria 2.3 | Bria AI | Diffusion |
-| Leonardo Phoenix | Leonardo.ai | Diffusion |
 | Aurora | xAI | Diffusion |
 | Imagen 3 | Google | Diffusion |
-| Freepik Mystic | Freepik | Diffusion |
 
 ### Image Editing
 
@@ -74,11 +101,10 @@ Frontier image models score >90% on standard benchmarks, but fail catastrophical
 |:------|:---------|:---------|
 | Flux Kontext | BFL | Text-guided editing |
 | Flux2 Flex | BFL | Mask-based editing |
-| Bria FIBO | Bria AI | Instruction following |
+| Bria Edit | Bria AI | Instruction following |
+| Picsart | Picsart | Creative editing |
 | Firefly Edit | Adobe | Multi-turn editing |
 | PhotoRoom | PhotoRoom | Background editing |
-| Picsart | Picsart | Creative editing |
-| Canva/Leonardo | Canva | Style-aware editing |
 
 ---
 
@@ -93,7 +119,7 @@ Frontier image models score >90% on standard benchmarks, but fail catastrophical
 Based on [GenEval 2](https://arxiv.org/abs/2512.16853) (Kamath et al., Dec 2025):
 
 1. Decompose each prompt into **atomic binary questions**
-2. Judge each question via **Qwen3.5-397B-A17B** (open-source, no self-bias)
+2. Judge each question via **MLLM** (GPT-4o or Qwen3.5-397B)
 3. Extract **P(Yes)** from first-token logprobs
 4. Aggregate two ways:
 
@@ -129,115 +155,12 @@ Based on [GenEval 2](https://arxiv.org/abs/2512.16853) (Kamath et al., Dec 2025)
 
 ---
 
-## CLI
-
-The `visual-eval` CLI wraps all pipeline scripts into a single entry point:
-
-```
-visual-eval
-├── t2i
-│   ├── generate    Generate images across T2I models
-│   ├── judge       Run MLLM judge on generated images
-│   ├── aggregate   Aggregate scores into leaderboard
-│   ├── report      Generate PDF scorecards
-│   ├── prompts     Build the prompt set (L1+L2+L3)
-│   └── hitl        Launch HITL validation web UI
-├── edit
-│   ├── run             Run edits across editing models
-│   ├── judge           Dual-image MLLM judge
-│   ├── aggregate       Aggregate edit scores
-│   ├── report          Generate edit report
-│   └── download-images Download source images
-├── dashboard           Launch Streamlit dashboard
-└── test                Run the test suite
-```
-
-Install and use:
-
-```bash
-pip install -e .
-visual-eval --help
-visual-eval t2i generate --models sanity --dry-run
-```
-
----
-
-## Dashboard
-
-Interactive Streamlit dashboard for exploring results:
-
-```bash
-visual-eval dashboard
-# or directly:
-streamlit run dashboard/app.py
-```
-
-Features:
-- **T2I Leaderboard** — ranked bar chart + data table with GM/AM scores
-- **Sub-Category Breakdown** — grouped bars + radar chart per category
-- **Layer Comparison** — public benchmark vs proprietary prompt performance
-- **Theme Analysis** — per-model theme score heatmap
-- **Edit Leaderboard** — ranked by overall score with dimension heatmap
-- **Cross-Pipeline Comparison** — box plot distributions, T2I vs Edit
-
----
-
-## Architecture
-
-```
-visual-eval/
-├── src/
-│   ├── core/                          # Shared infrastructure
-│   │   ├── scoring.py                 # Soft-TIFA AM/GM math
-│   │   └── utils.py                   # CostTracker, JSONL I/O, logging
-│   │
-│   ├── t2i/                           # Text-to-Image evaluation
-│   │   ├── generators/                # 10+ model adapters (@register pattern)
-│   │   │   ├── base.py                # BaseGenerator: async, retry, filter detection
-│   │   │   ├── openai_gen.py          # GPT Image 1.5
-│   │   │   ├── flux.py                # FLUX 1.1 Pro / 2 Max
-│   │   │   └── ...                    # adobe, bria, stability, etc.
-│   │   ├── judge.py                   # 4 MLLM judge backends
-│   │   ├── aggregator.py              # Per-model/category/theme scoring
-│   │   ├── prompt_loader.py           # Multi-layer prompt management
-│   │   ├── report.py                  # PDF scorecards + charts
-│   │   └── hitl.py / hitl_webui.py    # Human-in-the-loop validation
-│   │
-│   └── edit/                          # Image Editing evaluation
-│       ├── editors/                   # 7 editor adapters (@register pattern)
-│       │   ├── base.py                # BaseEditor: mask, multi-turn support
-│       │   ├── flux_kontext.py        # Flux Kontext
-│       │   └── ...                    # bria, firefly, photoroom, etc.
-│       ├── judge.py                   # Dual-image judge (source + edited)
-│       ├── aggregator.py              # 3-axis dimension scoring
-│       └── prompt_loader.py           # Edit prompt management
-│
-├── config/
-│   ├── t2i/                           # T2I model configs + settings
-│   └── edit/                          # Edit model configs + taxonomy
-│
-├── scripts/
-│   ├── t2i/                           # T2I pipeline CLI scripts
-│   └── edit/                          # Edit pipeline CLI scripts
-│
-├── prompts/
-│   ├── t2i/                           # T2I benchmark prompts
-│   └── edit/                          # Edit prompts + source images
-│
-└── tests/                             # 51 tests across all modules
-    ├── test_core/                     # Scoring math, CostTracker
-    ├── test_t2i/                      # Generators, judge, aggregator
-    └── test_edit/                     # Editors, judge, aggregator
-```
-
----
-
 ## Quick Start
 
 ### Setup
 
 ```bash
-git clone git@github.com:your-org/visual-eval.git
+git clone git@github.com:iamaniket0/visual-eval-.git
 cd visual-eval-
 python -m venv .venv && source .venv/bin/activate
 pip install -e ".[dev]"
@@ -285,17 +208,113 @@ docker compose --profile cli run pipeline t2i generate --models sanity
 
 ---
 
+## CLI
+
+The `visual-eval` CLI wraps all pipeline scripts into a single entry point:
+
+```
+visual-eval
+├── t2i
+│   ├── generate    Generate images across T2I models
+│   ├── judge       Run MLLM judge on generated images
+│   ├── aggregate   Aggregate scores into leaderboard
+│   ├── report      Generate PDF scorecards
+│   ├── prompts     Build the prompt set (L1+L2+L3)
+│   └── hitl        Launch HITL validation web UI
+├── edit
+│   ├── run             Run edits across editing models
+│   ├── judge           Dual-image MLLM judge
+│   ├── aggregate       Aggregate edit scores
+│   ├── report          Generate edit report
+│   └── download-images Download source images
+├── dashboard           Launch Streamlit dashboard
+└── test                Run the test suite
+```
+
+---
+
+## Dashboard
+
+Interactive Streamlit dashboard for exploring results:
+
+```bash
+visual-eval dashboard
+# or directly:
+streamlit run dashboard/app.py
+```
+
+Features:
+- **T2I Leaderboard** — ranked bar chart + data table with GM/AM scores
+- **Sub-Category Breakdown** — grouped bars + radar chart per category
+- **Layer Comparison** — public benchmark vs proprietary prompt performance
+- **Theme Analysis** — per-model theme score heatmap
+- **Edit Leaderboard** — ranked by overall score with dimension heatmap
+- **Cross-Pipeline Comparison** — box plot distributions, T2I vs Edit
+
+---
+
+## Architecture
+
+```
+visual-eval/
+├── src/
+│   ├── core/                          # Shared infrastructure
+│   │   ├── scoring.py                 # Soft-TIFA AM/GM math
+│   │   └── utils.py                   # CostTracker, JSONL I/O, logging
+│   │
+│   ├── t2i/                           # Text-to-Image evaluation
+│   │   ├── generators/                # Model adapters (@register pattern)
+│   │   │   ├── base.py                # BaseGenerator: async, retry, filter detection
+│   │   │   ├── openai_gen.py          # GPT Image 1.5 / 2
+│   │   │   ├── flux.py                # FLUX 1.1 Pro / 2 Max
+│   │   │   └── ...                    # bria, stability, xai, etc.
+│   │   ├── judge.py                   # MLLM judge backends (Soft-TIFA)
+│   │   ├── aggregator.py              # Per-model/category/theme scoring
+│   │   ├── prompt_loader.py           # Multi-layer prompt management
+│   │   ├── report.py                  # PDF scorecards + charts
+│   │   └── hitl.py / hitl_webui.py    # Human-in-the-loop validation
+│   │
+│   └── edit/                          # Image Editing evaluation
+│       ├── editors/                   # Editor adapters (@register pattern)
+│       │   ├── base.py                # BaseEditor: mask, multi-turn support
+│       │   ├── flux_kontext.py        # Flux Kontext
+│       │   └── ...                    # bria, picsart, etc.
+│       ├── judge.py                   # Dual-image judge (source + edited)
+│       ├── aggregator.py              # 3-axis dimension scoring
+│       └── prompt_loader.py           # Edit prompt management
+│
+├── config/
+│   ├── t2i/                           # T2I model configs + settings
+│   └── edit/                          # Edit model configs + taxonomy
+│
+├── scripts/
+│   ├── t2i/                           # T2I pipeline CLI scripts
+│   └── edit/                          # Edit pipeline CLI scripts
+│
+├── prompts/
+│   ├── t2i/                           # T2I benchmark prompts (L1+L2+L3)
+│   └── edit/                          # Edit prompts + source images
+│
+├── dashboard/                         # Streamlit interactive dashboard
+│
+└── tests/                             # 51 tests across all modules
+    ├── test_core/                     # Scoring math, CostTracker
+    ├── test_t2i/                      # Generators, judge, aggregator
+    └── test_edit/                     # Editors, judge, aggregator
+```
+
+---
+
 ## Key Design Decisions
 
 | Decision | Rationale |
 |:---------|:----------|
 | **Atomic binary decomposition** (not layered rubrics) | Multi-step judgments cause MLLMs to hallucinate failures |
-| **Open-source judge** (Qwen3.5-397B) | Avoids self-bias when judging GPT Image outputs |
-| **FILTERED != retried** | Content-policy blocks scored 0, never retried with modified prompts — preserves benchmark integrity |
 | **GM as primary metric** | Collapses on single weak atom, correlates best with human judgment (94.5% AUROC) |
+| **FILTERED != retried** | Content-policy blocks scored 0, never retried with modified prompts — preserves benchmark integrity |
 | **Hard cost cap** | CostTracker with 80% alert threshold and hard cutoff |
 | **Resume-friendly** | Generation/editing skips prompts whose output already exists |
-| **Scaffold-friendly** | Missing API keys → `SKIPPED`, not crashes |
+| **Scaffold-friendly** | Missing API keys -> `SKIPPED`, not crashes |
 
 ---
 
@@ -309,8 +328,8 @@ outputs/
 │   ├── judgments/{model}.jsonl                 # Per-image judge results
 │   ├── scores/
 │   │   ├── leaderboard.csv                    # Overall model ranking
-│   │   ├── per_subcategory.csv                # By numeracy/spatial/complex
-│   │   ├── layer_comparison.csv               # L1 vs L2 divergence
+│   │   ├── per_subcategory.csv                # By adversarial category
+│   │   ├── layer_comparison.csv               # L1 vs L2 vs L3 divergence
 │   │   └── theme_breakdown.csv                # Fine-grained theme analysis
 │   └── reports/
 │       ├── aggregate_report.pdf               # Full benchmark report
@@ -322,6 +341,7 @@ outputs/
     ├── judgments/{model}.jsonl                 # Per-image judge results
     └── scores/
         ├── leaderboard.csv                    # Overall model ranking
+        ├── per_subcategory.csv                # By edit category
         └── per_dimension.csv                  # Instruction/visual/detail axes
 ```
 
@@ -349,7 +369,7 @@ models:
 judge:
   backend: qwen_together_soft
   model_slug: "Qwen/Qwen3.5-397B-A17B"
-seeds_per_prompt: 3
+seeds_per_prompt: 1
 hard_cap: 300  # USD
 ```
 
@@ -365,10 +385,6 @@ models:
     provider: bfl
     supports_mask: false
     supports_multi_turn: false
-  firefly:
-    provider: adobe
-    supports_mask: true
-    supports_multi_turn: true
 
 # settings.yaml — 3 evaluation dimensions, 12 sub-categories
 dimensions:
@@ -393,14 +409,6 @@ pytest tests/test_core/ -v     # Shared scoring math (12 tests)
 pytest tests/test_t2i/ -v      # T2I pipeline (21 tests)
 pytest tests/test_edit/ -v     # Edit pipeline (18 tests)
 ```
-
----
-
-## Contributing
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for how to add a new model adapter, run tests, and submit PRs.
-
-For detailed architecture diagrams (Mermaid), see [docs/architecture.md](docs/architecture.md).
 
 ---
 
