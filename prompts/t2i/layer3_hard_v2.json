@@ -1,0 +1,265 @@
+[
+  {"prompt_id": "L3_CTR_006", "layer": 3, "sub_category": "constraint_trading", "difficulty": "extreme",
+   "prompt_text": "A tall woman in a yellow raincoat and black rubber boots holding a red umbrella in her left hand, standing to the right of a short man in a gray wool sweater and white sneakers carrying a brown paper grocery bag in both arms, on a wet cobblestone street with three green street lamps behind them",
+   "atomic_questions": [
+     {"q_id": "q1", "question": "Is there a tall woman?", "type": "presence"},
+     {"q_id": "q2", "question": "Is the woman wearing a yellow raincoat?", "type": "attribute"},
+     {"q_id": "q3", "question": "Is the woman wearing black rubber boots?", "type": "attribute"},
+     {"q_id": "q4", "question": "Is the woman holding a red umbrella?", "type": "attribute"},
+     {"q_id": "q5", "question": "Is the umbrella in her left hand?", "type": "spatial"},
+     {"q_id": "q6", "question": "Is the woman to the right of the man?", "type": "spatial"},
+     {"q_id": "q7", "question": "Is the man shorter than the woman?", "type": "spatial"},
+     {"q_id": "q8", "question": "Is the man wearing a gray sweater?", "type": "attribute"},
+     {"q_id": "q9", "question": "Is the sweater made of wool?", "type": "material"},
+     {"q_id": "q10", "question": "Is the man wearing white sneakers?", "type": "attribute"},
+     {"q_id": "q11", "question": "Is the man carrying a brown paper bag?", "type": "attribute"},
+     {"q_id": "q12", "question": "Is the street cobblestone?", "type": "material"},
+     {"q_id": "q13", "question": "Does the street appear wet?", "type": "attribute"},
+     {"q_id": "q14", "question": "Are there exactly three street lamps?", "type": "numeracy"},
+     {"q_id": "q15", "question": "Are the street lamps green?", "type": "attribute"}
+   ]},
+
+  {"prompt_id": "L3_CTR_007", "layer": 3, "sub_category": "constraint_trading", "difficulty": "extreme",
+   "prompt_text": "A round oak dining table set for exactly four people with white ceramic plates, silver forks to the left of each plate, crystal wine glasses to the right, a single tall red candle in the center, and a black cat sleeping under the table on a beige rug",
+   "atomic_questions": [
+     {"q_id": "q1", "question": "Is there a round dining table?", "type": "attribute"},
+     {"q_id": "q2", "question": "Is the table made of oak?", "type": "material"},
+     {"q_id": "q3", "question": "Are there exactly four place settings?", "type": "numeracy"},
+     {"q_id": "q4", "question": "Are the plates white ceramic?", "type": "attribute"},
+     {"q_id": "q5", "question": "Are the forks to the left of each plate?", "type": "spatial"},
+     {"q_id": "q6", "question": "Are the forks silver?", "type": "attribute"},
+     {"q_id": "q7", "question": "Are there crystal wine glasses to the right of each plate?", "type": "spatial"},
+     {"q_id": "q8", "question": "Is there exactly one candle in the center?", "type": "numeracy"},
+     {"q_id": "q9", "question": "Is the candle red?", "type": "attribute"},
+     {"q_id": "q10", "question": "Is there a black cat under the table?", "type": "presence"},
+     {"q_id": "q11", "question": "Is the cat sleeping?", "type": "attribute"},
+     {"q_id": "q12", "question": "Is there a beige rug under the table?", "type": "attribute"}
+   ]},
+
+  {"prompt_id": "L3_CTR_008", "layer": 3, "sub_category": "constraint_trading", "difficulty": "extreme",
+   "prompt_text": "A vintage red bicycle leaning against a yellow brick wall, with a wicker basket on the front containing exactly two baguettes and one bottle of wine, and a small white dog sitting next to the rear wheel on the left side",
+   "atomic_questions": [
+     {"q_id": "q1", "question": "Is there a bicycle?", "type": "presence"},
+     {"q_id": "q2", "question": "Is the bicycle red?", "type": "attribute"},
+     {"q_id": "q3", "question": "Does the bicycle look vintage?", "type": "attribute"},
+     {"q_id": "q4", "question": "Is the bicycle leaning against a wall?", "type": "spatial"},
+     {"q_id": "q5", "question": "Is the wall yellow brick?", "type": "attribute"},
+     {"q_id": "q6", "question": "Is there a wicker basket on the front?", "type": "presence"},
+     {"q_id": "q7", "question": "Are there exactly two baguettes in the basket?", "type": "numeracy"},
+     {"q_id": "q8", "question": "Is there exactly one bottle of wine in the basket?", "type": "numeracy"},
+     {"q_id": "q9", "question": "Is there a small white dog?", "type": "presence"},
+     {"q_id": "q10", "question": "Is the dog next to the rear wheel?", "type": "spatial"},
+     {"q_id": "q11", "question": "Is the dog on the left side of the bicycle?", "type": "spatial"}
+   ]},
+
+  {"prompt_id": "L3_CTR_009", "layer": 3, "sub_category": "constraint_trading", "difficulty": "extreme",
+   "prompt_text": "An artist's wooden easel holding a half-finished canvas showing a blue ocean, with exactly five paint tubes on the floor to the right, two dirty brushes in a glass jar of murky water on a metal stool to the left, and warm afternoon sunlight coming through a large window behind the easel",
+   "atomic_questions": [
+     {"q_id": "q1", "question": "Is there a wooden easel?", "type": "presence"},
+     {"q_id": "q2", "question": "Is there a canvas on the easel?", "type": "presence"},
+     {"q_id": "q3", "question": "Does the canvas show a blue ocean painting?", "type": "attribute"},
+     {"q_id": "q4", "question": "Does the painting appear half-finished?", "type": "attribute"},
+     {"q_id": "q5", "question": "Are there exactly five paint tubes on the floor?", "type": "numeracy"},
+     {"q_id": "q6", "question": "Are the paint tubes to the right of the easel?", "type": "spatial"},
+     {"q_id": "q7", "question": "Are there exactly two brushes in a glass jar?", "type": "numeracy"},
+     {"q_id": "q8", "question": "Does the water in the jar look murky?", "type": "attribute"},
+     {"q_id": "q9", "question": "Is the jar on a metal stool?", "type": "presence"},
+     {"q_id": "q10", "question": "Is the stool to the left of the easel?", "type": "spatial"},
+     {"q_id": "q11", "question": "Is there warm sunlight in the scene?", "type": "attribute"},
+     {"q_id": "q12", "question": "Is there a large window behind the easel?", "type": "presence"}
+   ]},
+
+  {"prompt_id": "L3_CTR_010", "layer": 3, "sub_category": "constraint_trading", "difficulty": "extreme",
+   "prompt_text": "Three children in a playground: a girl in a pink dress on the swing, a boy in blue jeans and a green t-shirt climbing the ladder, and another boy in orange shorts sitting at the top of the slide, with two pigeons on the ground near the sandbox",
+   "atomic_questions": [
+     {"q_id": "q1", "question": "Are there exactly three children?", "type": "numeracy"},
+     {"q_id": "q2", "question": "Is there a girl in a pink dress?", "type": "attribute"},
+     {"q_id": "q3", "question": "Is the girl on the swing?", "type": "spatial"},
+     {"q_id": "q4", "question": "Is there a boy in blue jeans and green t-shirt?", "type": "attribute"},
+     {"q_id": "q5", "question": "Is that boy climbing a ladder?", "type": "spatial"},
+     {"q_id": "q6", "question": "Is there a boy in orange shorts?", "type": "attribute"},
+     {"q_id": "q7", "question": "Is that boy sitting at the top of a slide?", "type": "spatial"},
+     {"q_id": "q8", "question": "Are there exactly two pigeons on the ground?", "type": "numeracy"},
+     {"q_id": "q9", "question": "Is there a sandbox in the playground?", "type": "presence"}
+   ]},
+
+  {"prompt_id": "L3_PHY_006", "layer": 3, "sub_category": "causal_physics", "difficulty": "extreme",
+   "prompt_text": "A person standing in shallow water at the beach, with their legs appearing distorted and shorter below the water surface due to refraction",
+   "atomic_questions": [
+     {"q_id": "q1", "question": "Is there a person standing in water?", "type": "presence"},
+     {"q_id": "q2", "question": "Is the water shallow?", "type": "attribute"},
+     {"q_id": "q3", "question": "Is this at a beach?", "type": "presence"},
+     {"q_id": "q4", "question": "Do the person's legs appear distorted or bent at the water line?", "type": "attribute"},
+     {"q_id": "q5", "question": "Do the legs below water appear shorter or compressed compared to above water?", "type": "attribute"}
+   ]},
+
+  {"prompt_id": "L3_PHY_007", "layer": 3, "sub_category": "causal_physics", "difficulty": "extreme",
+   "prompt_text": "A stack of five books on the edge of a desk with the top two books sliding off and falling, captured mid-fall at an angle",
+   "atomic_questions": [
+     {"q_id": "q1", "question": "Is there a stack of books on a desk?", "type": "presence"},
+     {"q_id": "q2", "question": "Are the books on the edge of the desk?", "type": "spatial"},
+     {"q_id": "q3", "question": "Are any books falling or sliding off the desk?", "type": "attribute"},
+     {"q_id": "q4", "question": "Are the falling books at an angle, not upright?", "type": "spatial"},
+     {"q_id": "q5", "question": "Are there approximately five books total?", "type": "numeracy"}
+   ]},
+
+  {"prompt_id": "L3_PHY_008", "layer": 3, "sub_category": "causal_physics", "difficulty": "extreme",
+   "prompt_text": "A large rock dropped into a pond creating circular ripples spreading outward, with water splashing upward around the impact point",
+   "atomic_questions": [
+     {"q_id": "q1", "question": "Is there a pond or body of water?", "type": "presence"},
+     {"q_id": "q2", "question": "Is there a rock in or near the water?", "type": "presence"},
+     {"q_id": "q3", "question": "Are there circular ripples on the water surface?", "type": "attribute"},
+     {"q_id": "q4", "question": "Are the ripples spreading outward from a central point?", "type": "spatial"},
+     {"q_id": "q5", "question": "Is there water splashing upward?", "type": "attribute"}
+   ]},
+
+  {"prompt_id": "L3_PHY_009", "layer": 3, "sub_category": "causal_physics", "difficulty": "extreme",
+   "prompt_text": "A mirror on a wall reflecting a room with a red armchair, where the reflection shows the armchair on the opposite side compared to the real scene",
+   "atomic_questions": [
+     {"q_id": "q1", "question": "Is there a mirror on a wall?", "type": "presence"},
+     {"q_id": "q2", "question": "Is there a red armchair in the room?", "type": "presence"},
+     {"q_id": "q3", "question": "Does the mirror show a reflection of the room?", "type": "presence"},
+     {"q_id": "q4", "question": "Is the armchair's position laterally reversed in the reflection compared to the real scene?", "type": "spatial"}
+   ]},
+
+  {"prompt_id": "L3_PHY_010", "layer": 3, "sub_category": "causal_physics", "difficulty": "extreme",
+   "prompt_text": "A wet dog shaking water off its body with droplets frozen in mid-air forming a radial spray pattern around the dog",
+   "atomic_questions": [
+     {"q_id": "q1", "question": "Is there a dog?", "type": "presence"},
+     {"q_id": "q2", "question": "Does the dog appear to be shaking?", "type": "attribute"},
+     {"q_id": "q3", "question": "Are there water droplets visible in the air?", "type": "presence"},
+     {"q_id": "q4", "question": "Do the droplets form a radial or spray pattern around the dog?", "type": "spatial"},
+     {"q_id": "q5", "question": "Does the dog appear wet?", "type": "attribute"}
+   ]},
+
+  {"prompt_id": "L3_MCT_006", "layer": 3, "sub_category": "multi_type_counting", "difficulty": "extreme",
+   "prompt_text": "A fruit bowl containing exactly two green pears, four red cherries, one yellow lemon, and three purple grapes",
+   "atomic_questions": [
+     {"q_id": "q1", "question": "Is there a fruit bowl?", "type": "presence"},
+     {"q_id": "q2", "question": "Are there exactly two pears?", "type": "numeracy"},
+     {"q_id": "q3", "question": "Are the pears green?", "type": "attribute"},
+     {"q_id": "q4", "question": "Are there exactly four cherries?", "type": "numeracy"},
+     {"q_id": "q5", "question": "Are the cherries red?", "type": "attribute"},
+     {"q_id": "q6", "question": "Is there exactly one lemon?", "type": "numeracy"},
+     {"q_id": "q7", "question": "Is the lemon yellow?", "type": "attribute"},
+     {"q_id": "q8", "question": "Are there exactly three grapes?", "type": "numeracy"},
+     {"q_id": "q9", "question": "Are the grapes purple?", "type": "attribute"}
+   ]},
+
+  {"prompt_id": "L3_MCT_007", "layer": 3, "sub_category": "multi_type_counting", "difficulty": "extreme",
+   "prompt_text": "A parking lot with exactly three red sedans, two white SUVs, and one blue motorcycle",
+   "atomic_questions": [
+     {"q_id": "q1", "question": "Is there a parking lot?", "type": "presence"},
+     {"q_id": "q2", "question": "Are there exactly three sedans?", "type": "numeracy"},
+     {"q_id": "q3", "question": "Are the sedans red?", "type": "attribute"},
+     {"q_id": "q4", "question": "Are there exactly two SUVs?", "type": "numeracy"},
+     {"q_id": "q5", "question": "Are the SUVs white?", "type": "attribute"},
+     {"q_id": "q6", "question": "Is there exactly one motorcycle?", "type": "numeracy"},
+     {"q_id": "q7", "question": "Is the motorcycle blue?", "type": "attribute"}
+   ]},
+
+  {"prompt_id": "L3_MCT_008", "layer": 3, "sub_category": "multi_type_counting", "difficulty": "extreme",
+   "prompt_text": "A classroom whiteboard with exactly six blue magnets across the top, two red markers in the tray, and four yellow sticky notes on the left side",
+   "atomic_questions": [
+     {"q_id": "q1", "question": "Is there a whiteboard?", "type": "presence"},
+     {"q_id": "q2", "question": "Are there exactly six magnets on the top?", "type": "numeracy"},
+     {"q_id": "q3", "question": "Are the magnets blue?", "type": "attribute"},
+     {"q_id": "q4", "question": "Are there exactly two markers in the tray?", "type": "numeracy"},
+     {"q_id": "q5", "question": "Are the markers red?", "type": "attribute"},
+     {"q_id": "q6", "question": "Are there exactly four sticky notes on the left?", "type": "numeracy"},
+     {"q_id": "q7", "question": "Are the sticky notes yellow?", "type": "attribute"}
+   ]},
+
+  {"prompt_id": "L3_OTS_001", "layer": 3, "sub_category": "order_to_space", "difficulty": "hard",
+   "prompt_text": "A cat to the right of a dog on a park bench",
+   "atomic_questions": [
+     {"q_id": "q1", "question": "Is there a cat?", "type": "presence"},
+     {"q_id": "q2", "question": "Is there a dog?", "type": "presence"},
+     {"q_id": "q3", "question": "Is there a park bench?", "type": "presence"},
+     {"q_id": "q4", "question": "Is the cat to the right of the dog?", "type": "spatial"}
+   ]},
+
+  {"prompt_id": "L3_OTS_002", "layer": 3, "sub_category": "order_to_space", "difficulty": "hard",
+   "prompt_text": "A blue vase to the right of a red book on a shelf",
+   "atomic_questions": [
+     {"q_id": "q1", "question": "Is there a blue vase?", "type": "presence"},
+     {"q_id": "q2", "question": "Is there a red book?", "type": "presence"},
+     {"q_id": "q3", "question": "Are they on a shelf?", "type": "presence"},
+     {"q_id": "q4", "question": "Is the blue vase to the right of the red book?", "type": "spatial"}
+   ]},
+
+  {"prompt_id": "L3_OTS_003", "layer": 3, "sub_category": "order_to_space", "difficulty": "hard",
+   "prompt_text": "A green apple to the right of a yellow banana on a white plate",
+   "atomic_questions": [
+     {"q_id": "q1", "question": "Is there a green apple?", "type": "presence"},
+     {"q_id": "q2", "question": "Is there a yellow banana?", "type": "presence"},
+     {"q_id": "q3", "question": "Is there a white plate?", "type": "presence"},
+     {"q_id": "q4", "question": "Is the green apple to the right of the banana?", "type": "spatial"}
+   ]},
+
+  {"prompt_id": "L3_OTS_004", "layer": 3, "sub_category": "order_to_space", "difficulty": "hard",
+   "prompt_text": "A tall glass to the right of a short mug on a wooden counter",
+   "atomic_questions": [
+     {"q_id": "q1", "question": "Is there a tall glass?", "type": "presence"},
+     {"q_id": "q2", "question": "Is there a short mug?", "type": "presence"},
+     {"q_id": "q3", "question": "Is there a wooden counter?", "type": "presence"},
+     {"q_id": "q4", "question": "Is the tall glass to the right of the mug?", "type": "spatial"}
+   ]},
+
+  {"prompt_id": "L3_OTS_005", "layer": 3, "sub_category": "order_to_space", "difficulty": "hard",
+   "prompt_text": "A soccer ball to the right of a basketball on grass",
+   "atomic_questions": [
+     {"q_id": "q1", "question": "Is there a soccer ball?", "type": "presence"},
+     {"q_id": "q2", "question": "Is there a basketball?", "type": "presence"},
+     {"q_id": "q3", "question": "Are they on grass?", "type": "presence"},
+     {"q_id": "q4", "question": "Is the soccer ball to the right of the basketball?", "type": "spatial"}
+   ]},
+
+  {"prompt_id": "L3_OCC_001", "layer": 3, "sub_category": "comparison_occlusion", "difficulty": "hard",
+   "prompt_text": "A large red ball partially hidden behind a small blue box on a table",
+   "atomic_questions": [
+     {"q_id": "q1", "question": "Is there a large red ball?", "type": "presence"},
+     {"q_id": "q2", "question": "Is there a small blue box?", "type": "presence"},
+     {"q_id": "q3", "question": "Is the ball larger than the box?", "type": "spatial"},
+     {"q_id": "q4", "question": "Is the ball partially hidden or occluded by the box?", "type": "spatial"},
+     {"q_id": "q5", "question": "Are they on a table?", "type": "presence"}
+   ]},
+
+  {"prompt_id": "L3_OCC_002", "layer": 3, "sub_category": "comparison_occlusion", "difficulty": "hard",
+   "prompt_text": "A tall building in the background partially blocked by a shorter tree in the foreground",
+   "atomic_questions": [
+     {"q_id": "q1", "question": "Is there a tall building?", "type": "presence"},
+     {"q_id": "q2", "question": "Is there a tree?", "type": "presence"},
+     {"q_id": "q3", "question": "Is the tree in the foreground?", "type": "spatial"},
+     {"q_id": "q4", "question": "Is the building partially blocked by the tree?", "type": "spatial"},
+     {"q_id": "q5", "question": "Is the building taller than the tree?", "type": "spatial"}
+   ]},
+
+  {"prompt_id": "L3_OCC_003", "layer": 3, "sub_category": "comparison_occlusion", "difficulty": "hard",
+   "prompt_text": "Three Russian nesting dolls of decreasing size from left to right, each partially overlapping the next",
+   "atomic_questions": [
+     {"q_id": "q1", "question": "Are there three nesting dolls?", "type": "numeracy"},
+     {"q_id": "q2", "question": "Do the dolls decrease in size from left to right?", "type": "spatial"},
+     {"q_id": "q3", "question": "Does the largest doll partially overlap the middle doll?", "type": "spatial"},
+     {"q_id": "q4", "question": "Does the middle doll partially overlap the smallest doll?", "type": "spatial"}
+   ]},
+
+  {"prompt_id": "L3_OCC_004", "layer": 3, "sub_category": "comparison_occlusion", "difficulty": "hard",
+   "prompt_text": "A small child standing in front of a much larger elephant at a zoo, where the child blocks part of the elephant's legs",
+   "atomic_questions": [
+     {"q_id": "q1", "question": "Is there a child?", "type": "presence"},
+     {"q_id": "q2", "question": "Is there an elephant?", "type": "presence"},
+     {"q_id": "q3", "question": "Is the child standing in front of the elephant?", "type": "spatial"},
+     {"q_id": "q4", "question": "Is the elephant much larger than the child?", "type": "spatial"},
+     {"q_id": "q5", "question": "Does the child partially block or occlude part of the elephant?", "type": "spatial"}
+   ]},
+
+  {"prompt_id": "L3_OCC_005", "layer": 3, "sub_category": "comparison_occlusion", "difficulty": "hard",
+   "prompt_text": "A wine bottle that is taller than the two wine glasses next to it, with one glass partially behind the bottle",
+   "atomic_questions": [
+     {"q_id": "q1", "question": "Is there a wine bottle?", "type": "presence"},
+     {"q_id": "q2", "question": "Are there exactly two wine glasses?", "type": "numeracy"},
+     {"q_id": "q3", "question": "Is the bottle taller than the glasses?", "type": "spatial"},
+     {"q_id": "q4", "question": "Is one glass partially behind the bottle?", "type": "spatial"}
+   ]}
+]

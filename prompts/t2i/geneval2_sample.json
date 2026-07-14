@@ -1,0 +1,5696 @@
+[
+  {
+    "prompt_id": "GE2_001",
+    "layer": "geneval2",
+    "sub_category": "atomicity_3",
+    "difficulty": "published",
+    "prompt_text": "three wooden zebras",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many zebras are in the image?",
+        "type": "numeracy",
+        "expected_answer": "three"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are the zebras wooden?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there any zebras in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_002",
+    "layer": "geneval2",
+    "sub_category": "atomicity_3",
+    "difficulty": "published",
+    "prompt_text": "a toy and a white bagel",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many toys are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there any toys in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "How many bagels are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q4",
+        "question": "Is the bagel white?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are there any bagels in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_003",
+    "layer": "geneval2",
+    "sub_category": "atomicity_3",
+    "difficulty": "published",
+    "prompt_text": "two stone raccoons",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many raccoons are in the image?",
+        "type": "numeracy",
+        "expected_answer": "two"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are the raccoons stone?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there any raccoons in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_004",
+    "layer": "geneval2",
+    "sub_category": "atomicity_3",
+    "difficulty": "published",
+    "prompt_text": "four red bears",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many bears are in the image?",
+        "type": "numeracy",
+        "expected_answer": "four"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are the bears red?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there any bears in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_005",
+    "layer": "geneval2",
+    "sub_category": "atomicity_3",
+    "difficulty": "published",
+    "prompt_text": "three white turtles",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many turtles are in the image?",
+        "type": "numeracy",
+        "expected_answer": "three"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are the turtles white?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there any turtles in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_006",
+    "layer": "geneval2",
+    "sub_category": "atomicity_3",
+    "difficulty": "published",
+    "prompt_text": "a truck in front of a toy",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many trucks are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there any trucks in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is the truck in front of the toy?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "How many toys are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are there any toys in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_007",
+    "layer": "geneval2",
+    "sub_category": "atomicity_3",
+    "difficulty": "published",
+    "prompt_text": "a giraffe and a spotted croissant",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many giraffes are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there any giraffes in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "How many croissants are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q4",
+        "question": "Is the croissant spotted?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are there any croissants in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_008",
+    "layer": "geneval2",
+    "sub_category": "atomicity_3",
+    "difficulty": "published",
+    "prompt_text": "a elephant and a brown umbrella",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many elephants are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there any elephants in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "How many umbrellas are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q4",
+        "question": "Is the umbrella brown?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are there any umbrellas in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_009",
+    "layer": "geneval2",
+    "sub_category": "atomicity_3",
+    "difficulty": "published",
+    "prompt_text": "five blue birds",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many birds are in the image?",
+        "type": "numeracy",
+        "expected_answer": "five"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are the birds blue?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there any birds in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_010",
+    "layer": "geneval2",
+    "sub_category": "atomicity_3",
+    "difficulty": "published",
+    "prompt_text": "a pig and six clocks",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many pigs are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there any pigs in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "How many clocks are in the image?",
+        "type": "numeracy",
+        "expected_answer": "six"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are there any clocks in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_011",
+    "layer": "geneval2",
+    "sub_category": "atomicity_3",
+    "difficulty": "published",
+    "prompt_text": "two metal penguins",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many penguins are in the image?",
+        "type": "numeracy",
+        "expected_answer": "two"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are the penguins metal?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there any penguins in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_012",
+    "layer": "geneval2",
+    "sub_category": "atomicity_3",
+    "difficulty": "published",
+    "prompt_text": "six purple trucks",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many trucks are in the image?",
+        "type": "numeracy",
+        "expected_answer": "six"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are the trucks purple?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there any trucks in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_013",
+    "layer": "geneval2",
+    "sub_category": "atomicity_3",
+    "difficulty": "published",
+    "prompt_text": "five stone flamingos",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many flamingos are in the image?",
+        "type": "numeracy",
+        "expected_answer": "five"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are the flamingos stone?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there any flamingos in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_014",
+    "layer": "geneval2",
+    "sub_category": "atomicity_4",
+    "difficulty": "published",
+    "prompt_text": "six blue donuts and a flower",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many donuts are in the image?",
+        "type": "numeracy",
+        "expected_answer": "six"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are the donuts blue?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there any donuts in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "How many flowers are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are there any flowers in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_015",
+    "layer": "geneval2",
+    "sub_category": "atomicity_4",
+    "difficulty": "published",
+    "prompt_text": "a glass trumpet behind a candle",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many trumpets are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is the trumpet glass?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there any trumpets in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "Is the trumpet behind the candle?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q5",
+        "question": "How many candles are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are there any candles in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_016",
+    "layer": "geneval2",
+    "sub_category": "atomicity_4",
+    "difficulty": "published",
+    "prompt_text": "a penguin and three pink cows",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many penguins are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there any penguins in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "How many cows are in the image?",
+        "type": "numeracy",
+        "expected_answer": "three"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are the cows pink?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are there any cows in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_017",
+    "layer": "geneval2",
+    "sub_category": "atomicity_4",
+    "difficulty": "published",
+    "prompt_text": "a striped dog chasing a turtle",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many dogs are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is the dog striped?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there any dogs in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "Is the dog chasing the turtle?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q5",
+        "question": "How many turtles are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are there any turtles in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_018",
+    "layer": "geneval2",
+    "sub_category": "atomicity_4",
+    "difficulty": "published",
+    "prompt_text": "a backpack under seven cookies",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many backpacks are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there any backpacks in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is the backpack under the cookies?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "How many cookies are in the image?",
+        "type": "numeracy",
+        "expected_answer": "seven"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are there any cookies in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_019",
+    "layer": "geneval2",
+    "sub_category": "atomicity_4",
+    "difficulty": "published",
+    "prompt_text": "a horse and six stone backpacks",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many horses are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there any horses in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "How many backpacks are in the image?",
+        "type": "numeracy",
+        "expected_answer": "six"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are the backpacks stone?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are there any backpacks in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_020",
+    "layer": "geneval2",
+    "sub_category": "atomicity_4",
+    "difficulty": "published",
+    "prompt_text": "a candle in front of a spotted croissant",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many candles are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there any candles in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is the candle in front of the croissant?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "How many croissants are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q5",
+        "question": "Is the croissant spotted?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are there any croissants in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_021",
+    "layer": "geneval2",
+    "sub_category": "atomicity_4",
+    "difficulty": "published",
+    "prompt_text": "a green flower and a suitcase and a guitar",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many flowers are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is the flower green?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there any flowers in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "How many suitcases are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are there any suitcases in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q6",
+        "question": "How many guitars are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q7",
+        "question": "Are there any guitars in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_022",
+    "layer": "geneval2",
+    "sub_category": "atomicity_4",
+    "difficulty": "published",
+    "prompt_text": "a white cat and a blue pig",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many cats are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is the cat white?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there any cats in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "How many pigs are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q5",
+        "question": "Is the pig blue?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are there any pigs in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_023",
+    "layer": "geneval2",
+    "sub_category": "atomicity_4",
+    "difficulty": "published",
+    "prompt_text": "a bagel and seven black sheeps",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many bagels are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there any bagels in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "How many sheeps are in the image?",
+        "type": "numeracy",
+        "expected_answer": "seven"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are the sheeps black?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are there any sheeps in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_024",
+    "layer": "geneval2",
+    "sub_category": "atomicity_4",
+    "difficulty": "published",
+    "prompt_text": "three motorcycles and a brown giraffe",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many motorcycles are in the image?",
+        "type": "numeracy",
+        "expected_answer": "three"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there any motorcycles in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "How many giraffes are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q4",
+        "question": "Is the giraffe brown?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are there any giraffes in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_025",
+    "layer": "geneval2",
+    "sub_category": "atomicity_4",
+    "difficulty": "published",
+    "prompt_text": "a lion under a pink chair",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many lions are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there any lions in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is the lion under the chair?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "How many chairs are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q5",
+        "question": "Is the chair pink?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are there any chairs in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_026",
+    "layer": "geneval2",
+    "sub_category": "atomicity_4",
+    "difficulty": "published",
+    "prompt_text": "a plastic car and six donuts",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many cars are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is the car plastic?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there any cars in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "How many donuts are in the image?",
+        "type": "numeracy",
+        "expected_answer": "six"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are there any donuts in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_027",
+    "layer": "geneval2",
+    "sub_category": "atomicity_5",
+    "difficulty": "published",
+    "prompt_text": "three striped birds to the right of a pig",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many birds are in the image?",
+        "type": "numeracy",
+        "expected_answer": "three"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are the birds striped?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there any birds in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are the birds to the right of the pig?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q5",
+        "question": "How many pigs are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are there any pigs in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_028",
+    "layer": "geneval2",
+    "sub_category": "atomicity_5",
+    "difficulty": "published",
+    "prompt_text": "a white motorcycle and two striped flowers",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many motorcycles are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is the motorcycle white?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there any motorcycles in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "How many flowers are in the image?",
+        "type": "numeracy",
+        "expected_answer": "two"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are the flowers striped?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are there any flowers in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_029",
+    "layer": "geneval2",
+    "sub_category": "atomicity_5",
+    "difficulty": "published",
+    "prompt_text": "seven candles to the right of a brown raccoon",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many candles are in the image?",
+        "type": "numeracy",
+        "expected_answer": "seven"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there any candles in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are the candles to the right of the raccoon?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "How many raccoons are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q5",
+        "question": "Is the raccoon brown?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are there any raccoons in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_030",
+    "layer": "geneval2",
+    "sub_category": "atomicity_5",
+    "difficulty": "published",
+    "prompt_text": "a penguin, and five guitars to the right of a giraffe",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many penguins are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there any penguins in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "How many guitars are in the image?",
+        "type": "numeracy",
+        "expected_answer": "five"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are there any guitars in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are the guitars to the right of the giraffe?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q6",
+        "question": "How many giraffes are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q7",
+        "question": "Are there any giraffes in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_031",
+    "layer": "geneval2",
+    "sub_category": "atomicity_5",
+    "difficulty": "published",
+    "prompt_text": "a sparkling violin on top of a zebra, and a truck",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many violins are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is the violin sparkling?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there any violins in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "Is the violin on top of the zebra?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q5",
+        "question": "How many zebras are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are there any zebras in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q7",
+        "question": "How many trucks are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q8",
+        "question": "Are there any trucks in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_032",
+    "layer": "geneval2",
+    "sub_category": "atomicity_5",
+    "difficulty": "published",
+    "prompt_text": "a bear and a flower and six brown mushrooms",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many bears are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there any bears in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "How many flowers are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are there any flowers in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q5",
+        "question": "How many mushrooms are in the image?",
+        "type": "numeracy",
+        "expected_answer": "six"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are the mushrooms brown?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q7",
+        "question": "Are there any mushrooms in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_033",
+    "layer": "geneval2",
+    "sub_category": "atomicity_5",
+    "difficulty": "published",
+    "prompt_text": "five backpacks and four black suitcases",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many backpacks are in the image?",
+        "type": "numeracy",
+        "expected_answer": "five"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there any backpacks in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "How many suitcases are in the image?",
+        "type": "numeracy",
+        "expected_answer": "four"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are the suitcases black?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are there any suitcases in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_034",
+    "layer": "geneval2",
+    "sub_category": "atomicity_5",
+    "difficulty": "published",
+    "prompt_text": "seven flowers on top of a mushroom, and a horse",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many flowers are in the image?",
+        "type": "numeracy",
+        "expected_answer": "seven"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there any flowers in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are the flowers on top of the mushroom?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "How many mushrooms are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are there any mushrooms in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q6",
+        "question": "How many horses are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q7",
+        "question": "Are there any horses in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_035",
+    "layer": "geneval2",
+    "sub_category": "atomicity_5",
+    "difficulty": "published",
+    "prompt_text": "a guitar and three stone toys and a penguin",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many guitars are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there any guitars in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "How many toys are in the image?",
+        "type": "numeracy",
+        "expected_answer": "three"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are the toys stone?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are there any toys in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q6",
+        "question": "How many penguins are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q7",
+        "question": "Are there any penguins in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_036",
+    "layer": "geneval2",
+    "sub_category": "atomicity_5",
+    "difficulty": "published",
+    "prompt_text": "two purple lions and two guitars",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many lions are in the image?",
+        "type": "numeracy",
+        "expected_answer": "two"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are the lions purple?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there any lions in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "How many guitars are in the image?",
+        "type": "numeracy",
+        "expected_answer": "two"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are there any guitars in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_037",
+    "layer": "geneval2",
+    "sub_category": "atomicity_5",
+    "difficulty": "published",
+    "prompt_text": "three guitars and two brown suitcases",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many guitars are in the image?",
+        "type": "numeracy",
+        "expected_answer": "three"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there any guitars in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "How many suitcases are in the image?",
+        "type": "numeracy",
+        "expected_answer": "two"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are the suitcases brown?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are there any suitcases in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_038",
+    "layer": "geneval2",
+    "sub_category": "atomicity_5",
+    "difficulty": "published",
+    "prompt_text": "a checkered raccoon on top of a red bagel",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many raccoons are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is the raccoon checkered?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there any raccoons in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "Is the raccoon on top of the bagel?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q5",
+        "question": "How many bagels are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q6",
+        "question": "Is the bagel red?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q7",
+        "question": "Are there any bagels in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_039",
+    "layer": "geneval2",
+    "sub_category": "atomicity_5",
+    "difficulty": "published",
+    "prompt_text": "four wooden motorcycles in front of a penguin",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many motorcycles are in the image?",
+        "type": "numeracy",
+        "expected_answer": "four"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are the motorcycles wooden?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there any motorcycles in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are the motorcycles in front of the penguin?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q5",
+        "question": "How many penguins are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are there any penguins in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_040",
+    "layer": "geneval2",
+    "sub_category": "atomicity_6",
+    "difficulty": "published",
+    "prompt_text": "six bicycles and a zebra and three metal cows",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many bicycles are in the image?",
+        "type": "numeracy",
+        "expected_answer": "six"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there any bicycles in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "How many zebras are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are there any zebras in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q5",
+        "question": "How many cows are in the image?",
+        "type": "numeracy",
+        "expected_answer": "three"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are the cows metal?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q7",
+        "question": "Are there any cows in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_041",
+    "layer": "geneval2",
+    "sub_category": "atomicity_6",
+    "difficulty": "published",
+    "prompt_text": "a striped monkey to the right of a mushroom to the right of a koala",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many monkeys are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is the monkey striped?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there any monkeys in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "Is the monkey to the right of the mushroom?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q5",
+        "question": "How many mushrooms are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are there any mushrooms in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q7",
+        "question": "Is the mushroom to the right of the koala?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q8",
+        "question": "How many koalas are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q9",
+        "question": "Are there any koalas in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_042",
+    "layer": "geneval2",
+    "sub_category": "atomicity_6",
+    "difficulty": "published",
+    "prompt_text": "a motorcycle behind a metal croissant to the left of a zebra",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many motorcycles are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there any motorcycles in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is the motorcycle behind the croissant?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "How many croissants are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q5",
+        "question": "Is the croissant metal?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are there any croissants in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q7",
+        "question": "Is the croissant to the left of the zebra?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q8",
+        "question": "How many zebras are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q9",
+        "question": "Are there any zebras in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_043",
+    "layer": "geneval2",
+    "sub_category": "atomicity_6",
+    "difficulty": "published",
+    "prompt_text": "three brown flowers to the right of a rabbit, and a motorcycle",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many flowers are in the image?",
+        "type": "numeracy",
+        "expected_answer": "three"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are the flowers brown?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there any flowers in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are the flowers to the right of the rabbit?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q5",
+        "question": "How many rabbits are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are there any rabbits in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q7",
+        "question": "How many motorcycles are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q8",
+        "question": "Are there any motorcycles in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_044",
+    "layer": "geneval2",
+    "sub_category": "atomicity_6",
+    "difficulty": "published",
+    "prompt_text": "three bears, and a penguin under a yellow bird",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many bears are in the image?",
+        "type": "numeracy",
+        "expected_answer": "three"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there any bears in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "How many penguins are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are there any penguins in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q5",
+        "question": "Is the penguin under the bird?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q6",
+        "question": "How many birds are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q7",
+        "question": "Is the bird yellow?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q8",
+        "question": "Are there any birds in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_045",
+    "layer": "geneval2",
+    "sub_category": "atomicity_6",
+    "difficulty": "published",
+    "prompt_text": "a white toy on top of a giraffe, and five umbrellas",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many toys are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is the toy white?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there any toys in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "Is the toy on top of the giraffe?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q5",
+        "question": "How many giraffes are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are there any giraffes in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q7",
+        "question": "How many umbrellas are in the image?",
+        "type": "numeracy",
+        "expected_answer": "five"
+      },
+      {
+        "q_id": "q8",
+        "question": "Are there any umbrellas in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_046",
+    "layer": "geneval2",
+    "sub_category": "atomicity_6",
+    "difficulty": "published",
+    "prompt_text": "a bagel behind a plastic suitcase, and seven backpacks",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many bagels are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there any bagels in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is the bagel behind the suitcase?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "How many suitcases are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q5",
+        "question": "Is the suitcase plastic?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are there any suitcases in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q7",
+        "question": "How many backpacks are in the image?",
+        "type": "numeracy",
+        "expected_answer": "seven"
+      },
+      {
+        "q_id": "q8",
+        "question": "Are there any backpacks in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_047",
+    "layer": "geneval2",
+    "sub_category": "atomicity_6",
+    "difficulty": "published",
+    "prompt_text": "two purple flowers in front of three dogs",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many flowers are in the image?",
+        "type": "numeracy",
+        "expected_answer": "two"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are the flowers purple?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there any flowers in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are the flowers in front of the dogs?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q5",
+        "question": "How many dogs are in the image?",
+        "type": "numeracy",
+        "expected_answer": "three"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are there any dogs in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_048",
+    "layer": "geneval2",
+    "sub_category": "atomicity_6",
+    "difficulty": "published",
+    "prompt_text": "a plastic car and seven plastic sheeps and a penguin",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many cars are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is the car plastic?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there any cars in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "How many sheeps are in the image?",
+        "type": "numeracy",
+        "expected_answer": "seven"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are the sheeps plastic?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are there any sheeps in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q7",
+        "question": "How many penguins are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q8",
+        "question": "Are there any penguins in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_049",
+    "layer": "geneval2",
+    "sub_category": "atomicity_6",
+    "difficulty": "published",
+    "prompt_text": "a motorcycle, and three birds on top of a purple rabbit",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many motorcycles are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there any motorcycles in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "How many birds are in the image?",
+        "type": "numeracy",
+        "expected_answer": "three"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are there any birds in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are the birds on top of the rabbit?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q6",
+        "question": "How many rabbits are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q7",
+        "question": "Is the rabbit purple?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q8",
+        "question": "Are there any rabbits in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_050",
+    "layer": "geneval2",
+    "sub_category": "atomicity_6",
+    "difficulty": "published",
+    "prompt_text": "a pink cookie in front of three plastic turtles",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many cookies are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is the cookie pink?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there any cookies in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "Is the cookie in front of the turtles?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q5",
+        "question": "How many turtles are in the image?",
+        "type": "numeracy",
+        "expected_answer": "three"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are the turtles plastic?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q7",
+        "question": "Are there any turtles in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_051",
+    "layer": "geneval2",
+    "sub_category": "atomicity_6",
+    "difficulty": "published",
+    "prompt_text": "a penguin on top of a white elephant behind a flamingo",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many penguins are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there any penguins in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is the penguin on top of the elephant?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "How many elephants are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q5",
+        "question": "Is the elephant white?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are there any elephants in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q7",
+        "question": "Is the elephant behind the flamingo?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q8",
+        "question": "How many flamingos are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q9",
+        "question": "Are there any flamingos in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_052",
+    "layer": "geneval2",
+    "sub_category": "atomicity_6",
+    "difficulty": "published",
+    "prompt_text": "a candle to the left of a brown kangaroo to the left of a toy",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many candles are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there any candles in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is the candle to the left of the kangaroo?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "How many kangaroos are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q5",
+        "question": "Is the kangaroo brown?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are there any kangaroos in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q7",
+        "question": "Is the kangaroo to the left of the toy?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q8",
+        "question": "How many toys are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q9",
+        "question": "Are there any toys in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_053",
+    "layer": "geneval2",
+    "sub_category": "atomicity_7",
+    "difficulty": "published",
+    "prompt_text": "six spotted flowers behind six blue suitcases",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many flowers are in the image?",
+        "type": "numeracy",
+        "expected_answer": "six"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are the flowers spotted?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there any flowers in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are the flowers behind the suitcases?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q5",
+        "question": "How many suitcases are in the image?",
+        "type": "numeracy",
+        "expected_answer": "six"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are the suitcases blue?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q7",
+        "question": "Are there any suitcases in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_054",
+    "layer": "geneval2",
+    "sub_category": "atomicity_7",
+    "difficulty": "published",
+    "prompt_text": "five bicycles and five spotted cats and five dogs",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many bicycles are in the image?",
+        "type": "numeracy",
+        "expected_answer": "five"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there any bicycles in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "How many cats are in the image?",
+        "type": "numeracy",
+        "expected_answer": "five"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are the cats spotted?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are there any cats in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q6",
+        "question": "How many dogs are in the image?",
+        "type": "numeracy",
+        "expected_answer": "five"
+      },
+      {
+        "q_id": "q7",
+        "question": "Are there any dogs in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_055",
+    "layer": "geneval2",
+    "sub_category": "atomicity_7",
+    "difficulty": "published",
+    "prompt_text": "four white bicycles in front of three plastic cows",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many bicycles are in the image?",
+        "type": "numeracy",
+        "expected_answer": "four"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are the bicycles white?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there any bicycles in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are the bicycles in front of the cows?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q5",
+        "question": "How many cows are in the image?",
+        "type": "numeracy",
+        "expected_answer": "three"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are the cows plastic?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q7",
+        "question": "Are there any cows in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_056",
+    "layer": "geneval2",
+    "sub_category": "atomicity_7",
+    "difficulty": "published",
+    "prompt_text": "a backpack in front of a spotted cat playing with a sparkling pig",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many backpacks are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there any backpacks in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is the backpack in front of the cat?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "How many cats are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q5",
+        "question": "Is the cat spotted?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are there any cats in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q7",
+        "question": "Is the cat playing with the pig?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q8",
+        "question": "How many pigs are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q9",
+        "question": "Is the pig sparkling?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q10",
+        "question": "Are there any pigs in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_057",
+    "layer": "geneval2",
+    "sub_category": "atomicity_7",
+    "difficulty": "published",
+    "prompt_text": "three elephants to the right of five sparkling chairs, and a cat",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many elephants are in the image?",
+        "type": "numeracy",
+        "expected_answer": "three"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there any elephants in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are the elephants to the right of the chairs?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "How many chairs are in the image?",
+        "type": "numeracy",
+        "expected_answer": "five"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are the chairs sparkling?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are there any chairs in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q7",
+        "question": "How many cats are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q8",
+        "question": "Are there any cats in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_058",
+    "layer": "geneval2",
+    "sub_category": "atomicity_7",
+    "difficulty": "published",
+    "prompt_text": "four checkered bicycles, and a violin under three rabbits",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many bicycles are in the image?",
+        "type": "numeracy",
+        "expected_answer": "four"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are the bicycles checkered?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there any bicycles in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "How many violins are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are there any violins in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q6",
+        "question": "Is the violin under the rabbits?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q7",
+        "question": "How many rabbits are in the image?",
+        "type": "numeracy",
+        "expected_answer": "three"
+      },
+      {
+        "q_id": "q8",
+        "question": "Are there any rabbits in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_059",
+    "layer": "geneval2",
+    "sub_category": "atomicity_7",
+    "difficulty": "published",
+    "prompt_text": "four red bicycles, and four chairs on top of a flamingo",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many bicycles are in the image?",
+        "type": "numeracy",
+        "expected_answer": "four"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are the bicycles red?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there any bicycles in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "How many chairs are in the image?",
+        "type": "numeracy",
+        "expected_answer": "four"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are there any chairs in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are the chairs on top of the flamingo?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q7",
+        "question": "How many flamingos are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q8",
+        "question": "Are there any flamingos in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_060",
+    "layer": "geneval2",
+    "sub_category": "atomicity_7",
+    "difficulty": "published",
+    "prompt_text": "a dog, and a plastic horse to the left of two checkered croissants",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many dogs are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there any dogs in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "How many horses are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q4",
+        "question": "Is the horse plastic?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are there any horses in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q6",
+        "question": "Is the horse to the left of the croissants?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q7",
+        "question": "How many croissants are in the image?",
+        "type": "numeracy",
+        "expected_answer": "two"
+      },
+      {
+        "q_id": "q8",
+        "question": "Are the croissants checkered?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q9",
+        "question": "Are there any croissants in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_061",
+    "layer": "geneval2",
+    "sub_category": "atomicity_7",
+    "difficulty": "published",
+    "prompt_text": "seven backpacks, and a blue car to the left of a red rabbit",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many backpacks are in the image?",
+        "type": "numeracy",
+        "expected_answer": "seven"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there any backpacks in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "How many cars are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q4",
+        "question": "Is the car blue?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are there any cars in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q6",
+        "question": "Is the car to the left of the rabbit?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q7",
+        "question": "How many rabbits are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q8",
+        "question": "Is the rabbit red?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q9",
+        "question": "Are there any rabbits in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_062",
+    "layer": "geneval2",
+    "sub_category": "atomicity_7",
+    "difficulty": "published",
+    "prompt_text": "a metal elephant to the left of seven violins, and three horses",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many elephants are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is the elephant metal?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there any elephants in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "Is the elephant to the left of the violins?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q5",
+        "question": "How many violins are in the image?",
+        "type": "numeracy",
+        "expected_answer": "seven"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are there any violins in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q7",
+        "question": "How many horses are in the image?",
+        "type": "numeracy",
+        "expected_answer": "three"
+      },
+      {
+        "q_id": "q8",
+        "question": "Are there any horses in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_063",
+    "layer": "geneval2",
+    "sub_category": "atomicity_7",
+    "difficulty": "published",
+    "prompt_text": "three plastic cows and two cookies and five horses",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many cows are in the image?",
+        "type": "numeracy",
+        "expected_answer": "three"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are the cows plastic?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there any cows in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "How many cookies are in the image?",
+        "type": "numeracy",
+        "expected_answer": "two"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are there any cookies in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q6",
+        "question": "How many horses are in the image?",
+        "type": "numeracy",
+        "expected_answer": "five"
+      },
+      {
+        "q_id": "q7",
+        "question": "Are there any horses in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_064",
+    "layer": "geneval2",
+    "sub_category": "atomicity_7",
+    "difficulty": "published",
+    "prompt_text": "two birds, and a suitcase in front of four yellow monkeys",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many birds are in the image?",
+        "type": "numeracy",
+        "expected_answer": "two"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there any birds in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "How many suitcases are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are there any suitcases in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q5",
+        "question": "Is the suitcase in front of the monkeys?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q6",
+        "question": "How many monkeys are in the image?",
+        "type": "numeracy",
+        "expected_answer": "four"
+      },
+      {
+        "q_id": "q7",
+        "question": "Are the monkeys yellow?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q8",
+        "question": "Are there any monkeys in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_065",
+    "layer": "geneval2",
+    "sub_category": "atomicity_7",
+    "difficulty": "published",
+    "prompt_text": "a metal dog and a purple truck and five white violins",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many dogs are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is the dog metal?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there any dogs in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "How many trucks are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q5",
+        "question": "Is the truck purple?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are there any trucks in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q7",
+        "question": "How many violins are in the image?",
+        "type": "numeracy",
+        "expected_answer": "five"
+      },
+      {
+        "q_id": "q8",
+        "question": "Are the violins white?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q9",
+        "question": "Are there any violins in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_066",
+    "layer": "geneval2",
+    "sub_category": "atomicity_8",
+    "difficulty": "published",
+    "prompt_text": "a motorcycle under a striped umbrella to the right of three purple croissants",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many motorcycles are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there any motorcycles in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is the motorcycle under the umbrella?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "How many umbrellas are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q5",
+        "question": "Is the umbrella striped?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are there any umbrellas in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q7",
+        "question": "Is the umbrella to the right of the croissants?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q8",
+        "question": "How many croissants are in the image?",
+        "type": "numeracy",
+        "expected_answer": "three"
+      },
+      {
+        "q_id": "q9",
+        "question": "Are the croissants purple?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q10",
+        "question": "Are there any croissants in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_067",
+    "layer": "geneval2",
+    "sub_category": "atomicity_8",
+    "difficulty": "published",
+    "prompt_text": "five pink cats and a sparkling turtle and seven stone motorcycles",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many cats are in the image?",
+        "type": "numeracy",
+        "expected_answer": "five"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are the cats pink?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there any cats in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "How many turtles are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q5",
+        "question": "Is the turtle sparkling?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are there any turtles in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q7",
+        "question": "How many motorcycles are in the image?",
+        "type": "numeracy",
+        "expected_answer": "seven"
+      },
+      {
+        "q_id": "q8",
+        "question": "Are the motorcycles stone?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q9",
+        "question": "Are there any motorcycles in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_068",
+    "layer": "geneval2",
+    "sub_category": "atomicity_8",
+    "difficulty": "published",
+    "prompt_text": "two plastic koalas in front of two bears, and seven violins",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many koalas are in the image?",
+        "type": "numeracy",
+        "expected_answer": "two"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are the koalas plastic?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there any koalas in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are the koalas in front of the bears?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q5",
+        "question": "How many bears are in the image?",
+        "type": "numeracy",
+        "expected_answer": "two"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are there any bears in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q7",
+        "question": "How many violins are in the image?",
+        "type": "numeracy",
+        "expected_answer": "seven"
+      },
+      {
+        "q_id": "q8",
+        "question": "Are there any violins in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_069",
+    "layer": "geneval2",
+    "sub_category": "atomicity_8",
+    "difficulty": "published",
+    "prompt_text": "seven blue mushrooms, and a lion to the left of three red birds",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many mushrooms are in the image?",
+        "type": "numeracy",
+        "expected_answer": "seven"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are the mushrooms blue?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there any mushrooms in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "How many lions are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are there any lions in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q6",
+        "question": "Is the lion to the left of the birds?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q7",
+        "question": "How many birds are in the image?",
+        "type": "numeracy",
+        "expected_answer": "three"
+      },
+      {
+        "q_id": "q8",
+        "question": "Are the birds red?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q9",
+        "question": "Are there any birds in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_070",
+    "layer": "geneval2",
+    "sub_category": "atomicity_8",
+    "difficulty": "published",
+    "prompt_text": "seven candles, and two blue guitars on top of five birds",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many candles are in the image?",
+        "type": "numeracy",
+        "expected_answer": "seven"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there any candles in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "How many guitars are in the image?",
+        "type": "numeracy",
+        "expected_answer": "two"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are the guitars blue?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are there any guitars in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are the guitars on top of the birds?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q7",
+        "question": "How many birds are in the image?",
+        "type": "numeracy",
+        "expected_answer": "five"
+      },
+      {
+        "q_id": "q8",
+        "question": "Are there any birds in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_071",
+    "layer": "geneval2",
+    "sub_category": "atomicity_8",
+    "difficulty": "published",
+    "prompt_text": "five pink cows under a sparkling cookie, and a plastic flower",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many cows are in the image?",
+        "type": "numeracy",
+        "expected_answer": "five"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are the cows pink?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there any cows in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are the cows under the cookie?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q5",
+        "question": "How many cookies are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q6",
+        "question": "Is the cookie sparkling?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q7",
+        "question": "Are there any cookies in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q8",
+        "question": "How many flowers are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q9",
+        "question": "Is the flower plastic?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q10",
+        "question": "Are there any flowers in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_072",
+    "layer": "geneval2",
+    "sub_category": "atomicity_8",
+    "difficulty": "published",
+    "prompt_text": "five green bears under a metal bicycle, and seven guitars",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many bears are in the image?",
+        "type": "numeracy",
+        "expected_answer": "five"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are the bears green?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there any bears in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are the bears under the bicycle?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q5",
+        "question": "How many bicycles are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q6",
+        "question": "Is the bicycle metal?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q7",
+        "question": "Are there any bicycles in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q8",
+        "question": "How many guitars are in the image?",
+        "type": "numeracy",
+        "expected_answer": "seven"
+      },
+      {
+        "q_id": "q9",
+        "question": "Are there any guitars in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_073",
+    "layer": "geneval2",
+    "sub_category": "atomicity_8",
+    "difficulty": "published",
+    "prompt_text": "a clock to the right of three purple monkeys to the right of a red guitar",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many clocks are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there any clocks in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is the clock to the right of the monkeys?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "How many monkeys are in the image?",
+        "type": "numeracy",
+        "expected_answer": "three"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are the monkeys purple?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are there any monkeys in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q7",
+        "question": "Are the monkeys to the right of the guitar?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q8",
+        "question": "How many guitars are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q9",
+        "question": "Is the guitar red?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q10",
+        "question": "Are there any guitars in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_074",
+    "layer": "geneval2",
+    "sub_category": "atomicity_8",
+    "difficulty": "published",
+    "prompt_text": "four striped toys, and seven croissants to the left of a metal pig",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many toys are in the image?",
+        "type": "numeracy",
+        "expected_answer": "four"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are the toys striped?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there any toys in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "How many croissants are in the image?",
+        "type": "numeracy",
+        "expected_answer": "seven"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are there any croissants in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are the croissants to the left of the pig?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q7",
+        "question": "How many pigs are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q8",
+        "question": "Is the pig metal?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q9",
+        "question": "Are there any pigs in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_075",
+    "layer": "geneval2",
+    "sub_category": "atomicity_8",
+    "difficulty": "published",
+    "prompt_text": "two lions, and three stone flowers to the left of a wooden bird",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many lions are in the image?",
+        "type": "numeracy",
+        "expected_answer": "two"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there any lions in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "How many flowers are in the image?",
+        "type": "numeracy",
+        "expected_answer": "three"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are the flowers stone?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are there any flowers in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are the flowers to the left of the bird?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q7",
+        "question": "How many birds are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q8",
+        "question": "Is the bird wooden?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q9",
+        "question": "Are there any birds in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_076",
+    "layer": "geneval2",
+    "sub_category": "atomicity_8",
+    "difficulty": "published",
+    "prompt_text": "five glass flamingos on top of a spotted croissant, and a stone giraffe",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many flamingos are in the image?",
+        "type": "numeracy",
+        "expected_answer": "five"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are the flamingos glass?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there any flamingos in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are the flamingos on top of the croissant?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q5",
+        "question": "How many croissants are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q6",
+        "question": "Is the croissant spotted?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q7",
+        "question": "Are there any croissants in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q8",
+        "question": "How many giraffes are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q9",
+        "question": "Is the giraffe stone?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q10",
+        "question": "Are there any giraffes in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_077",
+    "layer": "geneval2",
+    "sub_category": "atomicity_8",
+    "difficulty": "published",
+    "prompt_text": "a checkered lion chasing seven raccoons to the left of a stone croissant",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many lions are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is the lion checkered?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there any lions in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "Is the lion chasing the raccoons?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q5",
+        "question": "How many raccoons are in the image?",
+        "type": "numeracy",
+        "expected_answer": "seven"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are there any raccoons in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q7",
+        "question": "Are the raccoons to the left of the croissant?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q8",
+        "question": "How many croissants are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q9",
+        "question": "Is the croissant stone?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q10",
+        "question": "Are there any croissants in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_078",
+    "layer": "geneval2",
+    "sub_category": "atomicity_8",
+    "difficulty": "published",
+    "prompt_text": "five raccoons in front of three motorcycles, and four checkered cows",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many raccoons are in the image?",
+        "type": "numeracy",
+        "expected_answer": "five"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there any raccoons in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are the raccoons in front of the motorcycles?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "How many motorcycles are in the image?",
+        "type": "numeracy",
+        "expected_answer": "three"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are there any motorcycles in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q6",
+        "question": "How many cows are in the image?",
+        "type": "numeracy",
+        "expected_answer": "four"
+      },
+      {
+        "q_id": "q7",
+        "question": "Are the cows checkered?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q8",
+        "question": "Are there any cows in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_079",
+    "layer": "geneval2",
+    "sub_category": "atomicity_9",
+    "difficulty": "published",
+    "prompt_text": "five white candles on top of two red raccoons behind a cookie",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many candles are in the image?",
+        "type": "numeracy",
+        "expected_answer": "five"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are the candles white?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there any candles in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are the candles on top of the raccoons?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q5",
+        "question": "How many raccoons are in the image?",
+        "type": "numeracy",
+        "expected_answer": "two"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are the raccoons red?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q7",
+        "question": "Are there any raccoons in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q8",
+        "question": "Are the raccoons behind the cookie?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q9",
+        "question": "How many cookies are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q10",
+        "question": "Are there any cookies in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_080",
+    "layer": "geneval2",
+    "sub_category": "atomicity_9",
+    "difficulty": "published",
+    "prompt_text": "a bicycle to the left of three stone flamingos under three blue sheeps",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many bicycles are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there any bicycles in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is the bicycle to the left of the flamingos?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "How many flamingos are in the image?",
+        "type": "numeracy",
+        "expected_answer": "three"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are the flamingos stone?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are there any flamingos in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q7",
+        "question": "Are the flamingos under the sheeps?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q8",
+        "question": "How many sheeps are in the image?",
+        "type": "numeracy",
+        "expected_answer": "three"
+      },
+      {
+        "q_id": "q9",
+        "question": "Are the sheeps blue?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q10",
+        "question": "Are there any sheeps in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_081",
+    "layer": "geneval2",
+    "sub_category": "atomicity_9",
+    "difficulty": "published",
+    "prompt_text": "four yellow candles in front of three sparkling birds to the right of a chair",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many candles are in the image?",
+        "type": "numeracy",
+        "expected_answer": "four"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are the candles yellow?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there any candles in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are the candles in front of the birds?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q5",
+        "question": "How many birds are in the image?",
+        "type": "numeracy",
+        "expected_answer": "three"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are the birds sparkling?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q7",
+        "question": "Are there any birds in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q8",
+        "question": "Are the birds to the right of the chair?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q9",
+        "question": "How many chairs are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q10",
+        "question": "Are there any chairs in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_082",
+    "layer": "geneval2",
+    "sub_category": "atomicity_9",
+    "difficulty": "published",
+    "prompt_text": "five pink zebras behind two red bagels, and four toys",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many zebras are in the image?",
+        "type": "numeracy",
+        "expected_answer": "five"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are the zebras pink?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there any zebras in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are the zebras behind the bagels?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q5",
+        "question": "How many bagels are in the image?",
+        "type": "numeracy",
+        "expected_answer": "two"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are the bagels red?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q7",
+        "question": "Are there any bagels in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q8",
+        "question": "How many toys are in the image?",
+        "type": "numeracy",
+        "expected_answer": "four"
+      },
+      {
+        "q_id": "q9",
+        "question": "Are there any toys in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_083",
+    "layer": "geneval2",
+    "sub_category": "atomicity_9",
+    "difficulty": "published",
+    "prompt_text": "five kangaroos, and four white turtles in front of three stone candles",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many kangaroos are in the image?",
+        "type": "numeracy",
+        "expected_answer": "five"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there any kangaroos in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "How many turtles are in the image?",
+        "type": "numeracy",
+        "expected_answer": "four"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are the turtles white?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are there any turtles in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are the turtles in front of the candles?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q7",
+        "question": "How many candles are in the image?",
+        "type": "numeracy",
+        "expected_answer": "three"
+      },
+      {
+        "q_id": "q8",
+        "question": "Are the candles stone?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q9",
+        "question": "Are there any candles in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_084",
+    "layer": "geneval2",
+    "sub_category": "atomicity_9",
+    "difficulty": "published",
+    "prompt_text": "two yellow suitcases to the left of a giraffe behind three metal croissants",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many suitcases are in the image?",
+        "type": "numeracy",
+        "expected_answer": "two"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are the suitcases yellow?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there any suitcases in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are the suitcases to the left of the giraffe?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q5",
+        "question": "How many giraffes are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are there any giraffes in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q7",
+        "question": "Is the giraffe behind the croissants?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q8",
+        "question": "How many croissants are in the image?",
+        "type": "numeracy",
+        "expected_answer": "three"
+      },
+      {
+        "q_id": "q9",
+        "question": "Are the croissants metal?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q10",
+        "question": "Are there any croissants in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_085",
+    "layer": "geneval2",
+    "sub_category": "atomicity_9",
+    "difficulty": "published",
+    "prompt_text": "seven yellow umbrellas under three mushrooms under a red giraffe",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many umbrellas are in the image?",
+        "type": "numeracy",
+        "expected_answer": "seven"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are the umbrellas yellow?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there any umbrellas in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are the umbrellas under the mushrooms?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q5",
+        "question": "How many mushrooms are in the image?",
+        "type": "numeracy",
+        "expected_answer": "three"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are there any mushrooms in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q7",
+        "question": "Are the mushrooms under the giraffe?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q8",
+        "question": "How many giraffes are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q9",
+        "question": "Is the giraffe red?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q10",
+        "question": "Are there any giraffes in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_086",
+    "layer": "geneval2",
+    "sub_category": "atomicity_9",
+    "difficulty": "published",
+    "prompt_text": "three rabbits chasing five blue pigs, and six purple bicycles",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many rabbits are in the image?",
+        "type": "numeracy",
+        "expected_answer": "three"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there any rabbits in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are the rabbits chasing the pigs?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "How many pigs are in the image?",
+        "type": "numeracy",
+        "expected_answer": "five"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are the pigs blue?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are there any pigs in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q7",
+        "question": "How many bicycles are in the image?",
+        "type": "numeracy",
+        "expected_answer": "six"
+      },
+      {
+        "q_id": "q8",
+        "question": "Are the bicycles purple?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q9",
+        "question": "Are there any bicycles in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_087",
+    "layer": "geneval2",
+    "sub_category": "atomicity_9",
+    "difficulty": "published",
+    "prompt_text": "five stone monkeys to the right of seven backpacks behind a glass pig",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many monkeys are in the image?",
+        "type": "numeracy",
+        "expected_answer": "five"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are the monkeys stone?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there any monkeys in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are the monkeys to the right of the backpacks?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q5",
+        "question": "How many backpacks are in the image?",
+        "type": "numeracy",
+        "expected_answer": "seven"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are there any backpacks in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q7",
+        "question": "Are the backpacks behind the pig?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q8",
+        "question": "How many pigs are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q9",
+        "question": "Is the pig glass?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q10",
+        "question": "Are there any pigs in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_088",
+    "layer": "geneval2",
+    "sub_category": "atomicity_9",
+    "difficulty": "published",
+    "prompt_text": "three checkered cows, and two bicycles behind four green pigs",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many cows are in the image?",
+        "type": "numeracy",
+        "expected_answer": "three"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are the cows checkered?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there any cows in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "How many bicycles are in the image?",
+        "type": "numeracy",
+        "expected_answer": "two"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are there any bicycles in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are the bicycles behind the pigs?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q7",
+        "question": "How many pigs are in the image?",
+        "type": "numeracy",
+        "expected_answer": "four"
+      },
+      {
+        "q_id": "q8",
+        "question": "Are the pigs green?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q9",
+        "question": "Are there any pigs in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_089",
+    "layer": "geneval2",
+    "sub_category": "atomicity_9",
+    "difficulty": "published",
+    "prompt_text": "a checkered cookie under a white motorcycle to the right of five blue toys",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many cookies are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is the cookie checkered?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there any cookies in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "Is the cookie under the motorcycle?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q5",
+        "question": "How many motorcycles are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q6",
+        "question": "Is the motorcycle white?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q7",
+        "question": "Are there any motorcycles in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q8",
+        "question": "Is the motorcycle to the right of the toys?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q9",
+        "question": "How many toys are in the image?",
+        "type": "numeracy",
+        "expected_answer": "five"
+      },
+      {
+        "q_id": "q10",
+        "question": "Are the toys blue?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q11",
+        "question": "Are there any toys in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_090",
+    "layer": "geneval2",
+    "sub_category": "atomicity_9",
+    "difficulty": "published",
+    "prompt_text": "a croissant in front of five wooden flamingos under four blue cookies",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many croissants are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there any croissants in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is the croissant in front of the flamingos?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "How many flamingos are in the image?",
+        "type": "numeracy",
+        "expected_answer": "five"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are the flamingos wooden?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are there any flamingos in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q7",
+        "question": "Are the flamingos under the cookies?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q8",
+        "question": "How many cookies are in the image?",
+        "type": "numeracy",
+        "expected_answer": "four"
+      },
+      {
+        "q_id": "q9",
+        "question": "Are the cookies blue?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q10",
+        "question": "Are there any cookies in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_091",
+    "layer": "geneval2",
+    "sub_category": "atomicity_9",
+    "difficulty": "published",
+    "prompt_text": "two yellow kangaroos in front of a yellow pig to the left of a brown koala",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many kangaroos are in the image?",
+        "type": "numeracy",
+        "expected_answer": "two"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are the kangaroos yellow?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there any kangaroos in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are the kangaroos in front of the pig?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q5",
+        "question": "How many pigs are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q6",
+        "question": "Is the pig yellow?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q7",
+        "question": "Are there any pigs in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q8",
+        "question": "Is the pig to the left of the koala?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q9",
+        "question": "How many koalas are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q10",
+        "question": "Is the koala brown?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q11",
+        "question": "Are there any koalas in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_092",
+    "layer": "geneval2",
+    "sub_category": "atomicity_10",
+    "difficulty": "published",
+    "prompt_text": "a blue dog on top of three white sheeps behind seven white candles",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many dogs are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is the dog blue?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there any dogs in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "Is the dog on top of the sheeps?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q5",
+        "question": "How many sheeps are in the image?",
+        "type": "numeracy",
+        "expected_answer": "three"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are the sheeps white?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q7",
+        "question": "Are there any sheeps in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q8",
+        "question": "Are the sheeps behind the candles?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q9",
+        "question": "How many candles are in the image?",
+        "type": "numeracy",
+        "expected_answer": "seven"
+      },
+      {
+        "q_id": "q10",
+        "question": "Are the candles white?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q11",
+        "question": "Are there any candles in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_093",
+    "layer": "geneval2",
+    "sub_category": "atomicity_10",
+    "difficulty": "published",
+    "prompt_text": "five spotted suitcases behind six donuts to the left of seven yellow chairs",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many suitcases are in the image?",
+        "type": "numeracy",
+        "expected_answer": "five"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are the suitcases spotted?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there any suitcases in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are the suitcases behind the donuts?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q5",
+        "question": "How many donuts are in the image?",
+        "type": "numeracy",
+        "expected_answer": "six"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are there any donuts in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q7",
+        "question": "Are the donuts to the left of the chairs?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q8",
+        "question": "How many chairs are in the image?",
+        "type": "numeracy",
+        "expected_answer": "seven"
+      },
+      {
+        "q_id": "q9",
+        "question": "Are the chairs yellow?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q10",
+        "question": "Are there any chairs in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_094",
+    "layer": "geneval2",
+    "sub_category": "atomicity_10",
+    "difficulty": "published",
+    "prompt_text": "a stone bagel on top of six purple flamingos to the right of four checkered elephants",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many bagels are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is the bagel stone?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there any bagels in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "Is the bagel on top of the flamingos?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q5",
+        "question": "How many flamingos are in the image?",
+        "type": "numeracy",
+        "expected_answer": "six"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are the flamingos purple?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q7",
+        "question": "Are there any flamingos in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q8",
+        "question": "Are the flamingos to the right of the elephants?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q9",
+        "question": "How many elephants are in the image?",
+        "type": "numeracy",
+        "expected_answer": "four"
+      },
+      {
+        "q_id": "q10",
+        "question": "Are the elephants checkered?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q11",
+        "question": "Are there any elephants in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_095",
+    "layer": "geneval2",
+    "sub_category": "atomicity_10",
+    "difficulty": "published",
+    "prompt_text": "four brown bagels, and six metal mushrooms on top of four wooden violins",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many bagels are in the image?",
+        "type": "numeracy",
+        "expected_answer": "four"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are the bagels brown?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there any bagels in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "How many mushrooms are in the image?",
+        "type": "numeracy",
+        "expected_answer": "six"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are the mushrooms metal?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are there any mushrooms in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q7",
+        "question": "Are the mushrooms on top of the violins?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q8",
+        "question": "How many violins are in the image?",
+        "type": "numeracy",
+        "expected_answer": "four"
+      },
+      {
+        "q_id": "q9",
+        "question": "Are the violins wooden?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q10",
+        "question": "Are there any violins in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_096",
+    "layer": "geneval2",
+    "sub_category": "atomicity_10",
+    "difficulty": "published",
+    "prompt_text": "seven checkered trumpets behind seven glass birds to the right of a yellow penguin",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many trumpets are in the image?",
+        "type": "numeracy",
+        "expected_answer": "seven"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are the trumpets checkered?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there any trumpets in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are the trumpets behind the birds?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q5",
+        "question": "How many birds are in the image?",
+        "type": "numeracy",
+        "expected_answer": "seven"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are the birds glass?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q7",
+        "question": "Are there any birds in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q8",
+        "question": "Are the birds to the right of the penguin?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q9",
+        "question": "How many penguins are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q10",
+        "question": "Is the penguin yellow?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q11",
+        "question": "Are there any penguins in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_097",
+    "layer": "geneval2",
+    "sub_category": "atomicity_10",
+    "difficulty": "published",
+    "prompt_text": "four checkered croissants to the right of two elephants under seven spotted flowers",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many croissants are in the image?",
+        "type": "numeracy",
+        "expected_answer": "four"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are the croissants checkered?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there any croissants in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are the croissants to the right of the elephants?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q5",
+        "question": "How many elephants are in the image?",
+        "type": "numeracy",
+        "expected_answer": "two"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are there any elephants in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q7",
+        "question": "Are the elephants under the flowers?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q8",
+        "question": "How many flowers are in the image?",
+        "type": "numeracy",
+        "expected_answer": "seven"
+      },
+      {
+        "q_id": "q9",
+        "question": "Are the flowers spotted?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q10",
+        "question": "Are there any flowers in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_098",
+    "layer": "geneval2",
+    "sub_category": "atomicity_10",
+    "difficulty": "published",
+    "prompt_text": "three white raccoons to the left of two stone violins, and two red umbrellas",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many raccoons are in the image?",
+        "type": "numeracy",
+        "expected_answer": "three"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are the raccoons white?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there any raccoons in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are the raccoons to the left of the violins?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q5",
+        "question": "How many violins are in the image?",
+        "type": "numeracy",
+        "expected_answer": "two"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are the violins stone?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q7",
+        "question": "Are there any violins in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q8",
+        "question": "How many umbrellas are in the image?",
+        "type": "numeracy",
+        "expected_answer": "two"
+      },
+      {
+        "q_id": "q9",
+        "question": "Are the umbrellas red?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q10",
+        "question": "Are there any umbrellas in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_099",
+    "layer": "geneval2",
+    "sub_category": "atomicity_10",
+    "difficulty": "published",
+    "prompt_text": "three red backpacks to the right of four wooden cows jumping over a red bird",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many backpacks are in the image?",
+        "type": "numeracy",
+        "expected_answer": "three"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are the backpacks red?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there any backpacks in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are the backpacks to the right of the cows?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q5",
+        "question": "How many cows are in the image?",
+        "type": "numeracy",
+        "expected_answer": "four"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are the cows wooden?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q7",
+        "question": "Are there any cows in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q8",
+        "question": "Are the cows jumping over the bird?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q9",
+        "question": "How many birds are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q10",
+        "question": "Is the bird red?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q11",
+        "question": "Are there any birds in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_100",
+    "layer": "geneval2",
+    "sub_category": "atomicity_10",
+    "difficulty": "published",
+    "prompt_text": "two umbrellas in front of four spotted birds in front of three glass koalas",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many umbrellas are in the image?",
+        "type": "numeracy",
+        "expected_answer": "two"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there any umbrellas in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are the umbrellas in front of the birds?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "How many birds are in the image?",
+        "type": "numeracy",
+        "expected_answer": "four"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are the birds spotted?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are there any birds in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q7",
+        "question": "Are the birds in front of the koalas?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q8",
+        "question": "How many koalas are in the image?",
+        "type": "numeracy",
+        "expected_answer": "three"
+      },
+      {
+        "q_id": "q9",
+        "question": "Are the koalas glass?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q10",
+        "question": "Are there any koalas in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_101",
+    "layer": "geneval2",
+    "sub_category": "atomicity_10",
+    "difficulty": "published",
+    "prompt_text": "four yellow koalas in front of six pink trumpets, and five brown giraffes",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many koalas are in the image?",
+        "type": "numeracy",
+        "expected_answer": "four"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are the koalas yellow?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there any koalas in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are the koalas in front of the trumpets?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q5",
+        "question": "How many trumpets are in the image?",
+        "type": "numeracy",
+        "expected_answer": "six"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are the trumpets pink?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q7",
+        "question": "Are there any trumpets in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q8",
+        "question": "How many giraffes are in the image?",
+        "type": "numeracy",
+        "expected_answer": "five"
+      },
+      {
+        "q_id": "q9",
+        "question": "Are the giraffes brown?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q10",
+        "question": "Are there any giraffes in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_102",
+    "layer": "geneval2",
+    "sub_category": "atomicity_10",
+    "difficulty": "published",
+    "prompt_text": "six blue kangaroos, and five green zebras in front of six sparkling birds",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many kangaroos are in the image?",
+        "type": "numeracy",
+        "expected_answer": "six"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are the kangaroos blue?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there any kangaroos in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "How many zebras are in the image?",
+        "type": "numeracy",
+        "expected_answer": "five"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are the zebras green?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are there any zebras in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q7",
+        "question": "Are the zebras in front of the birds?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q8",
+        "question": "How many birds are in the image?",
+        "type": "numeracy",
+        "expected_answer": "six"
+      },
+      {
+        "q_id": "q9",
+        "question": "Are the birds sparkling?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q10",
+        "question": "Are there any birds in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_103",
+    "layer": "geneval2",
+    "sub_category": "atomicity_10",
+    "difficulty": "published",
+    "prompt_text": "two spotted clocks to the left of five sparkling flowers, and six checkered dogs",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many clocks are in the image?",
+        "type": "numeracy",
+        "expected_answer": "two"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are the clocks spotted?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there any clocks in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are the clocks to the left of the flowers?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q5",
+        "question": "How many flowers are in the image?",
+        "type": "numeracy",
+        "expected_answer": "five"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are the flowers sparkling?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q7",
+        "question": "Are there any flowers in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q8",
+        "question": "How many dogs are in the image?",
+        "type": "numeracy",
+        "expected_answer": "six"
+      },
+      {
+        "q_id": "q9",
+        "question": "Are the dogs checkered?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q10",
+        "question": "Are there any dogs in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  },
+  {
+    "prompt_id": "GE2_104",
+    "layer": "geneval2",
+    "sub_category": "atomicity_10",
+    "difficulty": "published",
+    "prompt_text": "seven blue trumpets to the left of five glass turtles jumping over a yellow giraffe",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "How many trumpets are in the image?",
+        "type": "numeracy",
+        "expected_answer": "seven"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are the trumpets blue?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there any trumpets in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are the trumpets to the left of the turtles?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q5",
+        "question": "How many turtles are in the image?",
+        "type": "numeracy",
+        "expected_answer": "five"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are the turtles glass?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q7",
+        "question": "Are there any turtles in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q8",
+        "question": "Are the turtles jumping over the giraffe?",
+        "type": "spatial",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q9",
+        "question": "How many giraffes are in the image?",
+        "type": "numeracy",
+        "expected_answer": "one"
+      },
+      {
+        "q_id": "q10",
+        "question": "Is the giraffe yellow?",
+        "type": "attribute",
+        "expected_answer": "Yes"
+      },
+      {
+        "q_id": "q11",
+        "question": "Are there any giraffes in the image?",
+        "type": "presence",
+        "expected_answer": "Yes"
+      }
+    ]
+  }
+]

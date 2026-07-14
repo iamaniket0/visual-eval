@@ -1,0 +1,2138 @@
+[
+  {
+    "source_image": "source_images/person/person_person_fullbody_0004.jpg",
+    "category": "lighting_weather",
+    "difficulty": "medium",
+    "edit_instruction": "Change to golden hour lighting with warm tones and long shadows",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      },
+      {
+        "q_id": "q3",
+        "question": "Does the result look photorealistic?",
+        "type": "quality",
+        "dimension": "detail_preservation"
+      }
+    ],
+    "prompt_id": "L2_LW_001",
+    "layer": 2,
+    "sub_category": "lighting_weather"
+  },
+  {
+    "source_image": "source_images/person/person_person_portrait_0043.jpg",
+    "category": "object_replace",
+    "difficulty": "medium",
+    "edit_instruction": "Replace the wooden fence with a stone wall of the same height",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      },
+      {
+        "q_id": "q3",
+        "question": "Does the result look photorealistic?",
+        "type": "quality",
+        "dimension": "detail_preservation"
+      }
+    ],
+    "prompt_id": "L2_RP_001",
+    "layer": 2,
+    "sub_category": "object_replace"
+  },
+  {
+    "source_image": "source_images/object/object_food_desserts_sweets_0106.jpg",
+    "category": "color_material",
+    "difficulty": "hard",
+    "edit_instruction": "Convert all metal surfaces to weathered copper with green patina, matching the existing light reflections",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      },
+      {
+        "q_id": "q3",
+        "question": "Does the result look photorealistic?",
+        "type": "quality",
+        "dimension": "detail_preservation"
+      }
+    ],
+    "prompt_id": "L2_CM_001",
+    "layer": 2,
+    "sub_category": "color_material"
+  },
+  {
+    "source_image": "source_images/scene/scene_cinema_theater_0138.jpg",
+    "category": "object_add",
+    "difficulty": "hard",
+    "edit_instruction": "Add a parked bicycle with its shadow on the cobblestones, chain lock visible, leaning against the lamppost in the midground",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      },
+      {
+        "q_id": "q3",
+        "question": "Does the result look photorealistic?",
+        "type": "quality",
+        "dimension": "detail_preservation"
+      }
+    ],
+    "prompt_id": "L2_OA_001",
+    "layer": 2,
+    "sub_category": "object_add"
+  },
+  {
+    "source_image": "source_images/style/style_holiday_general_celebrations_0163.jpg",
+    "category": "style_transfer",
+    "difficulty": "medium",
+    "edit_instruction": "Convert to a 1940s black-and-white film noir look with dramatic contrast",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      },
+      {
+        "q_id": "q3",
+        "question": "Does the result look photorealistic?",
+        "type": "quality",
+        "dimension": "detail_preservation"
+      }
+    ],
+    "prompt_id": "L2_ST_001",
+    "layer": 2,
+    "sub_category": "style_transfer"
+  },
+  {
+    "source_image": "source_images/style/style_music_performance_0164.jpg",
+    "category": "style_transfer",
+    "difficulty": "easy",
+    "edit_instruction": "Make it look like a watercolor painting",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      }
+    ],
+    "prompt_id": "L2_ST_002",
+    "layer": 2,
+    "sub_category": "style_transfer"
+  },
+  {
+    "source_image": "source_images/object/object_vehicles_motorcycles_0112.jpg",
+    "category": "text_editing",
+    "difficulty": "easy",
+    "edit_instruction": "Change the sign text to 'OPEN'",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      }
+    ],
+    "prompt_id": "L2_TE_001",
+    "layer": 2,
+    "sub_category": "text_editing"
+  },
+  {
+    "source_image": "source_images/scene/scene_landscape_meadow_plains_0140.jpg",
+    "category": "object_remove",
+    "difficulty": "hard",
+    "edit_instruction": "Remove the bridge from the scene, naturally extending the river and its reflections of the treeline",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      },
+      {
+        "q_id": "q3",
+        "question": "Does the result look photorealistic?",
+        "type": "quality",
+        "dimension": "detail_preservation"
+      }
+    ],
+    "prompt_id": "L2_OR_001",
+    "layer": 2,
+    "sub_category": "object_remove"
+  },
+  {
+    "source_image": "source_images/person/person_person_fullbody_0041.jpg",
+    "category": "background_change",
+    "difficulty": "easy",
+    "edit_instruction": "Change the background to a beach",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      }
+    ],
+    "prompt_id": "L2_BG_001",
+    "layer": 2,
+    "sub_category": "background_change"
+  },
+  {
+    "source_image": "source_images/person/person_person_group_0045.jpg",
+    "category": "anatomy_identity",
+    "difficulty": "medium",
+    "edit_instruction": "Change the person's jacket from denim to leather while keeping the fit and pose",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      },
+      {
+        "q_id": "q3",
+        "question": "Does the result look photorealistic?",
+        "type": "quality",
+        "dimension": "detail_preservation"
+      }
+    ],
+    "prompt_id": "L2_AI_001",
+    "layer": 2,
+    "sub_category": "anatomy_identity"
+  },
+  {
+    "source_image": "source_images/style/style_trees_foliage_0162.jpg",
+    "category": "multi_turn",
+    "difficulty": "medium",
+    "edit_instruction": "Turn 1: Change season to autumn | Turn 2: Add fallen leaves on the ground | Turn 3: Change lighting to golden hour",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      },
+      {
+        "q_id": "q3",
+        "question": "Does the result look photorealistic?",
+        "type": "quality",
+        "dimension": "detail_preservation"
+      }
+    ],
+    "prompt_id": "L2_MT_001",
+    "layer": 2,
+    "sub_category": "multi_turn"
+  },
+  {
+    "source_image": "source_images/scene/scene_architecture_modern_0117.jpg",
+    "category": "object_remove",
+    "difficulty": "easy",
+    "edit_instruction": "Remove the trash can",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      }
+    ],
+    "prompt_id": "L2_OR_002",
+    "layer": 2,
+    "sub_category": "object_remove"
+  },
+  {
+    "source_image": "source_images/object/object_music_instruments_0092.jpg",
+    "category": "text_editing",
+    "difficulty": "hard",
+    "edit_instruction": "Change all visible text to Japanese: the shop sign, the menu board, and the poster in the window, matching each surface's font style and perspective distortion",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      },
+      {
+        "q_id": "q3",
+        "question": "Does the result look photorealistic?",
+        "type": "quality",
+        "dimension": "detail_preservation"
+      }
+    ],
+    "prompt_id": "L2_TE_002",
+    "layer": 2,
+    "sub_category": "text_editing"
+  },
+  {
+    "source_image": "source_images/scene/scene_architecture_classical_0126.jpg",
+    "category": "object_replace",
+    "difficulty": "medium",
+    "edit_instruction": "Replace the wooden fence with a stone wall of the same height",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      },
+      {
+        "q_id": "q3",
+        "question": "Does the result look photorealistic?",
+        "type": "quality",
+        "dimension": "detail_preservation"
+      }
+    ],
+    "prompt_id": "L2_RP_002",
+    "layer": 2,
+    "sub_category": "object_replace"
+  },
+  {
+    "source_image": "source_images/object/object_flowers_wildflowers_0111.jpg",
+    "category": "background_change",
+    "difficulty": "easy",
+    "edit_instruction": "Change the background to a beach",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      }
+    ],
+    "prompt_id": "L2_BG_002",
+    "layer": 2,
+    "sub_category": "background_change"
+  },
+  {
+    "source_image": "source_images/object/object_shoes_footwear_0114.jpg",
+    "category": "text_editing",
+    "difficulty": "medium",
+    "edit_instruction": "Replace 'CAFE' on the awning with 'BAKERY' in the same font style and size",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      },
+      {
+        "q_id": "q3",
+        "question": "Does the result look photorealistic?",
+        "type": "quality",
+        "dimension": "detail_preservation"
+      }
+    ],
+    "prompt_id": "L2_TE_003",
+    "layer": 2,
+    "sub_category": "text_editing"
+  },
+  {
+    "source_image": "source_images/person/person_person_fullbody_0014.jpg",
+    "category": "lighting_weather",
+    "difficulty": "medium",
+    "edit_instruction": "Change to golden hour lighting with warm tones and long shadows",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      },
+      {
+        "q_id": "q3",
+        "question": "Does the result look photorealistic?",
+        "type": "quality",
+        "dimension": "detail_preservation"
+      }
+    ],
+    "prompt_id": "L2_LW_002",
+    "layer": 2,
+    "sub_category": "lighting_weather"
+  },
+  {
+    "source_image": "source_images/object/object_technology_robotics_0085.jpg",
+    "category": "object_add",
+    "difficulty": "easy",
+    "edit_instruction": "Add a coffee mug on the table",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      }
+    ],
+    "prompt_id": "L2_OA_002",
+    "layer": 2,
+    "sub_category": "object_add"
+  },
+  {
+    "source_image": "source_images/object/object_vehicles_motorcycles_0087.jpg",
+    "category": "spatial_pose",
+    "difficulty": "medium",
+    "edit_instruction": "Move the vase from the table to the shelf behind it",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      },
+      {
+        "q_id": "q3",
+        "question": "Does the result look photorealistic?",
+        "type": "quality",
+        "dimension": "detail_preservation"
+      }
+    ],
+    "prompt_id": "L2_SP_001",
+    "layer": 2,
+    "sub_category": "spatial_pose"
+  },
+  {
+    "source_image": "source_images/person/person_person_portrait_0001.jpg",
+    "category": "anatomy_identity",
+    "difficulty": "medium",
+    "edit_instruction": "Change the person's jacket from denim to leather while keeping the fit and pose",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      },
+      {
+        "q_id": "q3",
+        "question": "Does the result look photorealistic?",
+        "type": "quality",
+        "dimension": "detail_preservation"
+      }
+    ],
+    "prompt_id": "L2_AI_002",
+    "layer": 2,
+    "sub_category": "anatomy_identity"
+  },
+  {
+    "source_image": "source_images/style/style_dance_performance_0149.jpg",
+    "category": "physics",
+    "difficulty": "hard",
+    "edit_instruction": "Replace the still water with a flowing stream: add motion blur, adjust all reflections to show elongated distortion, add foam at rock edges, and shift the reflected sky coloring",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      },
+      {
+        "q_id": "q3",
+        "question": "Does the result look photorealistic?",
+        "type": "quality",
+        "dimension": "detail_preservation"
+      }
+    ],
+    "prompt_id": "L2_PH_001",
+    "layer": 2,
+    "sub_category": "physics"
+  },
+  {
+    "source_image": "source_images/object/object_toys_games_0078.jpg",
+    "category": "text_editing",
+    "difficulty": "easy",
+    "edit_instruction": "Change the sign text to 'OPEN'",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      }
+    ],
+    "prompt_id": "L2_TE_004",
+    "layer": 2,
+    "sub_category": "text_editing"
+  },
+  {
+    "source_image": "source_images/object/object_fruits_vegetables_0081.jpg",
+    "category": "object_remove",
+    "difficulty": "hard",
+    "edit_instruction": "Remove the bridge from the scene, naturally extending the river and its reflections of the treeline",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      },
+      {
+        "q_id": "q3",
+        "question": "Does the result look photorealistic?",
+        "type": "quality",
+        "dimension": "detail_preservation"
+      }
+    ],
+    "prompt_id": "L2_OR_003",
+    "layer": 2,
+    "sub_category": "object_remove"
+  },
+  {
+    "source_image": "source_images/scene/scene_urban_night_city_0120.jpg",
+    "category": "text_editing",
+    "difficulty": "hard",
+    "edit_instruction": "Change all visible text to Japanese: the shop sign, the menu board, and the poster in the window, matching each surface's font style and perspective distortion",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      },
+      {
+        "q_id": "q3",
+        "question": "Does the result look photorealistic?",
+        "type": "quality",
+        "dimension": "detail_preservation"
+      }
+    ],
+    "prompt_id": "L2_TE_005",
+    "layer": 2,
+    "sub_category": "text_editing"
+  },
+  {
+    "source_image": "source_images/scene/scene_urban_markets_bazaars_0122.jpg",
+    "category": "object_add",
+    "difficulty": "easy",
+    "edit_instruction": "Add a coffee mug on the table",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      }
+    ],
+    "prompt_id": "L2_OA_003",
+    "layer": 2,
+    "sub_category": "object_add"
+  },
+  {
+    "source_image": "source_images/object/object_gardening_tools_0115.jpg",
+    "category": "object_add",
+    "difficulty": "easy",
+    "edit_instruction": "Add a coffee mug on the table",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      }
+    ],
+    "prompt_id": "L2_OA_004",
+    "layer": 2,
+    "sub_category": "object_add"
+  },
+  {
+    "source_image": "source_images/object/object_vehicles_motorcycles_0087.jpg",
+    "category": "physics",
+    "difficulty": "medium",
+    "edit_instruction": "Change the object from matte to chrome, showing correct reflections of the surroundings",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      },
+      {
+        "q_id": "q3",
+        "question": "Does the result look photorealistic?",
+        "type": "quality",
+        "dimension": "detail_preservation"
+      }
+    ],
+    "prompt_id": "L2_PH_002",
+    "layer": 2,
+    "sub_category": "physics"
+  },
+  {
+    "source_image": "source_images/object/object_vehicles_aircraft_0074.jpg",
+    "category": "object_remove",
+    "difficulty": "hard",
+    "edit_instruction": "Remove the bridge from the scene, naturally extending the river and its reflections of the treeline",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      },
+      {
+        "q_id": "q3",
+        "question": "Does the result look photorealistic?",
+        "type": "quality",
+        "dimension": "detail_preservation"
+      }
+    ],
+    "prompt_id": "L2_OR_004",
+    "layer": 2,
+    "sub_category": "object_remove"
+  },
+  {
+    "source_image": "source_images/person/person_person_portrait_0031.jpg",
+    "category": "object_replace",
+    "difficulty": "medium",
+    "edit_instruction": "Replace the wooden fence with a stone wall of the same height",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      },
+      {
+        "q_id": "q3",
+        "question": "Does the result look photorealistic?",
+        "type": "quality",
+        "dimension": "detail_preservation"
+      }
+    ],
+    "prompt_id": "L2_RP_003",
+    "layer": 2,
+    "sub_category": "object_replace"
+  },
+  {
+    "source_image": "source_images/person/person_person_group_0011.jpg",
+    "category": "background_change",
+    "difficulty": "medium",
+    "edit_instruction": "Replace the urban skyline with rolling hills while keeping the foreground intact",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      },
+      {
+        "q_id": "q3",
+        "question": "Does the result look photorealistic?",
+        "type": "quality",
+        "dimension": "detail_preservation"
+      }
+    ],
+    "prompt_id": "L2_BG_003",
+    "layer": 2,
+    "sub_category": "background_change"
+  },
+  {
+    "source_image": "source_images/person/person_person_group_0005.jpg",
+    "category": "color_material",
+    "difficulty": "easy",
+    "edit_instruction": "Make the car blue",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      }
+    ],
+    "prompt_id": "L2_CM_002",
+    "layer": 2,
+    "sub_category": "color_material"
+  },
+  {
+    "source_image": "source_images/object/object_kitchen_cookware_0083.jpg",
+    "category": "physics",
+    "difficulty": "hard",
+    "edit_instruction": "Replace the still water with a flowing stream: add motion blur, adjust all reflections to show elongated distortion, add foam at rock edges, and shift the reflected sky coloring",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      },
+      {
+        "q_id": "q3",
+        "question": "Does the result look photorealistic?",
+        "type": "quality",
+        "dimension": "detail_preservation"
+      }
+    ],
+    "prompt_id": "L2_PH_003",
+    "layer": 2,
+    "sub_category": "physics"
+  },
+  {
+    "source_image": "source_images/scene/scene_waterscape_lakes_0145.jpg",
+    "category": "style_transfer",
+    "difficulty": "medium",
+    "edit_instruction": "Convert to a 1940s black-and-white film noir look with dramatic contrast",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      },
+      {
+        "q_id": "q3",
+        "question": "Does the result look photorealistic?",
+        "type": "quality",
+        "dimension": "detail_preservation"
+      }
+    ],
+    "prompt_id": "L2_ST_003",
+    "layer": 2,
+    "sub_category": "style_transfer"
+  },
+  {
+    "source_image": "source_images/object/object_cosmetics_beauty_0098.jpg",
+    "category": "physics",
+    "difficulty": "hard",
+    "edit_instruction": "Replace the still water with a flowing stream: add motion blur, adjust all reflections to show elongated distortion, add foam at rock edges, and shift the reflected sky coloring",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      },
+      {
+        "q_id": "q3",
+        "question": "Does the result look photorealistic?",
+        "type": "quality",
+        "dimension": "detail_preservation"
+      }
+    ],
+    "prompt_id": "L2_PH_004",
+    "layer": 2,
+    "sub_category": "physics"
+  },
+  {
+    "source_image": "source_images/scene/scene_landscape_mountains_0127.jpg",
+    "category": "background_change",
+    "difficulty": "medium",
+    "edit_instruction": "Replace the urban skyline with rolling hills while keeping the foreground intact",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      },
+      {
+        "q_id": "q3",
+        "question": "Does the result look photorealistic?",
+        "type": "quality",
+        "dimension": "detail_preservation"
+      }
+    ],
+    "prompt_id": "L2_BG_004",
+    "layer": 2,
+    "sub_category": "background_change"
+  },
+  {
+    "source_image": "source_images/object/object_vehicles_bicycles_0068.jpg",
+    "category": "object_remove",
+    "difficulty": "medium",
+    "edit_instruction": "Remove the person on the left without affecting the bench they were sitting on",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      },
+      {
+        "q_id": "q3",
+        "question": "Does the result look photorealistic?",
+        "type": "quality",
+        "dimension": "detail_preservation"
+      }
+    ],
+    "prompt_id": "L2_OR_005",
+    "layer": 2,
+    "sub_category": "object_remove"
+  },
+  {
+    "source_image": "source_images/person/person_person_group_0045.jpg",
+    "category": "object_replace",
+    "difficulty": "easy",
+    "edit_instruction": "Replace the dog with a cat",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      }
+    ],
+    "prompt_id": "L2_RP_004",
+    "layer": 2,
+    "sub_category": "object_replace"
+  },
+  {
+    "source_image": "source_images/person/person_person_fullbody_0065.jpg",
+    "category": "color_material",
+    "difficulty": "easy",
+    "edit_instruction": "Make the car blue",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      }
+    ],
+    "prompt_id": "L2_CM_003",
+    "layer": 2,
+    "sub_category": "color_material"
+  },
+  {
+    "source_image": "source_images/scene/scene_architecture_ruins_ancient_0125.jpg",
+    "category": "object_replace",
+    "difficulty": "easy",
+    "edit_instruction": "Replace the dog with a cat",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      }
+    ],
+    "prompt_id": "L2_RP_005",
+    "layer": 2,
+    "sub_category": "object_replace"
+  },
+  {
+    "source_image": "source_images/person/person_person_fullbody_0027.jpg",
+    "category": "spatial_pose",
+    "difficulty": "hard",
+    "edit_instruction": "Rotate the camera viewpoint 45 degrees to the right, revealing the side of the building and adjusting all perspective lines and shadows consistently",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      },
+      {
+        "q_id": "q3",
+        "question": "Does the result look photorealistic?",
+        "type": "quality",
+        "dimension": "detail_preservation"
+      }
+    ],
+    "prompt_id": "L2_SP_002",
+    "layer": 2,
+    "sub_category": "spatial_pose"
+  },
+  {
+    "source_image": "source_images/person/person_person_group_0063.jpg",
+    "category": "lighting_weather",
+    "difficulty": "easy",
+    "edit_instruction": "Make it nighttime",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      }
+    ],
+    "prompt_id": "L2_LW_003",
+    "layer": 2,
+    "sub_category": "lighting_weather"
+  },
+  {
+    "source_image": "source_images/person/person_person_group_0033.jpg",
+    "category": "lighting_weather",
+    "difficulty": "medium",
+    "edit_instruction": "Change to golden hour lighting with warm tones and long shadows",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      },
+      {
+        "q_id": "q3",
+        "question": "Does the result look photorealistic?",
+        "type": "quality",
+        "dimension": "detail_preservation"
+      }
+    ],
+    "prompt_id": "L2_LW_004",
+    "layer": 2,
+    "sub_category": "lighting_weather"
+  },
+  {
+    "source_image": "source_images/person/person_person_group_0023.jpg",
+    "category": "lighting_weather",
+    "difficulty": "easy",
+    "edit_instruction": "Make it nighttime",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      }
+    ],
+    "prompt_id": "L2_LW_005",
+    "layer": 2,
+    "sub_category": "lighting_weather"
+  },
+  {
+    "source_image": "source_images/object/object_beverages_cold_0099.jpg",
+    "category": "multi_turn",
+    "difficulty": "hard",
+    "edit_instruction": "Turn 1: Remove all people | Turn 2: Change setting to abandoned/overgrown | Turn 3: Add a single deer standing in the doorway | Turn 4: Make it foggy dawn with muted colors",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      },
+      {
+        "q_id": "q3",
+        "question": "Does the result look photorealistic?",
+        "type": "quality",
+        "dimension": "detail_preservation"
+      }
+    ],
+    "prompt_id": "L2_MT_002",
+    "layer": 2,
+    "sub_category": "multi_turn"
+  },
+  {
+    "source_image": "source_images/object/object_technology_robotics_0085.jpg",
+    "category": "physics",
+    "difficulty": "medium",
+    "edit_instruction": "Change the object from matte to chrome, showing correct reflections of the surroundings",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      },
+      {
+        "q_id": "q3",
+        "question": "Does the result look photorealistic?",
+        "type": "quality",
+        "dimension": "detail_preservation"
+      }
+    ],
+    "prompt_id": "L2_PH_005",
+    "layer": 2,
+    "sub_category": "physics"
+  },
+  {
+    "source_image": "source_images/person/person_person_portrait_0029.jpg",
+    "category": "color_material",
+    "difficulty": "medium",
+    "edit_instruction": "Change the brick wall to white marble, keeping the ivy pattern",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      },
+      {
+        "q_id": "q3",
+        "question": "Does the result look photorealistic?",
+        "type": "quality",
+        "dimension": "detail_preservation"
+      }
+    ],
+    "prompt_id": "L2_CM_004",
+    "layer": 2,
+    "sub_category": "color_material"
+  },
+  {
+    "source_image": "source_images/person/person_person_fullbody_0012.jpg",
+    "category": "anatomy_identity",
+    "difficulty": "medium",
+    "edit_instruction": "Change the person's jacket from denim to leather while keeping the fit and pose",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      },
+      {
+        "q_id": "q3",
+        "question": "Does the result look photorealistic?",
+        "type": "quality",
+        "dimension": "detail_preservation"
+      }
+    ],
+    "prompt_id": "L2_AI_003",
+    "layer": 2,
+    "sub_category": "anatomy_identity"
+  },
+  {
+    "source_image": "source_images/person/person_person_group_0020.jpg",
+    "category": "style_transfer",
+    "difficulty": "medium",
+    "edit_instruction": "Convert to a 1940s black-and-white film noir look with dramatic contrast",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      },
+      {
+        "q_id": "q3",
+        "question": "Does the result look photorealistic?",
+        "type": "quality",
+        "dimension": "detail_preservation"
+      }
+    ],
+    "prompt_id": "L2_ST_004",
+    "layer": 2,
+    "sub_category": "style_transfer"
+  },
+  {
+    "source_image": "source_images/person/person_person_portrait_0010.jpg",
+    "category": "style_transfer",
+    "difficulty": "medium",
+    "edit_instruction": "Convert to a 1940s black-and-white film noir look with dramatic contrast",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      },
+      {
+        "q_id": "q3",
+        "question": "Does the result look photorealistic?",
+        "type": "quality",
+        "dimension": "detail_preservation"
+      }
+    ],
+    "prompt_id": "L2_ST_005",
+    "layer": 2,
+    "sub_category": "style_transfer"
+  },
+  {
+    "source_image": "source_images/person/person_person_group_0035.jpg",
+    "category": "color_material",
+    "difficulty": "medium",
+    "edit_instruction": "Change the brick wall to white marble, keeping the ivy pattern",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      },
+      {
+        "q_id": "q3",
+        "question": "Does the result look photorealistic?",
+        "type": "quality",
+        "dimension": "detail_preservation"
+      }
+    ],
+    "prompt_id": "L2_CM_005",
+    "layer": 2,
+    "sub_category": "color_material"
+  },
+  {
+    "source_image": "source_images/scene/scene_architecture_modern_0143.jpg",
+    "category": "spatial_pose",
+    "difficulty": "easy",
+    "edit_instruction": "Flip the image horizontally",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      }
+    ],
+    "prompt_id": "L2_SP_003",
+    "layer": 2,
+    "sub_category": "spatial_pose"
+  },
+  {
+    "source_image": "source_images/object/object_toys_games_0070.jpg",
+    "category": "text_editing",
+    "difficulty": "easy",
+    "edit_instruction": "Change the sign text to 'OPEN'",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      }
+    ],
+    "prompt_id": "L2_TE_006",
+    "layer": 2,
+    "sub_category": "text_editing"
+  },
+  {
+    "source_image": "source_images/person/person_person_portrait_0058.jpg",
+    "category": "anatomy_identity",
+    "difficulty": "medium",
+    "edit_instruction": "Change the person's jacket from denim to leather while keeping the fit and pose",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      },
+      {
+        "q_id": "q3",
+        "question": "Does the result look photorealistic?",
+        "type": "quality",
+        "dimension": "detail_preservation"
+      }
+    ],
+    "prompt_id": "L2_AI_004",
+    "layer": 2,
+    "sub_category": "anatomy_identity"
+  },
+  {
+    "source_image": "source_images/person/person_person_portrait_0028.jpg",
+    "category": "lighting_weather",
+    "difficulty": "medium",
+    "edit_instruction": "Change to golden hour lighting with warm tones and long shadows",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      },
+      {
+        "q_id": "q3",
+        "question": "Does the result look photorealistic?",
+        "type": "quality",
+        "dimension": "detail_preservation"
+      }
+    ],
+    "prompt_id": "L2_LW_006",
+    "layer": 2,
+    "sub_category": "lighting_weather"
+  },
+  {
+    "source_image": "source_images/scene/scene_playground_recreation_0129.jpg",
+    "category": "lighting_weather",
+    "difficulty": "easy",
+    "edit_instruction": "Make it nighttime",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      }
+    ],
+    "prompt_id": "L2_LW_007",
+    "layer": 2,
+    "sub_category": "lighting_weather"
+  },
+  {
+    "source_image": "source_images/style/style_music_performance_0159.jpg",
+    "category": "object_remove",
+    "difficulty": "medium",
+    "edit_instruction": "Remove the person on the left without affecting the bench they were sitting on",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      },
+      {
+        "q_id": "q3",
+        "question": "Does the result look photorealistic?",
+        "type": "quality",
+        "dimension": "detail_preservation"
+      }
+    ],
+    "prompt_id": "L2_OR_006",
+    "layer": 2,
+    "sub_category": "object_remove"
+  },
+  {
+    "source_image": "source_images/person/person_person_portrait_0022.jpg",
+    "category": "color_material",
+    "difficulty": "hard",
+    "edit_instruction": "Convert all metal surfaces to weathered copper with green patina, matching the existing light reflections",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      },
+      {
+        "q_id": "q3",
+        "question": "Does the result look photorealistic?",
+        "type": "quality",
+        "dimension": "detail_preservation"
+      }
+    ],
+    "prompt_id": "L2_CM_006",
+    "layer": 2,
+    "sub_category": "color_material"
+  },
+  {
+    "source_image": "source_images/object/object_kitchen_cookware_0083.jpg",
+    "category": "color_material",
+    "difficulty": "hard",
+    "edit_instruction": "Convert all metal surfaces to weathered copper with green patina, matching the existing light reflections",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      },
+      {
+        "q_id": "q3",
+        "question": "Does the result look photorealistic?",
+        "type": "quality",
+        "dimension": "detail_preservation"
+      }
+    ],
+    "prompt_id": "L2_CM_007",
+    "layer": 2,
+    "sub_category": "color_material"
+  },
+  {
+    "source_image": "source_images/object/object_art_photography_equipment_0109.jpg",
+    "category": "color_material",
+    "difficulty": "medium",
+    "edit_instruction": "Change the brick wall to white marble, keeping the ivy pattern",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      },
+      {
+        "q_id": "q3",
+        "question": "Does the result look photorealistic?",
+        "type": "quality",
+        "dimension": "detail_preservation"
+      }
+    ],
+    "prompt_id": "L2_CM_008",
+    "layer": 2,
+    "sub_category": "color_material"
+  },
+  {
+    "source_image": "source_images/object/object_vehicles_cars_0090.jpg",
+    "category": "physics",
+    "difficulty": "medium",
+    "edit_instruction": "Change the object from matte to chrome, showing correct reflections of the surroundings",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      },
+      {
+        "q_id": "q3",
+        "question": "Does the result look photorealistic?",
+        "type": "quality",
+        "dimension": "detail_preservation"
+      }
+    ],
+    "prompt_id": "L2_PH_006",
+    "layer": 2,
+    "sub_category": "physics"
+  },
+  {
+    "source_image": "source_images/object/object_food_prepared_meals_0080.jpg",
+    "category": "object_remove",
+    "difficulty": "medium",
+    "edit_instruction": "Remove the person on the left without affecting the bench they were sitting on",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      },
+      {
+        "q_id": "q3",
+        "question": "Does the result look photorealistic?",
+        "type": "quality",
+        "dimension": "detail_preservation"
+      }
+    ],
+    "prompt_id": "L2_OR_007",
+    "layer": 2,
+    "sub_category": "object_remove"
+  },
+  {
+    "source_image": "source_images/scene/scene_waterscape_lakes_0145.jpg",
+    "category": "spatial_pose",
+    "difficulty": "medium",
+    "edit_instruction": "Move the vase from the table to the shelf behind it",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      },
+      {
+        "q_id": "q3",
+        "question": "Does the result look photorealistic?",
+        "type": "quality",
+        "dimension": "detail_preservation"
+      }
+    ],
+    "prompt_id": "L2_SP_004",
+    "layer": 2,
+    "sub_category": "spatial_pose"
+  },
+  {
+    "source_image": "source_images/person/person_person_portrait_0056.jpg",
+    "category": "color_material",
+    "difficulty": "hard",
+    "edit_instruction": "Convert all metal surfaces to weathered copper with green patina, matching the existing light reflections",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      },
+      {
+        "q_id": "q3",
+        "question": "Does the result look photorealistic?",
+        "type": "quality",
+        "dimension": "detail_preservation"
+      }
+    ],
+    "prompt_id": "L2_CM_009",
+    "layer": 2,
+    "sub_category": "color_material"
+  },
+  {
+    "source_image": "source_images/person/person_person_group_0038.jpg",
+    "category": "lighting_weather",
+    "difficulty": "medium",
+    "edit_instruction": "Change to golden hour lighting with warm tones and long shadows",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      },
+      {
+        "q_id": "q3",
+        "question": "Does the result look photorealistic?",
+        "type": "quality",
+        "dimension": "detail_preservation"
+      }
+    ],
+    "prompt_id": "L2_LW_008",
+    "layer": 2,
+    "sub_category": "lighting_weather"
+  },
+  {
+    "source_image": "source_images/person/person_person_portrait_0032.jpg",
+    "category": "background_change",
+    "difficulty": "medium",
+    "edit_instruction": "Replace the urban skyline with rolling hills while keeping the foreground intact",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      },
+      {
+        "q_id": "q3",
+        "question": "Does the result look photorealistic?",
+        "type": "quality",
+        "dimension": "detail_preservation"
+      }
+    ],
+    "prompt_id": "L2_BG_005",
+    "layer": 2,
+    "sub_category": "background_change"
+  },
+  {
+    "source_image": "source_images/scene/scene_cinema_theater_0138.jpg",
+    "category": "object_remove",
+    "difficulty": "hard",
+    "edit_instruction": "Remove the bridge from the scene, naturally extending the river and its reflections of the treeline",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      },
+      {
+        "q_id": "q3",
+        "question": "Does the result look photorealistic?",
+        "type": "quality",
+        "dimension": "detail_preservation"
+      }
+    ],
+    "prompt_id": "L2_OR_008",
+    "layer": 2,
+    "sub_category": "object_remove"
+  },
+  {
+    "source_image": "source_images/person/person_person_fullbody_0039.jpg",
+    "category": "anatomy_identity",
+    "difficulty": "hard",
+    "edit_instruction": "Age the person by 30 years: add wrinkles, grey hair, slight posture change, while preserving their identity and the clothing style",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      },
+      {
+        "q_id": "q3",
+        "question": "Does the result look photorealistic?",
+        "type": "quality",
+        "dimension": "detail_preservation"
+      }
+    ],
+    "prompt_id": "L2_AI_005",
+    "layer": 2,
+    "sub_category": "anatomy_identity"
+  },
+  {
+    "source_image": "source_images/person/person_person_fullbody_0054.jpg",
+    "category": "object_replace",
+    "difficulty": "hard",
+    "edit_instruction": "Replace the sedan with a vintage 1960s convertible in matching color, preserving the parking angle, ground shadow, and license plate text",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      },
+      {
+        "q_id": "q3",
+        "question": "Does the result look photorealistic?",
+        "type": "quality",
+        "dimension": "detail_preservation"
+      }
+    ],
+    "prompt_id": "L2_RP_006",
+    "layer": 2,
+    "sub_category": "object_replace"
+  },
+  {
+    "source_image": "source_images/scene/scene_landscape_arctic_tundra_0135.jpg",
+    "category": "lighting_weather",
+    "difficulty": "medium",
+    "edit_instruction": "Change to golden hour lighting with warm tones and long shadows",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      },
+      {
+        "q_id": "q3",
+        "question": "Does the result look photorealistic?",
+        "type": "quality",
+        "dimension": "detail_preservation"
+      }
+    ],
+    "prompt_id": "L2_LW_009",
+    "layer": 2,
+    "sub_category": "lighting_weather"
+  },
+  {
+    "source_image": "source_images/person/person_person_group_0005.jpg",
+    "category": "lighting_weather",
+    "difficulty": "hard",
+    "edit_instruction": "Add heavy rain with wet reflections on all surfaces, darkened sky, puddles forming on the ground, and rain streaks consistent with a strong crosswind from the left",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      },
+      {
+        "q_id": "q3",
+        "question": "Does the result look photorealistic?",
+        "type": "quality",
+        "dimension": "detail_preservation"
+      }
+    ],
+    "prompt_id": "L2_LW_010",
+    "layer": 2,
+    "sub_category": "lighting_weather"
+  },
+  {
+    "source_image": "source_images/person/person_person_portrait_0052.jpg",
+    "category": "spatial_pose",
+    "difficulty": "hard",
+    "edit_instruction": "Rotate the camera viewpoint 45 degrees to the right, revealing the side of the building and adjusting all perspective lines and shadows consistently",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      },
+      {
+        "q_id": "q3",
+        "question": "Does the result look photorealistic?",
+        "type": "quality",
+        "dimension": "detail_preservation"
+      }
+    ],
+    "prompt_id": "L2_SP_005",
+    "layer": 2,
+    "sub_category": "spatial_pose"
+  },
+  {
+    "source_image": "source_images/object/object_vehicles_trains_0076.jpg",
+    "category": "physics",
+    "difficulty": "medium",
+    "edit_instruction": "Change the object from matte to chrome, showing correct reflections of the surroundings",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      },
+      {
+        "q_id": "q3",
+        "question": "Does the result look photorealistic?",
+        "type": "quality",
+        "dimension": "detail_preservation"
+      }
+    ],
+    "prompt_id": "L2_PH_007",
+    "layer": 2,
+    "sub_category": "physics"
+  },
+  {
+    "source_image": "source_images/person/person_person_group_0006.jpg",
+    "category": "color_material",
+    "difficulty": "hard",
+    "edit_instruction": "Convert all metal surfaces to weathered copper with green patina, matching the existing light reflections",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      },
+      {
+        "q_id": "q3",
+        "question": "Does the result look photorealistic?",
+        "type": "quality",
+        "dimension": "detail_preservation"
+      }
+    ],
+    "prompt_id": "L2_CM_010",
+    "layer": 2,
+    "sub_category": "color_material"
+  },
+  {
+    "source_image": "source_images/person/person_person_portrait_0056.jpg",
+    "category": "object_replace",
+    "difficulty": "easy",
+    "edit_instruction": "Replace the dog with a cat",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      }
+    ],
+    "prompt_id": "L2_RP_007",
+    "layer": 2,
+    "sub_category": "object_replace"
+  },
+  {
+    "source_image": "source_images/style/style_art_painting_0157.jpg",
+    "category": "physics",
+    "difficulty": "medium",
+    "edit_instruction": "Change the object from matte to chrome, showing correct reflections of the surroundings",
+    "turns": 1,
+    "atoms": [
+      {
+        "q_id": "q1",
+        "question": "Was the edit instruction applied correctly?",
+        "type": "instruction",
+        "dimension": "instruction_following"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are non-edited regions preserved?",
+        "type": "preservation",
+        "dimension": "visual_consistency"
+      },
+      {
+        "q_id": "q3",
+        "question": "Does the result look photorealistic?",
+        "type": "quality",
+        "dimension": "detail_preservation"
+      }
+    ],
+    "prompt_id": "L2_PH_008",
+    "layer": 2,
+    "sub_category": "physics"
+  }
+]

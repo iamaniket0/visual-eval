@@ -1,0 +1,1429 @@
+{
+  "L1_NUM_001": [
+    "objects",
+    "counting",
+    "medium-objects",
+    "material-heavy"
+  ],
+  "L1_NUM_002": [
+    "people",
+    "objects",
+    "counting",
+    "medium-objects",
+    "static"
+  ],
+  "L1_NUM_003": [
+    "objects",
+    "counting",
+    "dense",
+    "static"
+  ],
+  "L1_NUM_004": [
+    "vehicles",
+    "food",
+    "counting",
+    "medium-objects",
+    "size-contrast"
+  ],
+  "L1_NUM_005": [
+    "objects",
+    "counting",
+    "few-objects",
+    "static"
+  ],
+  "L1_NUM_006": [
+    "vehicles",
+    "buildings",
+    "counting",
+    "medium-objects",
+    "action"
+  ],
+  "L1_NUM_007": [
+    "animals",
+    "counting",
+    "few-objects",
+    "static"
+  ],
+  "L1_NUM_008": [
+    "animals",
+    "objects",
+    "counting",
+    "few-objects"
+  ],
+  "L1_NUM_009": [
+    "food",
+    "counting",
+    "medium-objects",
+    "static"
+  ],
+  "L1_NUM_010": [
+    "animals",
+    "objects",
+    "counting",
+    "medium-objects",
+    "static"
+  ],
+  "L1_NUM_011": [
+    "animals",
+    "food",
+    "counting",
+    "few-objects",
+    "social-interaction"
+  ],
+  "L1_NUM_012": [
+    "objects",
+    "counting",
+    "few-objects",
+    "static"
+  ],
+  "L1_NUM_013": [
+    "objects",
+    "vehicles",
+    "counting",
+    "medium-objects",
+    "static"
+  ],
+  "L1_NUM_014": [
+    "animals",
+    "objects",
+    "counting",
+    "medium-objects"
+  ],
+  "L1_NUM_015": [
+    "animals",
+    "counting",
+    "action",
+    "medium-objects",
+    "indoor"
+  ],
+  "L1_NUM_016": [
+    "vehicles",
+    "objects",
+    "counting",
+    "few-objects"
+  ],
+  "L1_NUM_017": [
+    "objects",
+    "counting",
+    "medium-objects",
+    "vehicles",
+    "food"
+  ],
+  "L1_NUM_018": [
+    "animals",
+    "objects",
+    "counting",
+    "few-objects",
+    "action"
+  ],
+  "L1_NUM_019": [
+    "counting",
+    "dense",
+    "vehicles",
+    "food",
+    "objects"
+  ],
+  "L1_NUM_020": [
+    "objects",
+    "animals",
+    "counting",
+    "spatial-relation",
+    "few-objects"
+  ],
+  "L1_NUM_021": [
+    "animals",
+    "objects",
+    "counting",
+    "dense"
+  ],
+  "L1_NUM_022": [
+    "objects",
+    "counting",
+    "medium-objects",
+    "static"
+  ],
+  "L1_NUM_023": [
+    "objects",
+    "food",
+    "vehicles",
+    "counting",
+    "medium-objects"
+  ],
+  "L1_NUM_024": [
+    "animals",
+    "objects",
+    "counting",
+    "medium-objects"
+  ],
+  "L1_NUM_025": [
+    "animals",
+    "vehicles",
+    "outdoor",
+    "counting",
+    "action"
+  ],
+  "L1_NUM_026": [
+    "people",
+    "counting",
+    "age-related",
+    "social-interaction",
+    "few-objects"
+  ],
+  "L1_NUM_027": [
+    "animals",
+    "vehicles",
+    "counting",
+    "few-objects"
+  ],
+  "L1_NUM_028": [
+    "vehicles",
+    "animals",
+    "counting",
+    "outdoor",
+    "size-contrast"
+  ],
+  "L1_NUM_029": [
+    "food",
+    "objects",
+    "counting",
+    "medium-objects",
+    "outdoor"
+  ],
+  "L1_NUM_030": [
+    "animals",
+    "counting",
+    "few-objects",
+    "static"
+  ],
+  "L1_NUM_031": [
+    "animals",
+    "objects",
+    "counting",
+    "dense"
+  ],
+  "L1_NUM_032": [
+    "objects",
+    "counting",
+    "few-objects",
+    "static"
+  ],
+  "L1_NUM_033": [
+    "animals",
+    "people",
+    "food",
+    "counting",
+    "medium-objects"
+  ],
+  "L1_NUM_034": [
+    "animals",
+    "vehicles",
+    "counting",
+    "dense"
+  ],
+  "L1_NUM_035": [
+    "objects",
+    "food",
+    "counting",
+    "medium-objects",
+    "static"
+  ],
+  "L1_NUM_036": [
+    "objects",
+    "counting",
+    "few-objects",
+    "static"
+  ],
+  "L1_NUM_037": [
+    "objects",
+    "counting",
+    "medium-objects"
+  ],
+  "L1_NUM_038": [
+    "animals",
+    "counting",
+    "medium-objects"
+  ],
+  "L1_NUM_039": [
+    "animals",
+    "people",
+    "counting",
+    "medium-objects"
+  ],
+  "L1_NUM_040": [
+    "counting",
+    "dense",
+    "objects",
+    "animals",
+    "vehicles"
+  ],
+  "L1_NUM_041": [
+    "objects",
+    "animals",
+    "counting",
+    "dense",
+    "static"
+  ],
+  "L1_NUM_042": [
+    "vehicles",
+    "objects",
+    "counting",
+    "few-objects",
+    "action"
+  ],
+  "L1_NUM_043": [
+    "objects",
+    "vehicles",
+    "counting",
+    "dense"
+  ],
+  "L1_NUM_044": [
+    "animals",
+    "objects",
+    "counting",
+    "dense",
+    "static"
+  ],
+  "L1_NUM_045": [
+    "animals",
+    "objects",
+    "counting",
+    "dense"
+  ],
+  "L1_NUM_046": [
+    "objects",
+    "counting",
+    "medium-objects"
+  ],
+  "L1_NUM_047": [
+    "people",
+    "animals",
+    "objects",
+    "counting",
+    "dense"
+  ],
+  "L1_NUM_048": [
+    "animals",
+    "counting",
+    "few-objects"
+  ],
+  "L1_NUM_049": [
+    "counting",
+    "dense",
+    "objects",
+    "animals",
+    "vehicles"
+  ],
+  "L1_NUM_050": [
+    "vehicles",
+    "animals",
+    "food",
+    "counting",
+    "few-objects"
+  ],
+  "L1_CMP_001": [
+    "objects",
+    "color-heavy",
+    "material-heavy",
+    "static",
+    "few-objects"
+  ],
+  "L1_CMP_002": [
+    "objects",
+    "material-heavy",
+    "color-heavy",
+    "static"
+  ],
+  "L1_CMP_003": [
+    "objects",
+    "color-heavy",
+    "spatial-relation",
+    "few-objects",
+    "static"
+  ],
+  "L1_CMP_004": [
+    "animals",
+    "objects",
+    "color-heavy",
+    "spatial-relation",
+    "few-objects"
+  ],
+  "L1_CMP_005": [
+    "food",
+    "color-heavy",
+    "static",
+    "few-objects",
+    "spatial-relation"
+  ],
+  "L1_CMP_006": [
+    "objects",
+    "material-heavy",
+    "few-objects",
+    "static"
+  ],
+  "L1_CMP_007": [
+    "animals",
+    "objects",
+    "material-heavy",
+    "static",
+    "few-objects"
+  ],
+  "L1_CMP_008": [
+    "animals",
+    "nature",
+    "color-heavy",
+    "material-heavy",
+    "static"
+  ],
+  "L1_CMP_009": [
+    "objects",
+    "color-heavy",
+    "spatial-relation",
+    "few-objects",
+    "static"
+  ],
+  "L1_CMP_010": [
+    "objects",
+    "indoor",
+    "color-heavy",
+    "spatial-relation",
+    "few-objects"
+  ],
+  "L1_CMP_011": [
+    "food",
+    "color-heavy",
+    "outdoor",
+    "urban",
+    "dense"
+  ],
+  "L1_CMP_012": [
+    "nature",
+    "objects",
+    "buildings",
+    "color-heavy",
+    "spatial-relation"
+  ],
+  "L1_CMP_013": [
+    "objects",
+    "people",
+    "material-heavy",
+    "static",
+    "few-objects"
+  ],
+  "L1_CMP_014": [
+    "food",
+    "objects",
+    "indoor",
+    "few-objects"
+  ],
+  "L1_CMP_015": [
+    "nature",
+    "urban",
+    "color-heavy",
+    "static",
+    "material-heavy"
+  ],
+  "L1_CMP_016": [
+    "animals",
+    "nature",
+    "outdoor",
+    "few-objects",
+    "action"
+  ],
+  "L1_CMP_017": [
+    "objects",
+    "abstract-shapes",
+    "spatial-relation",
+    "few-objects",
+    "material-heavy"
+  ],
+  "L1_CMP_018": [
+    "objects",
+    "nature",
+    "color-heavy",
+    "material-heavy",
+    "static"
+  ],
+  "L1_CMP_019": [
+    "objects",
+    "nature",
+    "color-heavy",
+    "material-heavy",
+    "static"
+  ],
+  "L1_CMP_020": [
+    "food",
+    "objects",
+    "material-heavy",
+    "few-objects",
+    "static"
+  ],
+  "L1_CMP_021": [
+    "objects",
+    "color-heavy",
+    "material-heavy",
+    "static"
+  ],
+  "L1_CMP_022": [
+    "objects",
+    "indoor",
+    "color-heavy",
+    "static",
+    "few-objects"
+  ],
+  "L1_CMP_023": [
+    "vehicles",
+    "action",
+    "outdoor"
+  ],
+  "L1_CMP_024": [
+    "nature",
+    "buildings",
+    "material-heavy",
+    "action",
+    "few-objects"
+  ],
+  "L1_CMP_025": [
+    "abstract-shapes",
+    "objects",
+    "material-heavy",
+    "spatial-relation",
+    "few-objects"
+  ],
+  "L1_CMP_026": [
+    "objects",
+    "color-heavy",
+    "spatial-relation",
+    "static",
+    "few-objects"
+  ],
+  "L1_CMP_027": [
+    "animals",
+    "objects",
+    "color-heavy",
+    "material-heavy",
+    "static"
+  ],
+  "L1_CMP_028": [
+    "objects",
+    "material-heavy",
+    "color-heavy",
+    "spatial-relation",
+    "static"
+  ],
+  "L1_CMP_029": [
+    "nature",
+    "outdoor",
+    "color-heavy",
+    "static"
+  ],
+  "L1_CMP_030": [
+    "objects",
+    "color-heavy",
+    "spatial-relation",
+    "few-objects",
+    "static"
+  ],
+  "L1_CMP_031": [
+    "animals",
+    "static",
+    "few-objects"
+  ],
+  "L1_CMP_032": [
+    "objects",
+    "indoor",
+    "material-heavy",
+    "spatial-relation",
+    "few-objects"
+  ],
+  "L1_CMP_033": [
+    "people",
+    "nature",
+    "outdoor",
+    "action"
+  ],
+  "L1_CMP_034": [
+    "objects",
+    "indoor",
+    "static",
+    "few-objects"
+  ],
+  "L1_CMP_035": [
+    "animals",
+    "nature",
+    "outdoor",
+    "action",
+    "few-objects"
+  ],
+  "L1_CMP_036": [
+    "objects",
+    "color-heavy",
+    "spatial-relation",
+    "static",
+    "few-objects"
+  ],
+  "L1_CMP_037": [
+    "animals",
+    "objects",
+    "indoor",
+    "color-heavy",
+    "spatial-relation"
+  ],
+  "L1_CMP_038": [
+    "objects",
+    "indoor",
+    "spatial-relation",
+    "few-objects",
+    "static"
+  ],
+  "L1_CMP_039": [
+    "nature",
+    "outdoor",
+    "material-heavy",
+    "color-heavy",
+    "static"
+  ],
+  "L1_CMP_040": [
+    "vehicles",
+    "outdoor",
+    "rural",
+    "color-heavy",
+    "action"
+  ],
+  "L1_CMP_041": [
+    "people",
+    "objects",
+    "material-heavy",
+    "static",
+    "spatial-relation"
+  ],
+  "L1_CMP_042": [
+    "abstract-shapes",
+    "color-heavy",
+    "spatial-relation",
+    "few-objects",
+    "counting"
+  ],
+  "L1_CMP_043": [
+    "objects",
+    "abstract-shapes",
+    "material-heavy",
+    "spatial-relation",
+    "few-objects"
+  ],
+  "L1_CMP_044": [
+    "vehicles",
+    "nature",
+    "outdoor",
+    "color-heavy",
+    "spatial-relation"
+  ],
+  "L1_CMP_045": [
+    "nature",
+    "outdoor",
+    "color-heavy",
+    "static"
+  ],
+  "L1_CMP_046": [
+    "objects",
+    "color-heavy",
+    "spatial-relation",
+    "few-objects",
+    "static"
+  ],
+  "L1_CMP_047": [
+    "objects",
+    "indoor",
+    "buildings",
+    "few-objects"
+  ],
+  "L1_CMP_048": [
+    "objects",
+    "color-heavy",
+    "spatial-relation",
+    "few-objects",
+    "static"
+  ],
+  "L1_CMP_049": [
+    "people",
+    "action",
+    "abstract-shapes",
+    "objects"
+  ],
+  "L1_CMP_050": [
+    "objects",
+    "indoor",
+    "static",
+    "few-objects",
+    "spatial-relation"
+  ],
+  "L1_SP3_001": [
+    "animals",
+    "objects",
+    "occlusion",
+    "spatial-relation",
+    "few-objects"
+  ],
+  "L1_SP3_002": [
+    "objects",
+    "vehicles",
+    "occlusion",
+    "spatial-relation",
+    "few-objects"
+  ],
+  "L1_SP3_003": [
+    "animals",
+    "objects",
+    "occlusion",
+    "spatial-relation",
+    "few-objects"
+  ],
+  "L1_SP3_004": [
+    "animals",
+    "objects",
+    "indoor",
+    "occlusion",
+    "spatial-relation"
+  ],
+  "L1_SP3_005": [
+    "animals",
+    "occlusion",
+    "spatial-relation",
+    "few-objects",
+    "size-contrast"
+  ],
+  "L1_SP3_006": [
+    "people",
+    "objects",
+    "indoor",
+    "spatial-relation",
+    "few-objects"
+  ],
+  "L1_SP3_007": [
+    "animals",
+    "objects",
+    "spatial-relation",
+    "few-objects",
+    "static"
+  ],
+  "L1_SP3_008": [
+    "animals",
+    "objects",
+    "occlusion",
+    "few-objects",
+    "spatial-relation"
+  ],
+  "L1_SP3_009": [
+    "people",
+    "objects",
+    "spatial-relation",
+    "few-objects",
+    "static"
+  ],
+  "L1_SP3_010": [
+    "vehicles",
+    "objects",
+    "spatial-relation",
+    "few-objects",
+    "static"
+  ],
+  "L1_SP3_011": [
+    "animals",
+    "objects",
+    "spatial-relation",
+    "few-objects",
+    "static"
+  ],
+  "L1_SP3_012": [
+    "objects",
+    "indoor",
+    "spatial-relation",
+    "occlusion",
+    "few-objects"
+  ],
+  "L1_SP3_013": [
+    "animals",
+    "objects",
+    "spatial-relation",
+    "few-objects",
+    "static"
+  ],
+  "L1_SP3_014": [
+    "animals",
+    "objects",
+    "spatial-relation",
+    "occlusion",
+    "few-objects"
+  ],
+  "L1_SP3_015": [
+    "people",
+    "objects",
+    "occlusion",
+    "spatial-relation",
+    "indoor"
+  ],
+  "L1_SP3_016": [
+    "people",
+    "objects",
+    "spatial-relation",
+    "few-objects",
+    "static"
+  ],
+  "L1_SP3_017": [
+    "animals",
+    "objects",
+    "spatial-relation",
+    "few-objects",
+    "static"
+  ],
+  "L1_SP3_018": [
+    "objects",
+    "animals",
+    "spatial-relation",
+    "few-objects",
+    "size-contrast"
+  ],
+  "L1_SP3_019": [
+    "objects",
+    "indoor",
+    "spatial-relation",
+    "few-objects",
+    "static"
+  ],
+  "L1_SP3_020": [
+    "objects",
+    "spatial-relation",
+    "few-objects",
+    "static"
+  ],
+  "L1_SP3_021": [
+    "animals",
+    "objects",
+    "occlusion",
+    "spatial-relation",
+    "few-objects"
+  ],
+  "L1_SP3_022": [
+    "animals",
+    "occlusion",
+    "spatial-relation",
+    "few-objects"
+  ],
+  "L1_SP3_023": [
+    "animals",
+    "objects",
+    "spatial-relation",
+    "few-objects",
+    "static"
+  ],
+  "L1_SP3_024": [
+    "animals",
+    "objects",
+    "occlusion",
+    "spatial-relation",
+    "few-objects"
+  ],
+  "L1_SP3_025": [
+    "people",
+    "objects",
+    "spatial-relation",
+    "few-objects",
+    "static"
+  ],
+  "L1_SP3_026": [
+    "objects",
+    "indoor",
+    "spatial-relation",
+    "occlusion",
+    "few-objects"
+  ],
+  "L1_SP3_027": [
+    "objects",
+    "people",
+    "occlusion",
+    "spatial-relation",
+    "few-objects"
+  ],
+  "L1_SP3_028": [
+    "animals",
+    "objects",
+    "occlusion",
+    "spatial-relation",
+    "few-objects"
+  ],
+  "L1_SP3_029": [
+    "vehicles",
+    "animals",
+    "spatial-relation",
+    "few-objects",
+    "static"
+  ],
+  "L1_SP3_030": [
+    "vehicles",
+    "objects",
+    "spatial-relation",
+    "few-objects",
+    "static"
+  ],
+  "L1_SP3_031": [
+    "animals",
+    "objects",
+    "spatial-relation",
+    "few-objects",
+    "static"
+  ],
+  "L1_SP3_032": [
+    "people",
+    "objects",
+    "spatial-relation",
+    "few-objects",
+    "static"
+  ],
+  "L1_SP3_033": [
+    "animals",
+    "objects",
+    "occlusion",
+    "spatial-relation",
+    "few-objects"
+  ],
+  "L1_SP3_034": [
+    "animals",
+    "objects",
+    "spatial-relation",
+    "few-objects",
+    "static"
+  ],
+  "L1_SP3_035": [
+    "animals",
+    "objects",
+    "spatial-relation",
+    "few-objects",
+    "static"
+  ],
+  "L1_SP3_036": [
+    "animals",
+    "objects",
+    "spatial-relation",
+    "few-objects",
+    "static"
+  ],
+  "L1_SP3_037": [
+    "people",
+    "objects",
+    "spatial-relation",
+    "few-objects",
+    "static"
+  ],
+  "L1_SP3_038": [
+    "people",
+    "objects",
+    "spatial-relation",
+    "few-objects",
+    "static"
+  ],
+  "L1_SP3_039": [
+    "people",
+    "animals",
+    "spatial-relation",
+    "few-objects",
+    "age-related"
+  ],
+  "L1_SP3_040": [
+    "animals",
+    "spatial-relation",
+    "few-objects",
+    "static"
+  ],
+  "L1_SP3_041": [
+    "objects",
+    "indoor",
+    "spatial-relation",
+    "few-objects",
+    "static"
+  ],
+  "L1_SP3_042": [
+    "objects",
+    "indoor",
+    "spatial-relation",
+    "occlusion",
+    "few-objects"
+  ],
+  "L1_SP3_043": [
+    "objects",
+    "vehicles",
+    "spatial-relation",
+    "few-objects",
+    "static"
+  ],
+  "L1_SP3_044": [
+    "animals",
+    "vehicles",
+    "occlusion",
+    "spatial-relation",
+    "few-objects"
+  ],
+  "L1_SP3_045": [
+    "animals",
+    "objects",
+    "spatial-relation",
+    "few-objects",
+    "static"
+  ],
+  "L1_SP3_046": [
+    "objects",
+    "animals",
+    "spatial-relation",
+    "few-objects",
+    "static"
+  ],
+  "L1_SP3_047": [
+    "objects",
+    "few-objects",
+    "spatial-relation",
+    "static"
+  ],
+  "L1_SP3_048": [
+    "vehicles",
+    "objects",
+    "spatial-relation",
+    "few-objects",
+    "static"
+  ],
+  "L1_SP3_049": [
+    "objects",
+    "animals",
+    "occlusion",
+    "few-objects",
+    "spatial-relation"
+  ],
+  "L1_SP3_050": [
+    "animals",
+    "objects",
+    "spatial-relation",
+    "few-objects",
+    "static"
+  ],
+  "L2_NUM_001": [
+    "animals",
+    "nature",
+    "counting",
+    "dense",
+    "color-heavy"
+  ],
+  "L2_NUM_002": [
+    "objects",
+    "counting",
+    "color-heavy",
+    "material-heavy",
+    "medium-objects"
+  ],
+  "L2_NUM_003": [
+    "animals",
+    "counting",
+    "color-heavy",
+    "dense",
+    "objects"
+  ],
+  "L2_NUM_004": [
+    "objects",
+    "counting",
+    "color-heavy",
+    "material-heavy",
+    "spatial-relation"
+  ],
+  "L2_NUM_005": [
+    "objects",
+    "counting",
+    "material-heavy",
+    "indoor",
+    "spatial-relation"
+  ],
+  "L2_NUM_006": [
+    "animals",
+    "nature",
+    "counting",
+    "dense",
+    "color-heavy"
+  ],
+  "L2_NUM_007": [
+    "animals",
+    "objects",
+    "outdoor",
+    "counting",
+    "medium-objects"
+  ],
+  "L2_NUM_008": [
+    "animals",
+    "age-related",
+    "counting",
+    "indoor",
+    "dense"
+  ],
+  "L2_NUM_009": [
+    "animals",
+    "counting",
+    "dense",
+    "spatial-relation",
+    "color-heavy"
+  ],
+  "L2_NUM_010": [
+    "objects",
+    "counting",
+    "dense",
+    "material-heavy",
+    "static"
+  ],
+  "L2_NUM_011": [
+    "people",
+    "objects",
+    "counting",
+    "color-heavy",
+    "spatial-relation"
+  ],
+  "L2_NUM_012": [
+    "nature",
+    "counting",
+    "color-heavy",
+    "dense",
+    "objects"
+  ],
+  "L2_NUM_013": [
+    "people",
+    "objects",
+    "color-heavy",
+    "action",
+    "counting",
+    "dense"
+  ],
+  "L2_NUM_014": [
+    "objects",
+    "counting",
+    "size-contrast",
+    "spatial-relation",
+    "few-objects"
+  ],
+  "L2_NUM_015": [
+    "objects",
+    "counting",
+    "size-contrast",
+    "spatial-relation",
+    "indoor"
+  ],
+  "L2_NUM_016": [
+    "objects",
+    "counting",
+    "dense",
+    "color-heavy",
+    "abstract-shapes"
+  ],
+  "L2_NUM_017": [
+    "people",
+    "vehicles",
+    "counting",
+    "action",
+    "outdoor"
+  ],
+  "L2_NUM_018": [
+    "food",
+    "counting",
+    "color-heavy",
+    "dense",
+    "spatial-relation"
+  ],
+  "L2_NUM_019": [
+    "objects",
+    "counting",
+    "size-contrast",
+    "material-heavy",
+    "spatial-relation"
+  ],
+  "L2_NUM_020": [
+    "animals",
+    "nature",
+    "rural",
+    "outdoor",
+    "counting"
+  ],
+  "L2_SP3_001": [
+    "objects",
+    "indoor",
+    "material-heavy",
+    "spatial-relation",
+    "occlusion"
+  ],
+  "L2_SP3_002": [
+    "animals",
+    "objects",
+    "material-heavy",
+    "spatial-relation",
+    "occlusion"
+  ],
+  "L2_SP3_003": [
+    "people",
+    "vehicles",
+    "nature",
+    "outdoor",
+    "spatial-relation",
+    "color-heavy"
+  ],
+  "L2_SP3_004": [
+    "objects",
+    "indoor",
+    "spatial-relation",
+    "few-objects",
+    "material-heavy"
+  ],
+  "L2_SP3_005": [
+    "people",
+    "age-related",
+    "indoor",
+    "occlusion",
+    "material-heavy"
+  ],
+  "L2_SP3_006": [
+    "animals",
+    "indoor",
+    "spatial-relation",
+    "occlusion",
+    "few-objects"
+  ],
+  "L2_SP3_007": [
+    "buildings",
+    "objects",
+    "size-contrast",
+    "spatial-relation",
+    "material-heavy"
+  ],
+  "L2_SP3_008": [
+    "vehicles",
+    "animals",
+    "color-heavy",
+    "occlusion",
+    "spatial-relation"
+  ],
+  "L2_SP3_009": [
+    "people",
+    "age-related",
+    "color-heavy",
+    "spatial-relation",
+    "outdoor"
+  ],
+  "L2_SP3_010": [
+    "people",
+    "urban",
+    "outdoor",
+    "occlusion",
+    "spatial-relation"
+  ],
+  "L2_SP3_011": [
+    "objects",
+    "material-heavy",
+    "size-contrast",
+    "spatial-relation",
+    "occlusion"
+  ],
+  "L2_SP3_012": [
+    "animals",
+    "nature",
+    "outdoor",
+    "rural",
+    "spatial-relation"
+  ],
+  "L2_SP3_013": [
+    "people",
+    "occlusion",
+    "material-heavy",
+    "indoor",
+    "spatial-relation"
+  ],
+  "L2_SP3_014": [
+    "vehicles",
+    "buildings",
+    "outdoor",
+    "spatial-relation",
+    "occlusion"
+  ],
+  "L2_SP3_015": [
+    "vehicles",
+    "urban",
+    "spatial-relation",
+    "outdoor",
+    "size-contrast"
+  ],
+  "L2_SP3_016": [
+    "animals",
+    "objects",
+    "occlusion",
+    "spatial-relation",
+    "few-objects"
+  ],
+  "L2_SP3_017": [
+    "people",
+    "vehicles",
+    "urban",
+    "occlusion",
+    "action"
+  ],
+  "L2_SP3_018": [
+    "animals",
+    "nature",
+    "outdoor",
+    "spatial-relation",
+    "rural"
+  ],
+  "L2_SP3_019": [
+    "people",
+    "action",
+    "occlusion",
+    "indoor",
+    "objects"
+  ],
+  "L2_SP3_020": [
+    "people",
+    "food",
+    "indoor",
+    "spatial-relation",
+    "medium-objects"
+  ],
+  "L2_CMP_001": [
+    "vehicles",
+    "objects",
+    "buildings",
+    "color-heavy",
+    "spatial-relation"
+  ],
+  "L2_CMP_002": [
+    "animals",
+    "nature",
+    "outdoor",
+    "counting",
+    "few-objects"
+  ],
+  "L2_CMP_003": [
+    "objects",
+    "food",
+    "material-heavy",
+    "few-objects",
+    "static"
+  ],
+  "L2_CMP_004": [
+    "food",
+    "objects",
+    "counting",
+    "few-objects",
+    "indoor"
+  ],
+  "L2_CMP_005": [
+    "animals",
+    "indoor",
+    "color-heavy",
+    "spatial-relation",
+    "static"
+  ],
+  "L2_CMP_006": [
+    "objects",
+    "material-heavy",
+    "spatial-relation",
+    "few-objects",
+    "static"
+  ],
+  "L2_CMP_007": [
+    "people",
+    "food",
+    "indoor",
+    "counting",
+    "spatial-relation"
+  ],
+  "L2_CMP_008": [
+    "people",
+    "counting",
+    "color-heavy",
+    "action",
+    "outdoor"
+  ],
+  "L2_CMP_009": [
+    "people",
+    "material-heavy",
+    "color-heavy",
+    "spatial-relation",
+    "counting"
+  ],
+  "L2_CMP_010": [
+    "people",
+    "animals",
+    "age-related",
+    "counting",
+    "outdoor"
+  ],
+  "L2_CMP_011": [
+    "people",
+    "food",
+    "indoor",
+    "action",
+    "counting",
+    "material-heavy"
+  ],
+  "L2_CMP_012": [
+    "people",
+    "nature",
+    "outdoor",
+    "counting",
+    "age-related"
+  ],
+  "L2_CMP_013": [
+    "people",
+    "objects",
+    "material-heavy",
+    "counting",
+    "indoor"
+  ],
+  "L2_CMP_014": [
+    "people",
+    "objects",
+    "action",
+    "spatial-relation",
+    "counting"
+  ],
+  "L2_CMP_015": [
+    "indoor",
+    "buildings",
+    "counting",
+    "dense",
+    "spatial-relation"
+  ],
+  "L2_CMP_016": [
+    "people",
+    "animals",
+    "action",
+    "counting",
+    "material-heavy"
+  ],
+  "L2_CMP_017": [
+    "objects",
+    "buildings",
+    "indoor",
+    "counting",
+    "material-heavy",
+    "dense"
+  ],
+  "L2_CMP_018": [
+    "food",
+    "color-heavy",
+    "material-heavy",
+    "spatial-relation",
+    "counting"
+  ],
+  "L2_CMP_019": [
+    "indoor",
+    "buildings",
+    "objects",
+    "counting",
+    "material-heavy"
+  ],
+  "L2_CMP_020": [
+    "buildings",
+    "animals",
+    "outdoor",
+    "counting",
+    "spatial-relation"
+  ]
+}

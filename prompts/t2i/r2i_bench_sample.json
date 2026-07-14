@@ -1,0 +1,2852 @@
+[
+  {
+    "prompt_id": "R2I_CAU_001",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_causal",
+    "difficulty": "published",
+    "prompt_text": "Generate the result caused by pouring table salt directly onto a garden slug.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: The slug shrivels and begins to release mucus.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Visualizing osmotic process and rapid biological deterioration?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_CAU_002",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_causal",
+    "difficulty": "published",
+    "prompt_text": "Generate the result caused by leaving an unprotected antique oil painting in direct sunlight for six months.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: A faded oil painting with cracked paint and discolored sections.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Depicting cumulative UV damage effects (fading, cracking) from prolonged exposure over months.?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_CAU_003",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_causal",
+    "difficulty": "published",
+    "prompt_text": "Generate the result caused by leaving a bar of soap in a dish filled with water for a week.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: A partially or completely dissolved, soft bar of soap with a mushy texture.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Representing gradual material dissolution and textural transformation across extended duration.?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_CAU_004",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_causal",
+    "difficulty": "published",
+    "prompt_text": "Generate an image to explain the cause of following scene: a broken stained-glass window with a fallen weathervane beneath it.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: A powerful storm dislodging the weathervane, sending it crashing through the colorful glass.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Linking environmental forces to sequential collision damage?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_CAU_005",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_causal",
+    "difficulty": "published",
+    "prompt_text": "Generate the result of leaving a burning candle near an open window during a storm.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: An extinguished candlewick with melted wax hardened in uneven drips.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Depicting simultaneous wind effects (flame extinction) and thermal dynamics (wax solidification patt?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_CAU_006",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_causal",
+    "difficulty": "published",
+    "prompt_text": "Generate an image to explain the cause of following scene: fresh tire skid marks ending at a mangled guardrail on a highway.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: A car swerving abruptly and colliding with the guardrail, sparks flying on impact.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Kinetic chain visualization: reconstructing high-speed motion (skid-to-crash sequence) and energy tr?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_CAU_007",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_causal",
+    "difficulty": "published",
+    "prompt_text": "Generate an image to explain the cause of following scene: a tipped-over flowerpot with muddy paw prints leading away.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: A dog digging vigorously at the base of the plant, knocking the pot sideways.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Animal agency attribution: linking indirect evidence (paw prints, pot position) to animate causation?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_CAU_008",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_causal",
+    "difficulty": "published",
+    "prompt_text": "Generate an image to explain the cause of following scene: a bicycle lying on its side with a detached chain on pavement.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: A cyclist pedaling hard uphill when the chain suddenly snaps.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Inferring mechanical failure (chain detachment) caused by contextual stress (pedaling uphill) from s?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_CAU_009",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_causal",
+    "difficulty": "published",
+    "prompt_text": "Generate an image to explain the cause of following scene: an empty bird nest on the ground under a tree",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: Strong wind blowing the nest from a tree branch?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Requires understanding of natural environmental causes affecting the nest's displacement?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_CAU_010",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_causal",
+    "difficulty": "published",
+    "prompt_text": "Generate the result caused by placing a roll of aluminum foil inside a microwave and turning it on.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: Sparks flying as the foil reflects and reacts to the microwave energy.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Understanding electromagnetic interaction between metal and microwaves, leading to sparks.?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_CAU_011",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_causal",
+    "difficulty": "published",
+    "prompt_text": "Generate the result of a sealed thin glass jar filled with boiling water being placed in an ice bath.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: The glass jar shattered into pieces due to thermal shock.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Understanding thermal expansion/contraction principles and brittle material failure?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_CAU_012",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_causal",
+    "difficulty": "published",
+    "prompt_text": "Generate the result caused by leaving an iron garden shovel outdoors during rainy seasons for months.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: A shovel covered in reddish-brown rust patches and flaking metal.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Showing material corrosion through long-term environmental exposure?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_CAU_013",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_causal",
+    "difficulty": "published",
+    "prompt_text": "Generate an image to explain the cause of following scene: a bruise on a young boy's forehead",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: Boy hitting his head against a hard surface while playing?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Requires temporal reasoning to connect the accident to the bruise formation on the forehead?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_CAU_014",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_causal",
+    "difficulty": "published",
+    "prompt_text": "Generate the result caused by leaving bread dough to rise for five hours instead of one.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: A collapsed, over-fermented dough with a sunken center and large air pockets.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Representing delayed temporal effects of chemical/biological processes (over-fermentation leading to?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_CAU_015",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_causal",
+    "difficulty": "published",
+    "prompt_text": "Generate an image to explain the cause of following scene: a bicycle lying sideways on a rainy road with skid marks.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: A cyclist braking suddenly on wet pavement, wheels skidding.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Dynamic motion representation (sudden braking) and surface interaction (wet road).?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_CAU_016",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_causal",
+    "difficulty": "published",
+    "prompt_text": "Generate an image to explain the cause of following scene: a cigarette smell in a car",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: Person smoking a cigarette inside the car, leaving behind smoke residue?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Requires understanding how smoke lingers in enclosed spaces and leaves a lingering smell?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_CAU_017",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_causal",
+    "difficulty": "published",
+    "prompt_text": "A porcelain vase is accidentally knocked off a high shelf onto a concrete floor. Display the immediate result.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: Shattered porcelain fragments scattered around the base of the shelf.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Depicting material fragility (porcelain) and realistic fragmentation physics upon impact.?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_CAU_018",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_causal",
+    "difficulty": "published",
+    "prompt_text": "Generate an image to explain the cause of following scene: a car's dented front bumper pressed against a tree.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: The car skidding uncontrollably toward the tree during a collision.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Depicting dynamic motion (skidding collision) that explains static damage evidence.?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_CAU_019",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_causal",
+    "difficulty": "published",
+    "prompt_text": "Generate an image to explain the cause of following scene: food crumbs on a car seat",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: Person eating food in the car and accidentally spilling crumbs?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Requires reasoning about how small particles from food can end up on car seats during travel or eati?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_CAU_020",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_causal",
+    "difficulty": "published",
+    "prompt_text": "Generate an image to explain the cause of following scene: a spilled coffee cup on a desk with soaked papers.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: A person bumping into the desk while carrying a stack of books, knocking the cup over.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Representing a transient human action (bumping) that occurred prior to the visible effect, requiring?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_CAU_021",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_causal",
+    "difficulty": "published",
+    "prompt_text": "Generate the result of a popsicle being left under direct sunlight for 20 minutes.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: The popsicle melted.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Temporal reasoning about phase change over time and liquid physics simulation?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_CAU_022",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_causal",
+    "difficulty": "published",
+    "prompt_text": "Generate the result caused by placing a raw potato in an oven at high heat for two hours.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: A shriveled, burnt potato with a blackened outer skin.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Simulating combined dehydration effects (moisture loss) and pyrolysis (charring) from prolonged high?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_CAU_023",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_causal",
+    "difficulty": "published",
+    "prompt_text": "Generate an image to explain the cause of following scene: carved initials inside a heart shape on tree bark",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: Person using pocket knife to vandalize tree surface?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Requires temporal reasoning about human actions leaving permanent marks?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_CAU_024",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_causal",
+    "difficulty": "published",
+    "prompt_text": "Generate the result caused by adding a small amount of copper sulfate to a solution of sodium hydroxide.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: A blue precipitate of copper(II) hydroxide forms, indicating a successful double displacement reaction.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Accurately depicting the formation of the blue copper(II) hydroxide precipitate and the visual clari?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_CAU_025",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_causal",
+    "difficulty": "published",
+    "prompt_text": "Generate an image to explain the cause of following scene: a stain on the wall",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: Person accidentally spilling food or liquid on the wall?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Requires reasoning about how substances like food or drink can stain a vertical surface?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_CAU_026",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_causal",
+    "difficulty": "published",
+    "prompt_text": "Generate an image to explain the cause of following scene: a tree losing its leaves in early spring",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: Sudden frost or cold snap damaging the tree\u2019s leaves?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Requires understanding of environmental conditions affecting plant life?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_CAU_027",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_causal",
+    "difficulty": "published",
+    "prompt_text": "Generate the result caused by hammering a nail into a car tire with force.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: A deflated tire with a visible nail puncture.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Showing immediate consequences of structural compromise in pressurized objects?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_CAU_028",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_causal",
+    "difficulty": "published",
+    "prompt_text": "Generate an image to explain the cause of following scene: a tree with a significant portion of its bark peeling off",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: Insects or animals causing damage to the bark?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Requires reasoning about animal behavior and its impact on plant life?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_CAU_029",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_causal",
+    "difficulty": "published",
+    "prompt_text": "Generate an image to explain the cause of following scene: a trail of spilled milk leading to an empty glass on the kitchen floor",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: Person accidentally knocking over the glass of milk while walking or reaching for something?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Requires understanding the sequence of actions causing the milk to spill from the glass and create a?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_CAU_030",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_causal",
+    "difficulty": "published",
+    "prompt_text": "Generate the result caused by mixing sodium thiosulfate with hydrochloric acid.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: A cloudy, yellow precipitate of sulfur forms rapidly, accompanied by the release of heat and a color change from clear to opaque.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Depicting the precise moment when the solution turns cloudy and the formation of sulfur precipitates?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_NUM_001",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_numerical",
+    "difficulty": "published",
+    "prompt_text": "An image with a shelf. There are no ceramic pots on the shelf.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: The image shows a shelf with no ceramic pots placed on it.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Evaluates recognition of absence ('no') in the scene?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_NUM_002",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_numerical",
+    "difficulty": "published",
+    "prompt_text": "Twenty-five white earrings and twelve pink earrings",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: Twenty-five white earrings and twelve pink earrings?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Accurately generating two distinct exact numbers (25 and 12) and associating each with the correct c?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_NUM_003",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_numerical",
+    "difficulty": "published",
+    "prompt_text": "There are two papayas and three-sevenths of another papaya on the plate.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: There are two papayas and three-sevenths of another papaya on the plate.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Interpreting the combination of whole units and fractional parts of an object.?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_NUM_004",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_numerical",
+    "difficulty": "published",
+    "prompt_text": "19 lipsticks",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: 19 lipsticks?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Correctly identifying and generating the number (19) associated with the object (lipsticks).?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_NUM_005",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_numerical",
+    "difficulty": "published",
+    "prompt_text": "A tapestry divided into seven vertical panels.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: A single tapestry split into seven vertical panels hanging side by side.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Recognizing segmentation of a whole object into multiple equal visual parts.?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_NUM_006",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_numerical",
+    "difficulty": "published",
+    "prompt_text": "An image with some hourglasses and some compasses. There are as many hourglasses as compasses.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: The image contains some hourglasses and some compasses, with equal quantities (e.g., 4 or 5 each).?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Understanding of approximate quantity ('some') and numerical equivalence between two object types.?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_NUM_007",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_numerical",
+    "difficulty": "published",
+    "prompt_text": "An image of a garden. There are some wind chimes but only a few weather vanes.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: A garden with more wind chimes than weather vanes.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Differentiating quantities using 'some' and 'only a few'.?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_NUM_008",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_numerical",
+    "difficulty": "published",
+    "prompt_text": "There are two muffins and three-quarters of another muffin on the table.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: Two whole muffins and one muffin missing a quarter portion.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Understanding partial quantities and composition of whole and fractional parts.?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_NUM_009",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_numerical",
+    "difficulty": "published",
+    "prompt_text": "16 books stacked on a shelf",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: 16 books stacked on a shelf?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Ensuring the accurate generation of a specific count (16) of books and their correct spatial relatio?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_NUM_010",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_numerical",
+    "difficulty": "published",
+    "prompt_text": "A kitchen counter with some ceramic bowls and a few teapots. There are more bowls than teapots.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: A kitchen counter displaying some ceramic bowls and a smaller number of teapots.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Model's ability to represent approximate quantities and a comparative relationship ('more bowls than?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_NUM_011",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_numerical",
+    "difficulty": "published",
+    "prompt_text": "There are 8 cups on the table, but one cup is shattered into four fragments.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: 7 intact cups and 1 cup broken into 4 ceramic pieces on a table.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Distinguishing between whole objects and fragmented parts.?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_NUM_012",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_numerical",
+    "difficulty": "published",
+    "prompt_text": "There are two harps and half of another harp on display in the museum.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: There are two harps and half of another harp on display in the museum.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Interpreting fractional representation of an object among whole objects.?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_NUM_013",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_numerical",
+    "difficulty": "published",
+    "prompt_text": "25 plastic bags floating on the water surface",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: 25 plastic bags floating on the water surface?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Ensuring the exact count of 25 plastic bags floating on the water surface?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_NUM_014",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_numerical",
+    "difficulty": "published",
+    "prompt_text": "10 purple tulips and 5 white tulips in a garden",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: 10 purple tulips and 5 white tulips in a garden?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Ensuring two distinct exact numbers (10 and 5) and correctly associating each with the corresponding?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_NUM_015",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_numerical",
+    "difficulty": "published",
+    "prompt_text": "Nine brown dogs and twelve white dogs",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: Nine brown dogs and twelve white dogs?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Accurately generating two distinct exact numbers (9 and 12) and associating each with the correct co?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_NUM_016",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_numerical",
+    "difficulty": "published",
+    "prompt_text": "Two complete bookmarks and three-quarters of another translucent bookmark on the desk.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: Two complete bookmarks and three-quarters of another translucent bookmark on the desk.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Combining whole and fractional parts of a set of similar objects.?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_NUM_017",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_numerical",
+    "difficulty": "published",
+    "prompt_text": "Three green trees and twenty-five red trees",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: Three green trees and twenty-five red trees?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Accurately generating two distinct exact numbers (3 and 25) and associating each with the correct co?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_NUM_018",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_numerical",
+    "difficulty": "published",
+    "prompt_text": "There are some bamboo dragonflies on the table and some in the air. There are more in the air than on the table.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: Several bamboo dragonflies floating in the air, with fewer resting on the table.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Comparison of spatially distributed approximate quantities ('some', 'more than')?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_NUM_019",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_numerical",
+    "difficulty": "published",
+    "prompt_text": "Two complete placemats with half of a third placemat visible under a bowl.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: Two complete placemats with half of a third placemat visible under a bowl.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Understanding partial visibility and fractional representation of an object in a scene.?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_NUM_020",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_numerical",
+    "difficulty": "published",
+    "prompt_text": "A bath towel with vertical stripes transitioning from burgundy to platinum every 15cm.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: A bath towel with vertical stripes transitioning from burgundy to platinum every 15cm.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Recognizing patterned color transitions at regular intervals.?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_NUM_021",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_numerical",
+    "difficulty": "published",
+    "prompt_text": "An image with some umbrellas and some walking canes. There are more umbrellas than walking canes.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: An image containing some umbrellas and some walking canes, with a noticeably greater number of umbrellas than canes.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Ability to compare approximate quantities and depict a relative difference.?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_NUM_022",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_numerical",
+    "difficulty": "published",
+    "prompt_text": "A wall clock with alternating octagonal sectors of matte black and neon yellow.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: A wall clock with alternating octagonal sectors of matte black and neon yellow.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Interpreting alternating patterned sectors with geometric and color attributes.?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_NUM_023",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_numerical",
+    "difficulty": "published",
+    "prompt_text": "An image of a glass jar. The jar is empty; there are no marbles inside.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: A glass jar that is completely empty, with no marbles inside.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Recognizing and representing the concept of zero quantity.?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_NUM_024",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_numerical",
+    "difficulty": "published",
+    "prompt_text": "A chessboard with squares transitioning from jet black to pearl white in a gradient pattern.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: A chessboard with squares transitioning from jet black to pearl white in a gradient pattern.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Understanding gradual color transitions across a structured grid.?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_NUM_025",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_numerical",
+    "difficulty": "published",
+    "prompt_text": "There are three vintage cameras and half of another camera on the display shelf.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: There are three vintage cameras and half of another camera on the display shelf.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Recognizing partial inclusion as a fractional quantity in a set.?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_NUM_026",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_numerical",
+    "difficulty": "published",
+    "prompt_text": "A garden with a few solar-powered lamps and many windmills.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: A garden featuring a small number of solar-powered lamps and a significantly larger number of windmills.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Distinguishing between small and large approximate quantities using 'a few' and 'many'.?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_NUM_027",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_numerical",
+    "difficulty": "published",
+    "prompt_text": "An image of a table with some magnifying glasses and some telescopes. There are as many magnifying glasses as telescopes.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: The table holds equal numbers of magnifying glasses and telescopes (e.g., 4 or 5 each).?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Approximate Number Generation \ufffdC equality of two approximate quantities?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_NUM_028",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_numerical",
+    "difficulty": "published",
+    "prompt_text": "A quiver containing five arrows, with one arrow split into two halves.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: A quiver holding five whole arrows and one arrow broken cleanly into two pieces.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Identifying a mix of whole objects and one object split evenly into two halves.?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_NUM_029",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_numerical",
+    "difficulty": "published",
+    "prompt_text": "20 books on the shelf",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: 20 books on the shelf?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Ensuring the accurate representation of a single numerical quantity (20) within a simple contextual ?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_NUM_030",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_numerical",
+    "difficulty": "published",
+    "prompt_text": "An image with some bronze sculptures and many ceramic plates. There are more ceramic plates than bronze sculptures.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: An image showing a small number of bronze sculptures and a much larger number of ceramic plates.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Understanding and comparing approximate quantities using 'some' and 'many'.?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_COM_001",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_compositional",
+    "difficulty": "published",
+    "prompt_text": "Show a dog grooming its human at a salon.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: A dog trimming a human\u2019s hair with scissors and a comb.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Subverting human-animal hierarchies through role reversal in caregiving activities.?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_COM_002",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_compositional",
+    "difficulty": "published",
+    "prompt_text": "Draw a clock cooking a meal in a kitchen.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: A clock wearing a chef\u2019s hat and cooking food.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Anthropomorphizing a timepiece with culinary human actions while retaining clock functionality.?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_COM_003",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_compositional",
+    "difficulty": "published",
+    "prompt_text": "A birdbath is centered in a garden. Flanking it on either side are two flower beds\u2014the left bed has sunflowers, the right has tulips. A stone path starts behind the birdbath and curves westward.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: The birdbath is the central focal point. Sunflowers are strictly to its left, tulips to its right. The path begins directly behind the birdbath and bends leftward.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Lateral object distinction (left/right) and path orientation relative to a central feature?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_COM_004",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_compositional",
+    "difficulty": "published",
+    "prompt_text": "Draw a camera gliding with a parachute.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: A camera soaring through the sky with a parachute, its lens pointing toward the ground, capturing magnificent scenery.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Combining inanimate technology (camera) with human adventure activity (parachuting), requiring anima?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_COM_005",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_compositional",
+    "difficulty": "published",
+    "prompt_text": "On a nightstand, place an alarm clock at the back. Position a book horizontally in front of the clock. Add a glass of water to the nightstand\u2019s right edge, ahead of the book.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: Alarm clock is at the nightstand\u2019s rear. Book lies flat, horizontally centered between the clock and the nightstand\u2019s front edge. Glass is on the far right edge, closer to the front than the book.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Front/back positioning and horizontal vs edge placement with multiple objects on a surface?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_COM_006",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_compositional",
+    "difficulty": "published",
+    "prompt_text": "A coffee mug placed next to a retired space shuttle.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: The space shuttle appears vast and imposing, while the coffee mug is depicted as a tiny, everyday object, emphasizing the relative scale.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: The model should illustrate that a common coffee mug is very small compared to a decommissioned spac?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_COM_007",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_compositional",
+    "difficulty": "published",
+    "prompt_text": "Dragonfly and vintage gramophone.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: A small, delicate dragonfly is depicted near a large, classic gramophone, highlighting the scale contrast.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: The model should understand that a tiny dragonfly is far smaller than a vintage gramophone.?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_COM_008",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_compositional",
+    "difficulty": "published",
+    "prompt_text": "A ladybug on the ground next to a skyscraper.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: A tiny ladybug appears minuscule against the backdrop of an enormous skyscraper, emphasizing the vast difference in scale.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: The model should depict that a tiny ladybug is dwarfed by a towering skyscraper.?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_COM_009",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_compositional",
+    "difficulty": "published",
+    "prompt_text": "Visualize mountains suspended in mid-air with valleys floating above them.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: Aerial topography with inverted elevation - peaks below, hollows above.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Spatial paradox in geological formations defying gravitational logic?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_COM_010",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_compositional",
+    "difficulty": "published",
+    "prompt_text": "Draw a pencil performing figure skating on an ice rink.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: A pencil spinning and jumping on the ice, performing graceful figure skating moves.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Anthropomorphizing an inanimate object (pencil) to execute complex human-like ice skating motions wh?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_COM_011",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_compositional",
+    "difficulty": "published",
+    "prompt_text": "Depict a bird feeding a human.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: A bird dropping seeds into a person\u2019s mouth in a nest.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Inverting natural food chain dynamics and caretaker roles between species?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_COM_012",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_compositional",
+    "difficulty": "published",
+    "prompt_text": "Create a museum display with a dinosaur skeleton facing east. Position two display cases: one northwest of the skull showing teeth fossils, another southeast of the tail containing footprint casts. Add spotlighting from northeast and southwest.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: Body part-specific positioning (skull vs tail). Diagonal case placements. Directional lighting sources.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Anatomic part-relative positioning, diagonal spatial relationships, and directional light source pla?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_COM_013",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_compositional",
+    "difficulty": "published",
+    "prompt_text": "A mouse standing next to a horse's hoof.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: The mouse is tiny compared to the horse\u2019s hoof, emphasizing the horse\u2019s size.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: The model must depict a mouse as significantly smaller than a horse\u2019s hoof.?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_COM_014",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_compositional",
+    "difficulty": "published",
+    "prompt_text": "A soda can standing next to a vertical stack of five coins.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: The can\u2019s height exceeds the stack of coins.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: A soda can is taller than a vertical stack of five coins.?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_COM_015",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_compositional",
+    "difficulty": "published",
+    "prompt_text": "On a doctor\u2019s desk, a stethoscope coils clockwise around a clipboard. A pen lies diagonally across the clipboard\u2019s top-right corner, pointing northeast.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: Stethoscope forms a circular loop enclosing the clipboard. Pen crosses the clipboard\u2019s upper right corner at a 45-degree angle, tip facing NE.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Circular spatial enclosure (clockwise) and angular/directional precision (45-degree NE orientation)?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_COM_016",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_compositional",
+    "difficulty": "published",
+    "prompt_text": "A kangaroo and Tower Bridge.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: A smaller kangaroo positioned in the foreground, with the massive Tower Bridge displayed prominently in the background, highlighting the size difference.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: The model should determine the size relationship between a kangaroo and Tower Bridge, with the kanga?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_COM_017",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_compositional",
+    "difficulty": "published",
+    "prompt_text": "A person is standing in front of a bookshelf, with a book in their hand. Place a lamp on the table beside them, slightly above their elbow.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: A person is standing in front of a bookshelf, holding a book, with a lamp on a table beside them, slightly above their elbow.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Object placement relative to a person's body part (beside and above elbow).?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_COM_018",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_compositional",
+    "difficulty": "published",
+    "prompt_text": "Draw a bee riding a butterfly.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: A small bee perched on the back of a graceful butterfly, soaring through a colorful garden with wings fluttering in the breeze.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Creating a plausible hierarchical interaction between two distinct flying insects while maintaining ?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_COM_019",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_compositional",
+    "difficulty": "published",
+    "prompt_text": "Draw a bicycle painting a self-portrait.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: A bicycle with a paintbrush held by its handlebars, painting a canvas of itself on an easel, its wheels spinning in creative motion.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Anthropomorphization of mechanical objects combined with meta-artistic elements, requiring integrati?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_COM_020",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_compositional",
+    "difficulty": "published",
+    "prompt_text": "A hummingbird hovering beside a blooming sunflower in a garden.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: The hummingbird is diminutive compared to the large sunflower.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: A hummingbird is smaller than a sunflower in real-world scale.?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_COM_021",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_compositional",
+    "difficulty": "published",
+    "prompt_text": "Two bicycles leaning against a fence: one adult-sized and one child-sized.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: The adult-sized bicycle appears larger, while the child-sized bicycle is visibly smaller in comparison.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: The model should recognize the size difference between an adult-sized bicycle and a child-sized bicy?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_COM_022",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_compositional",
+    "difficulty": "published",
+    "prompt_text": "A garden has a small pond in the center, with a fountain in the pond. Place a bench on the edge of the pond, not too close to the fountain.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: A garden with a small pond in the center, a fountain in the pond, and a bench on the edge of the pond, positioned a short distance from the fountain.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Edge-based placement with general radial distance from central feature.?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_COM_023",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_compositional",
+    "difficulty": "published",
+    "prompt_text": "On a three-tiered bookshelf: a vase occupies the top-left shelf, a round clock is centered on the middle shelf, and a potted plant sits on the bottom-right shelf. The plant\u2019s vines cascade over the shelf edge.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: Clear vertical separation: vase (top-left), clock (middle-center), plant (bottom-right). The plant\u2019s leaves visibly droop below the bottom shelf. No overlapping between shelves.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Vertical tier organization with quadrant-specific placement (top-left/middle-center/bottom-right) an?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_COM_024",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_compositional",
+    "difficulty": "published",
+    "prompt_text": "On a patio table, a coffee cup sits centered on a saucer. A teaspoon points northwest across the saucer\u2019s right edge, while a napkin lies folded under the saucer\u2019s left side.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: Cup/saucer centered. Teaspoon diagonally crosses the saucer\u2019s right half. Napkin is partially visible under the saucer\u2019s left edge, not fully covered.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Execution of 'centered,' cardinal-angled placement, and partial 'under' relationships?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_COM_025",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_compositional",
+    "difficulty": "published",
+    "prompt_text": "A red umbrella is open on the beach, with a green towel placed to its left. A yellow bucket is positioned behind the umbrella, and a sandcastle is built in front of the towel. All items are spaced with generous separation.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: The red umbrella is centrally placed, with the green towel clearly to its left (no overlap). The yellow bucket is directly behind the umbrella, and the sandcastle is positioned in front of the towel. All objects maintain ample spacing in a diamond-like layout.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Multi-object relative positioning (left/right/front/behind) with clear spatial buffers between items?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_COM_026",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_compositional",
+    "difficulty": "published",
+    "prompt_text": "A person is sitting on a couch, with a bookshelf behind them. Place a book on the shelf, slightly to the left of the person's head.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: A person is sitting on a couch, with a bookshelf behind them, and a book on the shelf, slightly to the left of the person's head.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Spatial relations 'behind' and 'slightly to the left of' relative to body part (person's head)?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_COM_027",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_compositional",
+    "difficulty": "published",
+    "prompt_text": "A zebra and the Arc de Triomphe.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: A zebra appearing in the foreground, clearly smaller than the grand Arc de Triomphe in the background.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: The model should determine that a zebra is smaller in size compared to the Arc de Triomphe.?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_COM_028",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_compositional",
+    "difficulty": "published",
+    "prompt_text": "Draw a table dancing in a dance hall.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: A table standing in the dance hall, its legs spinning and leaping like a dancer.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Reimagining rigid furniture with fluid biomorphic movement in social spaces.?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_COM_029",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_compositional",
+    "difficulty": "published",
+    "prompt_text": "A car in a standard-sized bathtub.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: A miniature car placed inside a standard-sized bathtub.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: The model should infer that a car in a bathtub must be a toy.?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_COM_030",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_compositional",
+    "difficulty": "published",
+    "prompt_text": "A rubber duck riding atop a steam locomotive in the real world.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: The rubber duck is clearly minute against the huge, detailed structure of the locomotive.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: The model should depict a small rubber duck as being extremely tiny relative to a colossal steam loc?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_COM_001",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_commonsense",
+    "difficulty": "published",
+    "prompt_text": "A traffic intersection during rush hour at 8:00 AM.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: Heavy congestion with cars and pedestrians.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Rush hour at 8:00 AM is a peak time for commuters, leading to both heavy vehicular traffic and many ?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_COM_002",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_commonsense",
+    "difficulty": "published",
+    "prompt_text": "A person cutting onions in the kitchen.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: Tears in the person\u2019s eyes.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Cutting onions releases irritants that cause tearing.  A model lacking this knowledge may omit tears?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_COM_003",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_commonsense",
+    "difficulty": "published",
+    "prompt_text": "An instrument that extracts cylindrical stoppers from glass containers.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: Corkscrew?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: A corkscrew is a tool specifically designed to extract corks, which are cylindrical stoppers, from b?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_COM_004",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_commonsense",
+    "difficulty": "published",
+    "prompt_text": "A soldier hugs family members after returning home.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: The group expresses tearful relief (e.g., tight embrace, closed eyes with smiles).?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: The soldier and family members are likely experiencing intense emotions after being apart, which oft?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_COM_005",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_commonsense",
+    "difficulty": "published",
+    "prompt_text": "A student tossing an object in the air during a graduation ceremony.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: The student wears a cap-and-gown ensemble.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Graduation ceremonies in many cultures involve students wearing a cap-and-gown ensemble as a symbol ?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_COM_006",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_commonsense",
+    "difficulty": "published",
+    "prompt_text": "A woman is standing in front of her car after an accident, looking at the damage. The image should show her emotional state.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: The woman should look distressed or shocked, with a wide-eyed expression, furrowed brows, and hands possibly covering her face or on her hips in disbelief.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Car accidents are sudden and stressful events, and seeing damage to her vehicle would likely cause s?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_COM_007",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_commonsense",
+    "difficulty": "published",
+    "prompt_text": "A person receives a phone call with bad news about a family member. Depict their emotional response.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: The person\u2019s face falls, their mouth slightly open, eyes filled with worry or sadness, and one hand may be placed on their chest in shock.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Receiving distressing news about a loved one typically results in an immediate emotional reaction of?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_COM_008",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_commonsense",
+    "difficulty": "published",
+    "prompt_text": "A baby being fed milk from a bottle.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: The bottle is tilted so milk fills the nipple entirely.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Bottles must be tilted to avoid air ingestion.  A model might show the bottle upright.?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_COM_009",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_commonsense",
+    "difficulty": "published",
+    "prompt_text": "A rotating blade mechanism that tapers the tip of a graphite-based writing tool.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: Pencil sharpener?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: A pencil sharpener has a rotating blade mechanism specifically designed to shave the tip of a graphi?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_COM_010",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_commonsense",
+    "difficulty": "published",
+    "prompt_text": "A spoon in a glass of water.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: The spoon appears bent at the water\u2019s surface due to refraction.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: If the model ignores light refraction, the spoon would render straight.?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_COM_011",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_commonsense",
+    "difficulty": "published",
+    "prompt_text": "Portray the Venice Carnival in Italy.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: People wearing intricate masquerade masks and Baroque-era costumes in gondola-filled canals.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: The Venetian Carnival is globally recognized for its historical masks and opulent costumes.?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_COM_012",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_commonsense",
+    "difficulty": "published",
+    "prompt_text": "The national bird appearing on the Mexican flag",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: Should show a golden eagle perched on a cactus.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: The golden eagle is a prominent national symbol of Mexico, represented on the flag as part of the Az?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_COM_013",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_commonsense",
+    "difficulty": "published",
+    "prompt_text": "Currency notes featuring bridges symbolizing European unity and cooperation",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: Tests recognition of euro banknotes through their architectural motifs.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: The euro banknotes feature bridges that represent different periods of European history, symbolizing?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_COM_014",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_commonsense",
+    "difficulty": "published",
+    "prompt_text": "A candle burning continuously for three hours.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: Melted wax pooled around the base; shortened wick.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: As the candle burns, the wax will melt and pool around the base, and the wick will shorten as the ca?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_COM_015",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_commonsense",
+    "difficulty": "published",
+    "prompt_text": "A vintage clock showing noon",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: Both the hour hand and the minute hand point straight up.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: At noon, the time is exactly 12:00, and in a typical analog clock, both the hour hand and minute han?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_COM_016",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_commonsense",
+    "difficulty": "published",
+    "prompt_text": "A cuttlefish hovering above coastal sand.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: Sandy-beige skin texture.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Cephalopods dynamically adapt coloration to match environments.?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_COM_017",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_commonsense",
+    "difficulty": "published",
+    "prompt_text": "A squirrel storing acorns.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: Acorns buried underground or tucked into a tree hollow.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: An incorrect image might show acorns scattered randomly, ignoring squirrels\u2019 food-hoarding behavior.?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_COM_018",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_commonsense",
+    "difficulty": "published",
+    "prompt_text": "A dog that just heard a loud noise.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: The dog\u2019s ears are perked up, body tense, and tail lowered.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Without knowledge of animal behavior, the model might show a relaxed dog, missing signs of alertness?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_COM_019",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_commonsense",
+    "difficulty": "published",
+    "prompt_text": "A piece of paper in water",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: The paper is completely wet and soaked.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: When a piece of paper is placed in water, it absorbs the liquid, resulting in it being wet and soake?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_COM_020",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_commonsense",
+    "difficulty": "published",
+    "prompt_text": "Decorative items placed outside homes during Japanese New Year celebrations.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: Kadomatsu (pine and bamboo arrangements).?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Kadomatsu are traditional New Year decorations placed outside homes in Japan. They are believed to w?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_COM_021",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_commonsense",
+    "difficulty": "published",
+    "prompt_text": "A potted plant that hasn\u2019t been watered for a week.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: Dry, cracked soil and drooping leaves.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Without watering for a week, the plant would begin to suffer from dehydration, causing the soil to d?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_COM_022",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_commonsense",
+    "difficulty": "published",
+    "prompt_text": "A portable music device used by teenagers in the late 1990s",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: Should show a CD player or early MP3 player (like the Rio PMP300), not cassette players or modern smartphones.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: In the late 1990s, CD players and early MP3 players were popular portable music devices, while casse?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_COM_023",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_commonsense",
+    "difficulty": "published",
+    "prompt_text": "A wheat field 3 weeks after harvest season",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: Should show cut stalks with bales arranged in rows, no standing crops.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Three weeks after the harvest, the wheat field would typically have been cleared of standing crops, ?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_COM_024",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_commonsense",
+    "difficulty": "published",
+    "prompt_text": "Avian symbol appearing on government documents of a federation of 50 states",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: Tests identification of the bald eagle as the US national emblem.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: The bald eagle is the national bird and emblem of the United States, representing freedom and streng?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_COM_025",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_commonsense",
+    "difficulty": "published",
+    "prompt_text": "National Emblem of the country where Sydney is located",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: The model should generate an image of the national emblem of Australia?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Sydney is a major city in Australia, so the national emblem of Australia is the appropriate represen?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_COM_026",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_commonsense",
+    "difficulty": "published",
+    "prompt_text": "A balloon filled with air in a room.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: The model should generate an image showing a balloon filled with air resting on the floor or suspended slightly, indicating its lack of significant buoyancy?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: A balloon filled with air is less buoyant compared to one filled with lighter gases like helium, so ?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_COM_027",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_commonsense",
+    "difficulty": "published",
+    "prompt_text": "A silver necklace untouched for decades in a jewelry box.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: The necklace is tarnished black.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Over time, silver reacts with sulfur-containing compounds in the air, forming silver sulfide, which ?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_COM_028",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_commonsense",
+    "difficulty": "published",
+    "prompt_text": "A shopper's cart before she buys anything",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: The cart is empty.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Before purchasing items, a shopper's cart is typically empty as it has not yet been filled with sele?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_COM_029",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_commonsense",
+    "difficulty": "published",
+    "prompt_text": "Generate an utensil with a concave end designed to lift and transfer semi-liquid substances to the mouth.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: A spoon?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: A spoon is designed with a concave bowl, perfect for scooping and transferring liquid or semi-liquid?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_COM_030",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_commonsense",
+    "difficulty": "published",
+    "prompt_text": "Depict Hanami gatherings in Japan.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: Groups picnicking under blooming cherry blossom trees with paper lanterns at dusk.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Hanami specifically refers to cherry blossom viewing parties, distinct from other seasonal festivals?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_LOG_001",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_logical",
+    "difficulty": "published",
+    "prompt_text": "Generate an image of either a sandwich or a burger.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: A sandwich on a plate or a burger sitting on a serving tray, with no sandwich nearby.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Sandwiches and burgers are similar meal options. The model should avoid combining both items despite?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_LOG_002",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_logical",
+    "difficulty": "published",
+    "prompt_text": "Both a dragon drinking from a park fountain and children watching in amazement.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: A dragon bending to drink from a fountain, with children observing in shock.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: The image combines fantasy (dragon) with mundane reality (public park, children), visually fulfillin?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_LOG_003",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_logical",
+    "difficulty": "published",
+    "prompt_text": "A park where some of the toys are bicycles, and the rest are scooters.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: A mix of bicycles and scooters, with no other types of toys.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Evaluates comprehension of \"some\" and \"the rest\" in categorization.?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_LOG_004",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_logical",
+    "difficulty": "published",
+    "prompt_text": "Observation 1: Empty bird nest in a tree with scattered blue thread. Observation 2: Scissors and a blue sweater on a garden table below. Task: Generate an image showing why the nest contains thread.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: A bird plucking threads from a partially unraveled sweater on the table, carrying blue strands to line its nest in the tree.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: The presence of unraveled thread and scissors below the nest, combined with birds\u2019 known behavior of?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_LOG_005",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_logical",
+    "difficulty": "published",
+    "prompt_text": "If buildings were giant balloons, show a city skyline.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: Floating balloon-like structures tethered to the ground with strings, no rigid skyscrapers.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: The model needs to correctly infer that traditional architecture should be replaced by inflatable ba?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_LOG_006",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_logical",
+    "difficulty": "published",
+    "prompt_text": "Generate an image of either a lamp or a lampshade.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: A lamp turned on (e.g., on a table) with no lampshade nearby or a lampshade alone with no lamp.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Lampshades are normally part of lamps. The model should separate these components, depicting either ?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_LOG_007",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_logical",
+    "difficulty": "published",
+    "prompt_text": "Premise 1: No clothing in this store has sleeves. Premise 2: The store sells winter coats. Conclusion: Generate an image of the coat.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: A sleeveless (vest-style) winter coat.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: To conform to the no-sleeves rule, the winter coat must be rendered without sleeves, despite typical?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_LOG_008",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_logical",
+    "difficulty": "published",
+    "prompt_text": "A bathroom with many towels, where every towel is blue.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: All towels in the bathroom are blue; none are of other colors.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Tests comprehension of \"every\" in categorizing items.?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_LOG_009",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_logical",
+    "difficulty": "published",
+    "prompt_text": "Either a salad is in the bowl, or a soup is in the bowl.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: a. An image of a salad in the bowl.      b. An image of a soup in the bowl.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Salad and soup share the same container type. The model must focus on content distinction rather tha?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_LOG_010",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_logical",
+    "difficulty": "published",
+    "prompt_text": "If food is present, then it is placed in a bucket. Generate an image of a kitchen with lots of food.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: All food is placed in buckets; none are on countertops or tables.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Any food depicted must be in a bucket according to the prompt. The caption guarantees this by exclud?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_LOG_011",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_logical",
+    "difficulty": "published",
+    "prompt_text": "A dog park where all dogs are wearing collars.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: All dogs are wearing collars; no dogs are without collars.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Measures the interpretation of the universal quantifier \"all\".?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_LOG_012",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_logical",
+    "difficulty": "published",
+    "prompt_text": "Both a boat on the surface of the Moon and Earth visible in the background.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: Both a boat on the surface of the Moon and Earth visible in the background.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: The caption mirrors the prompt, showing a terrestrial object (boat) in a lunar setting, while also i?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_LOG_013",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_logical",
+    "difficulty": "published",
+    "prompt_text": "If a spinning top is present, then it is spinning. Generate an image of a table with many spinning tops.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: All spinning tops are spinning; none are stationary or untouched.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: The prompt demands that any spinning top must be in motion. The caption supports this by showing no ?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_LOG_014",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_logical",
+    "difficulty": "published",
+    "prompt_text": "If a shoe is by the door, then it is a high heel. Generate an image of an entryway with many shoes by the door.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: All shoes by the door are high heels; no other types of shoes are visible.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Shoes placed by the door must be high heels due to the conditional; showing sneakers or boots would ?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_LOG_015",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_logical",
+    "difficulty": "published",
+    "prompt_text": "Both a tornado touching the ground and an aurora borealis shimmering in the same night sky.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: A tornado under a sky filled with green/purple auroral waves.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: The caption fulfills the prompt by combining two natural phenomena\u2014a tornado and aurora\u2014in one visua?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_CON_001",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_concept_mixing",
+    "difficulty": "published",
+    "prompt_text": "A coffee mug that shows the current time and temperature.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: The mug has a digital display seamlessly embedded into its handle, showing real-time clock and liquid temperature readings while maintaining a drinkable container shape.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Seamless integration of digital technology into a functional drinkware design without affecting usab?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_CON_002",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_concept_mixing",
+    "difficulty": "published",
+    "prompt_text": "A makeup mirror that can automatically iron clothes.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: The makeup mirror has a built-in steam or heating function capable of ironing clothes while also serving as a regular makeup mirror.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Balancing the functionality of both the mirror and the iron, ensuring the mirror remains clear and t?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_CON_003",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_concept_mixing",
+    "difficulty": "published",
+    "prompt_text": "A frying pan that repels mosquitoes.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: The frying pan is designed with built-in mosquito repellent technology, keeping flying insects away while cooking, making it ideal for outdoor cooking or during mosquito seasons.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Incorporating mosquito-repelling technology into a frying pan without affecting the cooking process ?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_CON_004",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_concept_mixing",
+    "difficulty": "published",
+    "prompt_text": "Pants that can fertilize plants.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: The pants are designed with a built-in system that releases liquid fertilizer as the wearer moves, delivering nutrients directly to the plants as they walk through a garden or field.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Ensuring the fertilizer system is discreet, non-leaking, and does not interfere with the comfort or ?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_CON_005",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_concept_mixing",
+    "difficulty": "published",
+    "prompt_text": "A shark-like vase",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: A vase shaped like a shark, featuring a sleek, streamlined body with a dorsal fin as a handle and an opening at the mouth for holding flowers.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Blending the fierce, aquatic design of a shark with the delicate function of a vase, ensuring the fo?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_CON_006",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_concept_mixing",
+    "difficulty": "published",
+    "prompt_text": "A cloud-like clothes hanger",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: A clothes hanger designed to resemble a cloud, with soft, fluffy contours and a light, airy shape. The material could have a smooth, puffy texture that mimics the soft look of clouds, and the hanger\u2019s frame could have a gentle, curved shape, as if it were floating in the air. The color would likely be white or light pastel, evoking the feeling of a light, fluffy cloud.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: The challenge is blending the soft, ethereal aesthetic of a cloud with the practical, functional des?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_CON_007",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_concept_mixing",
+    "difficulty": "published",
+    "prompt_text": "A lychee-like chess piece",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: A chess piece designed with the texture and appearance of a lychee, featuring a rough, bumpy outer surface resembling the skin of a lychee. The piece could have the typical chess piece shape but with a color and texture reminiscent of the fruit\u2019s reddish exterior, and the inner part could have a translucent, slightly glossy finish, like the fruit\u2019s flesh.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: The challenge is incorporating the distinct texture and appearance of lychee into the formal, struct?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_CON_008",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_concept_mixing",
+    "difficulty": "published",
+    "prompt_text": "A suitcase that can fly.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: The suitcase is designed with a built-in propulsion system, allowing it to hover or fly above the ground to follow the user, making travel more convenient.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Designing a lightweight and safe flying mechanism that does not interfere with the suitcase\u2019s storag?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_CON_009",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_concept_mixing",
+    "difficulty": "published",
+    "prompt_text": "A sheep-like pair of shoes",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: A pair of shoes inspired by the soft, woolly texture of sheep, featuring a fluffy, comfortable lining and exterior accents resembling sheep\u2019s curly fleece, blending comfort with a unique aesthetic.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Combining the soft, plush feel of sheep\u2019s wool with the structural durability of a shoe, ensuring th?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_CON_010",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_concept_mixing",
+    "difficulty": "published",
+    "prompt_text": "A pillow that can cook food.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: The pillow has a built-in heating system and cooking surface, allowing it to prepare simple meals while providing the comfort of a pillow, with temperature control for safety and convenience.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Ensuring that the cooking system is safe and efficient while maintaining the pillow's primary functi?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_CON_011",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_concept_mixing",
+    "difficulty": "published",
+    "prompt_text": "A rabbit-like vacuum cleaner",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: A vacuum cleaner shaped like a rabbit, with large ears as handles, a soft, fluffy body, and a round nose-like nozzle where suction occurs.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Blending the cute, organic shape of a rabbit with the functional design of a vacuum cleaner while en?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_CON_012",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_concept_mixing",
+    "difficulty": "published",
+    "prompt_text": "An umbrella that purifies rainwater for drinking.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: The umbrella handle contains a hollow filtration system with activated charcoal/UV light, plus a spout and purity indicator LEDs near the grip.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Integration of water collection/purification functionality into umbrella mechanics while maintaining?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_CON_013",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_concept_mixing",
+    "difficulty": "published",
+    "prompt_text": "A giraffe-like guitar",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: A guitar with a long, slender neck resembling a giraffe\u2019s, and the body of the guitar designed with patterns and colors resembling a giraffe\u2019s spots.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Combining the slender, elongated neck of a giraffe with the compact, ergonomic structure of a guitar?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_CON_014",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_concept_mixing",
+    "difficulty": "published",
+    "prompt_text": "A fork that can write.",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: This fork has an integrated pen or pencil tip at one end, allowing it to write or draw while maintaining its traditional function as a utensil.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: Designing a fork that functions properly for both eating and writing, without making it too bulky or?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "R2I_CON_015",
+    "layer": "r2i_bench",
+    "sub_category": "r2i_concept_mixing",
+    "difficulty": "published",
+    "prompt_text": "A water-like iron",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Does the image match this description: An iron designed with water-inspired aesthetics, featuring a smooth, flowing shape and perhaps a semi-transparent body resembling water\u2019s clarity. The surface could have a sleek, liquid-like appearance, and the steam vents could resemble ripples or water droplets, emphasizing the connection to water. The water reservoir could be shaped like a small, elegant water droplet, seamlessly integrated into the design.?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the image demonstrate: The challenge is combining the sleek, fluid appearance of water with the practical needs of an iron,?",
+        "type": "attribute"
+      }
+    ]
+  }
+]
