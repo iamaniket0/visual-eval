@@ -1,0 +1,50 @@
+mvp: true
+
+prompt_config:
+  layer1_count: 175
+  layer2_count: 75
+  sub_categories:
+    - color_material
+    - object_add
+    - object_remove
+    - object_replace
+    - background_change
+    - style_transfer
+    - lighting_weather
+    - spatial_pose
+    - anatomy_identity
+    - physics
+    - text_editing
+    - multi_turn
+  difficulty_mix:
+    easy: 0.31
+    medium: 0.38
+    hard: 0.31
+
+editing:
+  max_retries: 3
+  retry_base_delay_sec: 2
+  seeds_per_prompt: 1
+
+judge:
+  backend: qwen_together_soft
+  model_slug: Qwen/Qwen3.5-397B-A17B
+  logprob_floor: -10
+  temperature: 0.0
+  cost_per_judgment_estimate: 0.004
+  dimensions:
+    - instruction_following
+    - visual_consistency
+    - detail_preservation
+
+cost:
+  hard_cap_usd: 200
+  alert_at_fraction: 0.8
+
+hitl:
+  sample_fraction: 0.10
+  target_cohen_kappa: 0.6
+
+scoring:
+  primary_metric: gm
+  report_dimensions: true

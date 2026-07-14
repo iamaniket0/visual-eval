@@ -1,0 +1,175 @@
+# Model configurations for all 10 T2I models being benchmarked.
+# API keys are pulled from environment variables (see .env.example).
+
+models:
+  flux2_max:
+    provider: bfl
+    api_url: https://api.bfl.ai/v1/flux-2-max
+    api_key_env: BFL_API_KEY
+    cost_per_image: 0.07
+    pattern: async_poll
+    poll_interval_sec: 2
+    max_poll_wait_sec: 120
+    notes: "FLUX.2 [max], BFL flagship. Highest quality, <15s gen. Endpoint verified from docs.eu.bfl.ai Apr 2026."
+
+  stable_image_ultra:
+    provider: stability
+    api_url: https://api.stability.ai/v2beta/stable-image/generate/ultra
+    api_key_env: STABILITY_API_KEY
+    cost_per_image: 0.04
+    pattern: sync
+    notes: "Stable Image Ultra, powered by SD 3.5 Large"
+
+  bria_fibo:
+    provider: bria
+    api_url: https://engine.prod.bria-api.com/v2/image/generate
+    api_key_env: BRIA_API_KEY
+    cost_per_image: 0.04
+    pattern: async_poll
+    poll_interval_sec: 3
+    max_poll_wait_sec: 180
+    notes: "FIBO via Bria API v2 (async). VLM bridge (Gemini 2.5 Flash) auto-expands prompts into structured JSON before generation."
+
+  freepik_mystic:
+    provider: freepik
+    api_url: https://api.freepik.com/v1/ai/text-to-image
+    api_key_env: FREEPIK_API_KEY
+    cost_per_image: 0.03
+    pattern: async_poll
+    poll_interval_sec: 3
+    max_poll_wait_sec: 180
+    notes: "Mystic 2.5 Fluid"
+
+  xai_aurora:
+    provider: xai
+    api_url: https://api.x.ai/v1/images/generations
+    api_key_env: XAI_API_KEY
+    cost_per_image: 0.07
+    pattern: sync
+    model_name: grok-imagine-image-pro
+    notes: "Grok Imagine Image Pro, Aurora MoE. (Field-tested 2026-04-17: live API model id is 'grok-imagine-image-pro', not 'grok-imagine-pro' as originally specced.)"
+
+  nano_banana_pro:
+    provider: google
+    api_url: https://generativelanguage.googleapis.com/v1beta/models/imagen-3.0-generate-002
+    api_key_env: GOOGLE_API_KEY
+    cost_per_image: 0.04
+    pattern: sync
+    notes: "Gemini 3 Pro Image / Nano Banana Pro"
+
+  gpt_image_15:
+    provider: openai
+    api_url: https://api.openai.com/v1/images/generations
+    api_key_env: OPENAI_API_KEY
+    cost_per_image: 0.04
+    pattern: sync
+    model_name: gpt-image-1
+    # Routing: settings.api_routing.gpt_image switches between api_url (direct)
+    # and the OpenRouter chat/completions endpoint using openrouter_model.
+    # CAVEAT: OpenRouter's openai/gpt-5-image is a NEWER generation than
+    # OpenAI's direct gpt-image-1 ("GPT Image 1.5"). The two labels below
+    # let the report disclose which endpoint was actually queried; if we
+    # publish, the model column needs an asterisk referencing this.
+    openrouter_model: "openai/gpt-5-image"
+    model_label_direct: "GPT Image 1.5 (direct)"
+    model_label_openrouter: "GPT Image (via OpenRouter)"
+    notes: "GPT Image 1.5, current flagship"
+
+  gpt_image_2:
+    # OpenAI's next-gen image model (GPT-5.4 generation, what was
+    # methodology doc calls "GPT Image 2 leaked but unreleased" - now
+    # publicly callable via OpenRouter as of Apr 2026).
+    # Shares the same OpenAIGenerator adapter as gpt_image_15; routing is
+    # chosen by settings.api_routing.gpt_image. When routing=openrouter the
+    # adapter hits /chat/completions with `openrouter_model`, and the
+    # fictional `api_url` below is only used for the `direct` routing
+    # fallback (untested - OpenAI's Images API endpoint for gpt-5.4-image-2
+    # would need confirmation if we ever flip routing back to direct).
+    provider: openai
+    api_url: https://api.openai.com/v1/images/generations
+    api_key_env: OPENAI_API_KEY
+    cost_per_image: 0.06
+    pattern: sync
+    model_name: gpt-5.4-image-2
+    openrouter_model: "openai/gpt-5.4-image-2"
+    model_label_direct: "GPT Image 2 (direct, unverified)"
+    model_label_openrouter: "GPT Image 2 (via OpenRouter)"
+    notes: "GPT-5.4 Image 2, OpenAI's latest. Benchmarked via OpenRouter."
+
+  lucid_origin:
+    provider: leonardo
+    api_url: https://cloud.leonardo.ai/api/rest/v1/generations
+    api_key_env: LEONARDO_API_KEY
+    model_id: 7b592283-e8a7-4c5a-9ba6-d18c31f258b9
+    cost_per_image: 0.02
+    pattern: async_poll
+    poll_interval_sec: 3
+    max_poll_wait_sec: 180
+    notes: "Lucid Origin via Leonardo.ai API"
+
+  adobe_firefly_5:
+    provider: adobe
+    api_url: https://firefly-api.adobe.io/v3/images/generate
+    api_key_env: ADOBE_CLIENT_ID
+    cost_per_image: 0.04
+    pattern: sync
+    notes: "Firefly Image Model 5, native 4MP. Results shared with Adobe only per customer agreement."
+
+  midjourney_v8:
+    provider: piapi
+    api_url: https://api.piapi.ai/api/v1/task
+    api_key_env: PIAPI_API_KEY
+    cost_per_image: 0.04
+    pattern: async_poll
+    poll_interval_sec: 5
+    max_poll_wait_sec: 300
+    optional: true
+    notes: "V8 beta via PiAPI. OPTIONAL. ToS risk noted."
+
+# Per-provider concurrency limits (semaphore size)
+concurrency:
+  bfl: 4
+  stability: 4
+  bria: 4
+  freepik: 2
+  xai: 4
+  google: 4
+  openai: 4
+  leonardo: 2
+  adobe: 4
+  piapi: 2
+
+profiles:
+  sanity:
+    # Quick pipeline sanity-check against live APIs before full run.
+    - lucid_origin
+    - flux2_max
+    - gpt_image_15
+  full:
+    # Production run. Excludes midjourney_v8 (PiAPI wrapper = ToS risk,
+    # not acceptable in public methodology). Midjourney revisited at end
+    # of project via official API if available, else manual sample.
+    - flux2_max
+    - stable_image_ultra
+    - bria_fibo
+    - freepik_mystic
+    - xai_aurora
+    - nano_banana_pro
+    - gpt_image_15
+    - gpt_image_2
+    - lucid_origin
+    - adobe_firefly_5
+  all:
+    # All 10+ including Midjourney. Use only if MJ ships official API
+    # or if ToS risk is explicitly accepted for a private run.
+    - flux2_max
+    - stable_image_ultra
+    - bria_fibo
+    - freepik_mystic
+    - xai_aurora
+    - nano_banana_pro
+    - gpt_image_15
+    - gpt_image_2
+    - lucid_origin
+    - adobe_firefly_5
+    - midjourney_v8

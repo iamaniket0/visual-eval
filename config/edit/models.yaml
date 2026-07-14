@@ -1,0 +1,113 @@
+models:
+  flux_kontext:
+    provider: bfl
+    api_url: https://api.bfl.ai/v1/flux-kontext-pro
+    api_key_env: FLUX_KONTEXT_API_KEY
+    model_id: flux-kontext-pro
+    supports_mask: true
+    supports_multi_turn: true
+    cost_per_edit: 0.04
+    pattern: async_poll
+    poll_interval_sec: 2
+    max_poll_wait_sec: 120
+    notes: "FLUX Kontext Pro — BFL's editing model. Reference-image conditioning with instruction following."
+
+  bria_edit:
+    provider: bria
+    api_url: https://engine.prod.bria-api.com/v2/image/edit
+    api_key_env: BRIA_API_KEY
+    model_id: bria-fibo-edit
+    supports_mask: true
+    supports_multi_turn: true
+    cost_per_edit: 0.04
+    pattern: async_poll
+    poll_interval_sec: 3
+    max_poll_wait_sec: 180
+    notes: "Bria FIBO Edit — commercial-safe editing via Bria API v2."
+
+  firefly:
+    provider: adobe
+    api_url: https://firefly-api.adobe.io/v3/images/edit
+    api_key_env: ADOBE_CLIENT_ID
+    model_id: firefly-edit-v3
+    supports_mask: true
+    supports_multi_turn: false
+    cost_per_edit: 0.04
+    pattern: sync
+    notes: "Adobe Firefly Image Edit v3 — generative fill + instruction-based editing."
+
+  photoroom:
+    provider: photoroom
+    api_url: https://sdk.photoroom.com/v1/edit
+    api_key_env: PHOTOROOM_API_KEY
+    model_id: photoroom-edit
+    supports_mask: false
+    supports_multi_turn: false
+    cost_per_edit: 0.03
+    pattern: sync
+    notes: "Photoroom Edit API — background/foreground manipulation, object edits."
+
+  picsart:
+    provider: picsart
+    api_url: https://api.picsart.io/tools/1.0/edit
+    api_key_env: PICSART_API_KEY
+    model_id: picsart-edit
+    supports_mask: true
+    supports_multi_turn: false
+    cost_per_edit: 0.03
+    pattern: sync
+    notes: "Picsart Editing API — AI-powered instruction editing."
+
+  flux2_flex:
+    provider: bfl
+    api_url: https://api.bfl.ai/v1/flux-2-flex
+    api_key_env: FLUX_KONTEXT_API_KEY
+    model_id: flux-2-flex
+    supports_mask: false
+    supports_multi_turn: true
+    cost_per_edit: 0.06
+    pattern: async_poll
+    poll_interval_sec: 2
+    max_poll_wait_sec: 120
+    notes: "FLUX.2 [flex] — BFL's latest editing model (recommended for editing). Multi-reference, up to 4MP."
+
+  canva_leonardo:
+    provider: leonardo
+    api_url: https://cloud.leonardo.ai/api/rest/v1/generations
+    api_key_env: LEONARDO_API_KEY
+    model_id: canva-leonardo-edit
+    leonardo_model_id: "de7d3faf-762f-48e0-b3b7-9d0ac3a3fcf3"
+    supports_mask: true
+    supports_multi_turn: false
+    cost_per_edit: 0.02
+    pattern: async_poll
+    poll_interval_sec: 3
+    max_poll_wait_sec: 180
+    notes: "Canva/Leonardo.ai — Phoenix 1.0 image-to-image editing via Leonardo API."
+
+concurrency:
+  bfl: 4
+  bria: 4
+  adobe: 4
+  photoroom: 4
+  picsart: 4
+  leonardo: 2
+
+profiles:
+  sanity:
+    - flux_kontext
+    - bria_edit
+  available:
+    - flux_kontext
+    - flux2_flex
+    - bria_edit
+    - picsart
+    - canva_leonardo
+  full:
+    - flux_kontext
+    - flux2_flex
+    - bria_edit
+    - firefly
+    - photoroom
+    - picsart
+    - canva_leonardo
