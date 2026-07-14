@@ -1,9 +1,11 @@
 <p align="center">
+  <a href="https://github.com/your-org/visual-eval/actions/workflows/ci.yml"><img src="https://github.com/your-org/visual-eval/actions/workflows/ci.yml/badge.svg" alt="CI" /></a>
   <img src="https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white" />
   <img src="https://img.shields.io/badge/Models-17+-FF6F61?style=for-the-badge&logo=openai&logoColor=white" />
   <img src="https://img.shields.io/badge/Judge-Qwen3.5--397B-00D4AA?style=for-the-badge&logo=huggingface&logoColor=white" />
   <img src="https://img.shields.io/badge/Scoring-Soft--TIFA-FFD700?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Tests-51%20passing-brightgreen?style=for-the-badge&logo=pytest&logoColor=white" />
+  <img src="https://img.shields.io/badge/Docker-Ready-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
 </p>
 
 <h1 align="center">Visual Eval</h1>
@@ -13,7 +15,7 @@
 </p>
 
 <p align="center">
-  <a href="#-t2i-evaluation">T2I Eval</a> · <a href="#-edit-evaluation">Edit Eval</a> · <a href="#-scoring-methodology">Scoring</a> · <a href="#-quick-start">Quick Start</a> · <a href="#-architecture">Architecture</a>
+  <a href="#-t2i-evaluation">T2I Eval</a> · <a href="#-edit-evaluation">Edit Eval</a> · <a href="#-scoring-methodology">Scoring</a> · <a href="#-quick-start">Quick Start</a> · <a href="#-cli">CLI</a> · <a href="#-dashboard">Dashboard</a> · <a href="#-architecture">Architecture</a>
 </p>
 
 ---
@@ -127,6 +129,59 @@ Based on [GenEval 2](https://arxiv.org/abs/2512.16853) (Kamath et al., Dec 2025)
 
 ---
 
+## CLI
+
+The `visual-eval` CLI wraps all pipeline scripts into a single entry point:
+
+```
+visual-eval
+├── t2i
+│   ├── generate    Generate images across T2I models
+│   ├── judge       Run MLLM judge on generated images
+│   ├── aggregate   Aggregate scores into leaderboard
+│   ├── report      Generate PDF scorecards
+│   ├── prompts     Build the prompt set (L1+L2+L3)
+│   └── hitl        Launch HITL validation web UI
+├── edit
+│   ├── run             Run edits across editing models
+│   ├── judge           Dual-image MLLM judge
+│   ├── aggregate       Aggregate edit scores
+│   ├── report          Generate edit report
+│   └── download-images Download source images
+├── dashboard           Launch Streamlit dashboard
+└── test                Run the test suite
+```
+
+Install and use:
+
+```bash
+pip install -e .
+visual-eval --help
+visual-eval t2i generate --models sanity --dry-run
+```
+
+---
+
+## Dashboard
+
+Interactive Streamlit dashboard for exploring results:
+
+```bash
+visual-eval dashboard
+# or directly:
+streamlit run dashboard/app.py
+```
+
+Features:
+- **T2I Leaderboard** — ranked bar chart + data table with GM/AM scores
+- **Sub-Category Breakdown** — grouped bars + radar chart per category
+- **Layer Comparison** — public benchmark vs proprietary prompt performance
+- **Theme Analysis** — per-model theme score heatmap
+- **Edit Leaderboard** — ranked by overall score with dimension heatmap
+- **Cross-Pipeline Comparison** — box plot distributions, T2I vs Edit
+
+---
+
 ## Architecture
 
 ```
@@ -185,7 +240,7 @@ visual-eval/
 git clone git@github.com:your-org/visual-eval.git
 cd visual-eval-
 python -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
+pip install -e ".[dev]"
 
 # Configure API keys
 cp .env.example .env
@@ -195,35 +250,37 @@ cp .env.example .env
 ### T2I Evaluation
 
 ```bash
-# 1. Build prompt set (L1 gold + L2 proprietary + L3 adversarial)
-python -m scripts.t2i.run_prompt_set
+# Using the CLI (recommended)
+visual-eval t2i prompts                          # Build prompt set
+visual-eval t2i generate --models sanity --dry-run  # Sanity check
+visual-eval t2i generate --models full            # Full run
+visual-eval t2i judge                             # Judge all images
+visual-eval t2i aggregate                         # Aggregate scores
+visual-eval t2i report                            # Generate PDF reports
 
-# 2. Generate images (sanity check first, then full run)
-python -m scripts.t2i.run_generation --models sanity --dry-run
+# Or via Python modules directly
 python -m scripts.t2i.run_generation --models full
-
-# 3. Judge all generated images
-python -m scripts.t2i.run_judge
-
-# 4. Aggregate scores and generate reports
-python -m scripts.t2i.run_aggregate
-python -m scripts.t2i.run_report
 ```
 
 ### Edit Evaluation
 
 ```bash
-# 1. Download source images
-python -m scripts.edit.download_source_images
+visual-eval edit download-images                  # Download source images
+visual-eval edit run --models sanity --dry-run    # Sanity check
+visual-eval edit run --models full                # Full run
+visual-eval edit judge                            # Judge edits
+visual-eval edit aggregate                        # Aggregate scores
+visual-eval edit report                           # Generate report
+```
 
-# 2. Run edits across all models
-python -m scripts.edit.run_edit --models sanity --dry-run
-python -m scripts.edit.run_edit --models full
+### Docker
 
-# 3. Judge and aggregate
-python -m scripts.edit.run_judge
-python -m scripts.edit.run_aggregate
-python -m scripts.edit.run_report
+```bash
+# Run the dashboard
+docker compose up dashboard
+
+# Run pipeline commands
+docker compose --profile cli run pipeline t2i generate --models sanity
 ```
 
 ---
@@ -329,12 +386,21 @@ dimensions:
 ```bash
 # Run all 51 tests
 pytest tests/ -v
+visual-eval test                # or via CLI
 
 # By domain
 pytest tests/test_core/ -v     # Shared scoring math (12 tests)
 pytest tests/test_t2i/ -v      # T2I pipeline (21 tests)
 pytest tests/test_edit/ -v     # Edit pipeline (18 tests)
 ```
+
+---
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for how to add a new model adapter, run tests, and submit PRs.
+
+For detailed architecture diagrams (Mermaid), see [docs/architecture.md](docs/architecture.md).
 
 ---
 
