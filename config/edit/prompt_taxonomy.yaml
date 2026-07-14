@@ -1,0 +1,204 @@
+# ═══════════════════════════════════════════════════════════════
+# Prompt Taxonomy & Difficulty Calibration
+# Based on: Complex-Edit (UCSC 2025), KontextBench (BFL 2025),
+#   EditVal (ICLR 2024), GEditBench v2 (NTU 2026), GenEval 2 (Meta)
+# ═══════════════════════════════════════════════════════════════
+
+# --- Difficulty levels mapped to Complex-Edit C1-C8 scale ---
+difficulty:
+  easy:
+    complex_edit_level: "C1-C2"
+    atomic_ops: [1, 2]
+    word_count: [3, 15]
+    atom_count: [2, 3]        # 1 instruction + 1-2 preservation
+    expected_success_rate: ">60%"
+    description: >
+      Single attribute change OR simple addition/removal.
+      No spatial reasoning, no physics constraints.
+      KontextBench-easy: "make the cat orange", "Make it darker"
+      Complex-Edit C1: "Add a red ball of yarn on the floor near the cat"
+
+  medium:
+    complex_edit_level: "C3-C4"
+    atomic_ops: [2, 3]
+    word_count: [10, 30]
+    atom_count: [3, 5]        # 2-3 instruction + 1-2 preservation
+    expected_success_rate: "30-60%"
+    description: >
+      Localized edit with explicit preservation constraint, OR
+      multi-attribute change, OR object replacement with context.
+      Some spatial awareness needed.
+      KontextBench-medium: "replace the carpet with a wood floor"
+      Complex-Edit C3: compound of 3 atomic operations
+
+  hard:
+    complex_edit_level: "C5-C8"
+    atomic_ops: [3, 8]
+    word_count: [20, 60]
+    atom_count: [5, 8]        # 3-5 instruction + 2-3 preservation/quality
+    expected_success_rate: "<30%"
+    description: >
+      Multi-object coordination, spatial reasoning, physics
+      constraints (shadows, reflections), identity preservation
+      under transformation, compound cross-category edits.
+      EditVal: position/viewpoint edits fail >80%.
+      Complex-Edit C5+: performance drops to ~2-4/10.
+
+# --- 12 task categories ---
+categories:
+  color_material:
+    id: "CM"
+    name: "Color/Material"
+    type: "local"
+    description: "Color swap, texture change, material modification"
+    applicable_groups: ["person", "object", "scene", "style"]
+    example_easy: "Make the car blue"
+    example_medium: "Change the brick wall to white marble, keeping the ivy pattern"
+    example_hard: "Convert all metal surfaces to weathered copper with green patina, matching the existing light reflections"
+
+  object_add:
+    id: "OA"
+    name: "Object Add"
+    type: "local"
+    description: "Add new object with spatial placement"
+    applicable_groups: ["object", "scene", "style"]
+    example_easy: "Add a coffee mug on the table"
+    example_medium: "Add a red umbrella leaning against the bench on the left"
+    example_hard: "Add a parked bicycle with its shadow on the cobblestones, chain lock visible, leaning against the lamppost in the midground"
+
+  object_remove:
+    id: "OR"
+    name: "Object Remove"
+    type: "local"
+    description: "Remove object, natural infill required"
+    applicable_groups: ["object", "scene", "style"]
+    example_easy: "Remove the trash can"
+    example_medium: "Remove the person on the left without affecting the bench they were sitting on"
+    example_hard: "Remove the bridge from the scene, naturally extending the river and its reflections of the treeline"
+
+  object_replace:
+    id: "RP"
+    name: "Object Replace"
+    type: "local"
+    description: "Swap one object for another"
+    applicable_groups: ["person", "object", "scene"]
+    example_easy: "Replace the dog with a cat"
+    example_medium: "Replace the wooden fence with a stone wall of the same height"
+    example_hard: "Replace the sedan with a vintage 1960s convertible in matching color, preserving the parking angle, ground shadow, and license plate text"
+
+  background_change:
+    id: "BG"
+    name: "Background Change"
+    type: "global"
+    description: "Environment swap, scene change"
+    applicable_groups: ["person", "object", "scene"]
+    example_easy: "Change the background to a beach"
+    example_medium: "Replace the urban skyline with rolling hills while keeping the foreground intact"
+    example_hard: "Transport the scene to a snowy mountain village, with consistent atmospheric perspective, snow accumulation on existing surfaces, and cold-tone lighting shift"
+
+  style_transfer:
+    id: "ST"
+    name: "Style Transfer"
+    type: "global"
+    description: "Artistic style, era-specific style, tone"
+    applicable_groups: ["person", "object", "scene", "style"]
+    example_easy: "Make it look like a watercolor painting"
+    example_medium: "Convert to a 1940s black-and-white film noir look with dramatic contrast"
+    example_hard: "Transform into a Ukiyo-e woodblock print style: flat color areas, black outlines, wave patterns in water, traditional composition rules"
+
+  lighting_weather:
+    id: "LW"
+    name: "Lighting/Weather"
+    type: "global"
+    description: "Time of day, weather, golden hour"
+    applicable_groups: ["person", "object", "scene", "style"]
+    example_easy: "Make it nighttime"
+    example_medium: "Change to golden hour lighting with warm tones and long shadows"
+    example_hard: "Add heavy rain with wet reflections on all surfaces, darkened sky, puddles forming on the ground, and rain streaks consistent with a strong crosswind from the left"
+
+  spatial_pose:
+    id: "SP"
+    name: "Spatial/Pose"
+    type: "hard"
+    description: "Move objects, change viewpoint, repose subjects"
+    applicable_groups: ["person", "object", "scene"]
+    example_easy: "Flip the image horizontally"
+    example_medium: "Move the vase from the table to the shelf behind it"
+    example_hard: "Rotate the camera viewpoint 45 degrees to the right, revealing the side of the building and adjusting all perspective lines and shadows consistently"
+
+  anatomy_identity:
+    id: "AI"
+    name: "Anatomy/Identity"
+    type: "hard"
+    description: "Age, expression, clothing change on person"
+    applicable_groups: ["person"]
+    example_easy: "Make the person smile"
+    example_medium: "Change the person's jacket from denim to leather while keeping the fit and pose"
+    example_hard: "Age the person by 30 years: add wrinkles, grey hair, slight posture change, while preserving their identity and the clothing style"
+
+  physics:
+    id: "PH"
+    name: "Physics"
+    type: "hard"
+    description: "Shadows, reflections, refraction correctness"
+    applicable_groups: ["object", "scene", "style"]
+    example_easy: "Add a shadow under the floating object"
+    example_medium: "Change the object from matte to chrome, showing correct reflections of the surroundings"
+    example_hard: "Replace the still water with a flowing stream: add motion blur, adjust all reflections to show elongated distortion, add foam at rock edges, and shift the reflected sky coloring"
+
+  text_editing:
+    id: "TE"
+    name: "Text Editing"
+    type: "local"
+    description: "Change text on signs, labels, screens"
+    applicable_groups: ["object", "scene"]
+    example_easy: "Change the sign text to 'OPEN'"
+    example_medium: "Replace 'CAFE' on the awning with 'BAKERY' in the same font style and size"
+    example_hard: "Change all visible text to Japanese: the shop sign, the menu board, and the poster in the window, matching each surface's font style and perspective distortion"
+
+  multi_turn:
+    id: "MT"
+    name: "Multi-turn"
+    type: "compound"
+    description: "Sequential dependent edits, 2-4 turns"
+    applicable_groups: ["person", "object", "scene"]
+    example_easy: "Turn 1: Remove the hat | Turn 2: Change hair to blonde"
+    example_medium: "Turn 1: Change season to autumn | Turn 2: Add fallen leaves on the ground | Turn 3: Change lighting to golden hour"
+    example_hard: "Turn 1: Remove all people | Turn 2: Change setting to abandoned/overgrown | Turn 3: Add a single deer standing in the doorway | Turn 4: Make it foggy dawn with muted colors"
+
+# --- Evaluation dimensions (consensus: GEditBench v2, ImgEdit-Bench, Complex-Edit) ---
+eval_dimensions:
+  instruction_following:
+    abbrev: "IF"
+    description: "Did the edit instruction get correctly applied?"
+    atom_types: ["instruction"]
+
+  visual_consistency:
+    abbrev: "VC"
+    description: "Are non-edited regions preserved? Identity, structure, background"
+    atom_types: ["preservation", "identity", "structure"]
+
+  detail_preservation:
+    abbrev: "DP"
+    description: "Is the result photorealistic? Fine details intact?"
+    atom_types: ["quality", "lighting"]
+
+# --- Scoring method (Soft-TIFA, GenEval 2) ---
+scoring:
+  method: "soft_tifa"
+  atom_level: "arithmetic_mean"
+  prompt_level: "geometric_mean"
+  cap_rule: "VC and DP scores capped at IF score (ImgEdit-Bench insight)"
+
+# --- Target distribution ---
+targets:
+  total_prompts: 250
+  difficulty_split:
+    easy: 0.30
+    medium: 0.40
+    hard: 0.30
+  min_per_category: 15
+  min_per_cell: 3  # category x difficulty
+  layer_split:
+    layer1_gold: 0.70         # ~175 prompts, public benchmark alignment
+    layer2_proprietary: 0.30  # ~75 prompts, Keivane failure patterns

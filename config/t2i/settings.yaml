@@ -1,0 +1,69 @@
+# Runtime settings. Flip mvp -> false to move toward v1.0.
+
+mvp: true
+
+prompt_sampling:
+  layer1_per_subcategory: 50      # 150 total
+  layer2_per_subcategory: 20      # 60 total
+  sub_categories:
+    - numeracy
+    - complex_compositions
+    - spatial_3d
+  layer2_complex_difficulty_mix:
+    easy: 6      # 3 constraints
+    medium: 8   # 4-5 constraints
+    hard: 6      # 6-8 constraints
+
+generation:
+  resolution: 1024
+  seeds_per_prompt: 3             # multi-seed variance; override per-run with --seeds
+  max_retries: 3
+  retry_base_delay_sec: 2
+
+judge:
+  primary: gpt-4o
+  fallback: gemini-3-pro
+  temperature: 0.0
+  batch_size: 16
+  cost_per_judgment_estimate: 0.004
+  # Soft-TIFA migration (Kamath et al., GenEval 2, arXiv 2512.16853v1).
+  #
+  # backend options (preferred first):
+  #   qwen_together_soft - Qwen3.5-397B-A17B on Together serverless.
+  #                        Open-source judge, logprobs preserved, correct
+  #                        request shape + thinking-mode disabled. Requires
+  #                        TOGETHER_API_KEY.  <-- the one we actually use.
+  #   gpt4o_soft         - Soft-TIFA via gpt-4o on OpenRouter Azure/OpenAI.
+  #                        Works today; has self-bias when judging
+  #                        gpt_image_15. Fallback only.
+  #   qwen_soft          - Qwen via OpenRouter. BLOCKED: every provider
+  #                        strips logprobs from Qwen VL routes as of Apr
+  #                        2026. Kept wired for the day that changes.
+  #   gpt4o_hard         - Legacy TIFA (no probabilities). Used before the
+  #                        migration; kept for reproducibility only.
+  backend: qwen_together_soft
+  model_slug: Qwen/Qwen3.5-397B-A17B
+  logprob_floor: -10
+
+cost:
+  hard_cap_usd: 300
+  alert_at_fraction: 0.8
+
+hitl:
+  sample_fraction: 0.10
+  target_cohen_kappa: 0.6
+
+atomic_decomposition:
+  model: claude-opus-4-7
+  temperature: 0.0
+
+# Which backend to use for each LLM-powered task.
+# - "openrouter": single-key access to every provider via OpenRouter
+#                 (requires OPENROUTER_API_KEY).
+# - "openai":     direct OpenAI API   (requires OPENAI_API_KEY).
+# - "anthropic":  direct Anthropic API (requires ANTHROPIC_API_KEY).
+# Changing these is a pure config switch; code contracts are identical.
+api_routing:
+  judge: openrouter           # or "openai"
+  decomposition: openrouter   # or "anthropic"
+  gpt_image: openrouter       # or "openai"
