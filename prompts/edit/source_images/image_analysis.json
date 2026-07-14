@@ -1,0 +1,4108 @@
+{
+  "prompts/source_images/person/person_person_group_0000.jpg": {
+    "scene_type": "outdoor/indoor",
+    "primary_subject": "group of people",
+    "has_people": true,
+    "editable_regions": [
+      "specific person's clothing",
+      "add/remove a person",
+      "background environment",
+      "group arrangement",
+      "lighting/time of day",
+      "foreground objects",
+      "individual accessories",
+      "ground surface"
+    ],
+    "typical_objects": [
+      "multiple people",
+      "clothing items",
+      "background structures",
+      "ground"
+    ],
+    "group": "person",
+    "category": "person_group",
+    "local_path": "prompts/source_images/person/person_person_group_0000.jpg"
+  },
+  "prompts/source_images/person/person_person_portrait_0001.jpg": {
+    "scene_type": "studio/outdoor",
+    "primary_subject": "person portrait (head and shoulders)",
+    "has_people": true,
+    "editable_regions": [
+      "hair color/style",
+      "eye color",
+      "skin tone",
+      "facial expression",
+      "clothing/top",
+      "accessories (glasses, jewelry, hat)",
+      "background behind subject",
+      "lighting/mood"
+    ],
+    "typical_objects": [
+      "clothing",
+      "accessories",
+      "background elements"
+    ],
+    "group": "person",
+    "category": "person_portrait",
+    "local_path": "prompts/source_images/person/person_person_portrait_0001.jpg"
+  },
+  "prompts/source_images/person/person_person_portrait_0002.jpg": {
+    "scene_type": "studio/outdoor",
+    "primary_subject": "person portrait (head and shoulders)",
+    "has_people": true,
+    "editable_regions": [
+      "hair color/style",
+      "eye color",
+      "skin tone",
+      "facial expression",
+      "clothing/top",
+      "accessories (glasses, jewelry, hat)",
+      "background behind subject",
+      "lighting/mood"
+    ],
+    "typical_objects": [
+      "clothing",
+      "accessories",
+      "background elements"
+    ],
+    "group": "person",
+    "category": "person_portrait",
+    "local_path": "prompts/source_images/person/person_person_portrait_0002.jpg"
+  },
+  "prompts/source_images/person/person_person_fullbody_0003.jpg": {
+    "scene_type": "outdoor/indoor",
+    "primary_subject": "person full body shot",
+    "has_people": true,
+    "editable_regions": [
+      "hair color/style",
+      "top/shirt",
+      "bottom/pants/skirt",
+      "shoes/footwear",
+      "accessories (bag, watch, hat)",
+      "pose/stance",
+      "background/environment",
+      "ground surface",
+      "lighting/shadows"
+    ],
+    "typical_objects": [
+      "clothing items",
+      "footwear",
+      "bag/accessories",
+      "ground",
+      "background structures"
+    ],
+    "group": "person",
+    "category": "person_fullbody",
+    "local_path": "prompts/source_images/person/person_person_fullbody_0003.jpg"
+  },
+  "prompts/source_images/person/person_person_fullbody_0004.jpg": {
+    "scene_type": "outdoor/indoor",
+    "primary_subject": "person full body shot",
+    "has_people": true,
+    "editable_regions": [
+      "hair color/style",
+      "top/shirt",
+      "bottom/pants/skirt",
+      "shoes/footwear",
+      "accessories (bag, watch, hat)",
+      "pose/stance",
+      "background/environment",
+      "ground surface",
+      "lighting/shadows"
+    ],
+    "typical_objects": [
+      "clothing items",
+      "footwear",
+      "bag/accessories",
+      "ground",
+      "background structures"
+    ],
+    "group": "person",
+    "category": "person_fullbody",
+    "local_path": "prompts/source_images/person/person_person_fullbody_0004.jpg"
+  },
+  "prompts/source_images/person/person_person_group_0005.jpg": {
+    "scene_type": "outdoor/indoor",
+    "primary_subject": "group of people",
+    "has_people": true,
+    "editable_regions": [
+      "specific person's clothing",
+      "add/remove a person",
+      "background environment",
+      "group arrangement",
+      "lighting/time of day",
+      "foreground objects",
+      "individual accessories",
+      "ground surface"
+    ],
+    "typical_objects": [
+      "multiple people",
+      "clothing items",
+      "background structures",
+      "ground"
+    ],
+    "group": "person",
+    "category": "person_group",
+    "local_path": "prompts/source_images/person/person_person_group_0005.jpg"
+  },
+  "prompts/source_images/person/person_person_group_0006.jpg": {
+    "scene_type": "outdoor/indoor",
+    "primary_subject": "group of people",
+    "has_people": true,
+    "editable_regions": [
+      "specific person's clothing",
+      "add/remove a person",
+      "background environment",
+      "group arrangement",
+      "lighting/time of day",
+      "foreground objects",
+      "individual accessories",
+      "ground surface"
+    ],
+    "typical_objects": [
+      "multiple people",
+      "clothing items",
+      "background structures",
+      "ground"
+    ],
+    "group": "person",
+    "category": "person_group",
+    "local_path": "prompts/source_images/person/person_person_group_0006.jpg"
+  },
+  "prompts/source_images/person/person_person_portrait_0007.jpg": {
+    "scene_type": "studio/outdoor",
+    "primary_subject": "person portrait (head and shoulders)",
+    "has_people": true,
+    "editable_regions": [
+      "hair color/style",
+      "eye color",
+      "skin tone",
+      "facial expression",
+      "clothing/top",
+      "accessories (glasses, jewelry, hat)",
+      "background behind subject",
+      "lighting/mood"
+    ],
+    "typical_objects": [
+      "clothing",
+      "accessories",
+      "background elements"
+    ],
+    "group": "person",
+    "category": "person_portrait",
+    "local_path": "prompts/source_images/person/person_person_portrait_0007.jpg"
+  },
+  "prompts/source_images/person/person_person_group_0008.jpg": {
+    "scene_type": "outdoor/indoor",
+    "primary_subject": "group of people",
+    "has_people": true,
+    "editable_regions": [
+      "specific person's clothing",
+      "add/remove a person",
+      "background environment",
+      "group arrangement",
+      "lighting/time of day",
+      "foreground objects",
+      "individual accessories",
+      "ground surface"
+    ],
+    "typical_objects": [
+      "multiple people",
+      "clothing items",
+      "background structures",
+      "ground"
+    ],
+    "group": "person",
+    "category": "person_group",
+    "local_path": "prompts/source_images/person/person_person_group_0008.jpg"
+  },
+  "prompts/source_images/person/person_person_group_0009.jpg": {
+    "scene_type": "outdoor/indoor",
+    "primary_subject": "group of people",
+    "has_people": true,
+    "editable_regions": [
+      "specific person's clothing",
+      "add/remove a person",
+      "background environment",
+      "group arrangement",
+      "lighting/time of day",
+      "foreground objects",
+      "individual accessories",
+      "ground surface"
+    ],
+    "typical_objects": [
+      "multiple people",
+      "clothing items",
+      "background structures",
+      "ground"
+    ],
+    "group": "person",
+    "category": "person_group",
+    "local_path": "prompts/source_images/person/person_person_group_0009.jpg"
+  },
+  "prompts/source_images/person/person_person_portrait_0010.jpg": {
+    "scene_type": "studio/outdoor",
+    "primary_subject": "person portrait (head and shoulders)",
+    "has_people": true,
+    "editable_regions": [
+      "hair color/style",
+      "eye color",
+      "skin tone",
+      "facial expression",
+      "clothing/top",
+      "accessories (glasses, jewelry, hat)",
+      "background behind subject",
+      "lighting/mood"
+    ],
+    "typical_objects": [
+      "clothing",
+      "accessories",
+      "background elements"
+    ],
+    "group": "person",
+    "category": "person_portrait",
+    "local_path": "prompts/source_images/person/person_person_portrait_0010.jpg"
+  },
+  "prompts/source_images/person/person_person_group_0011.jpg": {
+    "scene_type": "outdoor/indoor",
+    "primary_subject": "group of people",
+    "has_people": true,
+    "editable_regions": [
+      "specific person's clothing",
+      "add/remove a person",
+      "background environment",
+      "group arrangement",
+      "lighting/time of day",
+      "foreground objects",
+      "individual accessories",
+      "ground surface"
+    ],
+    "typical_objects": [
+      "multiple people",
+      "clothing items",
+      "background structures",
+      "ground"
+    ],
+    "group": "person",
+    "category": "person_group",
+    "local_path": "prompts/source_images/person/person_person_group_0011.jpg"
+  },
+  "prompts/source_images/person/person_person_fullbody_0012.jpg": {
+    "scene_type": "outdoor/indoor",
+    "primary_subject": "person full body shot",
+    "has_people": true,
+    "editable_regions": [
+      "hair color/style",
+      "top/shirt",
+      "bottom/pants/skirt",
+      "shoes/footwear",
+      "accessories (bag, watch, hat)",
+      "pose/stance",
+      "background/environment",
+      "ground surface",
+      "lighting/shadows"
+    ],
+    "typical_objects": [
+      "clothing items",
+      "footwear",
+      "bag/accessories",
+      "ground",
+      "background structures"
+    ],
+    "group": "person",
+    "category": "person_fullbody",
+    "local_path": "prompts/source_images/person/person_person_fullbody_0012.jpg"
+  },
+  "prompts/source_images/person/person_person_fullbody_0013.jpg": {
+    "scene_type": "outdoor/indoor",
+    "primary_subject": "person full body shot",
+    "has_people": true,
+    "editable_regions": [
+      "hair color/style",
+      "top/shirt",
+      "bottom/pants/skirt",
+      "shoes/footwear",
+      "accessories (bag, watch, hat)",
+      "pose/stance",
+      "background/environment",
+      "ground surface",
+      "lighting/shadows"
+    ],
+    "typical_objects": [
+      "clothing items",
+      "footwear",
+      "bag/accessories",
+      "ground",
+      "background structures"
+    ],
+    "group": "person",
+    "category": "person_fullbody",
+    "local_path": "prompts/source_images/person/person_person_fullbody_0013.jpg"
+  },
+  "prompts/source_images/person/person_person_fullbody_0014.jpg": {
+    "scene_type": "outdoor/indoor",
+    "primary_subject": "person full body shot",
+    "has_people": true,
+    "editable_regions": [
+      "hair color/style",
+      "top/shirt",
+      "bottom/pants/skirt",
+      "shoes/footwear",
+      "accessories (bag, watch, hat)",
+      "pose/stance",
+      "background/environment",
+      "ground surface",
+      "lighting/shadows"
+    ],
+    "typical_objects": [
+      "clothing items",
+      "footwear",
+      "bag/accessories",
+      "ground",
+      "background structures"
+    ],
+    "group": "person",
+    "category": "person_fullbody",
+    "local_path": "prompts/source_images/person/person_person_fullbody_0014.jpg"
+  },
+  "prompts/source_images/person/person_person_portrait_0015.jpg": {
+    "scene_type": "studio/outdoor",
+    "primary_subject": "person portrait (head and shoulders)",
+    "has_people": true,
+    "editable_regions": [
+      "hair color/style",
+      "eye color",
+      "skin tone",
+      "facial expression",
+      "clothing/top",
+      "accessories (glasses, jewelry, hat)",
+      "background behind subject",
+      "lighting/mood"
+    ],
+    "typical_objects": [
+      "clothing",
+      "accessories",
+      "background elements"
+    ],
+    "group": "person",
+    "category": "person_portrait",
+    "local_path": "prompts/source_images/person/person_person_portrait_0015.jpg"
+  },
+  "prompts/source_images/person/person_person_fullbody_0016.jpg": {
+    "scene_type": "outdoor/indoor",
+    "primary_subject": "person full body shot",
+    "has_people": true,
+    "editable_regions": [
+      "hair color/style",
+      "top/shirt",
+      "bottom/pants/skirt",
+      "shoes/footwear",
+      "accessories (bag, watch, hat)",
+      "pose/stance",
+      "background/environment",
+      "ground surface",
+      "lighting/shadows"
+    ],
+    "typical_objects": [
+      "clothing items",
+      "footwear",
+      "bag/accessories",
+      "ground",
+      "background structures"
+    ],
+    "group": "person",
+    "category": "person_fullbody",
+    "local_path": "prompts/source_images/person/person_person_fullbody_0016.jpg"
+  },
+  "prompts/source_images/person/person_person_group_0017.jpg": {
+    "scene_type": "outdoor/indoor",
+    "primary_subject": "group of people",
+    "has_people": true,
+    "editable_regions": [
+      "specific person's clothing",
+      "add/remove a person",
+      "background environment",
+      "group arrangement",
+      "lighting/time of day",
+      "foreground objects",
+      "individual accessories",
+      "ground surface"
+    ],
+    "typical_objects": [
+      "multiple people",
+      "clothing items",
+      "background structures",
+      "ground"
+    ],
+    "group": "person",
+    "category": "person_group",
+    "local_path": "prompts/source_images/person/person_person_group_0017.jpg"
+  },
+  "prompts/source_images/person/person_person_fullbody_0018.jpg": {
+    "scene_type": "outdoor/indoor",
+    "primary_subject": "person full body shot",
+    "has_people": true,
+    "editable_regions": [
+      "hair color/style",
+      "top/shirt",
+      "bottom/pants/skirt",
+      "shoes/footwear",
+      "accessories (bag, watch, hat)",
+      "pose/stance",
+      "background/environment",
+      "ground surface",
+      "lighting/shadows"
+    ],
+    "typical_objects": [
+      "clothing items",
+      "footwear",
+      "bag/accessories",
+      "ground",
+      "background structures"
+    ],
+    "group": "person",
+    "category": "person_fullbody",
+    "local_path": "prompts/source_images/person/person_person_fullbody_0018.jpg"
+  },
+  "prompts/source_images/person/person_person_fullbody_0019.jpg": {
+    "scene_type": "outdoor/indoor",
+    "primary_subject": "person full body shot",
+    "has_people": true,
+    "editable_regions": [
+      "hair color/style",
+      "top/shirt",
+      "bottom/pants/skirt",
+      "shoes/footwear",
+      "accessories (bag, watch, hat)",
+      "pose/stance",
+      "background/environment",
+      "ground surface",
+      "lighting/shadows"
+    ],
+    "typical_objects": [
+      "clothing items",
+      "footwear",
+      "bag/accessories",
+      "ground",
+      "background structures"
+    ],
+    "group": "person",
+    "category": "person_fullbody",
+    "local_path": "prompts/source_images/person/person_person_fullbody_0019.jpg"
+  },
+  "prompts/source_images/person/person_person_group_0020.jpg": {
+    "scene_type": "outdoor/indoor",
+    "primary_subject": "group of people",
+    "has_people": true,
+    "editable_regions": [
+      "specific person's clothing",
+      "add/remove a person",
+      "background environment",
+      "group arrangement",
+      "lighting/time of day",
+      "foreground objects",
+      "individual accessories",
+      "ground surface"
+    ],
+    "typical_objects": [
+      "multiple people",
+      "clothing items",
+      "background structures",
+      "ground"
+    ],
+    "group": "person",
+    "category": "person_group",
+    "local_path": "prompts/source_images/person/person_person_group_0020.jpg"
+  },
+  "prompts/source_images/person/person_person_fullbody_0021.jpg": {
+    "scene_type": "outdoor/indoor",
+    "primary_subject": "person full body shot",
+    "has_people": true,
+    "editable_regions": [
+      "hair color/style",
+      "top/shirt",
+      "bottom/pants/skirt",
+      "shoes/footwear",
+      "accessories (bag, watch, hat)",
+      "pose/stance",
+      "background/environment",
+      "ground surface",
+      "lighting/shadows"
+    ],
+    "typical_objects": [
+      "clothing items",
+      "footwear",
+      "bag/accessories",
+      "ground",
+      "background structures"
+    ],
+    "group": "person",
+    "category": "person_fullbody",
+    "local_path": "prompts/source_images/person/person_person_fullbody_0021.jpg"
+  },
+  "prompts/source_images/person/person_person_portrait_0022.jpg": {
+    "scene_type": "studio/outdoor",
+    "primary_subject": "person portrait (head and shoulders)",
+    "has_people": true,
+    "editable_regions": [
+      "hair color/style",
+      "eye color",
+      "skin tone",
+      "facial expression",
+      "clothing/top",
+      "accessories (glasses, jewelry, hat)",
+      "background behind subject",
+      "lighting/mood"
+    ],
+    "typical_objects": [
+      "clothing",
+      "accessories",
+      "background elements"
+    ],
+    "group": "person",
+    "category": "person_portrait",
+    "local_path": "prompts/source_images/person/person_person_portrait_0022.jpg"
+  },
+  "prompts/source_images/person/person_person_group_0023.jpg": {
+    "scene_type": "outdoor/indoor",
+    "primary_subject": "group of people",
+    "has_people": true,
+    "editable_regions": [
+      "specific person's clothing",
+      "add/remove a person",
+      "background environment",
+      "group arrangement",
+      "lighting/time of day",
+      "foreground objects",
+      "individual accessories",
+      "ground surface"
+    ],
+    "typical_objects": [
+      "multiple people",
+      "clothing items",
+      "background structures",
+      "ground"
+    ],
+    "group": "person",
+    "category": "person_group",
+    "local_path": "prompts/source_images/person/person_person_group_0023.jpg"
+  },
+  "prompts/source_images/person/person_person_fullbody_0024.jpg": {
+    "scene_type": "outdoor/indoor",
+    "primary_subject": "person full body shot",
+    "has_people": true,
+    "editable_regions": [
+      "hair color/style",
+      "top/shirt",
+      "bottom/pants/skirt",
+      "shoes/footwear",
+      "accessories (bag, watch, hat)",
+      "pose/stance",
+      "background/environment",
+      "ground surface",
+      "lighting/shadows"
+    ],
+    "typical_objects": [
+      "clothing items",
+      "footwear",
+      "bag/accessories",
+      "ground",
+      "background structures"
+    ],
+    "group": "person",
+    "category": "person_fullbody",
+    "local_path": "prompts/source_images/person/person_person_fullbody_0024.jpg"
+  },
+  "prompts/source_images/person/person_person_fullbody_0025.jpg": {
+    "scene_type": "outdoor/indoor",
+    "primary_subject": "person full body shot",
+    "has_people": true,
+    "editable_regions": [
+      "hair color/style",
+      "top/shirt",
+      "bottom/pants/skirt",
+      "shoes/footwear",
+      "accessories (bag, watch, hat)",
+      "pose/stance",
+      "background/environment",
+      "ground surface",
+      "lighting/shadows"
+    ],
+    "typical_objects": [
+      "clothing items",
+      "footwear",
+      "bag/accessories",
+      "ground",
+      "background structures"
+    ],
+    "group": "person",
+    "category": "person_fullbody",
+    "local_path": "prompts/source_images/person/person_person_fullbody_0025.jpg"
+  },
+  "prompts/source_images/person/person_person_group_0026.jpg": {
+    "scene_type": "outdoor/indoor",
+    "primary_subject": "group of people",
+    "has_people": true,
+    "editable_regions": [
+      "specific person's clothing",
+      "add/remove a person",
+      "background environment",
+      "group arrangement",
+      "lighting/time of day",
+      "foreground objects",
+      "individual accessories",
+      "ground surface"
+    ],
+    "typical_objects": [
+      "multiple people",
+      "clothing items",
+      "background structures",
+      "ground"
+    ],
+    "group": "person",
+    "category": "person_group",
+    "local_path": "prompts/source_images/person/person_person_group_0026.jpg"
+  },
+  "prompts/source_images/person/person_person_fullbody_0027.jpg": {
+    "scene_type": "outdoor/indoor",
+    "primary_subject": "person full body shot",
+    "has_people": true,
+    "editable_regions": [
+      "hair color/style",
+      "top/shirt",
+      "bottom/pants/skirt",
+      "shoes/footwear",
+      "accessories (bag, watch, hat)",
+      "pose/stance",
+      "background/environment",
+      "ground surface",
+      "lighting/shadows"
+    ],
+    "typical_objects": [
+      "clothing items",
+      "footwear",
+      "bag/accessories",
+      "ground",
+      "background structures"
+    ],
+    "group": "person",
+    "category": "person_fullbody",
+    "local_path": "prompts/source_images/person/person_person_fullbody_0027.jpg"
+  },
+  "prompts/source_images/person/person_person_portrait_0028.jpg": {
+    "scene_type": "studio/outdoor",
+    "primary_subject": "person portrait (head and shoulders)",
+    "has_people": true,
+    "editable_regions": [
+      "hair color/style",
+      "eye color",
+      "skin tone",
+      "facial expression",
+      "clothing/top",
+      "accessories (glasses, jewelry, hat)",
+      "background behind subject",
+      "lighting/mood"
+    ],
+    "typical_objects": [
+      "clothing",
+      "accessories",
+      "background elements"
+    ],
+    "group": "person",
+    "category": "person_portrait",
+    "local_path": "prompts/source_images/person/person_person_portrait_0028.jpg"
+  },
+  "prompts/source_images/person/person_person_portrait_0029.jpg": {
+    "scene_type": "studio/outdoor",
+    "primary_subject": "person portrait (head and shoulders)",
+    "has_people": true,
+    "editable_regions": [
+      "hair color/style",
+      "eye color",
+      "skin tone",
+      "facial expression",
+      "clothing/top",
+      "accessories (glasses, jewelry, hat)",
+      "background behind subject",
+      "lighting/mood"
+    ],
+    "typical_objects": [
+      "clothing",
+      "accessories",
+      "background elements"
+    ],
+    "group": "person",
+    "category": "person_portrait",
+    "local_path": "prompts/source_images/person/person_person_portrait_0029.jpg"
+  },
+  "prompts/source_images/person/person_person_portrait_0030.jpg": {
+    "scene_type": "studio/outdoor",
+    "primary_subject": "person portrait (head and shoulders)",
+    "has_people": true,
+    "editable_regions": [
+      "hair color/style",
+      "eye color",
+      "skin tone",
+      "facial expression",
+      "clothing/top",
+      "accessories (glasses, jewelry, hat)",
+      "background behind subject",
+      "lighting/mood"
+    ],
+    "typical_objects": [
+      "clothing",
+      "accessories",
+      "background elements"
+    ],
+    "group": "person",
+    "category": "person_portrait",
+    "local_path": "prompts/source_images/person/person_person_portrait_0030.jpg"
+  },
+  "prompts/source_images/person/person_person_portrait_0031.jpg": {
+    "scene_type": "studio/outdoor",
+    "primary_subject": "person portrait (head and shoulders)",
+    "has_people": true,
+    "editable_regions": [
+      "hair color/style",
+      "eye color",
+      "skin tone",
+      "facial expression",
+      "clothing/top",
+      "accessories (glasses, jewelry, hat)",
+      "background behind subject",
+      "lighting/mood"
+    ],
+    "typical_objects": [
+      "clothing",
+      "accessories",
+      "background elements"
+    ],
+    "group": "person",
+    "category": "person_portrait",
+    "local_path": "prompts/source_images/person/person_person_portrait_0031.jpg"
+  },
+  "prompts/source_images/person/person_person_portrait_0032.jpg": {
+    "scene_type": "studio/outdoor",
+    "primary_subject": "person portrait (head and shoulders)",
+    "has_people": true,
+    "editable_regions": [
+      "hair color/style",
+      "eye color",
+      "skin tone",
+      "facial expression",
+      "clothing/top",
+      "accessories (glasses, jewelry, hat)",
+      "background behind subject",
+      "lighting/mood"
+    ],
+    "typical_objects": [
+      "clothing",
+      "accessories",
+      "background elements"
+    ],
+    "group": "person",
+    "category": "person_portrait",
+    "local_path": "prompts/source_images/person/person_person_portrait_0032.jpg"
+  },
+  "prompts/source_images/person/person_person_group_0033.jpg": {
+    "scene_type": "outdoor/indoor",
+    "primary_subject": "group of people",
+    "has_people": true,
+    "editable_regions": [
+      "specific person's clothing",
+      "add/remove a person",
+      "background environment",
+      "group arrangement",
+      "lighting/time of day",
+      "foreground objects",
+      "individual accessories",
+      "ground surface"
+    ],
+    "typical_objects": [
+      "multiple people",
+      "clothing items",
+      "background structures",
+      "ground"
+    ],
+    "group": "person",
+    "category": "person_group",
+    "local_path": "prompts/source_images/person/person_person_group_0033.jpg"
+  },
+  "prompts/source_images/person/person_person_fullbody_0034.jpg": {
+    "scene_type": "outdoor/indoor",
+    "primary_subject": "person full body shot",
+    "has_people": true,
+    "editable_regions": [
+      "hair color/style",
+      "top/shirt",
+      "bottom/pants/skirt",
+      "shoes/footwear",
+      "accessories (bag, watch, hat)",
+      "pose/stance",
+      "background/environment",
+      "ground surface",
+      "lighting/shadows"
+    ],
+    "typical_objects": [
+      "clothing items",
+      "footwear",
+      "bag/accessories",
+      "ground",
+      "background structures"
+    ],
+    "group": "person",
+    "category": "person_fullbody",
+    "local_path": "prompts/source_images/person/person_person_fullbody_0034.jpg"
+  },
+  "prompts/source_images/person/person_person_group_0035.jpg": {
+    "scene_type": "outdoor/indoor",
+    "primary_subject": "group of people",
+    "has_people": true,
+    "editable_regions": [
+      "specific person's clothing",
+      "add/remove a person",
+      "background environment",
+      "group arrangement",
+      "lighting/time of day",
+      "foreground objects",
+      "individual accessories",
+      "ground surface"
+    ],
+    "typical_objects": [
+      "multiple people",
+      "clothing items",
+      "background structures",
+      "ground"
+    ],
+    "group": "person",
+    "category": "person_group",
+    "local_path": "prompts/source_images/person/person_person_group_0035.jpg"
+  },
+  "prompts/source_images/person/person_person_group_0036.jpg": {
+    "scene_type": "outdoor/indoor",
+    "primary_subject": "group of people",
+    "has_people": true,
+    "editable_regions": [
+      "specific person's clothing",
+      "add/remove a person",
+      "background environment",
+      "group arrangement",
+      "lighting/time of day",
+      "foreground objects",
+      "individual accessories",
+      "ground surface"
+    ],
+    "typical_objects": [
+      "multiple people",
+      "clothing items",
+      "background structures",
+      "ground"
+    ],
+    "group": "person",
+    "category": "person_group",
+    "local_path": "prompts/source_images/person/person_person_group_0036.jpg"
+  },
+  "prompts/source_images/person/person_person_portrait_0037.jpg": {
+    "scene_type": "studio/outdoor",
+    "primary_subject": "person portrait (head and shoulders)",
+    "has_people": true,
+    "editable_regions": [
+      "hair color/style",
+      "eye color",
+      "skin tone",
+      "facial expression",
+      "clothing/top",
+      "accessories (glasses, jewelry, hat)",
+      "background behind subject",
+      "lighting/mood"
+    ],
+    "typical_objects": [
+      "clothing",
+      "accessories",
+      "background elements"
+    ],
+    "group": "person",
+    "category": "person_portrait",
+    "local_path": "prompts/source_images/person/person_person_portrait_0037.jpg"
+  },
+  "prompts/source_images/person/person_person_group_0038.jpg": {
+    "scene_type": "outdoor/indoor",
+    "primary_subject": "group of people",
+    "has_people": true,
+    "editable_regions": [
+      "specific person's clothing",
+      "add/remove a person",
+      "background environment",
+      "group arrangement",
+      "lighting/time of day",
+      "foreground objects",
+      "individual accessories",
+      "ground surface"
+    ],
+    "typical_objects": [
+      "multiple people",
+      "clothing items",
+      "background structures",
+      "ground"
+    ],
+    "group": "person",
+    "category": "person_group",
+    "local_path": "prompts/source_images/person/person_person_group_0038.jpg"
+  },
+  "prompts/source_images/person/person_person_fullbody_0039.jpg": {
+    "scene_type": "outdoor/indoor",
+    "primary_subject": "person full body shot",
+    "has_people": true,
+    "editable_regions": [
+      "hair color/style",
+      "top/shirt",
+      "bottom/pants/skirt",
+      "shoes/footwear",
+      "accessories (bag, watch, hat)",
+      "pose/stance",
+      "background/environment",
+      "ground surface",
+      "lighting/shadows"
+    ],
+    "typical_objects": [
+      "clothing items",
+      "footwear",
+      "bag/accessories",
+      "ground",
+      "background structures"
+    ],
+    "group": "person",
+    "category": "person_fullbody",
+    "local_path": "prompts/source_images/person/person_person_fullbody_0039.jpg"
+  },
+  "prompts/source_images/person/person_person_portrait_0040.jpg": {
+    "scene_type": "studio/outdoor",
+    "primary_subject": "person portrait (head and shoulders)",
+    "has_people": true,
+    "editable_regions": [
+      "hair color/style",
+      "eye color",
+      "skin tone",
+      "facial expression",
+      "clothing/top",
+      "accessories (glasses, jewelry, hat)",
+      "background behind subject",
+      "lighting/mood"
+    ],
+    "typical_objects": [
+      "clothing",
+      "accessories",
+      "background elements"
+    ],
+    "group": "person",
+    "category": "person_portrait",
+    "local_path": "prompts/source_images/person/person_person_portrait_0040.jpg"
+  },
+  "prompts/source_images/person/person_person_fullbody_0041.jpg": {
+    "scene_type": "outdoor/indoor",
+    "primary_subject": "person full body shot",
+    "has_people": true,
+    "editable_regions": [
+      "hair color/style",
+      "top/shirt",
+      "bottom/pants/skirt",
+      "shoes/footwear",
+      "accessories (bag, watch, hat)",
+      "pose/stance",
+      "background/environment",
+      "ground surface",
+      "lighting/shadows"
+    ],
+    "typical_objects": [
+      "clothing items",
+      "footwear",
+      "bag/accessories",
+      "ground",
+      "background structures"
+    ],
+    "group": "person",
+    "category": "person_fullbody",
+    "local_path": "prompts/source_images/person/person_person_fullbody_0041.jpg"
+  },
+  "prompts/source_images/person/person_person_group_0042.jpg": {
+    "scene_type": "outdoor/indoor",
+    "primary_subject": "group of people",
+    "has_people": true,
+    "editable_regions": [
+      "specific person's clothing",
+      "add/remove a person",
+      "background environment",
+      "group arrangement",
+      "lighting/time of day",
+      "foreground objects",
+      "individual accessories",
+      "ground surface"
+    ],
+    "typical_objects": [
+      "multiple people",
+      "clothing items",
+      "background structures",
+      "ground"
+    ],
+    "group": "person",
+    "category": "person_group",
+    "local_path": "prompts/source_images/person/person_person_group_0042.jpg"
+  },
+  "prompts/source_images/person/person_person_portrait_0043.jpg": {
+    "scene_type": "studio/outdoor",
+    "primary_subject": "person portrait (head and shoulders)",
+    "has_people": true,
+    "editable_regions": [
+      "hair color/style",
+      "eye color",
+      "skin tone",
+      "facial expression",
+      "clothing/top",
+      "accessories (glasses, jewelry, hat)",
+      "background behind subject",
+      "lighting/mood"
+    ],
+    "typical_objects": [
+      "clothing",
+      "accessories",
+      "background elements"
+    ],
+    "group": "person",
+    "category": "person_portrait",
+    "local_path": "prompts/source_images/person/person_person_portrait_0043.jpg"
+  },
+  "prompts/source_images/person/person_person_group_0044.jpg": {
+    "scene_type": "outdoor/indoor",
+    "primary_subject": "group of people",
+    "has_people": true,
+    "editable_regions": [
+      "specific person's clothing",
+      "add/remove a person",
+      "background environment",
+      "group arrangement",
+      "lighting/time of day",
+      "foreground objects",
+      "individual accessories",
+      "ground surface"
+    ],
+    "typical_objects": [
+      "multiple people",
+      "clothing items",
+      "background structures",
+      "ground"
+    ],
+    "group": "person",
+    "category": "person_group",
+    "local_path": "prompts/source_images/person/person_person_group_0044.jpg"
+  },
+  "prompts/source_images/person/person_person_group_0045.jpg": {
+    "scene_type": "outdoor/indoor",
+    "primary_subject": "group of people",
+    "has_people": true,
+    "editable_regions": [
+      "specific person's clothing",
+      "add/remove a person",
+      "background environment",
+      "group arrangement",
+      "lighting/time of day",
+      "foreground objects",
+      "individual accessories",
+      "ground surface"
+    ],
+    "typical_objects": [
+      "multiple people",
+      "clothing items",
+      "background structures",
+      "ground"
+    ],
+    "group": "person",
+    "category": "person_group",
+    "local_path": "prompts/source_images/person/person_person_group_0045.jpg"
+  },
+  "prompts/source_images/person/person_person_portrait_0046.jpg": {
+    "scene_type": "studio/outdoor",
+    "primary_subject": "person portrait (head and shoulders)",
+    "has_people": true,
+    "editable_regions": [
+      "hair color/style",
+      "eye color",
+      "skin tone",
+      "facial expression",
+      "clothing/top",
+      "accessories (glasses, jewelry, hat)",
+      "background behind subject",
+      "lighting/mood"
+    ],
+    "typical_objects": [
+      "clothing",
+      "accessories",
+      "background elements"
+    ],
+    "group": "person",
+    "category": "person_portrait",
+    "local_path": "prompts/source_images/person/person_person_portrait_0046.jpg"
+  },
+  "prompts/source_images/person/person_person_portrait_0047.jpg": {
+    "scene_type": "studio/outdoor",
+    "primary_subject": "person portrait (head and shoulders)",
+    "has_people": true,
+    "editable_regions": [
+      "hair color/style",
+      "eye color",
+      "skin tone",
+      "facial expression",
+      "clothing/top",
+      "accessories (glasses, jewelry, hat)",
+      "background behind subject",
+      "lighting/mood"
+    ],
+    "typical_objects": [
+      "clothing",
+      "accessories",
+      "background elements"
+    ],
+    "group": "person",
+    "category": "person_portrait",
+    "local_path": "prompts/source_images/person/person_person_portrait_0047.jpg"
+  },
+  "prompts/source_images/person/person_person_portrait_0048.jpg": {
+    "scene_type": "studio/outdoor",
+    "primary_subject": "person portrait (head and shoulders)",
+    "has_people": true,
+    "editable_regions": [
+      "hair color/style",
+      "eye color",
+      "skin tone",
+      "facial expression",
+      "clothing/top",
+      "accessories (glasses, jewelry, hat)",
+      "background behind subject",
+      "lighting/mood"
+    ],
+    "typical_objects": [
+      "clothing",
+      "accessories",
+      "background elements"
+    ],
+    "group": "person",
+    "category": "person_portrait",
+    "local_path": "prompts/source_images/person/person_person_portrait_0048.jpg"
+  },
+  "prompts/source_images/person/person_person_fullbody_0049.jpg": {
+    "scene_type": "outdoor/indoor",
+    "primary_subject": "person full body shot",
+    "has_people": true,
+    "editable_regions": [
+      "hair color/style",
+      "top/shirt",
+      "bottom/pants/skirt",
+      "shoes/footwear",
+      "accessories (bag, watch, hat)",
+      "pose/stance",
+      "background/environment",
+      "ground surface",
+      "lighting/shadows"
+    ],
+    "typical_objects": [
+      "clothing items",
+      "footwear",
+      "bag/accessories",
+      "ground",
+      "background structures"
+    ],
+    "group": "person",
+    "category": "person_fullbody",
+    "local_path": "prompts/source_images/person/person_person_fullbody_0049.jpg"
+  },
+  "prompts/source_images/person/person_person_group_0050.jpg": {
+    "scene_type": "outdoor/indoor",
+    "primary_subject": "group of people",
+    "has_people": true,
+    "editable_regions": [
+      "specific person's clothing",
+      "add/remove a person",
+      "background environment",
+      "group arrangement",
+      "lighting/time of day",
+      "foreground objects",
+      "individual accessories",
+      "ground surface"
+    ],
+    "typical_objects": [
+      "multiple people",
+      "clothing items",
+      "background structures",
+      "ground"
+    ],
+    "group": "person",
+    "category": "person_group",
+    "local_path": "prompts/source_images/person/person_person_group_0050.jpg"
+  },
+  "prompts/source_images/person/person_person_fullbody_0051.jpg": {
+    "scene_type": "outdoor/indoor",
+    "primary_subject": "person full body shot",
+    "has_people": true,
+    "editable_regions": [
+      "hair color/style",
+      "top/shirt",
+      "bottom/pants/skirt",
+      "shoes/footwear",
+      "accessories (bag, watch, hat)",
+      "pose/stance",
+      "background/environment",
+      "ground surface",
+      "lighting/shadows"
+    ],
+    "typical_objects": [
+      "clothing items",
+      "footwear",
+      "bag/accessories",
+      "ground",
+      "background structures"
+    ],
+    "group": "person",
+    "category": "person_fullbody",
+    "local_path": "prompts/source_images/person/person_person_fullbody_0051.jpg"
+  },
+  "prompts/source_images/person/person_person_portrait_0052.jpg": {
+    "scene_type": "studio/outdoor",
+    "primary_subject": "person portrait (head and shoulders)",
+    "has_people": true,
+    "editable_regions": [
+      "hair color/style",
+      "eye color",
+      "skin tone",
+      "facial expression",
+      "clothing/top",
+      "accessories (glasses, jewelry, hat)",
+      "background behind subject",
+      "lighting/mood"
+    ],
+    "typical_objects": [
+      "clothing",
+      "accessories",
+      "background elements"
+    ],
+    "group": "person",
+    "category": "person_portrait",
+    "local_path": "prompts/source_images/person/person_person_portrait_0052.jpg"
+  },
+  "prompts/source_images/person/person_person_group_0053.jpg": {
+    "scene_type": "outdoor/indoor",
+    "primary_subject": "group of people",
+    "has_people": true,
+    "editable_regions": [
+      "specific person's clothing",
+      "add/remove a person",
+      "background environment",
+      "group arrangement",
+      "lighting/time of day",
+      "foreground objects",
+      "individual accessories",
+      "ground surface"
+    ],
+    "typical_objects": [
+      "multiple people",
+      "clothing items",
+      "background structures",
+      "ground"
+    ],
+    "group": "person",
+    "category": "person_group",
+    "local_path": "prompts/source_images/person/person_person_group_0053.jpg"
+  },
+  "prompts/source_images/person/person_person_fullbody_0054.jpg": {
+    "scene_type": "outdoor/indoor",
+    "primary_subject": "person full body shot",
+    "has_people": true,
+    "editable_regions": [
+      "hair color/style",
+      "top/shirt",
+      "bottom/pants/skirt",
+      "shoes/footwear",
+      "accessories (bag, watch, hat)",
+      "pose/stance",
+      "background/environment",
+      "ground surface",
+      "lighting/shadows"
+    ],
+    "typical_objects": [
+      "clothing items",
+      "footwear",
+      "bag/accessories",
+      "ground",
+      "background structures"
+    ],
+    "group": "person",
+    "category": "person_fullbody",
+    "local_path": "prompts/source_images/person/person_person_fullbody_0054.jpg"
+  },
+  "prompts/source_images/person/person_person_group_0055.jpg": {
+    "scene_type": "outdoor/indoor",
+    "primary_subject": "group of people",
+    "has_people": true,
+    "editable_regions": [
+      "specific person's clothing",
+      "add/remove a person",
+      "background environment",
+      "group arrangement",
+      "lighting/time of day",
+      "foreground objects",
+      "individual accessories",
+      "ground surface"
+    ],
+    "typical_objects": [
+      "multiple people",
+      "clothing items",
+      "background structures",
+      "ground"
+    ],
+    "group": "person",
+    "category": "person_group",
+    "local_path": "prompts/source_images/person/person_person_group_0055.jpg"
+  },
+  "prompts/source_images/person/person_person_portrait_0056.jpg": {
+    "scene_type": "studio/outdoor",
+    "primary_subject": "person portrait (head and shoulders)",
+    "has_people": true,
+    "editable_regions": [
+      "hair color/style",
+      "eye color",
+      "skin tone",
+      "facial expression",
+      "clothing/top",
+      "accessories (glasses, jewelry, hat)",
+      "background behind subject",
+      "lighting/mood"
+    ],
+    "typical_objects": [
+      "clothing",
+      "accessories",
+      "background elements"
+    ],
+    "group": "person",
+    "category": "person_portrait",
+    "local_path": "prompts/source_images/person/person_person_portrait_0056.jpg"
+  },
+  "prompts/source_images/person/person_person_group_0057.jpg": {
+    "scene_type": "outdoor/indoor",
+    "primary_subject": "group of people",
+    "has_people": true,
+    "editable_regions": [
+      "specific person's clothing",
+      "add/remove a person",
+      "background environment",
+      "group arrangement",
+      "lighting/time of day",
+      "foreground objects",
+      "individual accessories",
+      "ground surface"
+    ],
+    "typical_objects": [
+      "multiple people",
+      "clothing items",
+      "background structures",
+      "ground"
+    ],
+    "group": "person",
+    "category": "person_group",
+    "local_path": "prompts/source_images/person/person_person_group_0057.jpg"
+  },
+  "prompts/source_images/person/person_person_portrait_0058.jpg": {
+    "scene_type": "studio/outdoor",
+    "primary_subject": "person portrait (head and shoulders)",
+    "has_people": true,
+    "editable_regions": [
+      "hair color/style",
+      "eye color",
+      "skin tone",
+      "facial expression",
+      "clothing/top",
+      "accessories (glasses, jewelry, hat)",
+      "background behind subject",
+      "lighting/mood"
+    ],
+    "typical_objects": [
+      "clothing",
+      "accessories",
+      "background elements"
+    ],
+    "group": "person",
+    "category": "person_portrait",
+    "local_path": "prompts/source_images/person/person_person_portrait_0058.jpg"
+  },
+  "prompts/source_images/person/person_person_fullbody_0059.jpg": {
+    "scene_type": "outdoor/indoor",
+    "primary_subject": "person full body shot",
+    "has_people": true,
+    "editable_regions": [
+      "hair color/style",
+      "top/shirt",
+      "bottom/pants/skirt",
+      "shoes/footwear",
+      "accessories (bag, watch, hat)",
+      "pose/stance",
+      "background/environment",
+      "ground surface",
+      "lighting/shadows"
+    ],
+    "typical_objects": [
+      "clothing items",
+      "footwear",
+      "bag/accessories",
+      "ground",
+      "background structures"
+    ],
+    "group": "person",
+    "category": "person_fullbody",
+    "local_path": "prompts/source_images/person/person_person_fullbody_0059.jpg"
+  },
+  "prompts/source_images/person/person_person_portrait_0060.jpg": {
+    "scene_type": "studio/outdoor",
+    "primary_subject": "person portrait (head and shoulders)",
+    "has_people": true,
+    "editable_regions": [
+      "hair color/style",
+      "eye color",
+      "skin tone",
+      "facial expression",
+      "clothing/top",
+      "accessories (glasses, jewelry, hat)",
+      "background behind subject",
+      "lighting/mood"
+    ],
+    "typical_objects": [
+      "clothing",
+      "accessories",
+      "background elements"
+    ],
+    "group": "person",
+    "category": "person_portrait",
+    "local_path": "prompts/source_images/person/person_person_portrait_0060.jpg"
+  },
+  "prompts/source_images/person/person_person_group_0061.jpg": {
+    "scene_type": "outdoor/indoor",
+    "primary_subject": "group of people",
+    "has_people": true,
+    "editable_regions": [
+      "specific person's clothing",
+      "add/remove a person",
+      "background environment",
+      "group arrangement",
+      "lighting/time of day",
+      "foreground objects",
+      "individual accessories",
+      "ground surface"
+    ],
+    "typical_objects": [
+      "multiple people",
+      "clothing items",
+      "background structures",
+      "ground"
+    ],
+    "group": "person",
+    "category": "person_group",
+    "local_path": "prompts/source_images/person/person_person_group_0061.jpg"
+  },
+  "prompts/source_images/person/person_person_fullbody_0062.jpg": {
+    "scene_type": "outdoor/indoor",
+    "primary_subject": "person full body shot",
+    "has_people": true,
+    "editable_regions": [
+      "hair color/style",
+      "top/shirt",
+      "bottom/pants/skirt",
+      "shoes/footwear",
+      "accessories (bag, watch, hat)",
+      "pose/stance",
+      "background/environment",
+      "ground surface",
+      "lighting/shadows"
+    ],
+    "typical_objects": [
+      "clothing items",
+      "footwear",
+      "bag/accessories",
+      "ground",
+      "background structures"
+    ],
+    "group": "person",
+    "category": "person_fullbody",
+    "local_path": "prompts/source_images/person/person_person_fullbody_0062.jpg"
+  },
+  "prompts/source_images/person/person_person_group_0063.jpg": {
+    "scene_type": "outdoor/indoor",
+    "primary_subject": "group of people",
+    "has_people": true,
+    "editable_regions": [
+      "specific person's clothing",
+      "add/remove a person",
+      "background environment",
+      "group arrangement",
+      "lighting/time of day",
+      "foreground objects",
+      "individual accessories",
+      "ground surface"
+    ],
+    "typical_objects": [
+      "multiple people",
+      "clothing items",
+      "background structures",
+      "ground"
+    ],
+    "group": "person",
+    "category": "person_group",
+    "local_path": "prompts/source_images/person/person_person_group_0063.jpg"
+  },
+  "prompts/source_images/person/person_person_portrait_0064.jpg": {
+    "scene_type": "studio/outdoor",
+    "primary_subject": "person portrait (head and shoulders)",
+    "has_people": true,
+    "editable_regions": [
+      "hair color/style",
+      "eye color",
+      "skin tone",
+      "facial expression",
+      "clothing/top",
+      "accessories (glasses, jewelry, hat)",
+      "background behind subject",
+      "lighting/mood"
+    ],
+    "typical_objects": [
+      "clothing",
+      "accessories",
+      "background elements"
+    ],
+    "group": "person",
+    "category": "person_portrait",
+    "local_path": "prompts/source_images/person/person_person_portrait_0064.jpg"
+  },
+  "prompts/source_images/person/person_person_fullbody_0065.jpg": {
+    "scene_type": "outdoor/indoor",
+    "primary_subject": "person full body shot",
+    "has_people": true,
+    "editable_regions": [
+      "hair color/style",
+      "top/shirt",
+      "bottom/pants/skirt",
+      "shoes/footwear",
+      "accessories (bag, watch, hat)",
+      "pose/stance",
+      "background/environment",
+      "ground surface",
+      "lighting/shadows"
+    ],
+    "typical_objects": [
+      "clothing items",
+      "footwear",
+      "bag/accessories",
+      "ground",
+      "background structures"
+    ],
+    "group": "person",
+    "category": "person_fullbody",
+    "local_path": "prompts/source_images/person/person_person_fullbody_0065.jpg"
+  },
+  "prompts/source_images/person/person_person_fullbody_0066.jpg": {
+    "scene_type": "outdoor/indoor",
+    "primary_subject": "person full body shot",
+    "has_people": true,
+    "editable_regions": [
+      "hair color/style",
+      "top/shirt",
+      "bottom/pants/skirt",
+      "shoes/footwear",
+      "accessories (bag, watch, hat)",
+      "pose/stance",
+      "background/environment",
+      "ground surface",
+      "lighting/shadows"
+    ],
+    "typical_objects": [
+      "clothing items",
+      "footwear",
+      "bag/accessories",
+      "ground",
+      "background structures"
+    ],
+    "group": "person",
+    "category": "person_fullbody",
+    "local_path": "prompts/source_images/person/person_person_fullbody_0066.jpg"
+  },
+  "prompts/source_images/object/object_food_ingredients_0067.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "dark mushroom-growing tunnel",
+    "has_people": false,
+    "objects": [
+      "stacked shelves of plastic bags sprouting fungi with tub of yogurt",
+      "carton of eggs",
+      "block of cream cheese"
+    ],
+    "materials": [
+      "plastic"
+    ],
+    "description_full": "dark mushroom-growing tunnel with stacked shelves of plastic bags sprouting fungi with tub of yogurt, carton of eggs, block of cream cheese",
+    "editable_regions": [
+      "replace/modify stacked shelves of plastic bags sprouting fungi with tub of yogurt",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "object",
+    "category": "food_ingredients",
+    "local_path": "prompts/source_images/object/object_food_ingredients_0067.jpg"
+  },
+  "prompts/source_images/object/object_vehicles_bicycles_0068.jpg": {
+    "scene_type": "outdoor",
+    "primary_subject": "rice paddy bund path elevated between flooded fields",
+    "has_people": true,
+    "objects": [
+      "farmers\u2019 bikes nearby with seatpost clamp",
+      "saddle rail clamp",
+      "and one person"
+    ],
+    "materials": [],
+    "description_full": "rice paddy bund path elevated between flooded fields with farmers\u2019 bikes nearby with seatpost clamp, saddle rail clamp, and one person",
+    "editable_regions": [
+      "replace/modify farmers\u2019 bikes nearby with seatpost clamp",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "person's clothing/appearance",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "object",
+    "category": "vehicles_bicycles",
+    "local_path": "prompts/source_images/object/object_vehicles_bicycles_0068.jpg"
+  },
+  "prompts/source_images/object/object_vehicles_bicycles_0069.jpg": {
+    "scene_type": "outdoor",
+    "primary_subject": "open-air street market in a Southeast Asian city",
+    "has_people": false,
+    "objects": [
+      "bicycles weaving between stalls with folding bicycle",
+      "cargo tricycle",
+      "cycle rickshaw"
+    ],
+    "materials": [],
+    "description_full": "open-air street market in a Southeast Asian city with bicycles weaving between stalls with folding bicycle, cargo tricycle, cycle rickshaw",
+    "editable_regions": [
+      "replace/modify bicycles weaving between stalls with folding bicycle",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "object",
+    "category": "vehicles_bicycles",
+    "local_path": "prompts/source_images/object/object_vehicles_bicycles_0069.jpg"
+  },
+  "prompts/source_images/object/object_toys_games_0070.jpg": {
+    "scene_type": "outdoor",
+    "primary_subject": "suburban park sandbox scattered",
+    "has_people": false,
+    "objects": [
+      "plastic buckets and shovels with toy sandwich making set",
+      "toy fruit and vegetable set",
+      "toy snacks and sweets set"
+    ],
+    "materials": [
+      "plastic"
+    ],
+    "description_full": "suburban park sandbox scattered with plastic buckets and shovels with toy sandwich making set, toy fruit and vegetable set, toy snacks and sweets set",
+    "editable_regions": [
+      "replace/modify plastic buckets and shovels with toy sandwich making set",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "object",
+    "category": "toys_games",
+    "local_path": "prompts/source_images/object/object_toys_games_0070.jpg"
+  },
+  "prompts/source_images/object/object_beverages_hot_0071.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "rural train station platform bench",
+    "has_people": true,
+    "objects": [
+      "vending machine with decorative coffee bean-filled candle holder",
+      "foil coffee bag with one-way valve",
+      "and one person"
+    ],
+    "materials": [],
+    "description_full": "rural train station platform bench with vending machine with decorative coffee bean-filled candle holder, foil coffee bag with one-way valve, and one person",
+    "editable_regions": [
+      "replace/modify vending machine with decorative coffee bean-filled candle holder",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "person's clothing/appearance",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "object",
+    "category": "beverages_hot",
+    "local_path": "prompts/source_images/object/object_beverages_hot_0071.jpg"
+  },
+  "prompts/source_images/object/object_flowers_arrangements_0072.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "mosque courtyard wedding reception area",
+    "has_people": false,
+    "objects": [
+      "glass terrarium with plants",
+      "tabletop bonsai tree",
+      "cactus in clay pot"
+    ],
+    "materials": [
+      "glass"
+    ],
+    "description_full": "mosque courtyard wedding reception area with glass terrarium with plants, tabletop bonsai tree, cactus in clay pot",
+    "editable_regions": [
+      "replace/modify glass terrarium with plants",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "object",
+    "category": "flowers_arrangements",
+    "local_path": "prompts/source_images/object/object_flowers_arrangements_0072.jpg"
+  },
+  "prompts/source_images/object/object_technology_circuits_hardware_0073.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "timekeeping lab",
+    "has_people": false,
+    "objects": [
+      "cesium clock electronics racks with cable tie tensioning tool",
+      "label printer for cables",
+      "small parts pick-up tool"
+    ],
+    "materials": [],
+    "description_full": "timekeeping lab with cesium clock electronics racks with cable tie tensioning tool, label printer for cables, small parts pick-up tool",
+    "editable_regions": [
+      "replace/modify cesium clock electronics racks with cable tie tensioning tool",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "object",
+    "category": "technology_circuits_hardware",
+    "local_path": "prompts/source_images/object/object_technology_circuits_hardware_0073.jpg"
+  },
+  "prompts/source_images/object/object_vehicles_aircraft_0074.jpg": {
+    "scene_type": "outdoor",
+    "primary_subject": "remote hardstand",
+    "has_people": false,
+    "objects": [
+      "lone widebody parked with potable water service truck",
+      "lavatory service truck",
+      "passenger boarding stairs truck"
+    ],
+    "materials": [],
+    "description_full": "remote hardstand with lone widebody parked with potable water service truck, lavatory service truck, passenger boarding stairs truck",
+    "editable_regions": [
+      "replace/modify lone widebody parked with potable water service truck",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "object",
+    "category": "vehicles_aircraft",
+    "local_path": "prompts/source_images/object/object_vehicles_aircraft_0074.jpg"
+  },
+  "prompts/source_images/object/object_flowers_roses_0075.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "monastery cloister courtyard",
+    "has_people": false,
+    "objects": [
+      "old shrub roses around a central well with bouquet of dried roses hanging upside down from hook",
+      "dried rose wreath with faded blooms",
+      "clear glass dome showcasing a single preserved rose"
+    ],
+    "materials": [
+      "glass"
+    ],
+    "description_full": "monastery cloister courtyard with old shrub roses around a central well with bouquet of dried roses hanging upside down from hook, dried rose wreath with faded blooms, clear glass dome showcasing a single preserved rose",
+    "editable_regions": [
+      "replace/modify old shrub roses around a central well with bouquet of dried roses hanging upside down from hook",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "object",
+    "category": "flowers_roses",
+    "local_path": "prompts/source_images/object/object_flowers_roses_0075.jpg"
+  },
+  "prompts/source_images/object/object_vehicles_trains_0076.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "steam locomotive roundhouse",
+    "has_people": false,
+    "objects": [
+      "central turntable with ash pit cleaning rake",
+      "coaling tower chute",
+      "toolbox on locomotive running board"
+    ],
+    "materials": [],
+    "description_full": "steam locomotive roundhouse with central turntable with ash pit cleaning rake, coaling tower chute, toolbox on locomotive running board",
+    "editable_regions": [
+      "replace/modify central turntable with ash pit cleaning rake",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "object",
+    "category": "vehicles_trains",
+    "local_path": "prompts/source_images/object/object_vehicles_trains_0076.jpg"
+  },
+  "prompts/source_images/object/object_beverages_cold_0077.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "city marathon finish-line area",
+    "has_people": true,
+    "objects": [
+      "sponsor drink booths with garnish cutting station",
+      "fruit fly cover for drink glasses",
+      "and one person"
+    ],
+    "materials": [
+      "glass"
+    ],
+    "description_full": "city marathon finish-line area with sponsor drink booths with garnish cutting station, fruit fly cover for drink glasses, and one person",
+    "editable_regions": [
+      "replace/modify sponsor drink booths with garnish cutting station",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "person's clothing/appearance",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "object",
+    "category": "beverages_cold",
+    "local_path": "prompts/source_images/object/object_beverages_cold_0077.jpg"
+  },
+  "prompts/source_images/object/object_toys_games_0078.jpg": {
+    "scene_type": "outdoor",
+    "primary_subject": "outdoor flea market stall piled",
+    "has_people": false,
+    "objects": [
+      "secondhand toys with rag doll",
+      "toy fire truck",
+      "wooden tangram animals set"
+    ],
+    "materials": [
+      "wooden"
+    ],
+    "description_full": "outdoor flea market stall piled with secondhand toys with rag doll, toy fire truck, wooden tangram animals set",
+    "editable_regions": [
+      "replace/modify secondhand toys with rag doll",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "object",
+    "category": "toys_games",
+    "local_path": "prompts/source_images/object/object_toys_games_0078.jpg"
+  },
+  "prompts/source_images/object/object_beverages_hot_0079.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "ferry passenger deck snack bar",
+    "has_people": true,
+    "objects": [
+      "chest freezer for ice cream",
+      "microwave oven for caf\u00e9",
+      "and one person"
+    ],
+    "materials": [],
+    "description_full": "ferry passenger deck snack bar with chest freezer for ice cream, microwave oven for caf\u00e9, and one person",
+    "editable_regions": [
+      "replace/modify chest freezer for ice cream",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "person's clothing/appearance",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "object",
+    "category": "beverages_hot",
+    "local_path": "prompts/source_images/object/object_beverages_hot_0079.jpg"
+  },
+  "prompts/source_images/object/object_food_prepared_meals_0080.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "Brazilian churrascaria dining room",
+    "has_people": false,
+    "objects": [
+      "skewers carried by waiters with Brazilian feijoada black bean stew with meats and rice",
+      "Brazilian acaraj\u00e9 black-eyed pea fritters on plate",
+      "flan caramel custard unmolded on plate"
+    ],
+    "materials": [],
+    "description_full": "Brazilian churrascaria dining room with skewers carried by waiters with Brazilian feijoada black bean stew with meats and rice, Brazilian acaraj\u00e9 black-eyed pea fritters on plate, flan caramel custard unmolded on plate",
+    "editable_regions": [
+      "replace/modify skewers carried by waiters with Brazilian feijoada black bean stew with meats and rice",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "object",
+    "category": "food_prepared_meals",
+    "local_path": "prompts/source_images/object/object_food_prepared_meals_0080.jpg"
+  },
+  "prompts/source_images/object/object_fruits_vegetables_0081.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "industrial carrot washing and sorting line",
+    "has_people": true,
+    "objects": [
+      "plastic field harvest bin",
+      "wooden pallet",
+      "and one person"
+    ],
+    "materials": [
+      "wooden",
+      "plastic"
+    ],
+    "description_full": "industrial carrot washing and sorting line with plastic field harvest bin, wooden pallet, and one person",
+    "editable_regions": [
+      "replace/modify plastic field harvest bin",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "person's clothing/appearance",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "object",
+    "category": "fruits_vegetables",
+    "local_path": "prompts/source_images/object/object_fruits_vegetables_0081.jpg"
+  },
+  "prompts/source_images/object/object_beverages_alcoholic_0082.jpg": {
+    "scene_type": "outdoor",
+    "primary_subject": "city street block party beer garden",
+    "has_people": true,
+    "objects": [
+      "wooden beer bottle carrier crate with handle",
+      "plastic six-pack ring carrier",
+      "and one person"
+    ],
+    "materials": [
+      "wooden",
+      "plastic"
+    ],
+    "description_full": "city street block party beer garden with wooden beer bottle carrier crate with handle, plastic six-pack ring carrier, and one person",
+    "editable_regions": [
+      "replace/modify wooden beer bottle carrier crate with handle",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "person's clothing/appearance",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "object",
+    "category": "beverages_alcoholic",
+    "local_path": "prompts/source_images/object/object_beverages_alcoholic_0082.jpg"
+  },
+  "prompts/source_images/object/object_kitchen_cookware_0083.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "corporate test kitchen for food brand",
+    "has_people": true,
+    "objects": [
+      "kitchen scale",
+      "chef's knife",
+      "and one person"
+    ],
+    "materials": [],
+    "description_full": "corporate test kitchen for food brand with kitchen scale, chef's knife, and one person",
+    "editable_regions": [
+      "replace/modify kitchen scale",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "person's clothing/appearance",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "object",
+    "category": "kitchen_cookware",
+    "local_path": "prompts/source_images/object/object_kitchen_cookware_0083.jpg"
+  },
+  "prompts/source_images/object/object_vehicles_cars_0084.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "glass-fronted downtown boulevard",
+    "has_people": true,
+    "objects": [
+      "multilane car traffic with locking pliers",
+      "sanding block",
+      "and one person"
+    ],
+    "materials": [
+      "glass"
+    ],
+    "description_full": "glass-fronted downtown boulevard with multilane car traffic with locking pliers, sanding block, and one person",
+    "editable_regions": [
+      "replace/modify multilane car traffic with locking pliers",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "person's clothing/appearance",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "object",
+    "category": "vehicles_cars",
+    "local_path": "prompts/source_images/object/object_vehicles_cars_0084.jpg"
+  },
+  "prompts/source_images/object/object_technology_robotics_0085.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "exoskeleton testing gym",
+    "has_people": true,
+    "objects": [
+      "harness rails and powered suits with robotic exoskeleton suit",
+      "motion tracking suit with markers",
+      "and one person"
+    ],
+    "materials": [],
+    "description_full": "exoskeleton testing gym with harness rails and powered suits with robotic exoskeleton suit, motion tracking suit with markers, and one person",
+    "editable_regions": [
+      "replace/modify harness rails and powered suits with robotic exoskeleton suit",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "person's clothing/appearance",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "object",
+    "category": "technology_robotics",
+    "local_path": "prompts/source_images/object/object_technology_robotics_0085.jpg"
+  },
+  "prompts/source_images/object/object_art_sculpture_0086.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "Science museum atrium featuring a sculptural atom installation",
+    "has_people": true,
+    "objects": [
+      "fire hydrant sculpture",
+      "manhole cover relief sculpture",
+      "sewer pipe opening sculpture"
+    ],
+    "materials": [],
+    "description_full": "Science museum atrium featuring a sculptural atom installation with fire hydrant sculpture, manhole cover relief sculpture, sewer pipe opening sculpture",
+    "editable_regions": [
+      "replace/modify fire hydrant sculpture",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "person's clothing/appearance",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "object",
+    "category": "art_sculpture",
+    "local_path": "prompts/source_images/object/object_art_sculpture_0086.jpg"
+  },
+  "prompts/source_images/object/object_vehicles_motorcycles_0087.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "loading dock zone behind a large shopping mall",
+    "has_people": true,
+    "objects": [
+      "fuse assortment box",
+      "relay assortment box",
+      "and one person"
+    ],
+    "materials": [],
+    "description_full": "loading dock zone behind a large shopping mall with fuse assortment box, relay assortment box, and one person",
+    "editable_regions": [
+      "replace/modify fuse assortment box",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "person's clothing/appearance",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "object",
+    "category": "vehicles_motorcycles",
+    "local_path": "prompts/source_images/object/object_vehicles_motorcycles_0087.jpg"
+  },
+  "prompts/source_images/object/object_music_instruments_0088.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "Castle lawn where a Highland pipe band practices in formation",
+    "has_people": true,
+    "objects": [
+      "bagpipes",
+      "snare drum",
+      "and one person"
+    ],
+    "materials": [],
+    "description_full": "Castle lawn where a Highland pipe band practices in formation with bagpipes, snare drum, and one person",
+    "editable_regions": [
+      "replace/modify bagpipes",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "person's clothing/appearance",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "object",
+    "category": "music_instruments",
+    "local_path": "prompts/source_images/object/object_music_instruments_0088.jpg"
+  },
+  "prompts/source_images/object/object_vehicles_trucks_heavy_0089.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "diesel engine rebuild shop",
+    "has_people": false,
+    "objects": [
+      "stripped truck chassis with jump start booster pack",
+      "battery charger cart",
+      "coolant recycling machine"
+    ],
+    "materials": [],
+    "description_full": "diesel engine rebuild shop with stripped truck chassis with jump start booster pack, battery charger cart, coolant recycling machine",
+    "editable_regions": [
+      "replace/modify stripped truck chassis with jump start booster pack",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "object",
+    "category": "vehicles_trucks_heavy",
+    "local_path": "prompts/source_images/object/object_vehicles_trucks_heavy_0089.jpg"
+  },
+  "prompts/source_images/object/object_vehicles_cars_0090.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "mechanical car stacker system in a dense city lot",
+    "has_people": true,
+    "objects": [
+      "lap timing transponder",
+      "hood latch",
+      "and one person"
+    ],
+    "materials": [],
+    "description_full": "mechanical car stacker system in a dense city lot with lap timing transponder, hood latch, and one person",
+    "editable_regions": [
+      "replace/modify lap timing transponder",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "person's clothing/appearance",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "object",
+    "category": "vehicles_cars",
+    "local_path": "prompts/source_images/object/object_vehicles_cars_0090.jpg"
+  },
+  "prompts/source_images/object/object_art_sculpture_0091.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "Courthouse steps guarded by a blindfolded justice statue",
+    "has_people": false,
+    "objects": [
+      "weighing scale sculpture",
+      "scroll unfurling sculpture",
+      "open book relief sculpture"
+    ],
+    "materials": [],
+    "description_full": "Courthouse steps guarded by a blindfolded justice statue with weighing scale sculpture, scroll unfurling sculpture, open book relief sculpture",
+    "editable_regions": [
+      "replace/modify weighing scale sculpture",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "object",
+    "category": "art_sculpture",
+    "local_path": "prompts/source_images/object/object_art_sculpture_0091.jpg"
+  },
+  "prompts/source_images/object/object_music_instruments_0092.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "Instrument repair shop counter",
+    "has_people": false,
+    "objects": [
+      "an open trumpet and scattered tools with reed trimmer tool",
+      "mouthpiece puller",
+      "berimbau musical bow"
+    ],
+    "materials": [],
+    "description_full": "Instrument repair shop counter with an open trumpet and scattered tools with reed trimmer tool, mouthpiece puller, berimbau musical bow",
+    "editable_regions": [
+      "replace/modify an open trumpet and scattered tools with reed trimmer tool",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "object",
+    "category": "music_instruments",
+    "local_path": "prompts/source_images/object/object_music_instruments_0092.jpg"
+  },
+  "prompts/source_images/object/object_flowers_wildflowers_0093.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "rolling tallgrass prairie in full bloom",
+    "has_people": true,
+    "objects": [
+      "tall mullein flower spike",
+      "tuft of tall meadow grass",
+      "and one person"
+    ],
+    "materials": [],
+    "description_full": "rolling tallgrass prairie in full bloom with tall mullein flower spike, tuft of tall meadow grass, and one person",
+    "editable_regions": [
+      "replace/modify tall mullein flower spike",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "person's clothing/appearance",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "object",
+    "category": "flowers_wildflowers",
+    "local_path": "prompts/source_images/object/object_flowers_wildflowers_0093.jpg"
+  },
+  "prompts/source_images/object/object_tools_hardware_0094.jpg": {
+    "scene_type": "outdoor",
+    "primary_subject": "city parks department yard near a greenhouse",
+    "has_people": false,
+    "objects": [
+      "faucet puller",
+      "compression fitting tool",
+      "flaring tool"
+    ],
+    "materials": [],
+    "description_full": "city parks department yard near a greenhouse with faucet puller, compression fitting tool, flaring tool",
+    "editable_regions": [
+      "replace/modify faucet puller",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "object",
+    "category": "tools_hardware",
+    "local_path": "prompts/source_images/object/object_tools_hardware_0094.jpg"
+  },
+  "prompts/source_images/object/object_food_street_food_0095.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "campground central gathering area",
+    "has_people": true,
+    "objects": [
+      "a visiting taco truck with tostilocos snack bag",
+      "guacamole bowl",
+      "and one person"
+    ],
+    "materials": [],
+    "description_full": "campground central gathering area with a visiting taco truck with tostilocos snack bag, guacamole bowl, and one person",
+    "editable_regions": [
+      "replace/modify a visiting taco truck with tostilocos snack bag",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "person's clothing/appearance",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "object",
+    "category": "food_street_food",
+    "local_path": "prompts/source_images/object/object_food_street_food_0095.jpg"
+  },
+  "prompts/source_images/object/object_food_prepared_meals_0096.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "vintage train dining car",
+    "has_people": true,
+    "objects": [
+      "white linens and wood paneling with paneer tikka masala in bowl with rice",
+      "chana masala chickpea curry plate with naan",
+      "and one person"
+    ],
+    "materials": [],
+    "description_full": "vintage train dining car with white linens and wood paneling with paneer tikka masala in bowl with rice, chana masala chickpea curry plate with naan, and one person",
+    "editable_regions": [
+      "replace/modify white linens and wood paneling with paneer tikka masala in bowl with rice",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "person's clothing/appearance",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "object",
+    "category": "food_prepared_meals",
+    "local_path": "prompts/source_images/object/object_food_prepared_meals_0096.jpg"
+  },
+  "prompts/source_images/object/object_fruits_vegetables_0097.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "airport cargo terminal perishable goods area",
+    "has_people": true,
+    "objects": [
+      "chef's apron with vegetable print",
+      "oven mitts with fruit pattern",
+      "reusable produce stickers sheet"
+    ],
+    "materials": [],
+    "description_full": "airport cargo terminal perishable goods area with chef's apron with vegetable print, oven mitts with fruit pattern, reusable produce stickers sheet",
+    "editable_regions": [
+      "replace/modify chef's apron with vegetable print",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "person's clothing/appearance",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "object",
+    "category": "fruits_vegetables",
+    "local_path": "prompts/source_images/object/object_fruits_vegetables_0097.jpg"
+  },
+  "prompts/source_images/object/object_cosmetics_beauty_0098.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "wedding photography studio prep room",
+    "has_people": false,
+    "objects": [
+      "floral hair wreath crown",
+      "tiara hair accessory",
+      "ceramic ring dish on vanity"
+    ],
+    "materials": [
+      "ceramic"
+    ],
+    "description_full": "wedding photography studio prep room with floral hair wreath crown, tiara hair accessory, ceramic ring dish on vanity",
+    "editable_regions": [
+      "replace/modify floral hair wreath crown",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "object",
+    "category": "cosmetics_beauty",
+    "local_path": "prompts/source_images/object/object_cosmetics_beauty_0098.jpg"
+  },
+  "prompts/source_images/object/object_beverages_cold_0099.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "surf competition judging tower base",
+    "has_people": true,
+    "objects": [
+      "coolers with bottle neck hanger sign",
+      "tap handle label clip",
+      "and one person"
+    ],
+    "materials": [],
+    "description_full": "surf competition judging tower base with coolers with bottle neck hanger sign, tap handle label clip, and one person",
+    "editable_regions": [
+      "replace/modify coolers with bottle neck hanger sign",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "person's clothing/appearance",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "object",
+    "category": "beverages_cold",
+    "local_path": "prompts/source_images/object/object_beverages_cold_0099.jpg"
+  },
+  "prompts/source_images/object/object_vehicles_boats_ships_0100.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "multistory cruise ship interior atrium facing indoor promenade",
+    "has_people": true,
+    "objects": [
+      "ventilator cowl",
+      "ship's funnel",
+      "and one person"
+    ],
+    "materials": [],
+    "description_full": "multistory cruise ship interior atrium facing indoor promenade with ventilator cowl, ship's funnel, and one person",
+    "editable_regions": [
+      "replace/modify ventilator cowl",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "person's clothing/appearance",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "object",
+    "category": "vehicles_boats_ships",
+    "local_path": "prompts/source_images/object/object_vehicles_boats_ships_0100.jpg"
+  },
+  "prompts/source_images/object/object_art_photography_equipment_0101.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "camera rental house prep counter",
+    "has_people": false,
+    "objects": [
+      "photo negative loupe",
+      "color temperature meter",
+      "gray card"
+    ],
+    "materials": [],
+    "description_full": "camera rental house prep counter with photo negative loupe, color temperature meter, gray card",
+    "editable_regions": [
+      "replace/modify photo negative loupe",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "object",
+    "category": "art_photography_equipment",
+    "local_path": "prompts/source_images/object/object_art_photography_equipment_0101.jpg"
+  },
+  "prompts/source_images/object/object_flowers_roses_0102.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "cathedral front steps flanked by deep red rose beds below stone statuary",
+    "has_people": true,
+    "objects": [
+      "mandala pattern created entirely from rose petals",
+      "bowl filled with floating rose petals on water",
+      "bathtub surface covered in scattered rose petals"
+    ],
+    "materials": [
+      "stone"
+    ],
+    "description_full": "cathedral front steps flanked by deep red rose beds below stone statuary with mandala pattern created entirely from rose petals, bowl filled with floating rose petals on water, bathtub surface covered in scattered rose petals",
+    "editable_regions": [
+      "replace/modify mandala pattern created entirely from rose petals",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "person's clothing/appearance",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "object",
+    "category": "flowers_roses",
+    "local_path": "prompts/source_images/object/object_flowers_roses_0102.jpg"
+  },
+  "prompts/source_images/object/object_fashion_clothing_0103.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "gallery-style showroom",
+    "has_people": true,
+    "objects": [
+      "sari",
+      "hanbok dress",
+      "and one person"
+    ],
+    "materials": [],
+    "description_full": "gallery-style showroom with sari, hanbok dress, and one person",
+    "editable_regions": [
+      "replace/modify sari",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "person's clothing/appearance",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "object",
+    "category": "fashion_clothing",
+    "local_path": "prompts/source_images/object/object_fashion_clothing_0103.jpg"
+  },
+  "prompts/source_images/object/object_technology_robotics_0104.jpg": {
+    "scene_type": "outdoor",
+    "primary_subject": "remote desert solar farm drone launch pad for panel inspection",
+    "has_people": false,
+    "objects": [
+      "automated tool presetting machine",
+      "VTOL tilt-rotor drone",
+      "tethered power supply station for drones"
+    ],
+    "materials": [],
+    "description_full": "remote desert solar farm drone launch pad for panel inspection with automated tool presetting machine, VTOL tilt-rotor drone, tethered power supply station for drones",
+    "editable_regions": [
+      "replace/modify automated tool presetting machine",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "object",
+    "category": "technology_robotics",
+    "local_path": "prompts/source_images/object/object_technology_robotics_0104.jpg"
+  },
+  "prompts/source_images/object/object_hats_headwear_0105.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "parade route during a cultural festival",
+    "has_people": true,
+    "objects": [
+      "rasta tam hat",
+      "Andean chullo earflap hat",
+      "and one person"
+    ],
+    "materials": [],
+    "description_full": "parade route during a cultural festival with rasta tam hat, Andean chullo earflap hat, and one person",
+    "editable_regions": [
+      "replace/modify rasta tam hat",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "person's clothing/appearance",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "object",
+    "category": "hats_headwear",
+    "local_path": "prompts/source_images/object/object_hats_headwear_0105.jpg"
+  },
+  "prompts/source_images/object/object_food_desserts_sweets_0106.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "candy factory packaging line",
+    "has_people": false,
+    "objects": [
+      "belts of wrapped sweets with lamington sponge cube",
+      "s'mores stack with toasted marshmallow",
+      "sugar skull candy"
+    ],
+    "materials": [],
+    "description_full": "candy factory packaging line with belts of wrapped sweets with lamington sponge cube, s'mores stack with toasted marshmallow, sugar skull candy",
+    "editable_regions": [
+      "replace/modify belts of wrapped sweets with lamington sponge cube",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "object",
+    "category": "food_desserts_sweets",
+    "local_path": "prompts/source_images/object/object_food_desserts_sweets_0106.jpg"
+  },
+  "prompts/source_images/object/object_beverages_alcoholic_0107.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "winery restaurant terrace overlooking vines",
+    "has_people": true,
+    "objects": [
+      "carved wooden tiki totem",
+      "surfboard-shaped bar top",
+      "and one person"
+    ],
+    "materials": [
+      "wooden"
+    ],
+    "description_full": "winery restaurant terrace overlooking vines with carved wooden tiki totem, surfboard-shaped bar top, and one person",
+    "editable_regions": [
+      "replace/modify carved wooden tiki totem",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "person's clothing/appearance",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "object",
+    "category": "beverages_alcoholic",
+    "local_path": "prompts/source_images/object/object_beverages_alcoholic_0107.jpg"
+  },
+  "prompts/source_images/object/object_gardening_tools_0108.jpg": {
+    "scene_type": "outdoor",
+    "primary_subject": "university horticulture teaching garden plots",
+    "has_people": false,
+    "objects": [
+      "watering wand",
+      "garden cart",
+      "leaf blower"
+    ],
+    "materials": [],
+    "description_full": "university horticulture teaching garden plots with watering wand, garden cart, leaf blower",
+    "editable_regions": [
+      "replace/modify watering wand",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "object",
+    "category": "gardening_tools",
+    "local_path": "prompts/source_images/object/object_gardening_tools_0108.jpg"
+  },
+  "prompts/source_images/object/object_art_photography_equipment_0109.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "rocky tidal pools at low tide",
+    "has_people": true,
+    "objects": [
+      "UV blacklight tube fixture",
+      "continuous light wand",
+      "and one person"
+    ],
+    "materials": [],
+    "description_full": "rocky tidal pools at low tide with UV blacklight tube fixture, continuous light wand, and one person",
+    "editable_regions": [
+      "replace/modify UV blacklight tube fixture",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "person's clothing/appearance",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "object",
+    "category": "art_photography_equipment",
+    "local_path": "prompts/source_images/object/object_art_photography_equipment_0109.jpg"
+  },
+  "prompts/source_images/object/object_food_street_food_0110.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "parade route sidewalks",
+    "has_people": true,
+    "objects": [
+      "temporary food carts behind barriers with credit card bill presenter",
+      "picnic bench",
+      "and one person"
+    ],
+    "materials": [],
+    "description_full": "parade route sidewalks with temporary food carts behind barriers with credit card bill presenter, picnic bench, and one person",
+    "editable_regions": [
+      "replace/modify temporary food carts behind barriers with credit card bill presenter",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "person's clothing/appearance",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "object",
+    "category": "food_street_food",
+    "local_path": "prompts/source_images/object/object_food_street_food_0110.jpg"
+  },
+  "prompts/source_images/object/object_flowers_wildflowers_0111.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "desert wash in peak wildflower bloom",
+    "has_people": false,
+    "objects": [
+      "flowering honeysuckle vine",
+      "morning glory vine with flowers",
+      "teasel flower head"
+    ],
+    "materials": [],
+    "description_full": "desert wash in peak wildflower bloom with flowering honeysuckle vine, morning glory vine with flowers, teasel flower head",
+    "editable_regions": [
+      "replace/modify flowering honeysuckle vine",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "object",
+    "category": "flowers_wildflowers",
+    "local_path": "prompts/source_images/object/object_flowers_wildflowers_0111.jpg"
+  },
+  "prompts/source_images/object/object_vehicles_motorcycles_0112.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "custom motorcycle workshop interior full of frames and tools",
+    "has_people": true,
+    "objects": [
+      "set of pegboard hooks",
+      "plastic drawer organizer unit",
+      "and one person"
+    ],
+    "materials": [
+      "plastic"
+    ],
+    "description_full": "custom motorcycle workshop interior full of frames and tools with set of pegboard hooks, plastic drawer organizer unit, and one person",
+    "editable_regions": [
+      "replace/modify set of pegboard hooks",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "person's clothing/appearance",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "object",
+    "category": "vehicles_motorcycles",
+    "local_path": "prompts/source_images/object/object_vehicles_motorcycles_0112.jpg"
+  },
+  "prompts/source_images/object/object_tools_hardware_0113.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "hydroelectric dam turbine hall maintenance platform",
+    "has_people": true,
+    "objects": [
+      "putty knife",
+      "extension ladder",
+      "and one person"
+    ],
+    "materials": [],
+    "description_full": "hydroelectric dam turbine hall maintenance platform with putty knife, extension ladder, and one person",
+    "editable_regions": [
+      "replace/modify putty knife",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "person's clothing/appearance",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "object",
+    "category": "tools_hardware",
+    "local_path": "prompts/source_images/object/object_tools_hardware_0113.jpg"
+  },
+  "prompts/source_images/object/object_shoes_footwear_0114.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "coach luggage bay being loaded",
+    "has_people": true,
+    "objects": [
+      "duffel bags and scattered shoes with Edwardian spat-top boot",
+      "Auto racing driving shoe",
+      "and one person"
+    ],
+    "materials": [],
+    "description_full": "coach luggage bay being loaded with duffel bags and scattered shoes with Edwardian spat-top boot, Auto racing driving shoe, and one person",
+    "editable_regions": [
+      "replace/modify duffel bags and scattered shoes with Edwardian spat-top boot",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "person's clothing/appearance",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "object",
+    "category": "shoes_footwear",
+    "local_path": "prompts/source_images/object/object_shoes_footwear_0114.jpg"
+  },
+  "prompts/source_images/object/object_gardening_tools_0115.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "apple orchard in full blossom",
+    "has_people": true,
+    "objects": [
+      "dandelion weeder",
+      "hand cultivator claw",
+      "and one person"
+    ],
+    "materials": [],
+    "description_full": "apple orchard in full blossom with dandelion weeder, hand cultivator claw, and one person",
+    "editable_regions": [
+      "replace/modify dandelion weeder",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "person's clothing/appearance",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "object",
+    "category": "gardening_tools",
+    "local_path": "prompts/source_images/object/object_gardening_tools_0115.jpg"
+  },
+  "prompts/source_images/scene/scene_hotel_hospitality_0116.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "overwater bungalow bedroom opening onto turquoise lagoon",
+    "has_people": false,
+    "objects": [
+      "freestanding bathtub caddy tray",
+      "decorative throw pillow",
+      "glass coffee table"
+    ],
+    "materials": [
+      "glass"
+    ],
+    "description_full": "overwater bungalow bedroom opening onto turquoise lagoon with freestanding bathtub caddy tray, decorative throw pillow, glass coffee table",
+    "editable_regions": [
+      "replace/modify freestanding bathtub caddy tray",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "scene",
+    "category": "hotel_hospitality",
+    "local_path": "prompts/source_images/scene/scene_hotel_hospitality_0116.jpg"
+  },
+  "prompts/source_images/scene/scene_architecture_modern_0117.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "large modern city hall lobby",
+    "has_people": false,
+    "objects": [
+      "flags and security desks with reception desk counter",
+      "video door intercom panel",
+      "decorative wall mirror"
+    ],
+    "materials": [],
+    "description_full": "large modern city hall lobby with flags and security desks with reception desk counter, video door intercom panel, decorative wall mirror",
+    "editable_regions": [
+      "replace/modify flags and security desks with reception desk counter",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "scene",
+    "category": "architecture_modern",
+    "local_path": "prompts/source_images/scene/scene_architecture_modern_0117.jpg"
+  },
+  "prompts/source_images/scene/scene_urban_street_scenes_0118.jpg": {
+    "scene_type": "outdoor",
+    "primary_subject": "bicycle-priority street",
+    "has_people": true,
+    "objects": [
+      "separated colored bike lanes with lost bike frame chained to pole",
+      "reflective safety vest display rack",
+      "and one person"
+    ],
+    "materials": [],
+    "description_full": "bicycle-priority street with separated colored bike lanes with lost bike frame chained to pole, reflective safety vest display rack, and one person",
+    "editable_regions": [
+      "replace/modify separated colored bike lanes with lost bike frame chained to pole",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "person's clothing/appearance",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "scene",
+    "category": "urban_street_scenes",
+    "local_path": "prompts/source_images/scene/scene_urban_street_scenes_0118.jpg"
+  },
+  "prompts/source_images/scene/scene_architecture_skyscrapers_0119.jpg": {
+    "scene_type": "outdoor",
+    "primary_subject": "highway interchange on the city edge",
+    "has_people": true,
+    "objects": [
+      "skyline behind with retaining wall block",
+      "tower crane",
+      "and one person"
+    ],
+    "materials": [],
+    "description_full": "highway interchange on the city edge with skyline behind with retaining wall block, tower crane, and one person",
+    "editable_regions": [
+      "replace/modify skyline behind with retaining wall block",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "person's clothing/appearance",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "scene",
+    "category": "architecture_skyscrapers",
+    "local_path": "prompts/source_images/scene/scene_architecture_skyscrapers_0119.jpg"
+  },
+  "prompts/source_images/scene/scene_urban_night_city_0120.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "glass-walled exterior elevator shaft overlooking the city",
+    "has_people": true,
+    "objects": [
+      "venetian blind slats",
+      "curtain rod",
+      "and one person"
+    ],
+    "materials": [
+      "glass"
+    ],
+    "description_full": "glass-walled exterior elevator shaft overlooking the city with venetian blind slats, curtain rod, and one person",
+    "editable_regions": [
+      "replace/modify venetian blind slats",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "person's clothing/appearance",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "scene",
+    "category": "urban_night_city",
+    "local_path": "prompts/source_images/scene/scene_urban_night_city_0120.jpg"
+  },
+  "prompts/source_images/scene/scene_urban_markets_bazaars_0121.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "Shilin Night Market, Taipei, Taiwan",
+    "has_people": true,
+    "objects": [
+      "remote-controlled drone",
+      "plastic toy car",
+      "and one person"
+    ],
+    "materials": [
+      "plastic"
+    ],
+    "description_full": "Shilin Night Market, Taipei, Taiwan with remote-controlled drone, plastic toy car, and one person",
+    "editable_regions": [
+      "replace/modify remote-controlled drone",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "person's clothing/appearance",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "scene",
+    "category": "urban_markets_bazaars",
+    "local_path": "prompts/source_images/scene/scene_urban_markets_bazaars_0121.jpg"
+  },
+  "prompts/source_images/scene/scene_urban_markets_bazaars_0122.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "Borough Market, London, UK",
+    "has_people": false,
+    "objects": [
+      "cast iron wok",
+      "dog collar",
+      "dog leash"
+    ],
+    "materials": [
+      "iron"
+    ],
+    "description_full": "Borough Market, London, UK with cast iron wok, dog collar, dog leash",
+    "editable_regions": [
+      "replace/modify cast iron wok",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "scene",
+    "category": "urban_markets_bazaars",
+    "local_path": "prompts/source_images/scene/scene_urban_markets_bazaars_0122.jpg"
+  },
+  "prompts/source_images/scene/scene_camping_outdoors_0123.jpg": {
+    "scene_type": "outdoor",
+    "primary_subject": "bus depot loading bay where guides are strapping rafts and dry boxes to a trailer before a river tri",
+    "has_people": true,
+    "objects": [
+      "insulated soft-sided cooler",
+      "hard-sided ice chest cooler on wheels",
+      "compact personal cooler cube"
+    ],
+    "materials": [],
+    "description_full": "bus depot loading bay where guides are strapping rafts and dry boxes to a trailer before a river trip with insulated soft-sided cooler, hard-sided ice chest cooler on wheels, compact personal cooler cube",
+    "editable_regions": [
+      "replace/modify insulated soft-sided cooler",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "person's clothing/appearance",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "scene",
+    "category": "camping_outdoors",
+    "local_path": "prompts/source_images/scene/scene_camping_outdoors_0123.jpg"
+  },
+  "prompts/source_images/scene/scene_waterscape_lakes_0124.jpg": {
+    "scene_type": "outdoor",
+    "primary_subject": "Lake Chapala malec\u00f3n, Jalisco, Mexico",
+    "has_people": false,
+    "objects": [
+      "gazebo roof",
+      "outdoor clock",
+      "recycling station shelter"
+    ],
+    "materials": [],
+    "description_full": "Lake Chapala malec\u00f3n, Jalisco, Mexico with gazebo roof, outdoor clock, recycling station shelter",
+    "editable_regions": [
+      "replace/modify gazebo roof",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "scene",
+    "category": "waterscape_lakes",
+    "local_path": "prompts/source_images/scene/scene_waterscape_lakes_0124.jpg"
+  },
+  "prompts/source_images/scene/scene_architecture_ruins_ancient_0125.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "Angkor Wat temple causeway and towers, Cambodia",
+    "has_people": false,
+    "objects": [
+      "bronze ritual gong",
+      "bronze door boss",
+      "bronze statue fragment"
+    ],
+    "materials": [
+      "bronze"
+    ],
+    "description_full": "Angkor Wat temple causeway and towers, Cambodia with bronze ritual gong, bronze door boss, bronze statue fragment",
+    "editable_regions": [
+      "replace/modify bronze ritual gong",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "scene",
+    "category": "architecture_ruins_ancient",
+    "local_path": "prompts/source_images/scene/scene_architecture_ruins_ancient_0125.jpg"
+  },
+  "prompts/source_images/scene/scene_architecture_classical_0126.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "royal throne room",
+    "has_people": false,
+    "objects": [
+      "floor-standing metal candelabrum",
+      "stone display pedestal",
+      "marble portrait bust on pedestal"
+    ],
+    "materials": [
+      "metal",
+      "stone",
+      "marble"
+    ],
+    "description_full": "royal throne room with floor-standing metal candelabrum, stone display pedestal, marble portrait bust on pedestal",
+    "editable_regions": [
+      "replace/modify floor-standing metal candelabrum",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "scene",
+    "category": "architecture_classical",
+    "local_path": "prompts/source_images/scene/scene_architecture_classical_0126.jpg"
+  },
+  "prompts/source_images/scene/scene_landscape_mountains_0127.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "Annapurna and Dhaulagiri range from Poon Hill, Nepal",
+    "has_people": false,
+    "objects": [
+      "collapsible trekking umbrella",
+      "knit beanie hat",
+      "insulated mittens"
+    ],
+    "materials": [],
+    "description_full": "Annapurna and Dhaulagiri range from Poon Hill, Nepal with collapsible trekking umbrella, knit beanie hat, insulated mittens",
+    "editable_regions": [
+      "replace/modify collapsible trekking umbrella",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "scene",
+    "category": "landscape_mountains",
+    "local_path": "prompts/source_images/scene/scene_landscape_mountains_0127.jpg"
+  },
+  "prompts/source_images/scene/scene_science_laboratory_0128.jpg": {
+    "scene_type": "outdoor",
+    "primary_subject": "botanical garden herbarium research room",
+    "has_people": false,
+    "objects": [
+      "volumetric pipette",
+      "Pasteur pipette with rubber bulb",
+      "glass reagent bottle with ground glass stopper"
+    ],
+    "materials": [
+      "glass"
+    ],
+    "description_full": "botanical garden herbarium research room with volumetric pipette, Pasteur pipette with rubber bulb, glass reagent bottle with ground glass stopper",
+    "editable_regions": [
+      "replace/modify volumetric pipette",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "scene",
+    "category": "science_laboratory",
+    "local_path": "prompts/source_images/scene/scene_science_laboratory_0128.jpg"
+  },
+  "prompts/source_images/scene/scene_playground_recreation_0129.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "children\u2019s sand playground on an old wooden pier",
+    "has_people": true,
+    "objects": [
+      "hot dog cart",
+      "coin-operated kiddie ride",
+      "and one person"
+    ],
+    "materials": [
+      "wooden"
+    ],
+    "description_full": "children\u2019s sand playground on an old wooden pier with hot dog cart, coin-operated kiddie ride, and one person",
+    "editable_regions": [
+      "replace/modify hot dog cart",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "person's clothing/appearance",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "scene",
+    "category": "playground_recreation",
+    "local_path": "prompts/source_images/scene/scene_playground_recreation_0129.jpg"
+  },
+  "prompts/source_images/scene/scene_waterscape_rivers_streams_0130.jpg": {
+    "scene_type": "outdoor",
+    "primary_subject": "mountain stream cutting through terraced tea plantations",
+    "has_people": false,
+    "objects": [
+      "dense stand of bamboo along river",
+      "tangled blackberry bramble thicket",
+      "patch of stinging nettles by bank"
+    ],
+    "materials": [],
+    "description_full": "mountain stream cutting through terraced tea plantations with dense stand of bamboo along river, tangled blackberry bramble thicket, patch of stinging nettles by bank",
+    "editable_regions": [
+      "replace/modify dense stand of bamboo along river",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "scene",
+    "category": "waterscape_rivers_streams",
+    "local_path": "prompts/source_images/scene/scene_waterscape_rivers_streams_0130.jpg"
+  },
+  "prompts/source_images/scene/scene_landscape_tropical_0131.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "Iguaz\u00fa Falls from the Brazilian side, Brazil",
+    "has_people": false,
+    "objects": [
+      "bamboo windbreak screen",
+      "seashell-encrusted picture frame",
+      "incense stick bundle"
+    ],
+    "materials": [],
+    "description_full": "Iguaz\u00fa Falls from the Brazilian side, Brazil with bamboo windbreak screen, seashell-encrusted picture frame, incense stick bundle",
+    "editable_regions": [
+      "replace/modify bamboo windbreak screen",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "scene",
+    "category": "landscape_tropical",
+    "local_path": "prompts/source_images/scene/scene_landscape_tropical_0131.jpg"
+  },
+  "prompts/source_images/scene/scene_landscape_tropical_0132.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "coconut grove on the coastal plain near Kovalam, Kerala, India",
+    "has_people": false,
+    "objects": [
+      "rolled canvas bedroll",
+      "mosquito net canopy",
+      "leather map case"
+    ],
+    "materials": [
+      "leather"
+    ],
+    "description_full": "coconut grove on the coastal plain near Kovalam, Kerala, India with rolled canvas bedroll, mosquito net canopy, leather map case",
+    "editable_regions": [
+      "replace/modify rolled canvas bedroll",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "scene",
+    "category": "landscape_tropical",
+    "local_path": "prompts/source_images/scene/scene_landscape_tropical_0132.jpg"
+  },
+  "prompts/source_images/scene/scene_architecture_bridges_0133.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "rustic log footbridge over a clear alpine meadow stream",
+    "has_people": true,
+    "objects": [
+      "formwork tie rod",
+      "shock-absorbing lanyard",
+      "and one person"
+    ],
+    "materials": [],
+    "description_full": "rustic log footbridge over a clear alpine meadow stream with formwork tie rod, shock-absorbing lanyard, and one person",
+    "editable_regions": [
+      "replace/modify formwork tie rod",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "person's clothing/appearance",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "scene",
+    "category": "architecture_bridges",
+    "local_path": "prompts/source_images/scene/scene_architecture_bridges_0133.jpg"
+  },
+  "prompts/source_images/scene/scene_retail_shopping_0134.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "lighting showroom where dozens of illuminated fixtures fill the ceiling",
+    "has_people": false,
+    "objects": [
+      "ceiling fan",
+      "table lamp",
+      "floor lamp"
+    ],
+    "materials": [],
+    "description_full": "lighting showroom where dozens of illuminated fixtures fill the ceiling with ceiling fan, table lamp, floor lamp",
+    "editable_regions": [
+      "replace/modify ceiling fan",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "scene",
+    "category": "retail_shopping",
+    "local_path": "prompts/source_images/scene/scene_retail_shopping_0134.jpg"
+  },
+  "prompts/source_images/scene/scene_landscape_arctic_tundra_0135.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "open lead through pack ice in the Beaufort Sea",
+    "has_people": false,
+    "objects": [
+      "snow coring tube with T-handle",
+      "plankton net with long conical bag",
+      "water sampling Niskin bottle"
+    ],
+    "materials": [],
+    "description_full": "open lead through pack ice in the Beaufort Sea with snow coring tube with T-handle, plankton net with long conical bag, water sampling Niskin bottle",
+    "editable_regions": [
+      "replace/modify snow coring tube with T-handle",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "scene",
+    "category": "landscape_arctic_tundra",
+    "local_path": "prompts/source_images/scene/scene_landscape_arctic_tundra_0135.jpg"
+  },
+  "prompts/source_images/scene/scene_industrial_manufacturing_0136.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "cement plant rotary kiln hall",
+    "has_people": true,
+    "objects": [
+      "absorbent sock roll",
+      "oil absorbent pad stack",
+      "and one person"
+    ],
+    "materials": [],
+    "description_full": "cement plant rotary kiln hall with absorbent sock roll, oil absorbent pad stack, and one person",
+    "editable_regions": [
+      "replace/modify absorbent sock roll",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "person's clothing/appearance",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "scene",
+    "category": "industrial_manufacturing",
+    "local_path": "prompts/source_images/scene/scene_industrial_manufacturing_0136.jpg"
+  },
+  "prompts/source_images/scene/scene_science_laboratory_0137.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "astronomical observatory dome interior",
+    "has_people": true,
+    "objects": [
+      "ray optics kit with lenses holder",
+      "diffraction grating slide",
+      "and one person"
+    ],
+    "materials": [],
+    "description_full": "astronomical observatory dome interior with ray optics kit with lenses holder, diffraction grating slide, and one person",
+    "editable_regions": [
+      "replace/modify ray optics kit with lenses holder",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "person's clothing/appearance",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "scene",
+    "category": "science_laboratory",
+    "local_path": "prompts/source_images/scene/scene_science_laboratory_0137.jpg"
+  },
+  "prompts/source_images/scene/scene_cinema_theater_0138.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "contemporary art white cube gallery",
+    "has_people": true,
+    "objects": [
+      "IV drip stand",
+      "bicycle",
+      "and one person"
+    ],
+    "materials": [],
+    "description_full": "contemporary art white cube gallery with IV drip stand, bicycle, and one person",
+    "editable_regions": [
+      "replace/modify IV drip stand",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "person's clothing/appearance",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "scene",
+    "category": "cinema_theater",
+    "local_path": "prompts/source_images/scene/scene_cinema_theater_0138.jpg"
+  },
+  "prompts/source_images/scene/scene_medical_healthcare_0139.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "pharmaceutical cleanroom production line",
+    "has_people": true,
+    "objects": [
+      "ointment glass slab",
+      "pill bottling machine",
+      "and one person"
+    ],
+    "materials": [
+      "glass"
+    ],
+    "description_full": "pharmaceutical cleanroom production line with ointment glass slab, pill bottling machine, and one person",
+    "editable_regions": [
+      "replace/modify ointment glass slab",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "person's clothing/appearance",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "scene",
+    "category": "medical_healthcare",
+    "local_path": "prompts/source_images/scene/scene_medical_healthcare_0139.jpg"
+  },
+  "prompts/source_images/scene/scene_landscape_meadow_plains_0140.jpg": {
+    "scene_type": "outdoor",
+    "primary_subject": "Tibetan Plateau grasslands around Namtso Lake, Tibet, China",
+    "has_people": false,
+    "objects": [
+      "portable livestock scale platform",
+      "rope lasso coiled on ground",
+      "cowbell on strap"
+    ],
+    "materials": [],
+    "description_full": "Tibetan Plateau grasslands around Namtso Lake, Tibet, China with portable livestock scale platform, rope lasso coiled on ground, cowbell on strap",
+    "editable_regions": [
+      "replace/modify portable livestock scale platform",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "scene",
+    "category": "landscape_meadow_plains",
+    "local_path": "prompts/source_images/scene/scene_landscape_meadow_plains_0140.jpg"
+  },
+  "prompts/source_images/scene/scene_medical_healthcare_0141.jpg": {
+    "scene_type": "outdoor",
+    "primary_subject": "parking garage casualty staging area after multi-car crash",
+    "has_people": true,
+    "objects": [
+      "radiology right and left marker set",
+      "portable X-ray grid holder",
+      "and one person"
+    ],
+    "materials": [],
+    "description_full": "parking garage casualty staging area after multi-car crash with radiology right and left marker set, portable X-ray grid holder, and one person",
+    "editable_regions": [
+      "replace/modify radiology right and left marker set",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "person's clothing/appearance",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "scene",
+    "category": "medical_healthcare",
+    "local_path": "prompts/source_images/scene/scene_medical_healthcare_0141.jpg"
+  },
+  "prompts/source_images/scene/scene_architecture_classical_0142.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "baroque church facade on small urban square",
+    "has_people": false,
+    "objects": [
+      "broken pediment with central gap",
+      "gargoyle waterspout",
+      "wall-mounted lion-head fountain spout"
+    ],
+    "materials": [],
+    "description_full": "baroque church facade on small urban square with broken pediment with central gap, gargoyle waterspout, wall-mounted lion-head fountain spout",
+    "editable_regions": [
+      "replace/modify broken pediment with central gap",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "scene",
+    "category": "architecture_classical",
+    "local_path": "prompts/source_images/scene/scene_architecture_classical_0142.jpg"
+  },
+  "prompts/source_images/scene/scene_architecture_modern_0143.jpg": {
+    "scene_type": "outdoor",
+    "primary_subject": "urban pocket park framed by corten-steel walls and timber decks",
+    "has_people": true,
+    "objects": [
+      "picnic table set",
+      "fire pit bowl",
+      "and one person"
+    ],
+    "materials": [
+      "steel"
+    ],
+    "description_full": "urban pocket park framed by corten-steel walls and timber decks with picnic table set, fire pit bowl, and one person",
+    "editable_regions": [
+      "replace/modify picnic table set",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "person's clothing/appearance",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "scene",
+    "category": "architecture_modern",
+    "local_path": "prompts/source_images/scene/scene_architecture_modern_0143.jpg"
+  },
+  "prompts/source_images/scene/scene_education_classroom_0144.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "art museum gallery",
+    "has_people": true,
+    "objects": [
+      "docent-led tour with plaster bust model",
+      "light meter",
+      "and one person"
+    ],
+    "materials": [],
+    "description_full": "art museum gallery with docent-led tour with plaster bust model, light meter, and one person",
+    "editable_regions": [
+      "replace/modify docent-led tour with plaster bust model",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "person's clothing/appearance",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "scene",
+    "category": "education_classroom",
+    "local_path": "prompts/source_images/scene/scene_education_classroom_0144.jpg"
+  },
+  "prompts/source_images/scene/scene_waterscape_lakes_0145.jpg": {
+    "scene_type": "outdoor",
+    "primary_subject": "Malec\u00f3n de Granada on Lake Nicaragua, Nicaragua",
+    "has_people": false,
+    "objects": [
+      "checkered picnic blanket",
+      "folding camp chair",
+      "tiki torch"
+    ],
+    "materials": [],
+    "description_full": "Malec\u00f3n de Granada on Lake Nicaragua, Nicaragua with checkered picnic blanket, folding camp chair, tiki torch",
+    "editable_regions": [
+      "replace/modify checkered picnic blanket",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "scene",
+    "category": "waterscape_lakes",
+    "local_path": "prompts/source_images/scene/scene_waterscape_lakes_0145.jpg"
+  },
+  "prompts/source_images/scene/scene_construction_building_0146.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "coastal breakwater construction",
+    "has_people": true,
+    "objects": [
+      "armor stone placement with bundle of PVC conduit",
+      "roll of tie wire",
+      "and one person"
+    ],
+    "materials": [
+      "stone"
+    ],
+    "description_full": "coastal breakwater construction with armor stone placement with bundle of PVC conduit, roll of tie wire, and one person",
+    "editable_regions": [
+      "replace/modify armor stone placement with bundle of PVC conduit",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "person's clothing/appearance",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "scene",
+    "category": "construction_building",
+    "local_path": "prompts/source_images/scene/scene_construction_building_0146.jpg"
+  },
+  "prompts/source_images/scene/scene_urban_night_city_0147.jpg": {
+    "scene_type": "outdoor",
+    "primary_subject": "indoor ice rink",
+    "has_people": true,
+    "objects": [
+      "bright white ice and boards with LED driver box",
+      "raised floor tile",
+      "and one person"
+    ],
+    "materials": [],
+    "description_full": "indoor ice rink with bright white ice and boards with LED driver box, raised floor tile, and one person",
+    "editable_regions": [
+      "replace/modify bright white ice and boards with LED driver box",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "person's clothing/appearance",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "scene",
+    "category": "urban_night_city",
+    "local_path": "prompts/source_images/scene/scene_urban_night_city_0147.jpg"
+  },
+  "prompts/source_images/scene/scene_architecture_religious_0148.jpg": {
+    "scene_type": "outdoor",
+    "primary_subject": "Desert adobe mission church fa\u00e7ade",
+    "has_people": true,
+    "objects": [
+      "simple bell gable and wooden doors with outdoor stone wayside cross",
+      "carved stone tympanum relief",
+      "and one person"
+    ],
+    "materials": [
+      "wooden",
+      "stone"
+    ],
+    "description_full": "Desert adobe mission church fa\u00e7ade with simple bell gable and wooden doors with outdoor stone wayside cross, carved stone tympanum relief, and one person",
+    "editable_regions": [
+      "replace/modify simple bell gable and wooden doors with outdoor stone wayside cross",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "person's clothing/appearance",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "scene",
+    "category": "architecture_religious",
+    "local_path": "prompts/source_images/scene/scene_architecture_religious_0148.jpg"
+  },
+  "prompts/source_images/style/style_dance_performance_0149.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "rooftop bar DJ platform",
+    "has_people": true,
+    "objects": [
+      "ocarina",
+      "tin whistle",
+      "and one person"
+    ],
+    "materials": [],
+    "description_full": "rooftop bar DJ platform with ocarina, tin whistle, and one person",
+    "editable_regions": [
+      "replace/modify ocarina",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "person's clothing/appearance",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "style",
+    "category": "dance_performance",
+    "local_path": "prompts/source_images/style/style_dance_performance_0149.jpg"
+  },
+  "prompts/source_images/style/style_gardens_landscaping_0150.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "zoo savanna overlook lawn",
+    "has_people": false,
+    "objects": [
+      "landscaped berms with earth auger",
+      "soil pH meter probe",
+      "soil thermometer"
+    ],
+    "materials": [],
+    "description_full": "zoo savanna overlook lawn with landscaped berms with earth auger, soil pH meter probe, soil thermometer",
+    "editable_regions": [
+      "replace/modify landscaped berms with earth auger",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "style",
+    "category": "gardens_landscaping",
+    "local_path": "prompts/source_images/style/style_gardens_landscaping_0150.jpg"
+  },
+  "prompts/source_images/style/style_rural_countryside_0151.jpg": {
+    "scene_type": "outdoor",
+    "primary_subject": "lavender farm",
+    "has_people": false,
+    "objects": [
+      "straight purple rows and distant low hills with galvanized washtub",
+      "washboard",
+      "wooden clothespin"
+    ],
+    "materials": [
+      "wooden"
+    ],
+    "description_full": "lavender farm with straight purple rows and distant low hills with galvanized washtub, washboard, wooden clothespin",
+    "editable_regions": [
+      "replace/modify straight purple rows and distant low hills with galvanized washtub",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "style",
+    "category": "rural_countryside",
+    "local_path": "prompts/source_images/style/style_rural_countryside_0151.jpg"
+  },
+  "prompts/source_images/style/style_holiday_halloween_0152.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "underground mausoleum corridor lined",
+    "has_people": true,
+    "objects": [
+      "marble crypts and votive candles with stone altar slab",
+      "goat skull candle holder",
+      "and one person"
+    ],
+    "materials": [
+      "stone",
+      "marble"
+    ],
+    "description_full": "underground mausoleum corridor lined with marble crypts and votive candles with stone altar slab, goat skull candle holder, and one person",
+    "editable_regions": [
+      "replace/modify marble crypts and votive candles with stone altar slab",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "person's clothing/appearance",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "style",
+    "category": "holiday_halloween",
+    "local_path": "prompts/source_images/style/style_holiday_halloween_0152.jpg"
+  },
+  "prompts/source_images/style/style_dance_performance_0153.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "historic town square",
+    "has_people": true,
+    "objects": [
+      "temporary platform with lute",
+      "recorder flute",
+      "and one person"
+    ],
+    "materials": [],
+    "description_full": "historic town square with temporary platform with lute, recorder flute, and one person",
+    "editable_regions": [
+      "replace/modify temporary platform with lute",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "person's clothing/appearance",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "style",
+    "category": "dance_performance",
+    "local_path": "prompts/source_images/style/style_dance_performance_0153.jpg"
+  },
+  "prompts/source_images/style/style_holiday_christmas_0154.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "recording studio live room capturing a Christmas choir",
+    "has_people": true,
+    "objects": [
+      "hanging mistletoe ball",
+      "ceiling-suspended paper star lanterns",
+      "and one person"
+    ],
+    "materials": [],
+    "description_full": "recording studio live room capturing a Christmas choir with hanging mistletoe ball, ceiling-suspended paper star lanterns, and one person",
+    "editable_regions": [
+      "replace/modify hanging mistletoe ball",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "person's clothing/appearance",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "style",
+    "category": "holiday_christmas",
+    "local_path": "prompts/source_images/style/style_holiday_christmas_0154.jpg"
+  },
+  "prompts/source_images/style/style_art_painting_0155.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "sports stadium concourse wall",
+    "has_people": false,
+    "objects": [
+      "team mural in progress with overhead track light fixture",
+      "copper kettle",
+      "patterned oriental rug"
+    ],
+    "materials": [
+      "copper"
+    ],
+    "description_full": "sports stadium concourse wall with team mural in progress with overhead track light fixture, copper kettle, patterned oriental rug",
+    "editable_regions": [
+      "replace/modify team mural in progress with overhead track light fixture",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "style",
+    "category": "art_painting",
+    "local_path": "prompts/source_images/style/style_art_painting_0155.jpg"
+  },
+  "prompts/source_images/style/style_energy_renewable_0156.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "hydrogen pipeline compressor station in open country",
+    "has_people": false,
+    "objects": [
+      "hydrogen compressor package",
+      "hydrogen pipeline isolation valve",
+      "hydrogen leak detector sensor"
+    ],
+    "materials": [],
+    "description_full": "hydrogen pipeline compressor station in open country with hydrogen compressor package, hydrogen pipeline isolation valve, hydrogen leak detector sensor",
+    "editable_regions": [
+      "replace/modify hydrogen compressor package",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "style",
+    "category": "energy_renewable",
+    "local_path": "prompts/source_images/style/style_energy_renewable_0156.jpg"
+  },
+  "prompts/source_images/style/style_art_painting_0157.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "community center exterior wall during a neighborhood mural day",
+    "has_people": true,
+    "objects": [
+      "metal watering can",
+      "crystal wine glass",
+      "and one person"
+    ],
+    "materials": [
+      "metal",
+      "glass"
+    ],
+    "description_full": "community center exterior wall during a neighborhood mural day with metal watering can, crystal wine glass, and one person",
+    "editable_regions": [
+      "replace/modify metal watering can",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "person's clothing/appearance",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "style",
+    "category": "art_painting",
+    "local_path": "prompts/source_images/style/style_art_painting_0157.jpg"
+  },
+  "prompts/source_images/style/style_gardens_landscaping_0158.jpg": {
+    "scene_type": "outdoor",
+    "primary_subject": "children's discovery garden",
+    "has_people": true,
+    "objects": [
+      "interactive plantings with obelisk plant support",
+      "plant support stake",
+      "bamboo plant tripod"
+    ],
+    "materials": [],
+    "description_full": "children's discovery garden with interactive plantings with obelisk plant support, plant support stake, bamboo plant tripod",
+    "editable_regions": [
+      "replace/modify interactive plantings with obelisk plant support",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "person's clothing/appearance",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "style",
+    "category": "gardens_landscaping",
+    "local_path": "prompts/source_images/style/style_gardens_landscaping_0158.jpg"
+  },
+  "prompts/source_images/style/style_music_performance_0159.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "ferry terminal waiting hall",
+    "has_people": true,
+    "objects": [
+      "timbales drum set",
+      "tubular bells chime frame",
+      "and one person"
+    ],
+    "materials": [],
+    "description_full": "ferry terminal waiting hall with timbales drum set, tubular bells chime frame, and one person",
+    "editable_regions": [
+      "replace/modify timbales drum set",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "person's clothing/appearance",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "style",
+    "category": "music_performance",
+    "local_path": "prompts/source_images/style/style_music_performance_0159.jpg"
+  },
+  "prompts/source_images/style/style_holiday_halloween_0160.jpg": {
+    "scene_type": "outdoor",
+    "primary_subject": "forest trail carpeted in leaves",
+    "has_people": true,
+    "objects": [
+      "carved pumpkins lining the path with brain-in-a-jar lamp",
+      "pumpkin-shaped neon sign",
+      "and one person"
+    ],
+    "materials": [],
+    "description_full": "forest trail carpeted in leaves with carved pumpkins lining the path with brain-in-a-jar lamp, pumpkin-shaped neon sign, and one person",
+    "editable_regions": [
+      "replace/modify carved pumpkins lining the path with brain-in-a-jar lamp",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "person's clothing/appearance",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "style",
+    "category": "holiday_halloween",
+    "local_path": "prompts/source_images/style/style_holiday_halloween_0160.jpg"
+  },
+  "prompts/source_images/style/style_energy_renewable_0161.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "wastewater treatment plant",
+    "has_people": false,
+    "objects": [
+      "biogas lagoons and gas holders with biogas desulfurization tower",
+      "biogas flare stack",
+      "gas-tight biogas pipeline"
+    ],
+    "materials": [],
+    "description_full": "wastewater treatment plant with biogas lagoons and gas holders with biogas desulfurization tower, biogas flare stack, gas-tight biogas pipeline",
+    "editable_regions": [
+      "replace/modify biogas lagoons and gas holders with biogas desulfurization tower",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "style",
+    "category": "energy_renewable",
+    "local_path": "prompts/source_images/style/style_energy_renewable_0161.jpg"
+  },
+  "prompts/source_images/style/style_trees_foliage_0162.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "solitary baobab on a dry savanna plain",
+    "has_people": true,
+    "objects": [
+      "exposed tree roots",
+      "termite carton nest on tree",
+      "and one person"
+    ],
+    "materials": [],
+    "description_full": "solitary baobab on a dry savanna plain with exposed tree roots, termite carton nest on tree, and one person",
+    "editable_regions": [
+      "replace/modify exposed tree roots",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "person's clothing/appearance",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "style",
+    "category": "trees_foliage",
+    "local_path": "prompts/source_images/style/style_trees_foliage_0162.jpg"
+  },
+  "prompts/source_images/style/style_holiday_general_celebrations_0163.jpg": {
+    "scene_type": "outdoor",
+    "primary_subject": "indoor ice skating rink center under bright arena lights",
+    "has_people": true,
+    "objects": [
+      "hot chocolate urn",
+      "snowflake window decals",
+      "and one person"
+    ],
+    "materials": [],
+    "description_full": "indoor ice skating rink center under bright arena lights with hot chocolate urn, snowflake window decals, and one person",
+    "editable_regions": [
+      "replace/modify hot chocolate urn",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "person's clothing/appearance",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "style",
+    "category": "holiday_general_celebrations",
+    "local_path": "prompts/source_images/style/style_holiday_general_celebrations_0163.jpg"
+  },
+  "prompts/source_images/style/style_music_performance_0164.jpg": {
+    "scene_type": "indoor",
+    "primary_subject": "rooftop billboard catwalk",
+    "has_people": true,
+    "objects": [
+      "safety harness for rigger",
+      "sandbag stage weight",
+      "and one person"
+    ],
+    "materials": [],
+    "description_full": "rooftop billboard catwalk with safety harness for rigger, sandbag stage weight, and one person",
+    "editable_regions": [
+      "replace/modify safety harness for rigger",
+      "background/environment change",
+      "lighting/time of day change",
+      "color/material of main subject",
+      "person's clothing/appearance",
+      "add new object to scene",
+      "style transfer (artistic/era)",
+      "remove specific object"
+    ],
+    "group": "style",
+    "category": "music_performance",
+    "local_path": "prompts/source_images/style/style_music_performance_0164.jpg"
+  }
+}

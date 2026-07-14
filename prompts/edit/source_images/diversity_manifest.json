@@ -1,0 +1,1331 @@
+{
+  "total": 165,
+  "distribution": {
+    "person": 67,
+    "object": 49,
+    "scene": 33,
+    "style": 16
+  },
+  "images": [
+    {
+      "s3_key": "adobe-human-image-editing/accepted/group/SRC-02662.jpg",
+      "group": "person",
+      "category": "person_group",
+      "description": "group portrait from hub production data",
+      "filename": "SRC-02662.jpg",
+      "local_path": "prompts/source_images/person/person_person_group_0000.jpg"
+    },
+    {
+      "s3_key": "adobe-human-image-editing/accepted/portrait/SRC-01631.png",
+      "group": "person",
+      "category": "person_portrait",
+      "description": "portrait portrait from hub production data",
+      "filename": "SRC-01631.png",
+      "local_path": "prompts/source_images/person/person_person_portrait_0001.jpg"
+    },
+    {
+      "s3_key": "adobe-human-image-editing/accepted/portrait/SRC-01615.png",
+      "group": "person",
+      "category": "person_portrait",
+      "description": "portrait portrait from hub production data",
+      "filename": "SRC-01615.png",
+      "local_path": "prompts/source_images/person/person_person_portrait_0002.jpg"
+    },
+    {
+      "s3_key": "adobe-human-image-editing/accepted/fullbody/SRC-00055.png",
+      "group": "person",
+      "category": "person_fullbody",
+      "description": "fullbody portrait from hub production data",
+      "filename": "SRC-00055.png",
+      "local_path": "prompts/source_images/person/person_person_fullbody_0003.jpg"
+    },
+    {
+      "s3_key": "adobe-human-image-editing/accepted/fullbody/SRC-00108.png",
+      "group": "person",
+      "category": "person_fullbody",
+      "description": "fullbody portrait from hub production data",
+      "filename": "SRC-00108.png",
+      "local_path": "prompts/source_images/person/person_person_fullbody_0004.jpg"
+    },
+    {
+      "s3_key": "adobe-human-image-editing/accepted/group/SRC-01100.png",
+      "group": "person",
+      "category": "person_group",
+      "description": "group portrait from hub production data",
+      "filename": "SRC-01100.png",
+      "local_path": "prompts/source_images/person/person_person_group_0005.jpg"
+    },
+    {
+      "s3_key": "adobe-human-image-editing/accepted/group/SRC-02808.jpg",
+      "group": "person",
+      "category": "person_group",
+      "description": "group portrait from hub production data",
+      "filename": "SRC-02808.jpg",
+      "local_path": "prompts/source_images/person/person_person_group_0006.jpg"
+    },
+    {
+      "s3_key": "adobe-human-image-editing/accepted/portrait/SRC-01260.png",
+      "group": "person",
+      "category": "person_portrait",
+      "description": "portrait portrait from hub production data",
+      "filename": "SRC-01260.png",
+      "local_path": "prompts/source_images/person/person_person_portrait_0007.jpg"
+    },
+    {
+      "s3_key": "adobe-human-image-editing/accepted/group/SRC-01106.png",
+      "group": "person",
+      "category": "person_group",
+      "description": "group portrait from hub production data",
+      "filename": "SRC-01106.png",
+      "local_path": "prompts/source_images/person/person_person_group_0008.jpg"
+    },
+    {
+      "s3_key": "adobe-human-image-editing/accepted/group/SRC-02308.jpg",
+      "group": "person",
+      "category": "person_group",
+      "description": "group portrait from hub production data",
+      "filename": "SRC-02308.jpg",
+      "local_path": "prompts/source_images/person/person_person_group_0009.jpg"
+    },
+    {
+      "s3_key": "adobe-human-image-editing/accepted/portrait/SRC-01372.png",
+      "group": "person",
+      "category": "person_portrait",
+      "description": "portrait portrait from hub production data",
+      "filename": "SRC-01372.png",
+      "local_path": "prompts/source_images/person/person_person_portrait_0010.jpg"
+    },
+    {
+      "s3_key": "adobe-human-image-editing/accepted/group/SRC-02347.jpg",
+      "group": "person",
+      "category": "person_group",
+      "description": "group portrait from hub production data",
+      "filename": "SRC-02347.jpg",
+      "local_path": "prompts/source_images/person/person_person_group_0011.jpg"
+    },
+    {
+      "s3_key": "adobe-human-image-editing/accepted/fullbody/SRC-00350.png",
+      "group": "person",
+      "category": "person_fullbody",
+      "description": "fullbody portrait from hub production data",
+      "filename": "SRC-00350.png",
+      "local_path": "prompts/source_images/person/person_person_fullbody_0012.jpg"
+    },
+    {
+      "s3_key": "adobe-human-image-editing/accepted/fullbody/SRC-00313.png",
+      "group": "person",
+      "category": "person_fullbody",
+      "description": "fullbody portrait from hub production data",
+      "filename": "SRC-00313.png",
+      "local_path": "prompts/source_images/person/person_person_fullbody_0013.jpg"
+    },
+    {
+      "s3_key": "adobe-human-image-editing/accepted/fullbody/SRC-00013.png",
+      "group": "person",
+      "category": "person_fullbody",
+      "description": "fullbody portrait from hub production data",
+      "filename": "SRC-00013.png",
+      "local_path": "prompts/source_images/person/person_person_fullbody_0014.jpg"
+    },
+    {
+      "s3_key": "adobe-human-image-editing/accepted/portrait/SRC-01694.png",
+      "group": "person",
+      "category": "person_portrait",
+      "description": "portrait portrait from hub production data",
+      "filename": "SRC-01694.png",
+      "local_path": "prompts/source_images/person/person_person_portrait_0015.jpg"
+    },
+    {
+      "s3_key": "adobe-human-image-editing/accepted/fullbody/SRC-00231.png",
+      "group": "person",
+      "category": "person_fullbody",
+      "description": "fullbody portrait from hub production data",
+      "filename": "SRC-00231.png",
+      "local_path": "prompts/source_images/person/person_person_fullbody_0016.jpg"
+    },
+    {
+      "s3_key": "adobe-human-image-editing/accepted/group/SRC-00982.png",
+      "group": "person",
+      "category": "person_group",
+      "description": "group portrait from hub production data",
+      "filename": "SRC-00982.png",
+      "local_path": "prompts/source_images/person/person_person_group_0017.jpg"
+    },
+    {
+      "s3_key": "adobe-human-image-editing/accepted/fullbody/SRC-00346.png",
+      "group": "person",
+      "category": "person_fullbody",
+      "description": "fullbody portrait from hub production data",
+      "filename": "SRC-00346.png",
+      "local_path": "prompts/source_images/person/person_person_fullbody_0018.jpg"
+    },
+    {
+      "s3_key": "adobe-human-image-editing/accepted/fullbody/SRC-00144.png",
+      "group": "person",
+      "category": "person_fullbody",
+      "description": "fullbody portrait from hub production data",
+      "filename": "SRC-00144.png",
+      "local_path": "prompts/source_images/person/person_person_fullbody_0019.jpg"
+    },
+    {
+      "s3_key": "adobe-human-image-editing/accepted/group/SRC-02963.jpg",
+      "group": "person",
+      "category": "person_group",
+      "description": "group portrait from hub production data",
+      "filename": "SRC-02963.jpg",
+      "local_path": "prompts/source_images/person/person_person_group_0020.jpg"
+    },
+    {
+      "s3_key": "adobe-human-image-editing/accepted/fullbody/SRC-00056.png",
+      "group": "person",
+      "category": "person_fullbody",
+      "description": "fullbody portrait from hub production data",
+      "filename": "SRC-00056.png",
+      "local_path": "prompts/source_images/person/person_person_fullbody_0021.jpg"
+    },
+    {
+      "s3_key": "adobe-human-image-editing/accepted/portrait/SRC-01179.png",
+      "group": "person",
+      "category": "person_portrait",
+      "description": "portrait portrait from hub production data",
+      "filename": "SRC-01179.png",
+      "local_path": "prompts/source_images/person/person_person_portrait_0022.jpg"
+    },
+    {
+      "s3_key": "adobe-human-image-editing/accepted/group/SRC-02768.jpg",
+      "group": "person",
+      "category": "person_group",
+      "description": "group portrait from hub production data",
+      "filename": "SRC-02768.jpg",
+      "local_path": "prompts/source_images/person/person_person_group_0023.jpg"
+    },
+    {
+      "s3_key": "adobe-human-image-editing/accepted/fullbody/SRC-00066.png",
+      "group": "person",
+      "category": "person_fullbody",
+      "description": "fullbody portrait from hub production data",
+      "filename": "SRC-00066.png",
+      "local_path": "prompts/source_images/person/person_person_fullbody_0024.jpg"
+    },
+    {
+      "s3_key": "adobe-human-image-editing/accepted/fullbody/SRC-00316.png",
+      "group": "person",
+      "category": "person_fullbody",
+      "description": "fullbody portrait from hub production data",
+      "filename": "SRC-00316.png",
+      "local_path": "prompts/source_images/person/person_person_fullbody_0025.jpg"
+    },
+    {
+      "s3_key": "adobe-human-image-editing/accepted/group/SRC-02630.jpg",
+      "group": "person",
+      "category": "person_group",
+      "description": "group portrait from hub production data",
+      "filename": "SRC-02630.jpg",
+      "local_path": "prompts/source_images/person/person_person_group_0026.jpg"
+    },
+    {
+      "s3_key": "adobe-human-image-editing/accepted/fullbody/SRC-00156.png",
+      "group": "person",
+      "category": "person_fullbody",
+      "description": "fullbody portrait from hub production data",
+      "filename": "SRC-00156.png",
+      "local_path": "prompts/source_images/person/person_person_fullbody_0027.jpg"
+    },
+    {
+      "s3_key": "adobe-human-image-editing/accepted/portrait/SRC-01258.png",
+      "group": "person",
+      "category": "person_portrait",
+      "description": "portrait portrait from hub production data",
+      "filename": "SRC-01258.png",
+      "local_path": "prompts/source_images/person/person_person_portrait_0028.jpg"
+    },
+    {
+      "s3_key": "adobe-human-image-editing/accepted/portrait/SRC-01525.png",
+      "group": "person",
+      "category": "person_portrait",
+      "description": "portrait portrait from hub production data",
+      "filename": "SRC-01525.png",
+      "local_path": "prompts/source_images/person/person_person_portrait_0029.jpg"
+    },
+    {
+      "s3_key": "adobe-human-image-editing/accepted/portrait/SRC-01568.png",
+      "group": "person",
+      "category": "person_portrait",
+      "description": "portrait portrait from hub production data",
+      "filename": "SRC-01568.png",
+      "local_path": "prompts/source_images/person/person_person_portrait_0030.jpg"
+    },
+    {
+      "s3_key": "adobe-human-image-editing/accepted/portrait/SRC-01600.png",
+      "group": "person",
+      "category": "person_portrait",
+      "description": "portrait portrait from hub production data",
+      "filename": "SRC-01600.png",
+      "local_path": "prompts/source_images/person/person_person_portrait_0031.jpg"
+    },
+    {
+      "s3_key": "adobe-human-image-editing/accepted/portrait/SRC-01498.png",
+      "group": "person",
+      "category": "person_portrait",
+      "description": "portrait portrait from hub production data",
+      "filename": "SRC-01498.png",
+      "local_path": "prompts/source_images/person/person_person_portrait_0032.jpg"
+    },
+    {
+      "s3_key": "adobe-human-image-editing/accepted/group/SRC-02995.jpg",
+      "group": "person",
+      "category": "person_group",
+      "description": "group portrait from hub production data",
+      "filename": "SRC-02995.jpg",
+      "local_path": "prompts/source_images/person/person_person_group_0033.jpg"
+    },
+    {
+      "s3_key": "adobe-human-image-editing/accepted/fullbody/SRC-00031.png",
+      "group": "person",
+      "category": "person_fullbody",
+      "description": "fullbody portrait from hub production data",
+      "filename": "SRC-00031.png",
+      "local_path": "prompts/source_images/person/person_person_fullbody_0034.jpg"
+    },
+    {
+      "s3_key": "adobe-human-image-editing/accepted/group/SRC-02415.jpg",
+      "group": "person",
+      "category": "person_group",
+      "description": "group portrait from hub production data",
+      "filename": "SRC-02415.jpg",
+      "local_path": "prompts/source_images/person/person_person_group_0035.jpg"
+    },
+    {
+      "s3_key": "adobe-human-image-editing/accepted/group/SRC-01042.png",
+      "group": "person",
+      "category": "person_group",
+      "description": "group portrait from hub production data",
+      "filename": "SRC-01042.png",
+      "local_path": "prompts/source_images/person/person_person_group_0036.jpg"
+    },
+    {
+      "s3_key": "adobe-human-image-editing/accepted/portrait/SRC-01612.png",
+      "group": "person",
+      "category": "person_portrait",
+      "description": "portrait portrait from hub production data",
+      "filename": "SRC-01612.png",
+      "local_path": "prompts/source_images/person/person_person_portrait_0037.jpg"
+    },
+    {
+      "s3_key": "adobe-human-image-editing/accepted/group/SRC-01063.png",
+      "group": "person",
+      "category": "person_group",
+      "description": "group portrait from hub production data",
+      "filename": "SRC-01063.png",
+      "local_path": "prompts/source_images/person/person_person_group_0038.jpg"
+    },
+    {
+      "s3_key": "adobe-human-image-editing/accepted/fullbody/SRC-00226.png",
+      "group": "person",
+      "category": "person_fullbody",
+      "description": "fullbody portrait from hub production data",
+      "filename": "SRC-00226.png",
+      "local_path": "prompts/source_images/person/person_person_fullbody_0039.jpg"
+    },
+    {
+      "s3_key": "adobe-human-image-editing/accepted/portrait/SRC-01643.png",
+      "group": "person",
+      "category": "person_portrait",
+      "description": "portrait portrait from hub production data",
+      "filename": "SRC-01643.png",
+      "local_path": "prompts/source_images/person/person_person_portrait_0040.jpg"
+    },
+    {
+      "s3_key": "adobe-human-image-editing/accepted/fullbody/SRC-00452.png",
+      "group": "person",
+      "category": "person_fullbody",
+      "description": "fullbody portrait from hub production data",
+      "filename": "SRC-00452.png",
+      "local_path": "prompts/source_images/person/person_person_fullbody_0041.jpg"
+    },
+    {
+      "s3_key": "adobe-human-image-editing/accepted/group/SRC-02929.jpg",
+      "group": "person",
+      "category": "person_group",
+      "description": "group portrait from hub production data",
+      "filename": "SRC-02929.jpg",
+      "local_path": "prompts/source_images/person/person_person_group_0042.jpg"
+    },
+    {
+      "s3_key": "adobe-human-image-editing/accepted/portrait/SRC-01683.png",
+      "group": "person",
+      "category": "person_portrait",
+      "description": "portrait portrait from hub production data",
+      "filename": "SRC-01683.png",
+      "local_path": "prompts/source_images/person/person_person_portrait_0043.jpg"
+    },
+    {
+      "s3_key": "adobe-human-image-editing/accepted/group/SRC-00983.png",
+      "group": "person",
+      "category": "person_group",
+      "description": "group portrait from hub production data",
+      "filename": "SRC-00983.png",
+      "local_path": "prompts/source_images/person/person_person_group_0044.jpg"
+    },
+    {
+      "s3_key": "adobe-human-image-editing/accepted/group/SRC-02315.jpg",
+      "group": "person",
+      "category": "person_group",
+      "description": "group portrait from hub production data",
+      "filename": "SRC-02315.jpg",
+      "local_path": "prompts/source_images/person/person_person_group_0045.jpg"
+    },
+    {
+      "s3_key": "adobe-human-image-editing/accepted/portrait/SRC-01622.png",
+      "group": "person",
+      "category": "person_portrait",
+      "description": "portrait portrait from hub production data",
+      "filename": "SRC-01622.png",
+      "local_path": "prompts/source_images/person/person_person_portrait_0046.jpg"
+    },
+    {
+      "s3_key": "adobe-human-image-editing/accepted/portrait/SRC-01501.png",
+      "group": "person",
+      "category": "person_portrait",
+      "description": "portrait portrait from hub production data",
+      "filename": "SRC-01501.png",
+      "local_path": "prompts/source_images/person/person_person_portrait_0047.jpg"
+    },
+    {
+      "s3_key": "adobe-human-image-editing/accepted/portrait/SRC-01292.png",
+      "group": "person",
+      "category": "person_portrait",
+      "description": "portrait portrait from hub production data",
+      "filename": "SRC-01292.png",
+      "local_path": "prompts/source_images/person/person_person_portrait_0048.jpg"
+    },
+    {
+      "s3_key": "adobe-human-image-editing/accepted/fullbody/SRC-00524.png",
+      "group": "person",
+      "category": "person_fullbody",
+      "description": "fullbody portrait from hub production data",
+      "filename": "SRC-00524.png",
+      "local_path": "prompts/source_images/person/person_person_fullbody_0049.jpg"
+    },
+    {
+      "s3_key": "adobe-human-image-editing/accepted/group/SRC-01111.png",
+      "group": "person",
+      "category": "person_group",
+      "description": "group portrait from hub production data",
+      "filename": "SRC-01111.png",
+      "local_path": "prompts/source_images/person/person_person_group_0050.jpg"
+    },
+    {
+      "s3_key": "adobe-human-image-editing/accepted/fullbody/SRC-00455.png",
+      "group": "person",
+      "category": "person_fullbody",
+      "description": "fullbody portrait from hub production data",
+      "filename": "SRC-00455.png",
+      "local_path": "prompts/source_images/person/person_person_fullbody_0051.jpg"
+    },
+    {
+      "s3_key": "adobe-human-image-editing/accepted/portrait/SRC-01331.png",
+      "group": "person",
+      "category": "person_portrait",
+      "description": "portrait portrait from hub production data",
+      "filename": "SRC-01331.png",
+      "local_path": "prompts/source_images/person/person_person_portrait_0052.jpg"
+    },
+    {
+      "s3_key": "adobe-human-image-editing/accepted/group/SRC-02793.jpg",
+      "group": "person",
+      "category": "person_group",
+      "description": "group portrait from hub production data",
+      "filename": "SRC-02793.jpg",
+      "local_path": "prompts/source_images/person/person_person_group_0053.jpg"
+    },
+    {
+      "s3_key": "adobe-human-image-editing/accepted/fullbody/SRC-00016.png",
+      "group": "person",
+      "category": "person_fullbody",
+      "description": "fullbody portrait from hub production data",
+      "filename": "SRC-00016.png",
+      "local_path": "prompts/source_images/person/person_person_fullbody_0054.jpg"
+    },
+    {
+      "s3_key": "adobe-human-image-editing/accepted/group/SRC-02466.jpg",
+      "group": "person",
+      "category": "person_group",
+      "description": "group portrait from hub production data",
+      "filename": "SRC-02466.jpg",
+      "local_path": "prompts/source_images/person/person_person_group_0055.jpg"
+    },
+    {
+      "s3_key": "adobe-human-image-editing/accepted/portrait/SRC-01601.png",
+      "group": "person",
+      "category": "person_portrait",
+      "description": "portrait portrait from hub production data",
+      "filename": "SRC-01601.png",
+      "local_path": "prompts/source_images/person/person_person_portrait_0056.jpg"
+    },
+    {
+      "s3_key": "adobe-human-image-editing/accepted/group/SRC-02249.jpg",
+      "group": "person",
+      "category": "person_group",
+      "description": "group portrait from hub production data",
+      "filename": "SRC-02249.jpg",
+      "local_path": "prompts/source_images/person/person_person_group_0057.jpg"
+    },
+    {
+      "s3_key": "adobe-human-image-editing/accepted/portrait/SRC-01515.png",
+      "group": "person",
+      "category": "person_portrait",
+      "description": "portrait portrait from hub production data",
+      "filename": "SRC-01515.png",
+      "local_path": "prompts/source_images/person/person_person_portrait_0058.jpg"
+    },
+    {
+      "s3_key": "adobe-human-image-editing/accepted/fullbody/SRC-00517.png",
+      "group": "person",
+      "category": "person_fullbody",
+      "description": "fullbody portrait from hub production data",
+      "filename": "SRC-00517.png",
+      "local_path": "prompts/source_images/person/person_person_fullbody_0059.jpg"
+    },
+    {
+      "s3_key": "adobe-human-image-editing/accepted/portrait/SRC-01758.png",
+      "group": "person",
+      "category": "person_portrait",
+      "description": "portrait portrait from hub production data",
+      "filename": "SRC-01758.png",
+      "local_path": "prompts/source_images/person/person_person_portrait_0060.jpg"
+    },
+    {
+      "s3_key": "adobe-human-image-editing/accepted/group/SRC-02702.jpg",
+      "group": "person",
+      "category": "person_group",
+      "description": "group portrait from hub production data",
+      "filename": "SRC-02702.jpg",
+      "local_path": "prompts/source_images/person/person_person_group_0061.jpg"
+    },
+    {
+      "s3_key": "adobe-human-image-editing/accepted/fullbody/SRC-00256.png",
+      "group": "person",
+      "category": "person_fullbody",
+      "description": "fullbody portrait from hub production data",
+      "filename": "SRC-00256.png",
+      "local_path": "prompts/source_images/person/person_person_fullbody_0062.jpg"
+    },
+    {
+      "s3_key": "adobe-human-image-editing/accepted/group/SRC-02907.png",
+      "group": "person",
+      "category": "person_group",
+      "description": "group portrait from hub production data",
+      "filename": "SRC-02907.png",
+      "local_path": "prompts/source_images/person/person_person_group_0063.jpg"
+    },
+    {
+      "s3_key": "adobe-human-image-editing/accepted/portrait/SRC-01211.png",
+      "group": "person",
+      "category": "person_portrait",
+      "description": "portrait portrait from hub production data",
+      "filename": "SRC-01211.png",
+      "local_path": "prompts/source_images/person/person_person_portrait_0064.jpg"
+    },
+    {
+      "s3_key": "adobe-human-image-editing/accepted/fullbody/SRC-00205.png",
+      "group": "person",
+      "category": "person_fullbody",
+      "description": "fullbody portrait from hub production data",
+      "filename": "SRC-00205.png",
+      "local_path": "prompts/source_images/person/person_person_fullbody_0065.jpg"
+    },
+    {
+      "s3_key": "adobe-human-image-editing/accepted/fullbody/SRC-00113.png",
+      "group": "person",
+      "category": "person_fullbody",
+      "description": "fullbody portrait from hub production data",
+      "filename": "SRC-00113.png",
+      "local_path": "prompts/source_images/person/person_person_fullbody_0066.jpg"
+    },
+    {
+      "s3_key": "images/adobe/food_ingredients/scene_018074_shot01_full_scene.jpg",
+      "group": "object",
+      "category": "food_ingredients",
+      "description": "dark mushroom-growing tunnel with stacked shelves of plastic bags sprouting fungi with tub of yogurt, carton of eggs, block of cream cheese",
+      "filename": "scene_018074_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/object/object_food_ingredients_0067.jpg"
+    },
+    {
+      "s3_key": "images/adobe/vehicles_bicycles/scene_016220_shot01_full_scene.jpg",
+      "group": "object",
+      "category": "vehicles_bicycles",
+      "description": "rice paddy bund path elevated between flooded fields with farmers\u2019 bikes nearby with seatpost clamp, saddle rail clamp, and one person",
+      "filename": "scene_016220_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/object/object_vehicles_bicycles_0068.jpg"
+    },
+    {
+      "s3_key": "images/adobe/vehicles_bicycles/scene_009241_shot01_full_scene.jpg",
+      "group": "object",
+      "category": "vehicles_bicycles",
+      "description": "open-air street market in a Southeast Asian city with bicycles weaving between stalls with folding bicycle, cargo tricycle, cycle rickshaw",
+      "filename": "scene_009241_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/object/object_vehicles_bicycles_0069.jpg"
+    },
+    {
+      "s3_key": "images/adobe/toys_games/scene_023867_shot01_full_scene.jpg",
+      "group": "object",
+      "category": "toys_games",
+      "description": "suburban park sandbox scattered with plastic buckets and shovels with toy sandwich making set, toy fruit and vegetable set, toy snacks and sweets set",
+      "filename": "scene_023867_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/object/object_toys_games_0070.jpg"
+    },
+    {
+      "s3_key": "images/adobe/beverages_hot/scene_025138_shot01_full_scene.jpg",
+      "group": "object",
+      "category": "beverages_hot",
+      "description": "rural train station platform bench with vending machine with decorative coffee bean-filled candle holder, foil coffee bag with one-way valve, and one person",
+      "filename": "scene_025138_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/object/object_beverages_hot_0071.jpg"
+    },
+    {
+      "s3_key": "images/adobe/flowers_arrangements/scene_008107_shot01_full_scene.jpg",
+      "group": "object",
+      "category": "flowers_arrangements",
+      "description": "mosque courtyard wedding reception area with glass terrarium with plants, tabletop bonsai tree, cactus in clay pot",
+      "filename": "scene_008107_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/object/object_flowers_arrangements_0072.jpg"
+    },
+    {
+      "s3_key": "images/adobe/technology_circuits_hardware/scene_008632_shot01_full_scene.jpg",
+      "group": "object",
+      "category": "technology_circuits_hardware",
+      "description": "timekeeping lab with cesium clock electronics racks with cable tie tensioning tool, label printer for cables, small parts pick-up tool",
+      "filename": "scene_008632_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/object/object_technology_circuits_hardware_0073.jpg"
+    },
+    {
+      "s3_key": "images/adobe/vehicles_aircraft/scene_021218_shot01_full_scene.jpg",
+      "group": "object",
+      "category": "vehicles_aircraft",
+      "description": "remote hardstand with lone widebody parked with potable water service truck, lavatory service truck, passenger boarding stairs truck",
+      "filename": "scene_021218_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/object/object_vehicles_aircraft_0074.jpg"
+    },
+    {
+      "s3_key": "images/adobe/flowers_roses/scene_013050_shot01_full_scene.jpg",
+      "group": "object",
+      "category": "flowers_roses",
+      "description": "monastery cloister courtyard with old shrub roses around a central well with bouquet of dried roses hanging upside down from hook, dried rose wreath with faded blooms, clear glass dome showcasing a single preserved rose",
+      "filename": "scene_013050_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/object/object_flowers_roses_0075.jpg"
+    },
+    {
+      "s3_key": "images/adobe/vehicles_trains/scene_028874_shot01_full_scene.jpg",
+      "group": "object",
+      "category": "vehicles_trains",
+      "description": "steam locomotive roundhouse with central turntable with ash pit cleaning rake, coaling tower chute, toolbox on locomotive running board",
+      "filename": "scene_028874_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/object/object_vehicles_trains_0076.jpg"
+    },
+    {
+      "s3_key": "images/adobe/beverages_cold/scene_038376_shot01_full_scene.jpg",
+      "group": "object",
+      "category": "beverages_cold",
+      "description": "city marathon finish-line area with sponsor drink booths with garnish cutting station, fruit fly cover for drink glasses, and one person",
+      "filename": "scene_038376_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/object/object_beverages_cold_0077.jpg"
+    },
+    {
+      "s3_key": "images/adobe/toys_games/scene_011001_shot01_full_scene.jpg",
+      "group": "object",
+      "category": "toys_games",
+      "description": "outdoor flea market stall piled with secondhand toys with rag doll, toy fire truck, wooden tangram animals set",
+      "filename": "scene_011001_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/object/object_toys_games_0078.jpg"
+    },
+    {
+      "s3_key": "images/adobe/beverages_hot/scene_016275_shot01_full_scene.jpg",
+      "group": "object",
+      "category": "beverages_hot",
+      "description": "ferry passenger deck snack bar with chest freezer for ice cream, microwave oven for caf\u00e9, and one person",
+      "filename": "scene_016275_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/object/object_beverages_hot_0079.jpg"
+    },
+    {
+      "s3_key": "images/adobe/food_prepared_meals/scene_045433_shot01_full_scene.jpg",
+      "group": "object",
+      "category": "food_prepared_meals",
+      "description": "Brazilian churrascaria dining room with skewers carried by waiters with Brazilian feijoada black bean stew with meats and rice, Brazilian acaraj\u00e9 black-eyed pea fritters on plate, flan caramel custard unmolded on plate",
+      "filename": "scene_045433_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/object/object_food_prepared_meals_0080.jpg"
+    },
+    {
+      "s3_key": "images/adobe/fruits_vegetables/scene_038563_shot01_full_scene.jpg",
+      "group": "object",
+      "category": "fruits_vegetables",
+      "description": "industrial carrot washing and sorting line with plastic field harvest bin, wooden pallet, and one person",
+      "filename": "scene_038563_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/object/object_fruits_vegetables_0081.jpg"
+    },
+    {
+      "s3_key": "images/adobe/beverages_alcoholic/scene_018362_shot01_full_scene.jpg",
+      "group": "object",
+      "category": "beverages_alcoholic",
+      "description": "city street block party beer garden with wooden beer bottle carrier crate with handle, plastic six-pack ring carrier, and one person",
+      "filename": "scene_018362_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/object/object_beverages_alcoholic_0082.jpg"
+    },
+    {
+      "s3_key": "images/adobe/kitchen_cookware/scene_004610_shot01_full_scene.jpg",
+      "group": "object",
+      "category": "kitchen_cookware",
+      "description": "corporate test kitchen for food brand with kitchen scale, chef's knife, and one person",
+      "filename": "scene_004610_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/object/object_kitchen_cookware_0083.jpg"
+    },
+    {
+      "s3_key": "images/adobe/vehicles_cars/scene_026892_shot01_full_scene.jpg",
+      "group": "object",
+      "category": "vehicles_cars",
+      "description": "glass-fronted downtown boulevard with multilane car traffic with locking pliers, sanding block, and one person",
+      "filename": "scene_026892_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/object/object_vehicles_cars_0084.jpg"
+    },
+    {
+      "s3_key": "images/adobe/technology_robotics/scene_012001_shot01_full_scene.jpg",
+      "group": "object",
+      "category": "technology_robotics",
+      "description": "exoskeleton testing gym with harness rails and powered suits with robotic exoskeleton suit, motion tracking suit with markers, and one person",
+      "filename": "scene_012001_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/object/object_technology_robotics_0085.jpg"
+    },
+    {
+      "s3_key": "images/adobe/art_sculpture/scene_043373_shot01_full_scene.jpg",
+      "group": "object",
+      "category": "art_sculpture",
+      "description": "Science museum atrium featuring a sculptural atom installation with fire hydrant sculpture, manhole cover relief sculpture, sewer pipe opening sculpture",
+      "filename": "scene_043373_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/object/object_art_sculpture_0086.jpg"
+    },
+    {
+      "s3_key": "images/adobe/vehicles_motorcycles/scene_035006_shot01_full_scene.jpg",
+      "group": "object",
+      "category": "vehicles_motorcycles",
+      "description": "loading dock zone behind a large shopping mall with fuse assortment box, relay assortment box, and one person",
+      "filename": "scene_035006_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/object/object_vehicles_motorcycles_0087.jpg"
+    },
+    {
+      "s3_key": "images/adobe/music_instruments/scene_009415_shot01_full_scene.jpg",
+      "group": "object",
+      "category": "music_instruments",
+      "description": "Castle lawn where a Highland pipe band practices in formation with bagpipes, snare drum, and one person",
+      "filename": "scene_009415_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/object/object_music_instruments_0088.jpg"
+    },
+    {
+      "s3_key": "images/adobe/vehicles_trucks_heavy/scene_042122_shot01_full_scene.jpg",
+      "group": "object",
+      "category": "vehicles_trucks_heavy",
+      "description": "diesel engine rebuild shop with stripped truck chassis with jump start booster pack, battery charger cart, coolant recycling machine",
+      "filename": "scene_042122_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/object/object_vehicles_trucks_heavy_0089.jpg"
+    },
+    {
+      "s3_key": "images/adobe/vehicles_cars/scene_039407_shot01_full_scene.jpg",
+      "group": "object",
+      "category": "vehicles_cars",
+      "description": "mechanical car stacker system in a dense city lot with lap timing transponder, hood latch, and one person",
+      "filename": "scene_039407_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/object/object_vehicles_cars_0090.jpg"
+    },
+    {
+      "s3_key": "images/adobe/art_sculpture/scene_029184_shot01_full_scene.jpg",
+      "group": "object",
+      "category": "art_sculpture",
+      "description": "Courthouse steps guarded by a blindfolded justice statue with weighing scale sculpture, scroll unfurling sculpture, open book relief sculpture",
+      "filename": "scene_029184_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/object/object_art_sculpture_0091.jpg"
+    },
+    {
+      "s3_key": "images/adobe/music_instruments/scene_021101_shot01_full_scene.jpg",
+      "group": "object",
+      "category": "music_instruments",
+      "description": "Instrument repair shop counter with an open trumpet and scattered tools with reed trimmer tool, mouthpiece puller, berimbau musical bow",
+      "filename": "scene_021101_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/object/object_music_instruments_0092.jpg"
+    },
+    {
+      "s3_key": "images/adobe/flowers_wildflowers/scene_002918_shot01_full_scene.jpg",
+      "group": "object",
+      "category": "flowers_wildflowers",
+      "description": "rolling tallgrass prairie in full bloom with tall mullein flower spike, tuft of tall meadow grass, and one person",
+      "filename": "scene_002918_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/object/object_flowers_wildflowers_0093.jpg"
+    },
+    {
+      "s3_key": "images/adobe/tools_hardware/scene_028427_shot01_full_scene.jpg",
+      "group": "object",
+      "category": "tools_hardware",
+      "description": "city parks department yard near a greenhouse with faucet puller, compression fitting tool, flaring tool",
+      "filename": "scene_028427_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/object/object_tools_hardware_0094.jpg"
+    },
+    {
+      "s3_key": "images/adobe/food_street_food/scene_028131_shot01_full_scene.jpg",
+      "group": "object",
+      "category": "food_street_food",
+      "description": "campground central gathering area with a visiting taco truck with tostilocos snack bag, guacamole bowl, and one person",
+      "filename": "scene_028131_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/object/object_food_street_food_0095.jpg"
+    },
+    {
+      "s3_key": "images/adobe/food_prepared_meals/scene_040679_shot01_full_scene.jpg",
+      "group": "object",
+      "category": "food_prepared_meals",
+      "description": "vintage train dining car with white linens and wood paneling with paneer tikka masala in bowl with rice, chana masala chickpea curry plate with naan, and one person",
+      "filename": "scene_040679_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/object/object_food_prepared_meals_0096.jpg"
+    },
+    {
+      "s3_key": "images/adobe/fruits_vegetables/scene_043599_shot01_full_scene.jpg",
+      "group": "object",
+      "category": "fruits_vegetables",
+      "description": "airport cargo terminal perishable goods area with chef's apron with vegetable print, oven mitts with fruit pattern, reusable produce stickers sheet",
+      "filename": "scene_043599_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/object/object_fruits_vegetables_0097.jpg"
+    },
+    {
+      "s3_key": "images/adobe/cosmetics_beauty/scene_009474_shot01_full_scene.jpg",
+      "group": "object",
+      "category": "cosmetics_beauty",
+      "description": "wedding photography studio prep room with floral hair wreath crown, tiara hair accessory, ceramic ring dish on vanity",
+      "filename": "scene_009474_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/object/object_cosmetics_beauty_0098.jpg"
+    },
+    {
+      "s3_key": "images/adobe/beverages_cold/scene_039876_shot01_full_scene.jpg",
+      "group": "object",
+      "category": "beverages_cold",
+      "description": "surf competition judging tower base with coolers with bottle neck hanger sign, tap handle label clip, and one person",
+      "filename": "scene_039876_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/object/object_beverages_cold_0099.jpg"
+    },
+    {
+      "s3_key": "images/adobe/vehicles_boats_ships/scene_003515_shot01_full_scene.jpg",
+      "group": "object",
+      "category": "vehicles_boats_ships",
+      "description": "multistory cruise ship interior atrium facing indoor promenade with ventilator cowl, ship's funnel, and one person",
+      "filename": "scene_003515_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/object/object_vehicles_boats_ships_0100.jpg"
+    },
+    {
+      "s3_key": "images/adobe/art_photography_equipment/scene_017095_shot01_full_scene.jpg",
+      "group": "object",
+      "category": "art_photography_equipment",
+      "description": "camera rental house prep counter with photo negative loupe, color temperature meter, gray card",
+      "filename": "scene_017095_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/object/object_art_photography_equipment_0101.jpg"
+    },
+    {
+      "s3_key": "images/adobe/flowers_roses/scene_017253_shot01_full_scene.jpg",
+      "group": "object",
+      "category": "flowers_roses",
+      "description": "cathedral front steps flanked by deep red rose beds below stone statuary with mandala pattern created entirely from rose petals, bowl filled with floating rose petals on water, bathtub surface covered in scattered rose petals",
+      "filename": "scene_017253_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/object/object_flowers_roses_0102.jpg"
+    },
+    {
+      "s3_key": "images/adobe/fashion_clothing/scene_018303_shot01_full_scene.jpg",
+      "group": "object",
+      "category": "fashion_clothing",
+      "description": "gallery-style showroom with sari, hanbok dress, and one person",
+      "filename": "scene_018303_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/object/object_fashion_clothing_0103.jpg"
+    },
+    {
+      "s3_key": "images/adobe/technology_robotics/scene_034501_shot01_full_scene.jpg",
+      "group": "object",
+      "category": "technology_robotics",
+      "description": "remote desert solar farm drone launch pad for panel inspection with automated tool presetting machine, VTOL tilt-rotor drone, tethered power supply station for drones",
+      "filename": "scene_034501_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/object/object_technology_robotics_0104.jpg"
+    },
+    {
+      "s3_key": "images/adobe/hats_headwear/scene_014424_shot01_full_scene.jpg",
+      "group": "object",
+      "category": "hats_headwear",
+      "description": "parade route during a cultural festival with rasta tam hat, Andean chullo earflap hat, and one person",
+      "filename": "scene_014424_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/object/object_hats_headwear_0105.jpg"
+    },
+    {
+      "s3_key": "images/adobe/food_desserts_sweets/scene_027402_shot01_full_scene.jpg",
+      "group": "object",
+      "category": "food_desserts_sweets",
+      "description": "candy factory packaging line with belts of wrapped sweets with lamington sponge cube, s'mores stack with toasted marshmallow, sugar skull candy",
+      "filename": "scene_027402_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/object/object_food_desserts_sweets_0106.jpg"
+    },
+    {
+      "s3_key": "images/adobe/beverages_alcoholic/scene_024337_shot01_full_scene.jpg",
+      "group": "object",
+      "category": "beverages_alcoholic",
+      "description": "winery restaurant terrace overlooking vines with carved wooden tiki totem, surfboard-shaped bar top, and one person",
+      "filename": "scene_024337_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/object/object_beverages_alcoholic_0107.jpg"
+    },
+    {
+      "s3_key": "images/adobe/gardening_tools/scene_010781_shot01_full_scene.jpg",
+      "group": "object",
+      "category": "gardening_tools",
+      "description": "university horticulture teaching garden plots with watering wand, garden cart, leaf blower",
+      "filename": "scene_010781_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/object/object_gardening_tools_0108.jpg"
+    },
+    {
+      "s3_key": "images/adobe/art_photography_equipment/scene_005445_shot01_full_scene.jpg",
+      "group": "object",
+      "category": "art_photography_equipment",
+      "description": "rocky tidal pools at low tide with UV blacklight tube fixture, continuous light wand, and one person",
+      "filename": "scene_005445_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/object/object_art_photography_equipment_0109.jpg"
+    },
+    {
+      "s3_key": "images/adobe/food_street_food/scene_030998_shot01_full_scene.jpg",
+      "group": "object",
+      "category": "food_street_food",
+      "description": "parade route sidewalks with temporary food carts behind barriers with credit card bill presenter, picnic bench, and one person",
+      "filename": "scene_030998_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/object/object_food_street_food_0110.jpg"
+    },
+    {
+      "s3_key": "images/adobe/flowers_wildflowers/scene_007219_shot01_full_scene.jpg",
+      "group": "object",
+      "category": "flowers_wildflowers",
+      "description": "desert wash in peak wildflower bloom with flowering honeysuckle vine, morning glory vine with flowers, teasel flower head",
+      "filename": "scene_007219_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/object/object_flowers_wildflowers_0111.jpg"
+    },
+    {
+      "s3_key": "images/adobe/vehicles_motorcycles/scene_034125_shot01_full_scene.jpg",
+      "group": "object",
+      "category": "vehicles_motorcycles",
+      "description": "custom motorcycle workshop interior full of frames and tools with set of pegboard hooks, plastic drawer organizer unit, and one person",
+      "filename": "scene_034125_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/object/object_vehicles_motorcycles_0112.jpg"
+    },
+    {
+      "s3_key": "images/adobe/tools_hardware/scene_013941_shot01_full_scene.jpg",
+      "group": "object",
+      "category": "tools_hardware",
+      "description": "hydroelectric dam turbine hall maintenance platform with putty knife, extension ladder, and one person",
+      "filename": "scene_013941_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/object/object_tools_hardware_0113.jpg"
+    },
+    {
+      "s3_key": "images/adobe/shoes_footwear/scene_023750_shot01_full_scene.jpg",
+      "group": "object",
+      "category": "shoes_footwear",
+      "description": "coach luggage bay being loaded with duffel bags and scattered shoes with Edwardian spat-top boot, Auto racing driving shoe, and one person",
+      "filename": "scene_023750_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/object/object_shoes_footwear_0114.jpg"
+    },
+    {
+      "s3_key": "images/adobe/gardening_tools/scene_003134_shot01_full_scene.jpg",
+      "group": "object",
+      "category": "gardening_tools",
+      "description": "apple orchard in full blossom with dandelion weeder, hand cultivator claw, and one person",
+      "filename": "scene_003134_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/object/object_gardening_tools_0115.jpg"
+    },
+    {
+      "s3_key": "images/adobe/hotel_hospitality/scene_047735_shot01_full_scene.jpg",
+      "group": "scene",
+      "category": "hotel_hospitality",
+      "description": "overwater bungalow bedroom opening onto turquoise lagoon with freestanding bathtub caddy tray, decorative throw pillow, glass coffee table",
+      "filename": "scene_047735_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/scene/scene_hotel_hospitality_0116.jpg"
+    },
+    {
+      "s3_key": "images/adobe/architecture_modern/scene_020089_shot01_full_scene.jpg",
+      "group": "scene",
+      "category": "architecture_modern",
+      "description": "large modern city hall lobby with flags and security desks with reception desk counter, video door intercom panel, decorative wall mirror",
+      "filename": "scene_020089_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/scene/scene_architecture_modern_0117.jpg"
+    },
+    {
+      "s3_key": "images/adobe/urban_street_scenes/scene_042098_shot01_full_scene.jpg",
+      "group": "scene",
+      "category": "urban_street_scenes",
+      "description": "bicycle-priority street with separated colored bike lanes with lost bike frame chained to pole, reflective safety vest display rack, and one person",
+      "filename": "scene_042098_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/scene/scene_urban_street_scenes_0118.jpg"
+    },
+    {
+      "s3_key": "images/adobe/architecture_skyscrapers/scene_006794_shot01_full_scene.jpg",
+      "group": "scene",
+      "category": "architecture_skyscrapers",
+      "description": "highway interchange on the city edge with skyline behind with retaining wall block, tower crane, and one person",
+      "filename": "scene_006794_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/scene/scene_architecture_skyscrapers_0119.jpg"
+    },
+    {
+      "s3_key": "images/adobe/urban_night_city/scene_037853_shot01_full_scene.jpg",
+      "group": "scene",
+      "category": "urban_night_city",
+      "description": "glass-walled exterior elevator shaft overlooking the city with venetian blind slats, curtain rod, and one person",
+      "filename": "scene_037853_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/scene/scene_urban_night_city_0120.jpg"
+    },
+    {
+      "s3_key": "images/adobe/urban_markets_bazaars/scene_038337_shot01_full_scene.jpg",
+      "group": "scene",
+      "category": "urban_markets_bazaars",
+      "description": "Shilin Night Market, Taipei, Taiwan with remote-controlled drone, plastic toy car, and one person",
+      "filename": "scene_038337_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/scene/scene_urban_markets_bazaars_0121.jpg"
+    },
+    {
+      "s3_key": "images/adobe/urban_markets_bazaars/scene_006465_shot01_full_scene.jpg",
+      "group": "scene",
+      "category": "urban_markets_bazaars",
+      "description": "Borough Market, London, UK with cast iron wok, dog collar, dog leash",
+      "filename": "scene_006465_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/scene/scene_urban_markets_bazaars_0122.jpg"
+    },
+    {
+      "s3_key": "images/adobe/camping_outdoors/scene_047603_shot01_full_scene.jpg",
+      "group": "scene",
+      "category": "camping_outdoors",
+      "description": "bus depot loading bay where guides are strapping rafts and dry boxes to a trailer before a river trip with insulated soft-sided cooler, hard-sided ice chest cooler on wheels, compact personal cooler cube",
+      "filename": "scene_047603_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/scene/scene_camping_outdoors_0123.jpg"
+    },
+    {
+      "s3_key": "images/adobe/waterscape_lakes/scene_018756_shot01_full_scene.jpg",
+      "group": "scene",
+      "category": "waterscape_lakes",
+      "description": "Lake Chapala malec\u00f3n, Jalisco, Mexico with gazebo roof, outdoor clock, recycling station shelter",
+      "filename": "scene_018756_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/scene/scene_waterscape_lakes_0124.jpg"
+    },
+    {
+      "s3_key": "images/adobe/architecture_ruins_ancient/scene_026428_shot01_full_scene.jpg",
+      "group": "scene",
+      "category": "architecture_ruins_ancient",
+      "description": "Angkor Wat temple causeway and towers, Cambodia with bronze ritual gong, bronze door boss, bronze statue fragment",
+      "filename": "scene_026428_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/scene/scene_architecture_ruins_ancient_0125.jpg"
+    },
+    {
+      "s3_key": "images/adobe/architecture_classical/scene_015039_shot01_full_scene.jpg",
+      "group": "scene",
+      "category": "architecture_classical",
+      "description": "royal throne room with floor-standing metal candelabrum, stone display pedestal, marble portrait bust on pedestal",
+      "filename": "scene_015039_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/scene/scene_architecture_classical_0126.jpg"
+    },
+    {
+      "s3_key": "images/adobe/landscape_mountains/scene_032171_shot01_full_scene.jpg",
+      "group": "scene",
+      "category": "landscape_mountains",
+      "description": "Annapurna and Dhaulagiri range from Poon Hill, Nepal with collapsible trekking umbrella, knit beanie hat, insulated mittens",
+      "filename": "scene_032171_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/scene/scene_landscape_mountains_0127.jpg"
+    },
+    {
+      "s3_key": "images/adobe/science_laboratory/scene_049260_shot01_full_scene.jpg",
+      "group": "scene",
+      "category": "science_laboratory",
+      "description": "botanical garden herbarium research room with volumetric pipette, Pasteur pipette with rubber bulb, glass reagent bottle with ground glass stopper",
+      "filename": "scene_049260_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/scene/scene_science_laboratory_0128.jpg"
+    },
+    {
+      "s3_key": "images/adobe/playground_recreation/scene_054273_shot01_full_scene.jpg",
+      "group": "scene",
+      "category": "playground_recreation",
+      "description": "children\u2019s sand playground on an old wooden pier with hot dog cart, coin-operated kiddie ride, and one person",
+      "filename": "scene_054273_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/scene/scene_playground_recreation_0129.jpg"
+    },
+    {
+      "s3_key": "images/adobe/waterscape_rivers_streams/scene_012400_shot01_full_scene.jpg",
+      "group": "scene",
+      "category": "waterscape_rivers_streams",
+      "description": "mountain stream cutting through terraced tea plantations with dense stand of bamboo along river, tangled blackberry bramble thicket, patch of stinging nettles by bank",
+      "filename": "scene_012400_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/scene/scene_waterscape_rivers_streams_0130.jpg"
+    },
+    {
+      "s3_key": "images/adobe/landscape_tropical/scene_019482_shot01_full_scene.jpg",
+      "group": "scene",
+      "category": "landscape_tropical",
+      "description": "Iguaz\u00fa Falls from the Brazilian side, Brazil with bamboo windbreak screen, seashell-encrusted picture frame, incense stick bundle",
+      "filename": "scene_019482_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/scene/scene_landscape_tropical_0131.jpg"
+    },
+    {
+      "s3_key": "images/adobe/landscape_tropical/scene_015705_shot01_full_scene.jpg",
+      "group": "scene",
+      "category": "landscape_tropical",
+      "description": "coconut grove on the coastal plain near Kovalam, Kerala, India with rolled canvas bedroll, mosquito net canopy, leather map case",
+      "filename": "scene_015705_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/scene/scene_landscape_tropical_0132.jpg"
+    },
+    {
+      "s3_key": "images/adobe/architecture_bridges/scene_004321_shot01_full_scene.jpg",
+      "group": "scene",
+      "category": "architecture_bridges",
+      "description": "rustic log footbridge over a clear alpine meadow stream with formwork tie rod, shock-absorbing lanyard, and one person",
+      "filename": "scene_004321_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/scene/scene_architecture_bridges_0133.jpg"
+    },
+    {
+      "s3_key": "images/adobe/retail_shopping/scene_047164_shot01_full_scene.jpg",
+      "group": "scene",
+      "category": "retail_shopping",
+      "description": "lighting showroom where dozens of illuminated fixtures fill the ceiling with ceiling fan, table lamp, floor lamp",
+      "filename": "scene_047164_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/scene/scene_retail_shopping_0134.jpg"
+    },
+    {
+      "s3_key": "images/adobe/landscape_arctic_tundra/scene_012891_shot01_full_scene.jpg",
+      "group": "scene",
+      "category": "landscape_arctic_tundra",
+      "description": "open lead through pack ice in the Beaufort Sea with snow coring tube with T-handle, plankton net with long conical bag, water sampling Niskin bottle",
+      "filename": "scene_012891_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/scene/scene_landscape_arctic_tundra_0135.jpg"
+    },
+    {
+      "s3_key": "images/adobe/industrial_manufacturing/scene_034305_shot01_full_scene.jpg",
+      "group": "scene",
+      "category": "industrial_manufacturing",
+      "description": "cement plant rotary kiln hall with absorbent sock roll, oil absorbent pad stack, and one person",
+      "filename": "scene_034305_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/scene/scene_industrial_manufacturing_0136.jpg"
+    },
+    {
+      "s3_key": "images/adobe/science_laboratory/scene_050129_shot01_full_scene.jpg",
+      "group": "scene",
+      "category": "science_laboratory",
+      "description": "astronomical observatory dome interior with ray optics kit with lenses holder, diffraction grating slide, and one person",
+      "filename": "scene_050129_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/scene/scene_science_laboratory_0137.jpg"
+    },
+    {
+      "s3_key": "images/adobe/cinema_theater/scene_028583_shot01_full_scene.jpg",
+      "group": "scene",
+      "category": "cinema_theater",
+      "description": "contemporary art white cube gallery with IV drip stand, bicycle, and one person",
+      "filename": "scene_028583_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/scene/scene_cinema_theater_0138.jpg"
+    },
+    {
+      "s3_key": "images/adobe/medical_healthcare/scene_043921_shot01_full_scene.jpg",
+      "group": "scene",
+      "category": "medical_healthcare",
+      "description": "pharmaceutical cleanroom production line with ointment glass slab, pill bottling machine, and one person",
+      "filename": "scene_043921_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/scene/scene_medical_healthcare_0139.jpg"
+    },
+    {
+      "s3_key": "images/adobe/landscape_meadow_plains/scene_019582_shot01_full_scene.jpg",
+      "group": "scene",
+      "category": "landscape_meadow_plains",
+      "description": "Tibetan Plateau grasslands around Namtso Lake, Tibet, China with portable livestock scale platform, rope lasso coiled on ground, cowbell on strap",
+      "filename": "scene_019582_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/scene/scene_landscape_meadow_plains_0140.jpg"
+    },
+    {
+      "s3_key": "images/adobe/medical_healthcare/scene_040560_shot01_full_scene.jpg",
+      "group": "scene",
+      "category": "medical_healthcare",
+      "description": "parking garage casualty staging area after multi-car crash with radiology right and left marker set, portable X-ray grid holder, and one person",
+      "filename": "scene_040560_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/scene/scene_medical_healthcare_0141.jpg"
+    },
+    {
+      "s3_key": "images/adobe/architecture_classical/scene_011712_shot01_full_scene.jpg",
+      "group": "scene",
+      "category": "architecture_classical",
+      "description": "baroque church facade on small urban square with broken pediment with central gap, gargoyle waterspout, wall-mounted lion-head fountain spout",
+      "filename": "scene_011712_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/scene/scene_architecture_classical_0142.jpg"
+    },
+    {
+      "s3_key": "images/adobe/architecture_modern/scene_003675_shot01_full_scene.jpg",
+      "group": "scene",
+      "category": "architecture_modern",
+      "description": "urban pocket park framed by corten-steel walls and timber decks with picnic table set, fire pit bowl, and one person",
+      "filename": "scene_003675_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/scene/scene_architecture_modern_0143.jpg"
+    },
+    {
+      "s3_key": "images/adobe/education_classroom/scene_002898_shot01_full_scene.jpg",
+      "group": "scene",
+      "category": "education_classroom",
+      "description": "art museum gallery with docent-led tour with plaster bust model, light meter, and one person",
+      "filename": "scene_002898_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/scene/scene_education_classroom_0144.jpg"
+    },
+    {
+      "s3_key": "images/adobe/waterscape_lakes/scene_015231_shot01_full_scene.jpg",
+      "group": "scene",
+      "category": "waterscape_lakes",
+      "description": "Malec\u00f3n de Granada on Lake Nicaragua, Nicaragua with checkered picnic blanket, folding camp chair, tiki torch",
+      "filename": "scene_015231_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/scene/scene_waterscape_lakes_0145.jpg"
+    },
+    {
+      "s3_key": "images/adobe/construction_building/scene_043861_shot01_full_scene.jpg",
+      "group": "scene",
+      "category": "construction_building",
+      "description": "coastal breakwater construction with armor stone placement with bundle of PVC conduit, roll of tie wire, and one person",
+      "filename": "scene_043861_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/scene/scene_construction_building_0146.jpg"
+    },
+    {
+      "s3_key": "images/adobe/urban_night_city/scene_036995_shot01_full_scene.jpg",
+      "group": "scene",
+      "category": "urban_night_city",
+      "description": "indoor ice rink with bright white ice and boards with LED driver box, raised floor tile, and one person",
+      "filename": "scene_036995_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/scene/scene_urban_night_city_0147.jpg"
+    },
+    {
+      "s3_key": "images/adobe/architecture_religious/scene_004769_shot01_full_scene.jpg",
+      "group": "scene",
+      "category": "architecture_religious",
+      "description": "Desert adobe mission church fa\u00e7ade with simple bell gable and wooden doors with outdoor stone wayside cross, carved stone tympanum relief, and one person",
+      "filename": "scene_004769_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/scene/scene_architecture_religious_0148.jpg"
+    },
+    {
+      "s3_key": "images/adobe/dance_performance/scene_029873_shot01_full_scene.jpg",
+      "group": "style",
+      "category": "dance_performance",
+      "description": "rooftop bar DJ platform with ocarina, tin whistle, and one person",
+      "filename": "scene_029873_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/style/style_dance_performance_0149.jpg"
+    },
+    {
+      "s3_key": "images/adobe/gardens_landscaping/scene_010696_shot01_full_scene.jpg",
+      "group": "style",
+      "category": "gardens_landscaping",
+      "description": "zoo savanna overlook lawn with landscaped berms with earth auger, soil pH meter probe, soil thermometer",
+      "filename": "scene_010696_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/style/style_gardens_landscaping_0150.jpg"
+    },
+    {
+      "s3_key": "images/adobe/rural_countryside/scene_028929_shot01_full_scene.jpg",
+      "group": "style",
+      "category": "rural_countryside",
+      "description": "lavender farm with straight purple rows and distant low hills with galvanized washtub, washboard, wooden clothespin",
+      "filename": "scene_028929_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/style/style_rural_countryside_0151.jpg"
+    },
+    {
+      "s3_key": "images/adobe/holiday_halloween/scene_031165_shot01_full_scene.jpg",
+      "group": "style",
+      "category": "holiday_halloween",
+      "description": "underground mausoleum corridor lined with marble crypts and votive candles with stone altar slab, goat skull candle holder, and one person",
+      "filename": "scene_031165_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/style/style_holiday_halloween_0152.jpg"
+    },
+    {
+      "s3_key": "images/adobe/dance_performance/scene_025272_shot01_full_scene.jpg",
+      "group": "style",
+      "category": "dance_performance",
+      "description": "historic town square with temporary platform with lute, recorder flute, and one person",
+      "filename": "scene_025272_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/style/style_dance_performance_0153.jpg"
+    },
+    {
+      "s3_key": "images/adobe/holiday_christmas/scene_045409_shot01_full_scene.jpg",
+      "group": "style",
+      "category": "holiday_christmas",
+      "description": "recording studio live room capturing a Christmas choir with hanging mistletoe ball, ceiling-suspended paper star lanterns, and one person",
+      "filename": "scene_045409_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/style/style_holiday_christmas_0154.jpg"
+    },
+    {
+      "s3_key": "images/adobe/art_painting/scene_019958_shot01_full_scene.jpg",
+      "group": "style",
+      "category": "art_painting",
+      "description": "sports stadium concourse wall with team mural in progress with overhead track light fixture, copper kettle, patterned oriental rug",
+      "filename": "scene_019958_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/style/style_art_painting_0155.jpg"
+    },
+    {
+      "s3_key": "images/adobe/energy_renewable/scene_015908_shot01_full_scene.jpg",
+      "group": "style",
+      "category": "energy_renewable",
+      "description": "hydrogen pipeline compressor station in open country with hydrogen compressor package, hydrogen pipeline isolation valve, hydrogen leak detector sensor",
+      "filename": "scene_015908_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/style/style_energy_renewable_0156.jpg"
+    },
+    {
+      "s3_key": "images/adobe/art_painting/scene_009992_shot01_full_scene.jpg",
+      "group": "style",
+      "category": "art_painting",
+      "description": "community center exterior wall during a neighborhood mural day with metal watering can, crystal wine glass, and one person",
+      "filename": "scene_009992_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/style/style_art_painting_0157.jpg"
+    },
+    {
+      "s3_key": "images/adobe/gardens_landscaping/scene_019147_shot01_full_scene.jpg",
+      "group": "style",
+      "category": "gardens_landscaping",
+      "description": "children's discovery garden with interactive plantings with obelisk plant support, plant support stake, bamboo plant tripod",
+      "filename": "scene_019147_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/style/style_gardens_landscaping_0158.jpg"
+    },
+    {
+      "s3_key": "images/adobe/music_performance/scene_026961_shot01_full_scene.jpg",
+      "group": "style",
+      "category": "music_performance",
+      "description": "ferry terminal waiting hall with timbales drum set, tubular bells chime frame, and one person",
+      "filename": "scene_026961_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/style/style_music_performance_0159.jpg"
+    },
+    {
+      "s3_key": "images/adobe/holiday_halloween/scene_012508_shot01_full_scene.jpg",
+      "group": "style",
+      "category": "holiday_halloween",
+      "description": "forest trail carpeted in leaves with carved pumpkins lining the path with brain-in-a-jar lamp, pumpkin-shaped neon sign, and one person",
+      "filename": "scene_012508_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/style/style_holiday_halloween_0160.jpg"
+    },
+    {
+      "s3_key": "images/adobe/energy_renewable/scene_015904_shot01_full_scene.jpg",
+      "group": "style",
+      "category": "energy_renewable",
+      "description": "wastewater treatment plant with biogas lagoons and gas holders with biogas desulfurization tower, biogas flare stack, gas-tight biogas pipeline",
+      "filename": "scene_015904_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/style/style_energy_renewable_0161.jpg"
+    },
+    {
+      "s3_key": "images/adobe/trees_foliage/scene_003174_shot01_full_scene.jpg",
+      "group": "style",
+      "category": "trees_foliage",
+      "description": "solitary baobab on a dry savanna plain with exposed tree roots, termite carton nest on tree, and one person",
+      "filename": "scene_003174_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/style/style_trees_foliage_0162.jpg"
+    },
+    {
+      "s3_key": "images/adobe/holiday_general_celebrations/scene_018001_shot01_full_scene.jpg",
+      "group": "style",
+      "category": "holiday_general_celebrations",
+      "description": "indoor ice skating rink center under bright arena lights with hot chocolate urn, snowflake window decals, and one person",
+      "filename": "scene_018001_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/style/style_holiday_general_celebrations_0163.jpg"
+    },
+    {
+      "s3_key": "images/adobe/music_performance/scene_021391_shot01_full_scene.jpg",
+      "group": "style",
+      "category": "music_performance",
+      "description": "rooftop billboard catwalk with safety harness for rigger, sandbag stage weight, and one person",
+      "filename": "scene_021391_shot01_full_scene.jpg",
+      "local_path": "prompts/source_images/style/style_music_performance_0164.jpg"
+    }
+  ]
+}
