@@ -54,7 +54,7 @@ Before spending time on ANY eval category, ask three questions in order:
 
 1. **Does the model actually fail hard here?** (score below 0.80 on SOTA benchmark prompts)
 2. **Is this fixable with training data?** (not architectural — data must be THE fix)
-3. **Would a customer pay for this data?** (clear ROI, not incremental improvement)
+3. **Is this category high-impact?** (clear value, not incremental improvement)
 
 If any answer is NO, skip the category.
 

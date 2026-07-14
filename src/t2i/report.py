@@ -168,7 +168,7 @@ def _disclosure_text() -> str:
 
 
 def _pitch_backend_caveat() -> str:
-    """A sentence to append to model-card Training Data Recommendations when relevant."""
+    """A sentence to append to model-card data pitch when relevant."""
     if _current_judge_backend() == "gpt4o_soft":
         return (
             " Note: scores under GPT-4o as judge carry a documented "
@@ -940,7 +940,7 @@ def build_model_card(model: str, pitch_text: str | None = None) -> Path:
                 story.append(Paragraph("<br/>".join(lines), st["Normal"]))
             story.append(Spacer(1, 10))
 
-    # ------- Hub data pitch (divergence-aware) -------
+    # ------- Training data recommendations (divergence-aware) -------
     story.append(PageBreak())
     story.append(Paragraph("Training Data Recommendations", st["H2"]))
     if pitch_text is not None:
@@ -949,15 +949,15 @@ def build_model_card(model: str, pitch_text: str | None = None) -> Path:
         pitch = (
             "Targeted compositional training data — numeracy-rich "
             "scenes, multi-constraint prompt-image pairs, and 3D-spatial "
-            "annotations - calibrated to the specific failure modes shown "
-            "above. A pilot data pack can close the gap between your Layer 1 "
+            "annotations — calibrated to the specific failure modes shown "
+            "above can close the gap between Layer 1 "
             "and Layer 2 scores within one training cycle."
         )
     elif div is not None and pd.notna(div) and div < -0.1:
         pitch = (
-            "This model's scores on our proprietary Layer 2 prompts exceed "
+            "This model's scores on the proprietary Layer 2 prompts exceed "
             "its scores on the public T2I-CompBench++ benchmark, indicating "
-            "our current Layer 2 sample is under-calibrated relative to the "
+            "the current Layer 2 sample is under-calibrated relative to the "
             "public set. A harder Layer 2 pass with higher object counts and "
             "more constraints is planned. The per-sub-category failure modes "
             "shown above remain actionable signal for training data targeting."
@@ -965,7 +965,8 @@ def build_model_card(model: str, pitch_text: str | None = None) -> Path:
     else:
         pitch = (
             "Targeted compositional training data calibrated to "
-            "the specific failure modes shown above. While this model shows "
+            "the specific failure modes shown above can address the "
+            "weaknesses identified. While this model shows "
             "consistent performance across public and proprietary prompt "
             "sets, the per-sub-category failure analysis identifies concrete "
             "areas for improvement."
