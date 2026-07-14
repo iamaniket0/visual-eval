@@ -53,7 +53,7 @@ def main():
     ap.add_argument(
         "--backend",
         default=None,
-        choices=[None, "qwen_together_soft"],
+        choices=[None, "qwen_together_soft", "gpt4o_soft"],
         help="Judge backend override",
     )
     args = ap.parse_args()

@@ -16,7 +16,7 @@ prompt_sampling:
 
 generation:
   resolution: 1024
-  seeds_per_prompt: 3             # multi-seed variance; override per-run with --seeds
+  seeds_per_prompt: 1             # multi-seed variance; override per-run with --seeds
   max_retries: 3
   retry_base_delay_sec: 2
 

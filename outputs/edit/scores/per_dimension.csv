@@ -1,0 +1,5 @@
+model,instruction_following_am,instruction_following_gm,visual_consistency_am,visual_consistency_gm,detail_preservation_am,detail_preservation_gm
+flux2_flex,0.6639,0.1853,0.2662,0.0094,0.4823,0.0456
+bria_edit,0.6031,0.0681,0.3616,0.0332,0.2838,0.0108
+flux_kontext,0.2781,0.0035,0.529,0.0838,0.3098,0.0143
+picsart,0.0,0.0,0.8638,0.841,0.0834,0.0002

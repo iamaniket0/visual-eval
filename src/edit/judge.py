@@ -292,6 +292,213 @@ class TogetherQwen35SoftJudge:
 
 
 # ---------------------------------------------------------------------------
+# GPT-4o Soft Judge via OpenRouter (fallback when Together is unavailable)
+# ---------------------------------------------------------------------------
+
+OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
+OPENROUTER_HEADERS = {
+    "HTTP-Referer": "https://visual-eval-benchmark",
+    "X-Title": "visual-eval-benchmark",
+}
+
+
+class GPT4oSoftJudge:
+    """Soft-TIFA via GPT-4o on OpenRouter — dual-image variant for edits."""
+
+    backend_name = "gpt4o_soft"
+
+    def __init__(
+        self,
+        model: str = "gpt-4o",
+        cost_tracker: CostTracker | None = None,
+        concurrency: int = 8,
+        logprob_floor: float = -10.0,
+    ):
+        self.cost_tracker = cost_tracker
+        self.semaphore = asyncio.Semaphore(concurrency)
+        self.logprob_floor = float(logprob_floor)
+        self._client = None
+        settings = load_settings()
+        self.cost_per_judgment = settings.get("judge", {}).get(
+            "cost_per_judgment_estimate", 0.004
+        )
+        routing = settings.get("api_routing", {}).get("judge", "openrouter")
+        if routing == "openrouter":
+            self.api_key = get_api_key("OPENROUTER_API_KEY")
+            self._base_url = OPENROUTER_BASE_URL
+            self._key_env = "OPENROUTER_API_KEY"
+            self.model = model if "/" in model else f"openai/{model}"
+            self._extra_headers = dict(OPENROUTER_HEADERS)
+        else:
+            self.api_key = get_api_key("OPENAI_API_KEY")
+            self._base_url = None
+            self._key_env = "OPENAI_API_KEY"
+            self.model = model
+            self._extra_headers = None
+
+    def _ensure_client(self):
+        if self._client is not None:
+            return
+        if not self.api_key:
+            raise RuntimeError(f"{self._key_env} not set; cannot run judge")
+        from openai import AsyncOpenAI
+
+        kwargs = {"api_key": self.api_key}
+        if self._base_url:
+            kwargs["base_url"] = self._base_url
+        if self._extra_headers:
+            kwargs["default_headers"] = self._extra_headers
+        self._client = AsyncOpenAI(**kwargs)
+
+    async def judge_edit(
+        self,
+        prompt_id: str,
+        model: str,
+        edit_instruction: str,
+        source_image_path: str,
+        edited_image_path: str,
+        atoms: list[dict[str, str]],
+    ) -> JudgeResult:
+        if not edited_image_path or not Path(edited_image_path).exists():
+            return JudgeResult(
+                prompt_id=prompt_id,
+                model=model,
+                source_image_path=source_image_path,
+                edited_image_path=edited_image_path,
+                judge_model=self.model,
+                answers=[
+                    {
+                        "q_id": f"q{i + 1}",
+                        "answer": "no",
+                        "probability": 0.0,
+                        "type": a.get("type", ""),
+                        "dimension": a.get("dimension", ""),
+                    }
+                    for i, a in enumerate(atoms)
+                ],
+                score=0.0,
+                score_am=0.0,
+                score_gm=0.0,
+                error="edited_image_missing_or_filtered",
+            )
+
+        if not source_image_path or not Path(source_image_path).exists():
+            return JudgeResult(
+                prompt_id=prompt_id,
+                model=model,
+                source_image_path=source_image_path,
+                edited_image_path=edited_image_path,
+                judge_model=self.model,
+                answers=[
+                    {
+                        "q_id": f"q{i + 1}",
+                        "answer": "no",
+                        "probability": 0.0,
+                        "type": a.get("type", ""),
+                        "dimension": a.get("dimension", ""),
+                    }
+                    for i, a in enumerate(atoms)
+                ],
+                score=0.0,
+                score_am=0.0,
+                score_gm=0.0,
+                error="source_image_missing",
+            )
+
+        self._ensure_client()
+        source_b64 = _image_to_b64(Path(source_image_path))
+        edited_b64 = _image_to_b64(Path(edited_image_path))
+
+        coros = [self._score_atom(edit_instruction, atom, source_b64, edited_b64) for atom in atoms]
+        atom_results = await asyncio.gather(*coros, return_exceptions=False)
+
+        answers: list[dict[str, Any]] = []
+        probs: list[float] = []
+        errored_atoms = []
+        for i, (atom, (p, err)) in enumerate(zip(atoms, atom_results)):
+            if err:
+                errored_atoms.append((f"q{i + 1}", err))
+                p = math.exp(self.logprob_floor)
+            hard = "yes" if p >= 0.5 else "no"
+            answers.append(
+                {
+                    "q_id": atom.get("q_id", f"q{i + 1}"),
+                    "question": atom.get("question", ""),
+                    "type": atom.get("type", ""),
+                    "dimension": atom.get("dimension", ""),
+                    "answer": hard,
+                    "probability": round(float(p), 6),
+                }
+            )
+            probs.append(float(p))
+
+        score_am = _am(probs)
+        score_gm = _gm(probs, self.logprob_floor)
+
+        if self.cost_tracker:
+            self.cost_tracker.add(
+                self.cost_per_judgment * max(1, len(atoms)),
+                model=model,
+                stage="judge",
+            )
+
+        return JudgeResult(
+            prompt_id=prompt_id,
+            model=model,
+            source_image_path=source_image_path,
+            edited_image_path=edited_image_path,
+            judge_model=self.model,
+            answers=answers,
+            score=round(score_am, 4),
+            score_am=round(score_am, 4),
+            score_gm=round(score_gm, 4),
+            cost_usd=self.cost_per_judgment * max(1, len(atoms)),
+            error=(f"ATOM_ERRORS: {errored_atoms[:3]}" if errored_atoms else None),
+        )
+
+    async def _score_atom(
+        self, edit_instruction: str, atom: dict[str, str], source_b64: str, edited_b64: str
+    ) -> tuple[float, str | None]:
+        user_text = SOFT_JUDGE_USER_TEMPLATE.format(
+            edit_instruction=edit_instruction,
+            question=atom["question"],
+        )
+        content = [
+            {"type": "text", "text": user_text},
+            {"type": "image_url", "image_url": {"url": f"data:image/png;base64,{source_b64}"}},
+            {"type": "image_url", "image_url": {"url": f"data:image/png;base64,{edited_b64}"}},
+        ]
+
+        async with self.semaphore:
+            try:
+                resp = await self._client.chat.completions.create(
+                    model=self.model,
+                    temperature=0.0,
+                    max_tokens=1,
+                    messages=[
+                        {"role": "system", "content": SOFT_JUDGE_SYSTEM},
+                        {"role": "user", "content": content},
+                    ],
+                    logprobs=True,
+                    top_logprobs=5,
+                )
+            except Exception as e:
+                return (math.exp(self.logprob_floor), f"{type(e).__name__}: {e}")
+
+        choice = resp.choices[0]
+        logp = choice.logprobs
+        content_logprobs = getattr(logp, "content", None) if logp else None
+        if not logp or not content_logprobs:
+            raise SoftTifaLogprobsUnavailableError(
+                f"OpenRouter returned no logprobs for model={self.model}. Soft-TIFA cannot proceed."
+            )
+        first = content_logprobs[0]
+        top = getattr(first, "top_logprobs", []) or []
+        p_yes = extract_yes_probability(top, self.logprob_floor)
+        return (p_yes, None)
+
+
+# ---------------------------------------------------------------------------
 # Backend factory
 # ---------------------------------------------------------------------------
 
@@ -306,6 +513,14 @@ def judge_client_factory(
     backend = override_backend or jcfg.get("backend", "qwen_together_soft")
     slug = jcfg.get("model_slug")
     floor = float(jcfg.get("logprob_floor", -10.0))
+
+    if backend == "gpt4o_soft":
+        return GPT4oSoftJudge(
+            model=slug or "gpt-4o",
+            cost_tracker=cost_tracker,
+            concurrency=concurrency,
+            logprob_floor=floor,
+        )
 
     if backend == "qwen_together_soft":
         return TogetherQwen35SoftJudge(

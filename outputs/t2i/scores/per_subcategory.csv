@@ -1,0 +1,6 @@
+model,adversarial_binding__am,causal_physics__am,comparison_occlusion__am,constraint_trading__am,count_binding__am,multi_type_counting__am,negation__am,order_to_space__am,rare_combination__am,adversarial_binding__gm,causal_physics__gm,comparison_occlusion__gm,constraint_trading__gm,count_binding__gm,multi_type_counting__gm,negation__gm,order_to_space__gm,rare_combination__gm,overall_am,overall_gm
+gpt_image_2,0.9776,0.9,1.0,1.0,0.9998,0.9864,0.8,1.0,0.9999,0.9746,0.6272,1.0,1.0,0.9998,0.9858,0.1353,1.0,0.9999,0.9626,0.8581
+xai_aurora,0.9172,1.0,0.9998,1.0,1.0,0.8571,0.7994,0.9998,0.9357,0.7182,1.0,0.9998,1.0,1.0,0.2396,0.1352,0.9998,0.9186,0.9454,0.779
+gpt_image_15,0.959,0.9999,1.0,1.0,0.9999,0.7258,0.8,0.9999,0.8573,0.9466,0.9999,1.0,1.0,0.9999,0.1963,0.1353,0.9999,0.3898,0.9269,0.7409
+bria_fibo,0.995,0.9974,0.9998,0.8956,0.8349,0.9998,0.6546,0.9831,0.8569,0.9948,0.9974,0.9998,0.6864,0.5367,0.9998,0.0758,0.9827,0.2494,0.913,0.7248
+flux2_max,0.9994,0.5,1.0,0.5,0.5,0.8567,0.8,0.0,0.8626,0.9994,0.5,1.0,0.5,0.5,0.2726,0.1353,0.0,0.6279,0.6687,0.5039

@@ -1,0 +1,5 @@
+model,n_covered,n_total,uncovered,uncovered_rate
+flux_kontext,11,250,239,0.956
+flux2_flex,12,250,238,0.952
+picsart,12,250,238,0.952
+bria_edit,12,250,238,0.952
