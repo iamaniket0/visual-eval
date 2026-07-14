@@ -1,6 +1,6 @@
 """Stage 1: Prompt Loading.
 
-Loads Layer 1 (T2I-CompBench++) and Layer 2 (proprietary) prompts,
+Loads Layer 1 (T2I-CompBench++) and Layer 2 (internal proprietary) prompts,
 generates atomic binary decompositions for Layer 1 via Claude, and writes
 a unified prompt set to prompts/prompt_set.json.
 
