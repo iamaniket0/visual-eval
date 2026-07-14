@@ -1,0 +1,102 @@
+[
+  {
+    "id": "animals",
+    "description": "Prompts featuring animals (pets, wildlife, birds, insects, fish)"
+  },
+  {
+    "id": "people",
+    "description": "Prompts featuring humans (children, adults, workers, characters)"
+  },
+  {
+    "id": "objects",
+    "description": "Prompts centered on inanimate household or generic objects"
+  },
+  {
+    "id": "food",
+    "description": "Prompts involving food or drink items"
+  },
+  {
+    "id": "vehicles",
+    "description": "Prompts featuring cars, boats, planes, bikes, or other transport"
+  },
+  {
+    "id": "buildings",
+    "description": "Prompts involving architecture, rooms, or built structures"
+  },
+  {
+    "id": "nature",
+    "description": "Prompts involving plants, landscapes, weather, or natural scenery"
+  },
+  {
+    "id": "indoor",
+    "description": "Scenes set inside a room, home, or enclosed space"
+  },
+  {
+    "id": "outdoor",
+    "description": "Scenes set outside in open air or natural environments"
+  },
+  {
+    "id": "urban",
+    "description": "City, street, or man-made public settings"
+  },
+  {
+    "id": "rural",
+    "description": "Countryside, meadow, farm, or wilderness settings"
+  },
+  {
+    "id": "color-heavy",
+    "description": "Prompts emphasizing specific colors as salient attributes"
+  },
+  {
+    "id": "material-heavy",
+    "description": "Prompts emphasizing materials or textures (wood, metal, silk, etc.)"
+  },
+  {
+    "id": "size-contrast",
+    "description": "Prompts comparing sizes, lengths, or relative scale"
+  },
+  {
+    "id": "age-related",
+    "description": "Prompts referencing age (child, adult, old, young, puppy)"
+  },
+  {
+    "id": "static",
+    "description": "Still scenes with no motion or action described"
+  },
+  {
+    "id": "action",
+    "description": "Prompts depicting movement, activity, or dynamic events"
+  },
+  {
+    "id": "social-interaction",
+    "description": "Multiple people or agents interacting together"
+  },
+  {
+    "id": "spatial-relation",
+    "description": "Prompts explicitly specifying spatial arrangement (behind, front, on top)"
+  },
+  {
+    "id": "occlusion",
+    "description": "Prompts involving hiding, obscuring, or partial visibility"
+  },
+  {
+    "id": "counting",
+    "description": "Prompts requiring specific numeric quantities of items"
+  },
+  {
+    "id": "few-objects",
+    "description": "Scenes containing 3 or fewer distinct items"
+  },
+  {
+    "id": "medium-objects",
+    "description": "Scenes containing 4 to 6 distinct items"
+  },
+  {
+    "id": "dense",
+    "description": "Scenes containing 7 or more distinct items"
+  },
+  {
+    "id": "abstract-shapes",
+    "description": "Prompts involving geometric shapes or abstract forms"
+  }
+]

@@ -1,0 +1,1192 @@
+[
+  {
+    "prompt_id": "L3_ADV_001",
+    "layer": 3,
+    "sub_category": "adversarial_binding",
+    "difficulty": "extreme",
+    "prompt_text": "A red banana next to a yellow apple on a white plate",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Is there a banana in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is there an apple in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is the banana red in color?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q4",
+        "question": "Is the apple yellow in color?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are the banana and apple on a plate?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q6",
+        "question": "Is the plate white in color?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L3_ADV_002",
+    "layer": 3,
+    "sub_category": "adversarial_binding",
+    "difficulty": "extreme",
+    "prompt_text": "A blue strawberry beside a green orange on a wooden table",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Is there a strawberry in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is there an orange in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is the strawberry blue in color?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q4",
+        "question": "Is the orange green in color?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are both fruits on a table?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q6",
+        "question": "Is the table made of wood?",
+        "type": "material"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L3_ADV_003",
+    "layer": 3,
+    "sub_category": "adversarial_binding",
+    "difficulty": "extreme",
+    "prompt_text": "A black swan swimming next to a white crow in a pond",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Is there a swan in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is there a crow in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is the swan black in color?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q4",
+        "question": "Is the crow white in color?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are both birds in water?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q6",
+        "question": "Is the swan swimming?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L3_ADV_004",
+    "layer": 3,
+    "sub_category": "adversarial_binding",
+    "difficulty": "extreme",
+    "prompt_text": "A purple carrot next to an orange eggplant in a garden bed",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Is there a carrot in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is there an eggplant in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is the carrot purple in color?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q4",
+        "question": "Is the eggplant orange in color?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are both vegetables in a garden?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are they planted in soil?",
+        "type": "spatial"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L3_ADV_005",
+    "layer": 3,
+    "sub_category": "adversarial_binding",
+    "difficulty": "extreme",
+    "prompt_text": "A silver rose next to a golden sunflower in a crystal vase",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Is there a rose in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is there a sunflower in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is the rose silver in color?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q4",
+        "question": "Is the sunflower golden in color?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are both flowers in a vase?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q6",
+        "question": "Is the vase made of crystal?",
+        "type": "material"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L3_ADV_006",
+    "layer": 3,
+    "sub_category": "adversarial_binding",
+    "difficulty": "extreme",
+    "prompt_text": "A transparent elephant standing behind an opaque mouse on grass",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Is there an elephant in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is there a mouse in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is the elephant transparent?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q4",
+        "question": "Is the mouse opaque?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q5",
+        "question": "Is the elephant behind the mouse?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are both animals on grass?",
+        "type": "spatial"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L3_ADV_007",
+    "layer": 3,
+    "sub_category": "adversarial_binding",
+    "difficulty": "extreme",
+    "prompt_text": "A square wheel attached to a triangular bicycle frame on pavement",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Is there a wheel in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is there a bicycle frame in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is the wheel square-shaped?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q4",
+        "question": "Is the bicycle frame triangular?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q5",
+        "question": "Is the wheel attached to the frame?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q6",
+        "question": "Is the bicycle on pavement?",
+        "type": "spatial"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L3_ADV_008",
+    "layer": 3,
+    "sub_category": "adversarial_binding",
+    "difficulty": "extreme",
+    "prompt_text": "A hot ice cube melting next to a frozen fire in a metal bowl",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Is there an ice cube in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is there fire in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is the ice cube hot?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q4",
+        "question": "Is the fire frozen?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q5",
+        "question": "Is the ice cube melting?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are both elements in a bowl?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q7",
+        "question": "Is the bowl made of metal?",
+        "type": "material"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L3_ADV_009",
+    "layer": 3,
+    "sub_category": "adversarial_binding",
+    "difficulty": "extreme",
+    "prompt_text": "A soft rock sitting next to a hard feather on a glass surface",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Is there a rock in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is there a feather in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is the rock soft in texture?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q4",
+        "question": "Is the feather hard in texture?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are both objects on a surface?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q6",
+        "question": "Is the surface made of glass?",
+        "type": "material"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L3_ADV_010",
+    "layer": 3,
+    "sub_category": "adversarial_binding",
+    "difficulty": "extreme",
+    "prompt_text": "A tiny elephant wearing a giant mouse costume in a circus ring",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Is there an elephant in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is there a mouse costume in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is the elephant tiny in size?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q4",
+        "question": "Is the mouse costume giant in size?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q5",
+        "question": "Is the elephant wearing the costume?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are they in a circus ring?",
+        "type": "spatial"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L3_ADV_011",
+    "layer": 3,
+    "sub_category": "count_binding",
+    "difficulty": "extreme",
+    "prompt_text": "Exactly seven mice chasing exactly one cat through a kitchen",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Are there mice in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is there a cat in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there exactly seven mice?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q4",
+        "question": "Is there exactly one cat?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are the mice chasing the cat?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q6",
+        "question": "Is the scene in a kitchen?",
+        "type": "spatial"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L3_ADV_012",
+    "layer": 3,
+    "sub_category": "count_binding",
+    "difficulty": "extreme",
+    "prompt_text": "Exactly nine small dogs surrounding exactly two large cats on a carpet",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Are there dogs in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there cats in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there exactly nine dogs?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are there exactly two cats?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are the dogs small in size?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are the cats large in size?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q7",
+        "question": "Are the dogs surrounding the cats?",
+        "type": "spatial"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L3_ADV_013",
+    "layer": 3,
+    "sub_category": "count_binding",
+    "difficulty": "extreme",
+    "prompt_text": "Exactly twelve sheep herding exactly three shepherds in a meadow",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Are there sheep in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there shepherds in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there exactly twelve sheep?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are there exactly three shepherds?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are the sheep herding the shepherds?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q6",
+        "question": "Is the scene in a meadow?",
+        "type": "spatial"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L3_ADV_014",
+    "layer": 3,
+    "sub_category": "count_binding",
+    "difficulty": "extreme",
+    "prompt_text": "Exactly eight students teaching exactly one professor in a classroom",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Are there students in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is there a professor in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there exactly eight students?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q4",
+        "question": "Is there exactly one professor?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are the students teaching the professor?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q6",
+        "question": "Is the scene in a classroom?",
+        "type": "spatial"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L3_ADV_015",
+    "layer": 3,
+    "sub_category": "count_binding",
+    "difficulty": "extreme",
+    "prompt_text": "Exactly five elephants riding exactly ten bicycles in a parade",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Are there elephants in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there bicycles in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there exactly five elephants?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are there exactly ten bicycles?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are the elephants riding the bicycles?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q6",
+        "question": "Is this a parade scene?",
+        "type": "spatial"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L3_ADV_016",
+    "layer": 3,
+    "sub_category": "count_binding",
+    "difficulty": "extreme",
+    "prompt_text": "Exactly eleven birds carrying exactly four humans through the sky",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Are there birds in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there humans in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there exactly eleven birds?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are there exactly four humans?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are the birds carrying the humans?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are they flying through the sky?",
+        "type": "spatial"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L3_ADV_017",
+    "layer": 3,
+    "sub_category": "count_binding",
+    "difficulty": "extreme",
+    "prompt_text": "Exactly six trees growing exactly fifteen roots above ground level",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Are there trees in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there roots visible in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there exactly six trees?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are there exactly fifteen roots?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are the roots above ground level?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q6",
+        "question": "Do the roots belong to the trees?",
+        "type": "spatial"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L3_ADV_018",
+    "layer": 3,
+    "sub_category": "count_binding",
+    "difficulty": "extreme",
+    "prompt_text": "Exactly thirteen fish swimming exactly two whales in an aquarium",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Are there fish in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there whales in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there exactly thirteen fish?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are there exactly two whales?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are the fish swimming the whales?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q6",
+        "question": "Is the scene in an aquarium?",
+        "type": "spatial"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L3_ADV_019",
+    "layer": 3,
+    "sub_category": "count_binding",
+    "difficulty": "extreme",
+    "prompt_text": "Exactly four moons orbiting exactly twenty stars in space",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Are there moons in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there stars in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there exactly four moons?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are there exactly twenty stars?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are the moons orbiting the stars?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q6",
+        "question": "Is the scene in space?",
+        "type": "spatial"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L3_ADV_020",
+    "layer": 3,
+    "sub_category": "count_binding",
+    "difficulty": "extreme",
+    "prompt_text": "Exactly fourteen children pushing exactly three adults on swings",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Are there children in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there adults in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there exactly fourteen children?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are there exactly three adults?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are the children pushing the adults?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are the adults on swings?",
+        "type": "spatial"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L3_ADV_021",
+    "layer": 3,
+    "sub_category": "rare_combination",
+    "difficulty": "extreme",
+    "prompt_text": "A grand piano floating inside a swimming pool filled with orange juice",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Is there a grand piano in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is there a swimming pool in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is the piano floating?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q4",
+        "question": "Is the piano inside the pool?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q5",
+        "question": "Is the pool filled with liquid?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q6",
+        "question": "Is the liquid orange juice?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q7",
+        "question": "Is the liquid orange in color?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L3_ADV_022",
+    "layer": 3,
+    "sub_category": "rare_combination",
+    "difficulty": "extreme",
+    "prompt_text": "A lighthouse built entirely from cotton candy on a desert sand dune",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Is there a lighthouse in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is there cotton candy in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is the lighthouse made of cotton candy?",
+        "type": "material"
+      },
+      {
+        "q_id": "q4",
+        "question": "Is there a desert in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q5",
+        "question": "Is there a sand dune in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q6",
+        "question": "Is the lighthouse on the sand dune?",
+        "type": "spatial"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L3_ADV_023",
+    "layer": 3,
+    "sub_category": "rare_combination",
+    "difficulty": "extreme",
+    "prompt_text": "A subway train driving through a library filled with flying books",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Is there a subway train in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is there a library in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there books in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q4",
+        "question": "Is the train driving through the library?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are the books flying?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q6",
+        "question": "Is the library filled with books?",
+        "type": "spatial"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L3_ADV_024",
+    "layer": 3,
+    "sub_category": "rare_combination",
+    "difficulty": "extreme",
+    "prompt_text": "A refrigerator growing like a tree with kitchen appliances as fruit",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Is there a refrigerator in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there kitchen appliances in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is the refrigerator growing like a tree?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are appliances hanging like fruit?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q5",
+        "question": "Does the refrigerator have branches?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are the appliances attached to the refrigerator?",
+        "type": "spatial"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L3_ADV_025",
+    "layer": 3,
+    "sub_category": "rare_combination",
+    "difficulty": "extreme",
+    "prompt_text": "A hospital bed sailing across a frozen lake with penguin doctors",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Is there a hospital bed in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is there a frozen lake in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there penguins in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q4",
+        "question": "Is the bed sailing across the lake?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are the penguins dressed as doctors?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q6",
+        "question": "Is the lake frozen?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L3_ADV_026",
+    "layer": 3,
+    "sub_category": "spatial_conflict",
+    "difficulty": "extreme",
+    "prompt_text": "A fork positioned to the right of a knife on a dinner plate",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Is there a fork in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is there a knife in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is there a dinner plate in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q4",
+        "question": "Is the fork to the right of the knife?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are both utensils on the plate?",
+        "type": "spatial"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L3_ADV_027",
+    "layer": 3,
+    "sub_category": "spatial_conflict",
+    "difficulty": "extreme",
+    "prompt_text": "A spoon placed above a bowl on a kitchen counter",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Is there a spoon in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is there a bowl in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is there a kitchen counter in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q4",
+        "question": "Is the spoon above the bowl?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are both items on the counter?",
+        "type": "spatial"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L3_ADV_028",
+    "layer": 3,
+    "sub_category": "spatial_conflict",
+    "difficulty": "extreme",
+    "prompt_text": "A cup sitting behind a saucer on a coffee table",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Is there a cup in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is there a saucer in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is there a coffee table in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q4",
+        "question": "Is the cup behind the saucer?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are both items on the table?",
+        "type": "spatial"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L3_ADV_029",
+    "layer": 3,
+    "sub_category": "spatial_conflict",
+    "difficulty": "extreme",
+    "prompt_text": "A lamp positioned underneath a book on a wooden desk",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Is there a lamp in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is there a book in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is there a wooden desk in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q4",
+        "question": "Is the lamp underneath the book?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are both items on the desk?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q6",
+        "question": "Is the desk made of wood?",
+        "type": "material"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L3_ADV_030",
+    "layer": 3,
+    "sub_category": "spatial_conflict",
+    "difficulty": "extreme",
+    "prompt_text": "A tiny matte dark-green ceramic teapot sitting to the left of a shiny bright-red metallic sugar bowl",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Is there a teapot in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is there a sugar bowl in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is the teapot tiny in size?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q4",
+        "question": "Is the teapot matte in finish?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q5",
+        "question": "Is the teapot dark-green in color?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q6",
+        "question": "Is the teapot made of ceramic?",
+        "type": "material"
+      },
+      {
+        "q_id": "q7",
+        "question": "Is the sugar bowl shiny in finish?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q8",
+        "question": "Is the sugar bowl bright-red in color?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q9",
+        "question": "Is the sugar bowl made of metal?",
+        "type": "material"
+      },
+      {
+        "q_id": "q10",
+        "question": "Is the teapot to the left of the sugar bowl?",
+        "type": "spatial"
+      }
+    ]
+  }
+]

@@ -1,0 +1,292 @@
+[
+  {
+    "prompt_id": "L3_ADV_031",
+    "layer": 3,
+    "sub_category": "comparison_occlusion",
+    "difficulty": "extreme",
+    "prompt_text": "A massive field mouse three times larger than a tiny African elephant, with the mouse in the foreground casting a shadow over the elephant in the background, while a regular-sized oak tree stands between them, 60% obscured by the mouse's body",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Is there a mouse visible in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is the mouse larger than the elephant?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is the tree positioned between the mouse and elephant?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q4",
+        "question": "How many animals are visible in the scene?",
+        "type": "numeracy"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L3_ADV_032",
+    "layer": 3,
+    "sub_category": "comparison_occlusion",
+    "difficulty": "extreme",
+    "prompt_text": "A miniature blue whale the size of a goldfish swimming in front of a giant ant that towers like a skyscraper, with a normal-sized red bicycle wheel positioned in the middle layer, exactly 75% hidden behind the whale but in front of the ant",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Is there a blue whale present in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is the ant larger than the whale?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is the bicycle wheel behind the whale?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q4",
+        "question": "How many different objects are visible in total?",
+        "type": "numeracy"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L3_ADV_033",
+    "layer": 3,
+    "sub_category": "comparison_occlusion",
+    "difficulty": "extreme",
+    "prompt_text": "Four layers of reversed scale: a colossal hummingbird larger than a minuscule school bus, which is bigger than a tiny cruise ship, which dwarfs a microscopic mountain, with each object 40% occluded by the one in front of it",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Is a hummingbird visible in the scene?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is the hummingbird the largest object?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is the mountain positioned behind all other objects?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q4",
+        "question": "How many objects are arranged in the layered sequence?",
+        "type": "numeracy"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L3_ADV_034",
+    "layer": 3,
+    "sub_category": "comparison_occlusion",
+    "difficulty": "extreme",
+    "prompt_text": "A gigantic paperclip the size of a building looming behind a normal-sized grizzly bear, which stands in front of a tiny skyscraper no bigger than a pencil, with a regular coffee mug floating in mid-air, half-concealed by the bear's left shoulder",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Is there a coffee mug in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is the paperclip larger than the skyscraper?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is the bear positioned in front of the skyscraper?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q4",
+        "question": "How many objects are partially or fully visible?",
+        "type": "numeracy"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L3_ADV_035",
+    "layer": 3,
+    "sub_category": "comparison_occlusion",
+    "difficulty": "extreme",
+    "prompt_text": "An enormous butterfly with wingspan larger than a miniature cargo ship, both objects casting shadows on a pocket-sized cathedral, while three normal-sized tennis balls hover at different depths, with exactly 33% of each ball hidden by the objects in front",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Are there tennis balls visible in the scene?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is the butterfly larger than the cargo ship?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is the cathedral behind both the butterfly and ship?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q4",
+        "question": "How many tennis balls are in the image?",
+        "type": "numeracy"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L3_ADV_036",
+    "layer": 3,
+    "sub_category": "comparison_occlusion",
+    "difficulty": "extreme",
+    "prompt_text": "A massive strawberry the size of a house positioned behind a tiny Boeing 747 no larger than a toy car, which flies in front of a minuscule mountain range, with two regular-sized golden coins spinning in the air, 80% obscured by the aircraft's wings",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Is there a strawberry in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is the strawberry larger than the airplane?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are the coins positioned behind the airplane?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q4",
+        "question": "How many coins are present in the scene?",
+        "type": "numeracy"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L3_ADV_037",
+    "layer": 3,
+    "sub_category": "comparison_occlusion",
+    "difficulty": "extreme",
+    "prompt_text": "Five objects in impossible scale hierarchy: a colossal ladybug bigger than a tiny locomotive, larger than a miniature aircraft carrier, bigger than a small planet Earth, which dwarfs a microscopic galaxy, each successive object 25% hidden behind the previous one",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Is a ladybug visible in the composition?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is the ladybug the largest visible object?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is the galaxy positioned at the back of the sequence?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q4",
+        "question": "How many objects are arranged in the scale hierarchy?",
+        "type": "numeracy"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L3_ADV_038",
+    "layer": 3,
+    "sub_category": "comparison_occlusion",
+    "difficulty": "extreme",
+    "prompt_text": "A gigantic teaspoon towering over a tiny dinosaur the size of an insect, with a miniature Eiffel Tower smaller than the dinosaur in the background, while a normal-sized rubber duck floats between layers, exactly half-visible behind the spoon's handle",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Is there a rubber duck in the scene?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is the teaspoon larger than the dinosaur?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is the Eiffel Tower positioned behind the dinosaur?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q4",
+        "question": "How many objects are completely or partially visible?",
+        "type": "numeracy"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L3_ADV_039",
+    "layer": 3,
+    "sub_category": "comparison_occlusion",
+    "difficulty": "extreme",
+    "prompt_text": "An enormous grain of rice the size of a stadium behind a tiny cruise liner no bigger than a marble, which floats above a microscopic city skyline, with four regular-sized purple grapes arranged in a line, each grape 90% concealed by the ship's hull",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Are there grapes present in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is the grain of rice larger than the cruise liner?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is the city skyline positioned below the cruise liner?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q4",
+        "question": "How many grapes are in the scene?",
+        "type": "numeracy"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L3_ADV_040",
+    "layer": 3,
+    "sub_category": "comparison_occlusion",
+    "difficulty": "extreme",
+    "prompt_text": "A massive ant the size of a cathedral in the background, with a tiny space shuttle smaller than a pen in the middle ground, and a miniature redwood forest no taller than grass in the foreground, while six normal-sized silver marbles roll between the layers, each marble 65% hidden by overlapping objects",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Are there silver marbles visible in the composition?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is the ant larger than the space shuttle?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is the redwood forest in the foreground?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q4",
+        "question": "How many marbles are present in the scene?",
+        "type": "numeracy"
+      }
+    ]
+  }
+]

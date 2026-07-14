@@ -1,0 +1,2172 @@
+[
+  {
+    "prompt_id": "L2_NUM_001",
+    "layer": 2,
+    "sub_category": "numeracy",
+    "difficulty": "medium",
+    "prompt_text": "Eight red cardinals perched on a snow-covered branch with three small acorns hanging below them",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Are there cardinals in the image?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are the cardinals red?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there exactly 8 cardinals?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q4",
+        "question": "Is there a snow-covered branch?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are the cardinals perched on the branch?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are there acorns below the cardinals?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q7",
+        "question": "Are there exactly 3 acorns?",
+        "type": "numeracy"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L2_NUM_002",
+    "layer": 2,
+    "sub_category": "numeracy",
+    "difficulty": "medium",
+    "prompt_text": "Five blue teacups and four green saucers stacked on a white marble countertop",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Are there teacups?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are the teacups blue?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there exactly 5 teacups?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are there saucers?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are the saucers green?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are there exactly 4 saucers?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q7",
+        "question": "Is the countertop marble?",
+        "type": "material"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L2_NUM_003",
+    "layer": 2,
+    "sub_category": "numeracy",
+    "difficulty": "medium",
+    "prompt_text": "Seven yellow rubber ducks and two black swans swimming in a circular fountain",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Are there rubber ducks?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are the ducks yellow?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there exactly 7 ducks?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are there swans?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are the swans black?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are there exactly 2 swans?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q7",
+        "question": "Is the fountain circular?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L2_NUM_004",
+    "layer": 2,
+    "sub_category": "numeracy",
+    "difficulty": "medium",
+    "prompt_text": "A row of six wooden crates where the third crate from the left is painted bright red and the others are unpainted",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Are there wooden crates?",
+        "type": "material"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there exactly 6 crates?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are the crates arranged in a row?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q4",
+        "question": "Is the third crate from the left painted red?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are the other crates unpainted?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L2_NUM_005",
+    "layer": 2,
+    "sub_category": "numeracy",
+    "difficulty": "medium",
+    "prompt_text": "Four tall copper candlesticks holding nine dripping white candles on a long oak dining table",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Are there candlesticks?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are the candlesticks copper?",
+        "type": "material"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there exactly 4 candlesticks?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are there candles in the candlesticks?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are the candles white?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are there exactly 9 candles total?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q7",
+        "question": "Is the table oak?",
+        "type": "material"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L2_NUM_006",
+    "layer": 2,
+    "sub_category": "numeracy",
+    "difficulty": "medium",
+    "prompt_text": "Twelve orange monarch butterflies resting on the petals of a single large white hibiscus flower",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Are there butterflies?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are the butterflies orange?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there exactly 12 butterflies?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q4",
+        "question": "Is there a hibiscus flower?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q5",
+        "question": "Is the hibiscus white?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q6",
+        "question": "Is there exactly 1 hibiscus flower?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q7",
+        "question": "Are the butterflies resting on the petals?",
+        "type": "spatial"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L2_NUM_007",
+    "layer": 2,
+    "sub_category": "numeracy",
+    "difficulty": "medium",
+    "prompt_text": "Six smiling jack-o-lanterns and three black crows sitting on a wooden fence at dusk",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Are there jack-o-lanterns?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there exactly 6 jack-o-lanterns?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there crows?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are the crows black?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are there exactly 3 crows?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are all of them on a wooden fence?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q7",
+        "question": "Is the fence wooden?",
+        "type": "material"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L2_NUM_008",
+    "layer": 2,
+    "sub_category": "numeracy",
+    "difficulty": "medium",
+    "prompt_text": "Eight golden retriever puppies and two adult golden retrievers lying together on a patterned rug",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Are there puppies?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are the puppies golden retrievers?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there exactly 8 puppies?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are there adult dogs?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are there exactly 2 adult dogs?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are all of them lying on the rug?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q7",
+        "question": "Does the rug have a pattern?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L2_NUM_009",
+    "layer": 2,
+    "sub_category": "numeracy",
+    "difficulty": "medium",
+    "prompt_text": "A line of seven marching penguins where the fifth penguin from the front wears a red bow tie and the others do not",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Are there penguins?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there exactly 7 penguins?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are the penguins in a line?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q4",
+        "question": "Is the fifth penguin from the front wearing a red bow tie?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are the other penguins without bow ties?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L2_NUM_010",
+    "layer": 2,
+    "sub_category": "numeracy",
+    "difficulty": "medium",
+    "prompt_text": "Ten identical silver forks, six identical knives, and four identical spoons arranged on a white linen tablecloth",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Are there forks?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are the forks silver?",
+        "type": "material"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there exactly 10 forks?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are there exactly 6 knives?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are there exactly 4 spoons?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q6",
+        "question": "Is the tablecloth white linen?",
+        "type": "material"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L2_NUM_011",
+    "layer": 2,
+    "sub_category": "numeracy",
+    "difficulty": "medium",
+    "prompt_text": "Four toddlers wearing red sneakers and four identical teddy bears sitting in a semicircle on a pastel blue rug",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Are there toddlers?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there exactly 4 toddlers?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are the toddlers wearing red sneakers?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are there teddy bears?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are there exactly 4 teddy bears?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are all of them arranged in a semicircle?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q7",
+        "question": "Is the rug pastel blue?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L2_NUM_012",
+    "layer": 2,
+    "sub_category": "numeracy",
+    "difficulty": "medium",
+    "prompt_text": "Seven red tulips, five white tulips, and three purple tulips bundled in a clear glass vase",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Are there tulips?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there exactly 7 red tulips?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there exactly 5 white tulips?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are there exactly 3 purple tulips?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q5",
+        "question": "Is the vase clear glass?",
+        "type": "material"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are the tulips inside the vase?",
+        "type": "spatial"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L2_NUM_013",
+    "layer": 2,
+    "sub_category": "numeracy",
+    "difficulty": "medium",
+    "prompt_text": "Nine orange juggling pins mid-air above a smiling clown wearing a polka-dot costume",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Are there juggling pins?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are the pins orange?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there exactly 9 pins?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q4",
+        "question": "Is there a clown?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q5",
+        "question": "Is the clown's costume polka-dotted?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are the pins above the clown?",
+        "type": "spatial"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L2_NUM_014",
+    "layer": 2,
+    "sub_category": "numeracy",
+    "difficulty": "medium",
+    "prompt_text": "Four stacked books on a shelf where the second book from the bottom is visibly thicker than the other three",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Are there books on a shelf?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there exactly 4 books?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are the books stacked?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q4",
+        "question": "Is the second book from the bottom thicker than the others?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are the other books similar in thickness to each other?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L2_NUM_015",
+    "layer": 2,
+    "sub_category": "numeracy",
+    "difficulty": "medium",
+    "prompt_text": "Five tall wine glasses and four short shot glasses lined up on a mirrored bar",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Are there wine glasses?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there exactly 5 wine glasses?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are the wine glasses tall?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are there shot glasses?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are there exactly 4 shot glasses?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are the shot glasses short?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q7",
+        "question": "Is the bar surface mirrored?",
+        "type": "material"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L2_NUM_016",
+    "layer": 2,
+    "sub_category": "numeracy",
+    "difficulty": "medium",
+    "prompt_text": "Eight identical chess pawns and two kings arranged on a black-and-white checkered board",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Are there chess pawns?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there exactly 8 pawns?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there kings?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are there exactly 2 kings?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q5",
+        "question": "Is the board checkered black and white?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are all pieces on the board?",
+        "type": "spatial"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L2_NUM_017",
+    "layer": 2,
+    "sub_category": "numeracy",
+    "difficulty": "medium",
+    "prompt_text": "Four children on bicycles and three children on scooters racing down a park path",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Are there children on bicycles?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there exactly 4 children on bicycles?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there children on scooters?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are there exactly 3 children on scooters?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are they all on a park path?",
+        "type": "spatial"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L2_NUM_018",
+    "layer": 2,
+    "sub_category": "numeracy",
+    "difficulty": "medium",
+    "prompt_text": "Seven green apples and six red apples arranged in a pyramid inside a woven basket",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Are there apples?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there exactly 7 green apples?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there exactly 6 red apples?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are the apples arranged in a pyramid?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q5",
+        "question": "Is the basket woven?",
+        "type": "material"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are all the apples inside the basket?",
+        "type": "spatial"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L2_NUM_019",
+    "layer": 2,
+    "sub_category": "numeracy",
+    "difficulty": "medium",
+    "prompt_text": "Six wooden pencils of increasing length lying parallel on a white sheet, with the fourth pencil from the left tipped in gold",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Are there pencils?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there exactly 6 pencils?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are the pencils wooden?",
+        "type": "material"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are the pencils parallel?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q5",
+        "question": "Does each pencil increase in length from left to right?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q6",
+        "question": "Is the fourth pencil from the left tipped in gold?",
+        "type": "spatial"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L2_NUM_020",
+    "layer": 2,
+    "sub_category": "numeracy",
+    "difficulty": "medium",
+    "prompt_text": "Nine brown horses and four white horses grazing in a fenced meadow at midday",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Are there brown horses?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there exactly 9 brown horses?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there white horses?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are there exactly 4 white horses?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are they grazing?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q6",
+        "question": "Is there a fence around the meadow?",
+        "type": "spatial"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L2_SP3_001",
+    "layer": 2,
+    "sub_category": "spatial_3d",
+    "difficulty": "medium",
+    "prompt_text": "A silver pocket watch partially hidden behind an open leather book on a desk, with a tall bookshelf filled with volumes receding into the background",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Is there a silver pocket watch?",
+        "type": "material"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is there an open leather book?",
+        "type": "material"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is the pocket watch partially hidden behind the book?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q4",
+        "question": "Is there a bookshelf behind the desk?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q5",
+        "question": "Does the bookshelf appear farther from the camera than the book?",
+        "type": "spatial"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L2_SP3_002",
+    "layer": 2,
+    "sub_category": "spatial_3d",
+    "difficulty": "medium",
+    "prompt_text": "A small gray mouse hiding behind the leg of a wooden chair with only its tail and whiskers visible",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Is there a gray mouse?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is there a wooden chair?",
+        "type": "material"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is the mouse mostly hidden behind the chair leg?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are only the mouse's tail and whiskers visible?",
+        "type": "spatial"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L2_SP3_003",
+    "layer": 2,
+    "sub_category": "spatial_3d",
+    "difficulty": "medium",
+    "prompt_text": "A red canoe in the foreground, a fisherman standing knee-deep in water in the middle distance, and a line of pine trees on the far shore",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Is there a red canoe?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is the canoe in the foreground?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is there a fisherman in the middle distance?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are there pine trees on the far shore?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q5",
+        "question": "Do the pine trees appear farthest from the camera?",
+        "type": "spatial"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L2_SP3_004",
+    "layer": 2,
+    "sub_category": "spatial_3d",
+    "difficulty": "medium",
+    "prompt_text": "From the camera's viewpoint a crystal wine glass is closest, a lit candle is in the middle, and a ceramic vase is farthest, all on the same dinner table",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Is there a wine glass?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is there a lit candle?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is there a ceramic vase?",
+        "type": "material"
+      },
+      {
+        "q_id": "q4",
+        "question": "Is the wine glass closer to the camera than the candle?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q5",
+        "question": "Is the candle closer to the camera than the vase?",
+        "type": "spatial"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L2_SP3_005",
+    "layer": 2,
+    "sub_category": "spatial_3d",
+    "difficulty": "medium",
+    "prompt_text": "A child peeking out from behind a tall wooden door with only half their face visible",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Is there a child?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is there a tall wooden door?",
+        "type": "material"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is the child mostly behind the door?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q4",
+        "question": "Is only half of the child's face visible?",
+        "type": "spatial"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L2_SP3_006",
+    "layer": 2,
+    "sub_category": "spatial_3d",
+    "difficulty": "medium",
+    "prompt_text": "A tabby cat crouched behind a sofa stalking a rubber mouse on a rug in the foreground, with a glass-fronted fireplace at the far back of the room",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Is there a tabby cat?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is the cat crouched behind a sofa?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is there a rubber mouse on a rug in the foreground?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q4",
+        "question": "Is there a glass-fronted fireplace at the back of the room?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q5",
+        "question": "Does the fireplace appear farther from the camera than the sofa?",
+        "type": "spatial"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L2_SP3_007",
+    "layer": 2,
+    "sub_category": "spatial_3d",
+    "difficulty": "medium",
+    "prompt_text": "From the photographer's angle a small bronze statue in the foreground appears larger than the marble government building behind it, due to forced perspective",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Is there a bronze statue?",
+        "type": "material"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is there a marble building behind the statue?",
+        "type": "material"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is the statue in the foreground?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q4",
+        "question": "Does the statue appear larger than the building from this angle?",
+        "type": "spatial"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L2_SP3_008",
+    "layer": 2,
+    "sub_category": "spatial_3d",
+    "difficulty": "medium",
+    "prompt_text": "A yellow submarine partially obscured by a school of blue fish swimming in front of it underwater",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Is there a yellow submarine?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is there a school of blue fish?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are the fish in front of the submarine?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q4",
+        "question": "Is the submarine partially hidden by the fish?",
+        "type": "spatial"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L2_SP3_009",
+    "layer": 2,
+    "sub_category": "spatial_3d",
+    "difficulty": "medium",
+    "prompt_text": "A child holding a red balloon in the foreground, a carousel turning in the middle distance, and a Ferris wheel silhouetted against the evening sky far behind",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Is there a child holding a red balloon?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is there a carousel?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is there a Ferris wheel?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q4",
+        "question": "Is the child closest to the camera?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q5",
+        "question": "Is the carousel between the child and the Ferris wheel?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q6",
+        "question": "Is the Ferris wheel farthest from the camera?",
+        "type": "spatial"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L2_SP3_010",
+    "layer": 2,
+    "sub_category": "spatial_3d",
+    "difficulty": "medium",
+    "prompt_text": "A thief in a black mask peeking out from behind a brick pillar while watching a jeweler's shop window across the street",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Is there a thief in a black mask?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is there a brick pillar?",
+        "type": "material"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is the thief partially hidden behind the pillar?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q4",
+        "question": "Is there a jeweler's shop window?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q5",
+        "question": "Is the shop window in the direction the thief is looking?",
+        "type": "spatial"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L2_SP3_011",
+    "layer": 2,
+    "sub_category": "spatial_3d",
+    "difficulty": "medium",
+    "prompt_text": "A black chess queen concealed behind a taller white rook on a wooden chessboard, from a low angle",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Are there chess pieces?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is there a black queen?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is there a white rook?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q4",
+        "question": "Is the black queen behind the rook?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q5",
+        "question": "Is the rook taller than the queen?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q6",
+        "question": "Is the chessboard wooden?",
+        "type": "material"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L2_SP3_012",
+    "layer": 2,
+    "sub_category": "spatial_3d",
+    "difficulty": "medium",
+    "prompt_text": "From a macro camera angle a bee hovers in the foreground, a single blooming daisy sits in the middle distance, and a wildflower meadow stretches toward the horizon behind them",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Is there a bee?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the bee appear very close to the camera?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is there a blooming daisy in the middle distance?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q4",
+        "question": "Is there a meadow stretching to the horizon?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q5",
+        "question": "Does the meadow appear farthest from the camera?",
+        "type": "spatial"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L2_SP3_013",
+    "layer": 2,
+    "sub_category": "spatial_3d",
+    "difficulty": "medium",
+    "prompt_text": "A ghostly figure mostly hidden behind a gauzy white curtain, with only the silhouette and outline visible through the fabric",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Is there a figure?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is there a white curtain?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is the curtain gauzy?",
+        "type": "material"
+      },
+      {
+        "q_id": "q4",
+        "question": "Is the figure behind the curtain?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q5",
+        "question": "Is only an outline of the figure visible?",
+        "type": "spatial"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L2_SP3_014",
+    "layer": 2,
+    "sub_category": "spatial_3d",
+    "difficulty": "medium",
+    "prompt_text": "A horse-drawn carriage partially blocked by a row of tall hedges in the middle distance, with a castle rising in the far background",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Is there a horse-drawn carriage?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is there a row of tall hedges?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are the hedges in front of the carriage?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q4",
+        "question": "Is the carriage partially hidden by the hedges?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q5",
+        "question": "Is there a castle in the far background?",
+        "type": "spatial"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L2_SP3_015",
+    "layer": 2,
+    "sub_category": "spatial_3d",
+    "difficulty": "medium",
+    "prompt_text": "From the driver's seat of a car the steering wheel is in the foreground and a row of cars on the road ahead appears to recede into the distance",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Is there a steering wheel?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the steering wheel appear in the foreground?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is there a road ahead with cars on it?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q4",
+        "question": "Do the cars appear to recede into the distance?",
+        "type": "spatial"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L2_SP3_016",
+    "layer": 2,
+    "sub_category": "spatial_3d",
+    "difficulty": "medium",
+    "prompt_text": "A small kitten hiding inside an open cardboard box with only its ears sticking out above the rim",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Is there a kitten?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is there an open cardboard box?",
+        "type": "material"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is the kitten mostly inside the box?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are the kitten's ears visible above the rim?",
+        "type": "spatial"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L2_SP3_017",
+    "layer": 2,
+    "sub_category": "spatial_3d",
+    "difficulty": "medium",
+    "prompt_text": "A jogger mostly obscured by a passing city bus, with only the jogger's legs visible below the bus on the street",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Is there a jogger?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is there a city bus?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is the jogger behind the bus from the camera's view?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are only the jogger's legs visible below the bus?",
+        "type": "spatial"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L2_SP3_018",
+    "layer": 2,
+    "sub_category": "spatial_3d",
+    "difficulty": "medium",
+    "prompt_text": "A pinecone on a moss-covered log in the foreground, a deer standing alert in a clearing in the middle distance, and snow-capped mountains in the far background",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Is there a pinecone on a log?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is the log moss-covered?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is there a deer in the middle distance?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are there snow-capped mountains in the far distance?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q5",
+        "question": "Does the deer appear closer to the camera than the mountains?",
+        "type": "spatial"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L2_SP3_019",
+    "layer": 2,
+    "sub_category": "spatial_3d",
+    "difficulty": "medium",
+    "prompt_text": "A singer on stage with their lower body obscured by a large stage amp and part of their face hidden behind a tall microphone stand",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Is there a singer on a stage?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is there a stage amp in front of the singer?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is there a tall microphone stand?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q4",
+        "question": "Is the singer's lower body hidden by the amp?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q5",
+        "question": "Is part of the singer's face hidden behind the microphone stand?",
+        "type": "spatial"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L2_SP3_020",
+    "layer": 2,
+    "sub_category": "spatial_3d",
+    "difficulty": "medium",
+    "prompt_text": "A bowl of fruit in the foreground, a seated woman reading a book in the middle of the room, and a large bay window showing a garden beyond in the background",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Is there a bowl of fruit?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is the bowl in the foreground?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is there a seated woman reading?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q4",
+        "question": "Is there a bay window behind the woman?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q5",
+        "question": "Is a garden visible through the window?",
+        "type": "spatial"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L2_CMP_001",
+    "layer": 2,
+    "sub_category": "complex_compositions",
+    "difficulty": "easy",
+    "prompt_text": "A blue bicycle leaning against a white brick wall next to a red fire hydrant",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Is there a blue bicycle?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is the wall white and made of brick?",
+        "type": "material"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is the bike next to a red fire hydrant?",
+        "type": "spatial"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L2_CMP_002",
+    "layer": 2,
+    "sub_category": "complex_compositions",
+    "difficulty": "easy",
+    "prompt_text": "Two identical brown owls perched on a bare branch at dusk",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Are there owls?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there exactly 2 owls?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are the owls perched on a bare branch?",
+        "type": "spatial"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L2_CMP_003",
+    "layer": 2,
+    "sub_category": "complex_compositions",
+    "difficulty": "easy",
+    "prompt_text": "A porcelain teapot on a wooden tray beside a steaming cup",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Is there a porcelain teapot?",
+        "type": "material"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is the teapot on a wooden tray?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is there a steaming cup beside the teapot?",
+        "type": "spatial"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L2_CMP_004",
+    "layer": 2,
+    "sub_category": "complex_compositions",
+    "difficulty": "easy",
+    "prompt_text": "Three fresh lemons next to a glass pitcher of water on a marble counter",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Are there exactly 3 lemons?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is there a glass pitcher of water beside the lemons?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is the counter marble?",
+        "type": "material"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L2_CMP_005",
+    "layer": 2,
+    "sub_category": "complex_compositions",
+    "difficulty": "easy",
+    "prompt_text": "A golden retriever lying on a red carpet in front of a stone fireplace",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Is there a golden retriever?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is the dog lying on a red carpet?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is the fireplace made of stone?",
+        "type": "material"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L2_CMP_006",
+    "layer": 2,
+    "sub_category": "complex_compositions",
+    "difficulty": "easy",
+    "prompt_text": "A straw sunhat hanging on a metal hook above a wooden bench",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Is there a straw sunhat?",
+        "type": "material"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is the sunhat hanging on a metal hook?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is the bench directly below the sunhat?",
+        "type": "spatial"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L2_CMP_007",
+    "layer": 2,
+    "sub_category": "complex_compositions",
+    "difficulty": "medium",
+    "prompt_text": "A chef holding three red tomatoes over a wooden cutting board in a bright kitchen next to a white stove",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Is there a chef?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there exactly 3 red tomatoes?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is the chef holding the tomatoes above a cutting board?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q4",
+        "question": "Is the cutting board wooden?",
+        "type": "material"
+      },
+      {
+        "q_id": "q5",
+        "question": "Is there a white stove beside the chef?",
+        "type": "spatial"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L2_CMP_008",
+    "layer": 2,
+    "sub_category": "complex_compositions",
+    "difficulty": "medium",
+    "prompt_text": "Four schoolchildren in yellow raincoats walking through a puddle with a single red umbrella held above them",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Are there children?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there exactly 4 children?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are the children wearing yellow raincoats?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are the children walking through a puddle?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q5",
+        "question": "Is a red umbrella held above the children?",
+        "type": "spatial"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L2_CMP_009",
+    "layer": 2,
+    "sub_category": "complex_compositions",
+    "difficulty": "medium",
+    "prompt_text": "A woman in a blue silk dress standing in front of two tall marble columns with a single red rose at her feet",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Is the woman's dress blue silk?",
+        "type": "material"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there exactly 2 marble columns behind the woman?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is the woman in front of the columns?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q4",
+        "question": "Is there exactly 1 red rose at the woman's feet?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q5",
+        "question": "Is the rose red?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L2_CMP_010",
+    "layer": 2,
+    "sub_category": "complex_compositions",
+    "difficulty": "medium",
+    "prompt_text": "An old fisherman with a gray beard holding a net containing five silver fish while standing knee-deep in green water",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Is there an old fisherman with a gray beard?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is the fisherman holding a net?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there exactly 5 silver fish in the net?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q4",
+        "question": "Is the fisherman knee-deep in water?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q5",
+        "question": "Is the water green?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L2_CMP_011",
+    "layer": 2,
+    "sub_category": "complex_compositions",
+    "difficulty": "medium",
+    "prompt_text": "A baker placing three loaves of bread onto a wooden rack in a flour-dusted kitchen",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Is there a baker?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there exactly 3 loaves of bread?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is the rack made of wood?",
+        "type": "material"
+      },
+      {
+        "q_id": "q4",
+        "question": "Is the baker placing the loaves onto the rack?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q5",
+        "question": "Is there visible flour dust in the kitchen?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L2_CMP_012",
+    "layer": 2,
+    "sub_category": "complex_compositions",
+    "difficulty": "medium",
+    "prompt_text": "A young girl with two long braids holding four yellow balloons in a park at golden hour",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Is there a young girl?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Does the girl have exactly 2 long braids?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is the girl holding balloons?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are there exactly 4 yellow balloons?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q5",
+        "question": "Is the girl in a park?",
+        "type": "spatial"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L2_CMP_013",
+    "layer": 2,
+    "sub_category": "complex_compositions",
+    "difficulty": "medium",
+    "prompt_text": "A musician sitting on a wooden stool playing an acoustic guitar with five copper-colored strings visible",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Is there a musician?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is the musician seated on a wooden stool?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is the guitar acoustic?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are there exactly 5 strings visible on the guitar?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are the strings copper-colored?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L2_CMP_014",
+    "layer": 2,
+    "sub_category": "complex_compositions",
+    "difficulty": "medium",
+    "prompt_text": "A potter shaping a clay vase on a spinning wheel with three finished vases on a shelf behind him",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Is there a potter?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is the potter shaping a vase?",
+        "type": "presence"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is the vase material clay?",
+        "type": "material"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are there exactly 3 finished vases on the shelf?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q5",
+        "question": "Is the shelf behind the potter?",
+        "type": "spatial"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L2_CMP_015",
+    "layer": 2,
+    "sub_category": "complex_compositions",
+    "difficulty": "hard",
+    "prompt_text": "A Victorian parlor with a brass chandelier hanging from the ceiling, a red velvet sofa holding four lace pillows, three gilt-framed portraits mounted on the wall behind the sofa, and two taxidermy peacocks on a mahogany side table",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Is there a brass chandelier hanging from the ceiling?",
+        "type": "material"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is there a red velvet sofa?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is the sofa upholstered in velvet?",
+        "type": "material"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are there exactly 4 lace pillows on the sofa?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are there exactly 3 gilt-framed portraits on the wall?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are the portraits on the wall behind the sofa?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q7",
+        "question": "Are there exactly 2 taxidermy peacocks on the side table?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q8",
+        "question": "Is the side table made of mahogany?",
+        "type": "material"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L2_CMP_016",
+    "layer": 2,
+    "sub_category": "complex_compositions",
+    "difficulty": "hard",
+    "prompt_text": "A young knight in polished silver armor riding a brown horse across a stone bridge, holding a red banner with a golden lion on it, with five crows flying overhead and two gray wolves running behind the horse",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Is there a knight in polished silver armor?",
+        "type": "material"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is the horse brown?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q3",
+        "question": "Is the bridge made of stone?",
+        "type": "material"
+      },
+      {
+        "q_id": "q4",
+        "question": "Is the knight holding a red banner?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q5",
+        "question": "Is there a golden lion design on the banner?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are there exactly 5 crows flying overhead?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q7",
+        "question": "Are there exactly 2 gray wolves behind the horse?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q8",
+        "question": "Are the wolves behind the horse?",
+        "type": "spatial"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L2_CMP_017",
+    "layer": 2,
+    "sub_category": "complex_compositions",
+    "difficulty": "hard",
+    "prompt_text": "A wooden-floored greenhouse with three tall terracotta pots of red geraniums lined up on the left, four identical ceramic pots of yellow marigolds on the right, a marble bust in the center, and a wrought-iron watering can hanging from a rusted hook",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Is the greenhouse floor wooden?",
+        "type": "material"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there exactly 3 terracotta pots of red geraniums?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are the geranium pots on the left side of the greenhouse?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are there exactly 4 ceramic pots of yellow marigolds?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are the marigold pots on the right side of the greenhouse?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q6",
+        "question": "Is there a marble bust in the center?",
+        "type": "material"
+      },
+      {
+        "q_id": "q7",
+        "question": "Is there a wrought-iron watering can?",
+        "type": "material"
+      },
+      {
+        "q_id": "q8",
+        "question": "Is the hook rusted?",
+        "type": "attribute"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L2_CMP_018",
+    "layer": 2,
+    "sub_category": "complex_compositions",
+    "difficulty": "hard",
+    "prompt_text": "A bustling farmers market stall with six wicker baskets of golden oranges on the top shelf, three wooden crates of red apples on the middle shelf, two tin buckets of green pears on the bottom shelf, and a chalkboard sign reading FRESH in the foreground",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Are there exactly 6 wicker baskets of oranges on the top shelf?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are the oranges golden in color?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there exactly 3 wooden crates of red apples on the middle shelf?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are the apples on the middle shelf?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are there exactly 2 tin buckets of green pears on the bottom shelf?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are the pear buckets made of tin?",
+        "type": "material"
+      },
+      {
+        "q_id": "q7",
+        "question": "Is there a chalkboard sign reading FRESH?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q8",
+        "question": "Is the chalkboard sign in the foreground?",
+        "type": "spatial"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L2_CMP_019",
+    "layer": 2,
+    "sub_category": "complex_compositions",
+    "difficulty": "hard",
+    "prompt_text": "A modern kitchen with a black granite countertop holding four copper saucepans of decreasing size, a wooden knife block with five knives visible, two crystal wine glasses to the right, and a silver tray of green grapes in the center",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Is there a black granite countertop?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q2",
+        "question": "Is the countertop made of granite?",
+        "type": "material"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are there exactly 4 copper saucepans?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q4",
+        "question": "Do the saucepans decrease in size from left to right?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are there exactly 5 knives in a wooden knife block?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are there exactly 2 crystal wine glasses to the right?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q7",
+        "question": "Is the tray silver?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q8",
+        "question": "Is the tray in the center of the countertop?",
+        "type": "spatial"
+      }
+    ]
+  },
+  {
+    "prompt_id": "L2_CMP_020",
+    "layer": 2,
+    "sub_category": "complex_compositions",
+    "difficulty": "hard",
+    "prompt_text": "A stone courtyard at twilight with three bronze statues standing in a triangle around a central fountain, four arched windows glowing yellow on the far wall, and two black cats sitting on opposite low walls",
+    "atomic_questions": [
+      {
+        "q_id": "q1",
+        "question": "Is the courtyard made of stone?",
+        "type": "material"
+      },
+      {
+        "q_id": "q2",
+        "question": "Are there exactly 3 bronze statues?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q3",
+        "question": "Are the statues arranged in a triangle around a central fountain?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q4",
+        "question": "Are there exactly 4 arched windows on the far wall?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q5",
+        "question": "Are the windows glowing yellow?",
+        "type": "attribute"
+      },
+      {
+        "q_id": "q6",
+        "question": "Are the windows behind the statues?",
+        "type": "spatial"
+      },
+      {
+        "q_id": "q7",
+        "question": "Are there exactly 2 black cats?",
+        "type": "numeracy"
+      },
+      {
+        "q_id": "q8",
+        "question": "Are the two cats on opposite walls?",
+        "type": "spatial"
+      }
+    ]
+  }
+]

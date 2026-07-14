@@ -1,0 +1,371 @@
+[
+  {
+    "prompt_id": "L3_NEG_001",
+    "layer": 3,
+    "sub_category": "negation",
+    "difficulty": "hard",
+    "prompt_text": "A wooden dining table with three plates but no food on any of them",
+    "atomic_questions": [
+      {"q_id": "q1", "question": "Is there a wooden dining table?", "type": "presence"},
+      {"q_id": "q2", "question": "Are there exactly three plates on the table?", "type": "numeracy"},
+      {"q_id": "q3", "question": "Is the table made of wood?", "type": "material"},
+      {"q_id": "q4", "question": "Are all the plates empty with no food on them?", "type": "negation"},
+      {"q_id": "q5", "question": "Is there any food visible on the plates?", "type": "negation"}
+    ]
+  },
+  {
+    "prompt_id": "L3_NEG_002",
+    "layer": 3,
+    "sub_category": "negation",
+    "difficulty": "hard",
+    "prompt_text": "A man wearing a suit but no tie, standing in front of a bookshelf",
+    "atomic_questions": [
+      {"q_id": "q1", "question": "Is there a man in the image?", "type": "presence"},
+      {"q_id": "q2", "question": "Is the man wearing a suit?", "type": "attribute"},
+      {"q_id": "q3", "question": "Is the man wearing a tie?", "type": "negation"},
+      {"q_id": "q4", "question": "Is there a bookshelf in the background?", "type": "presence"},
+      {"q_id": "q5", "question": "Is the man standing in front of the bookshelf?", "type": "spatial"}
+    ]
+  },
+  {
+    "prompt_id": "L3_NEG_003",
+    "layer": 3,
+    "sub_category": "negation",
+    "difficulty": "hard",
+    "prompt_text": "A vase of flowers on a windowsill with no curtains on the window",
+    "atomic_questions": [
+      {"q_id": "q1", "question": "Is there a vase of flowers?", "type": "presence"},
+      {"q_id": "q2", "question": "Is the vase on a windowsill?", "type": "spatial"},
+      {"q_id": "q3", "question": "Is there a window visible?", "type": "presence"},
+      {"q_id": "q4", "question": "Are there any curtains or drapes on the window?", "type": "negation"}
+    ]
+  },
+  {
+    "prompt_id": "L3_NEG_004",
+    "layer": 3,
+    "sub_category": "negation",
+    "difficulty": "hard",
+    "prompt_text": "A parking lot full of cars but with no people visible anywhere",
+    "atomic_questions": [
+      {"q_id": "q1", "question": "Is there a parking lot?", "type": "presence"},
+      {"q_id": "q2", "question": "Are there multiple cars in the parking lot?", "type": "presence"},
+      {"q_id": "q3", "question": "Are there any people visible in the image?", "type": "negation"}
+    ]
+  },
+  {
+    "prompt_id": "L3_NEG_005",
+    "layer": 3,
+    "sub_category": "negation",
+    "difficulty": "hard",
+    "prompt_text": "A birthday cake with five candles but without any frosting",
+    "atomic_questions": [
+      {"q_id": "q1", "question": "Is there a birthday cake?", "type": "presence"},
+      {"q_id": "q2", "question": "Are there exactly five candles on the cake?", "type": "numeracy"},
+      {"q_id": "q3", "question": "Does the cake have frosting or icing on it?", "type": "negation"}
+    ]
+  },
+  {
+    "prompt_id": "L3_NEG_006",
+    "layer": 3,
+    "sub_category": "negation",
+    "difficulty": "hard",
+    "prompt_text": "An office desk with a laptop and a coffee mug but no papers or documents",
+    "atomic_questions": [
+      {"q_id": "q1", "question": "Is there an office desk?", "type": "presence"},
+      {"q_id": "q2", "question": "Is there a laptop on the desk?", "type": "presence"},
+      {"q_id": "q3", "question": "Is there a coffee mug on the desk?", "type": "presence"},
+      {"q_id": "q4", "question": "Are there any papers or documents visible on the desk?", "type": "negation"}
+    ]
+  },
+  {
+    "prompt_id": "L3_NEG_007",
+    "layer": 3,
+    "sub_category": "negation",
+    "difficulty": "hard",
+    "prompt_text": "A dog sitting on a couch in a living room with no television",
+    "atomic_questions": [
+      {"q_id": "q1", "question": "Is there a dog?", "type": "presence"},
+      {"q_id": "q2", "question": "Is the dog sitting on a couch?", "type": "spatial"},
+      {"q_id": "q3", "question": "Is the setting a living room?", "type": "presence"},
+      {"q_id": "q4", "question": "Is there a television visible in the room?", "type": "negation"}
+    ]
+  },
+  {
+    "prompt_id": "L3_NEG_008",
+    "layer": 3,
+    "sub_category": "negation",
+    "difficulty": "hard",
+    "prompt_text": "A beach scene at sunset with waves but no people and no umbrellas",
+    "atomic_questions": [
+      {"q_id": "q1", "question": "Is there a beach visible?", "type": "presence"},
+      {"q_id": "q2", "question": "Is there a sunset in the sky?", "type": "presence"},
+      {"q_id": "q3", "question": "Are there waves in the water?", "type": "presence"},
+      {"q_id": "q4", "question": "Are there any people visible?", "type": "negation"},
+      {"q_id": "q5", "question": "Are there any umbrellas or parasols visible?", "type": "negation"}
+    ]
+  },
+  {
+    "prompt_id": "L3_NEG_009",
+    "layer": 3,
+    "sub_category": "negation",
+    "difficulty": "hard",
+    "prompt_text": "A glass of water on a marble countertop with no ice in the glass",
+    "atomic_questions": [
+      {"q_id": "q1", "question": "Is there a glass of water?", "type": "presence"},
+      {"q_id": "q2", "question": "Is the glass on a marble countertop?", "type": "spatial"},
+      {"q_id": "q3", "question": "Is the countertop made of marble?", "type": "material"},
+      {"q_id": "q4", "question": "Is there any ice in the glass?", "type": "negation"}
+    ]
+  },
+  {
+    "prompt_id": "L3_NEG_010",
+    "layer": 3,
+    "sub_category": "negation",
+    "difficulty": "hard",
+    "prompt_text": "A classroom with desks and a blackboard but no chairs",
+    "atomic_questions": [
+      {"q_id": "q1", "question": "Is there a classroom setting?", "type": "presence"},
+      {"q_id": "q2", "question": "Are there desks in the classroom?", "type": "presence"},
+      {"q_id": "q3", "question": "Is there a blackboard?", "type": "presence"},
+      {"q_id": "q4", "question": "Are there any chairs visible in the classroom?", "type": "negation"}
+    ]
+  },
+  {
+    "prompt_id": "L3_CTR_001",
+    "layer": 3,
+    "sub_category": "constraint_trading",
+    "difficulty": "hard",
+    "prompt_text": "Exactly four red ceramic mugs arranged in a straight line on a dark wooden shelf, with a small green potted cactus to the left of the mugs and a brass desk lamp to the right",
+    "atomic_questions": [
+      {"q_id": "q1", "question": "Are there exactly four mugs?", "type": "numeracy"},
+      {"q_id": "q2", "question": "Are the mugs red?", "type": "attribute"},
+      {"q_id": "q3", "question": "Are the mugs made of ceramic?", "type": "material"},
+      {"q_id": "q4", "question": "Are the mugs arranged in a straight line?", "type": "spatial"},
+      {"q_id": "q5", "question": "Is the shelf dark-colored wood?", "type": "attribute"},
+      {"q_id": "q6", "question": "Is there a small green potted cactus?", "type": "presence"},
+      {"q_id": "q7", "question": "Is the cactus to the left of the mugs?", "type": "spatial"},
+      {"q_id": "q8", "question": "Is there a brass desk lamp?", "type": "presence"},
+      {"q_id": "q9", "question": "Is the lamp to the right of the mugs?", "type": "spatial"}
+    ]
+  },
+  {
+    "prompt_id": "L3_CTR_002",
+    "layer": 3,
+    "sub_category": "constraint_trading",
+    "difficulty": "hard",
+    "prompt_text": "Three blue glass bottles of decreasing height next to two white candles on a round marble table, with a single yellow sunflower in the tallest bottle",
+    "atomic_questions": [
+      {"q_id": "q1", "question": "Are there exactly three bottles?", "type": "numeracy"},
+      {"q_id": "q2", "question": "Are the bottles blue?", "type": "attribute"},
+      {"q_id": "q3", "question": "Are the bottles made of glass?", "type": "material"},
+      {"q_id": "q4", "question": "Are the bottles arranged in decreasing height?", "type": "spatial"},
+      {"q_id": "q5", "question": "Are there exactly two white candles?", "type": "numeracy"},
+      {"q_id": "q6", "question": "Is the table round?", "type": "attribute"},
+      {"q_id": "q7", "question": "Is the table marble?", "type": "material"},
+      {"q_id": "q8", "question": "Is there a yellow sunflower in the tallest bottle?", "type": "presence"},
+      {"q_id": "q9", "question": "Is there exactly one sunflower?", "type": "numeracy"}
+    ]
+  },
+  {
+    "prompt_id": "L3_CTR_003",
+    "layer": 3,
+    "sub_category": "constraint_trading",
+    "difficulty": "hard",
+    "prompt_text": "A woman in a green silk dress holding a red leather handbag, standing to the right of a tall man in a navy suit and brown shoes, both in front of a white brick wall",
+    "atomic_questions": [
+      {"q_id": "q1", "question": "Is there a woman?", "type": "presence"},
+      {"q_id": "q2", "question": "Is the woman's dress green?", "type": "attribute"},
+      {"q_id": "q3", "question": "Is the dress made of silk?", "type": "material"},
+      {"q_id": "q4", "question": "Is the woman holding a red handbag?", "type": "attribute"},
+      {"q_id": "q5", "question": "Is the handbag leather?", "type": "material"},
+      {"q_id": "q6", "question": "Is there a tall man?", "type": "presence"},
+      {"q_id": "q7", "question": "Is the man wearing a navy suit?", "type": "attribute"},
+      {"q_id": "q8", "question": "Is the man wearing brown shoes?", "type": "attribute"},
+      {"q_id": "q9", "question": "Is the woman to the right of the man?", "type": "spatial"},
+      {"q_id": "q10", "question": "Is there a white brick wall behind them?", "type": "presence"}
+    ]
+  },
+  {
+    "prompt_id": "L3_CTR_004",
+    "layer": 3,
+    "sub_category": "constraint_trading",
+    "difficulty": "hard",
+    "prompt_text": "Five oranges and three green apples in a woven basket on a checkered tablecloth, with a glass pitcher of lemonade behind the basket",
+    "atomic_questions": [
+      {"q_id": "q1", "question": "Are there exactly five oranges?", "type": "numeracy"},
+      {"q_id": "q2", "question": "Are there exactly three apples?", "type": "numeracy"},
+      {"q_id": "q3", "question": "Are the apples green?", "type": "attribute"},
+      {"q_id": "q4", "question": "Is there a woven basket containing the fruit?", "type": "presence"},
+      {"q_id": "q5", "question": "Is there a checkered tablecloth?", "type": "attribute"},
+      {"q_id": "q6", "question": "Is there a glass pitcher?", "type": "presence"},
+      {"q_id": "q7", "question": "Does the pitcher contain lemonade or yellow liquid?", "type": "attribute"},
+      {"q_id": "q8", "question": "Is the pitcher behind the basket?", "type": "spatial"}
+    ]
+  },
+  {
+    "prompt_id": "L3_CTR_005",
+    "layer": 3,
+    "sub_category": "constraint_trading",
+    "difficulty": "hard",
+    "prompt_text": "Two brown leather armchairs facing each other across a small glass coffee table, with three hardcover books stacked on the table and a floor lamp with a white shade between the chairs",
+    "atomic_questions": [
+      {"q_id": "q1", "question": "Are there exactly two armchairs?", "type": "numeracy"},
+      {"q_id": "q2", "question": "Are the armchairs brown?", "type": "attribute"},
+      {"q_id": "q3", "question": "Are the armchairs leather?", "type": "material"},
+      {"q_id": "q4", "question": "Are the armchairs facing each other?", "type": "spatial"},
+      {"q_id": "q5", "question": "Is there a glass coffee table between them?", "type": "presence"},
+      {"q_id": "q6", "question": "Are there exactly three books stacked on the table?", "type": "numeracy"},
+      {"q_id": "q7", "question": "Are the books hardcover?", "type": "attribute"},
+      {"q_id": "q8", "question": "Is there a floor lamp?", "type": "presence"},
+      {"q_id": "q9", "question": "Does the lamp have a white shade?", "type": "attribute"}
+    ]
+  },
+  {
+    "prompt_id": "L3_PHY_001",
+    "layer": 3,
+    "sub_category": "causal_physics",
+    "difficulty": "hard",
+    "prompt_text": "A glass of red wine knocked over on a white tablecloth with wine spilling out and staining the cloth",
+    "atomic_questions": [
+      {"q_id": "q1", "question": "Is there a wine glass?", "type": "presence"},
+      {"q_id": "q2", "question": "Is the wine glass tipped over or knocked over?", "type": "spatial"},
+      {"q_id": "q3", "question": "Is there red wine spilling out of the glass?", "type": "presence"},
+      {"q_id": "q4", "question": "Is there a white tablecloth?", "type": "presence"},
+      {"q_id": "q5", "question": "Is there a red wine stain on the tablecloth?", "type": "presence"}
+    ]
+  },
+  {
+    "prompt_id": "L3_PHY_002",
+    "layer": 3,
+    "sub_category": "causal_physics",
+    "difficulty": "hard",
+    "prompt_text": "A candle in a dark room casting a long shadow of a vase on the wall to the right",
+    "atomic_questions": [
+      {"q_id": "q1", "question": "Is there a lit candle?", "type": "presence"},
+      {"q_id": "q2", "question": "Is the room dark?", "type": "attribute"},
+      {"q_id": "q3", "question": "Is there a vase in the scene?", "type": "presence"},
+      {"q_id": "q4", "question": "Is there a shadow of the vase visible on the wall?", "type": "presence"},
+      {"q_id": "q5", "question": "Is the shadow cast to the right of the vase?", "type": "spatial"}
+    ]
+  },
+  {
+    "prompt_id": "L3_PHY_003",
+    "layer": 3,
+    "sub_category": "causal_physics",
+    "difficulty": "hard",
+    "prompt_text": "A ball halfway through bouncing off a hardwood floor, captured mid-air with a slight motion blur",
+    "atomic_questions": [
+      {"q_id": "q1", "question": "Is there a ball in the image?", "type": "presence"},
+      {"q_id": "q2", "question": "Is the ball in mid-air above the floor?", "type": "spatial"},
+      {"q_id": "q3", "question": "Is there a hardwood floor?", "type": "material"},
+      {"q_id": "q4", "question": "Is there any motion blur visible on the ball?", "type": "attribute"}
+    ]
+  },
+  {
+    "prompt_id": "L3_PHY_004",
+    "layer": 3,
+    "sub_category": "causal_physics",
+    "difficulty": "hard",
+    "prompt_text": "A metal spoon partially submerged in a glass of water, appearing bent at the water surface due to refraction",
+    "atomic_questions": [
+      {"q_id": "q1", "question": "Is there a metal spoon?", "type": "presence"},
+      {"q_id": "q2", "question": "Is the spoon partially in a glass of water?", "type": "spatial"},
+      {"q_id": "q3", "question": "Does the spoon appear bent or distorted at the water surface?", "type": "attribute"},
+      {"q_id": "q4", "question": "Is the glass transparent?", "type": "attribute"}
+    ]
+  },
+  {
+    "prompt_id": "L3_PHY_005",
+    "layer": 3,
+    "sub_category": "causal_physics",
+    "difficulty": "hard",
+    "prompt_text": "An ice cube melting on a hot black stone surface with a small puddle of water forming around it",
+    "atomic_questions": [
+      {"q_id": "q1", "question": "Is there an ice cube?", "type": "presence"},
+      {"q_id": "q2", "question": "Is the ice cube on a dark stone surface?", "type": "spatial"},
+      {"q_id": "q3", "question": "Does the ice cube appear to be melting?", "type": "attribute"},
+      {"q_id": "q4", "question": "Is there a puddle of water around the ice cube?", "type": "presence"}
+    ]
+  },
+  {
+    "prompt_id": "L3_MCT_001",
+    "layer": 3,
+    "sub_category": "multi_type_counting",
+    "difficulty": "hard",
+    "prompt_text": "Exactly two red apples, three yellow bananas, and four green limes arranged on a white plate",
+    "atomic_questions": [
+      {"q_id": "q1", "question": "Are there exactly two apples?", "type": "numeracy"},
+      {"q_id": "q2", "question": "Are the apples red?", "type": "attribute"},
+      {"q_id": "q3", "question": "Are there exactly three bananas?", "type": "numeracy"},
+      {"q_id": "q4", "question": "Are the bananas yellow?", "type": "attribute"},
+      {"q_id": "q5", "question": "Are there exactly four limes?", "type": "numeracy"},
+      {"q_id": "q6", "question": "Are the limes green?", "type": "attribute"},
+      {"q_id": "q7", "question": "Is there a white plate?", "type": "presence"}
+    ]
+  },
+  {
+    "prompt_id": "L3_MCT_002",
+    "layer": 3,
+    "sub_category": "multi_type_counting",
+    "difficulty": "hard",
+    "prompt_text": "A toy store shelf with exactly six blue toy cars, two red toy trucks, and one yellow toy airplane",
+    "atomic_questions": [
+      {"q_id": "q1", "question": "Is there a shelf in a toy store?", "type": "presence"},
+      {"q_id": "q2", "question": "Are there exactly six toy cars?", "type": "numeracy"},
+      {"q_id": "q3", "question": "Are the toy cars blue?", "type": "attribute"},
+      {"q_id": "q4", "question": "Are there exactly two toy trucks?", "type": "numeracy"},
+      {"q_id": "q5", "question": "Are the toy trucks red?", "type": "attribute"},
+      {"q_id": "q6", "question": "Is there exactly one toy airplane?", "type": "numeracy"},
+      {"q_id": "q7", "question": "Is the airplane yellow?", "type": "attribute"}
+    ]
+  },
+  {
+    "prompt_id": "L3_MCT_003",
+    "layer": 3,
+    "sub_category": "multi_type_counting",
+    "difficulty": "hard",
+    "prompt_text": "A garden with exactly three red roses, five white daisies, and two purple tulips in a flower bed",
+    "atomic_questions": [
+      {"q_id": "q1", "question": "Is there a garden or flower bed?", "type": "presence"},
+      {"q_id": "q2", "question": "Are there exactly three roses?", "type": "numeracy"},
+      {"q_id": "q3", "question": "Are the roses red?", "type": "attribute"},
+      {"q_id": "q4", "question": "Are there exactly five daisies?", "type": "numeracy"},
+      {"q_id": "q5", "question": "Are the daisies white?", "type": "attribute"},
+      {"q_id": "q6", "question": "Are there exactly two tulips?", "type": "numeracy"},
+      {"q_id": "q7", "question": "Are the tulips purple?", "type": "attribute"}
+    ]
+  },
+  {
+    "prompt_id": "L3_MCT_004",
+    "layer": 3,
+    "sub_category": "multi_type_counting",
+    "difficulty": "hard",
+    "prompt_text": "A kitchen counter with exactly four brown eggs, two slices of white bread, and three red strawberries",
+    "atomic_questions": [
+      {"q_id": "q1", "question": "Is there a kitchen counter?", "type": "presence"},
+      {"q_id": "q2", "question": "Are there exactly four eggs?", "type": "numeracy"},
+      {"q_id": "q3", "question": "Are the eggs brown?", "type": "attribute"},
+      {"q_id": "q4", "question": "Are there exactly two slices of bread?", "type": "numeracy"},
+      {"q_id": "q5", "question": "Is the bread white?", "type": "attribute"},
+      {"q_id": "q6", "question": "Are there exactly three strawberries?", "type": "numeracy"},
+      {"q_id": "q7", "question": "Are the strawberries red?", "type": "attribute"}
+    ]
+  },
+  {
+    "prompt_id": "L3_MCT_005",
+    "layer": 3,
+    "sub_category": "multi_type_counting",
+    "difficulty": "hard",
+    "prompt_text": "A desk with exactly one black laptop, two silver pens, three yellow sticky notes, and four paper clips",
+    "atomic_questions": [
+      {"q_id": "q1", "question": "Is there a desk?", "type": "presence"},
+      {"q_id": "q2", "question": "Is there exactly one laptop?", "type": "numeracy"},
+      {"q_id": "q3", "question": "Is the laptop black?", "type": "attribute"},
+      {"q_id": "q4", "question": "Are there exactly two pens?", "type": "numeracy"},
+      {"q_id": "q5", "question": "Are the pens silver?", "type": "attribute"},
+      {"q_id": "q6", "question": "Are there exactly three sticky notes?", "type": "numeracy"},
+      {"q_id": "q7", "question": "Are the sticky notes yellow?", "type": "attribute"},
+      {"q_id": "q8", "question": "Are there exactly four paper clips?", "type": "numeracy"}
+    ]
+  }
+]
