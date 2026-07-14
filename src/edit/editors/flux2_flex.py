@@ -65,7 +65,7 @@ class Flux2FlexEditor(BaseEditor):
                 return img_bytes, result
 
             if "moderat" in status:
-                raise RuntimeError(f"content_policy: FLUX.2 moderated this request")
+                raise RuntimeError("content_policy: FLUX.2 moderated this request")
 
             if status in ("failed", "error"):
                 raise RuntimeError(f"FLUX.2 flex edit failed: {result}")

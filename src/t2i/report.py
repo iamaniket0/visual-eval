@@ -17,7 +17,6 @@ self-bias caveat when gpt-4o is judging gpt_image_15.
 from __future__ import annotations
 
 from pathlib import Path
-from typing import Any
 
 import matplotlib
 
@@ -26,21 +25,23 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from reportlab.lib import colors
 from reportlab.lib.pagesizes import LETTER
-from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
+from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
 from reportlab.lib.units import inch
 from reportlab.platypus import (
-    SimpleDocTemplate,
-    Paragraph,
-    Spacer,
     Image as RLImage,
+)
+from reportlab.platypus import (
+    PageBreak,
+    Paragraph,
+    SimpleDocTemplate,
+    Spacer,
     Table,
     TableStyle,
-    PageBreak,
 )
 
-from src.t2i.aggregator import worst_examples_for_model
 from src.core.utils import get_logger
 from src.t2i import OUTPUTS_DIR, load_settings
+from src.t2i.aggregator import worst_examples_for_model
 
 log = get_logger("report")
 
@@ -671,7 +672,7 @@ def build_aggregate_report() -> Path:
             )
             cov_pct = 100.0 * n_cov / max(1, n_tot)
             reliability_clause = (
-                f"(100% coverage)"
+                "(100% coverage)"
                 if uncov == 0
                 else f"(<b>{uncov}/{n_tot}</b> prompts uncovered &mdash; "
                 f"{100.0 - cov_pct:.1f}% of benchmark)"

@@ -147,7 +147,7 @@ class BaseGenerator(ABC):
         async with self.semaphore:
             try:
                 image_bytes, raw_meta = await self._generate_with_retry(prompt_text, seed=seed)
-            except _ContentFiltered as e:
+            except _ContentFilteredError as e:
                 return GenerationResult(
                     prompt_id=prompt_id,
                     model=self.model_id,
@@ -196,13 +196,13 @@ class BaseGenerator(ABC):
         for attempt in range(max_retries):
             try:
                 return await self._do_generate_with_seed(prompt_text, seed)
-            except _ContentFiltered:
+            except _ContentFilteredError:
                 raise  # never retry content filter blocks
             except httpx.HTTPStatusError as e:
                 code = e.response.status_code
                 body_snippet = e.response.text[:500] if e.response is not None else ""
                 if looks_like_filter(body_snippet):
-                    raise _ContentFiltered(
+                    raise _ContentFilteredError(
                         f"Content filter: {body_snippet[:200]}", metadata={"status_code": code}
                     ) from e
                 if code in (429, 500, 502, 503, 504) and attempt < max_retries - 1:
@@ -246,7 +246,7 @@ class BaseGenerator(ABC):
 
     @abstractmethod
     async def _do_generate(self, prompt_text: str) -> tuple[bytes, dict]:
-        """Return (image_bytes, raw_metadata). May raise _ContentFiltered."""
+        """Return (image_bytes, raw_metadata). May raise _ContentFilteredError."""
 
     async def _do_generate_with_seed(self, prompt_text: str, seed: int) -> tuple[bytes, dict]:
         """Default seed-aware path: delegates to `_do_generate` and ignores
@@ -304,7 +304,7 @@ class BaseGenerator(ABC):
             data = r.json()
             if failed_check and (reason := failed_check(data)):
                 if looks_like_filter(reason):
-                    raise _ContentFiltered(reason, metadata=data)
+                    raise _ContentFilteredError(reason, metadata=data)
                 raise RuntimeError(f"Job failed: {reason}")
             if ready_check(data):
                 return data
@@ -313,7 +313,7 @@ class BaseGenerator(ABC):
         raise TimeoutError(f"Job did not complete within {max_wait}s")
 
 
-class _ContentFiltered(Exception):
+class _ContentFilteredError(Exception):
     def __init__(self, msg: str, metadata: dict | None = None):
         super().__init__(msg)
         self.metadata = metadata or {}
@@ -367,16 +367,16 @@ def all_registered() -> list[str]:
 
 # Import concrete generators so they register
 from . import (  # noqa: E402,F401
-    flux,
-    stability,
-    bria,
-    freepik,
-    xai,
-    google_gen,
-    openai_gen,
-    leonardo,
     adobe,
+    bria,
+    flux,
+    freepik,
+    google_gen,
+    leonardo,
     midjourney,
+    openai_gen,
+    stability,
+    xai,
 )
 
 

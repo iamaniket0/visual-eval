@@ -28,8 +28,8 @@ from typing import Any
 
 from src.core.utils import get_api_key
 from src.t2i import load_settings
-from .base import BaseGenerator, _ContentFiltered, looks_like_filter, register
 
+from .base import BaseGenerator, _ContentFilteredError, looks_like_filter, register
 
 OPENROUTER_ENDPOINT = "https://openrouter.ai/api/v1/chat/completions"
 OPENROUTER_HEADERS = {
@@ -113,7 +113,7 @@ class OpenAIGenerator(BaseGenerator):
         }
         r = await self.client.post(self._endpoint, headers=headers, json=body)
         if r.status_code == 400 and looks_like_filter(r.text):
-            raise _ContentFiltered(r.text[:300], metadata={"status": 400})
+            raise _ContentFilteredError(r.text[:300], metadata={"status": 400})
         r.raise_for_status()
         data = r.json()
         item = data.get("data", [{}])[0]
@@ -136,7 +136,7 @@ class OpenAIGenerator(BaseGenerator):
         }
         r = await self.client.post(self._endpoint, headers=headers, json=body)
         if r.status_code == 400 and looks_like_filter(r.text):
-            raise _ContentFiltered(r.text[:300], metadata={"status": 400})
+            raise _ContentFilteredError(r.text[:300], metadata={"status": 400})
         r.raise_for_status()
         data = r.json()
         url = _extract_openrouter_image_source(data)

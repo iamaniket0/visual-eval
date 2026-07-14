@@ -10,7 +10,6 @@ outputs/t2i/hitl/hitl_human.jsonl on every submit.
 
 from __future__ import annotations
 
-import json
 from pathlib import Path
 
 from flask import (
@@ -24,8 +23,8 @@ from flask import (
     url_for,
 )
 
-from src.t2i.hitl import HITL_DIR, build_sample, compute_agreement, load_sample, save_sample
 from src.core.utils import append_jsonl, get_logger, read_jsonl
+from src.t2i.hitl import HITL_DIR, build_sample, compute_agreement, load_sample, save_sample
 
 log = get_logger("hitl_webui")
 app = Flask(__name__)

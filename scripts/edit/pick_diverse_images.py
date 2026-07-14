@@ -14,14 +14,13 @@ Usage:
 """
 
 import argparse
-import boto3
 import json
-import os
 import random
-import sys
 from collections import defaultdict
 from io import BytesIO
 from pathlib import Path
+
+import boto3
 
 try:
     from PIL import Image

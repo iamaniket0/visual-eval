@@ -19,7 +19,7 @@ Four judge backends share this file, selected at runtime via
 
   - "qwen_soft"           -> `QwenSoftJudge`
         Same Soft-TIFA math via OpenRouter to a Qwen VL model. Fails loudly
-        with `SoftTifaLogprobsUnavailable` on current OpenRouter providers
+        with `SoftTifaLogprobsUnavailableError` on current OpenRouter providers
         (they all strip logprobs on Qwen VL routes as of Apr 2026). Kept so
         the one-line settings flip back to this path is available if the
         provider situation changes.
@@ -62,17 +62,16 @@ import re
 from dataclasses import asdict, dataclass, field
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Any, Iterable
+from typing import Any
 
-from src.core.utils import CostTracker, append_jsonl, get_api_key, get_logger, read_jsonl
 from src.core.scoring import (
-    extract_yes_probability,
-    DEFAULT_LOGPROB_FLOOR,
-    YES_TOKEN_VARIANTS,
     NO_TOKEN_VARIANTS,
+    YES_TOKEN_VARIANTS,
+    extract_yes_probability,
     soft_tifa_am,
     soft_tifa_gm,
 )
+from src.core.utils import CostTracker, append_jsonl, get_api_key, get_logger, read_jsonl
 from src.t2i import OUTPUTS_DIR, load_settings
 
 log = get_logger("judge")
@@ -153,7 +152,7 @@ class JudgeResult:
         return asdict(self)
 
 
-class SoftTifaLogprobsUnavailable(RuntimeError):
+class SoftTifaLogprobsUnavailableError(RuntimeError):
     """Raised by soft judges when the provider returns no logprobs.
 
     Per internal methodology guidance: never silently fall back to hard yes/no
@@ -590,7 +589,7 @@ class _BaseSoftJudge(_BaseOpenAICompatClient):
         # Provider stripped logprobs -> we can't do Soft-TIFA. Surface loudly.
         content_logprobs = getattr(logp, "content", None) if logp else None
         if not logp or not content_logprobs:
-            raise SoftTifaLogprobsUnavailable(
+            raise SoftTifaLogprobsUnavailableError(
                 f"{type(self).__name__}: provider returned no logprobs for "
                 f"model={self.api_model}. Soft-TIFA cannot proceed. See "
                 "judge.py docstring for backends that are known to preserve "
@@ -722,7 +721,7 @@ class QwenSoftJudge(_BaseSoftJudge):
 
     As of Apr 2026, every OpenRouter provider hosting a Qwen-VL model
     strips logprobs from the response. This class will raise
-    `SoftTifaLogprobsUnavailable` on the first atom call when that's still
+    `SoftTifaLogprobsUnavailableError` on the first atom call when that's still
     true. Options to unblock:
       1. Together.ai dedicated endpoint for Qwen2.5-VL-7B (preserves
          logprobs but requires a manual dashboard-provisioning step).

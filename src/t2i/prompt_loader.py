@@ -26,7 +26,7 @@ import subprocess
 from pathlib import Path
 from typing import Any
 
-from src.core.utils import ROOT, get_logger, get_api_key
+from src.core.utils import ROOT, get_api_key, get_logger
 from src.t2i import PROMPTS_DIR, load_settings
 
 log = get_logger("prompt_loader")

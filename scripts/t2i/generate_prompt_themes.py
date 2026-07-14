@@ -26,7 +26,6 @@ import asyncio
 import json
 import re
 import time
-from pathlib import Path
 
 from src.core.utils import get_api_key, get_logger
 from src.t2i import PROMPTS_DIR, load_settings

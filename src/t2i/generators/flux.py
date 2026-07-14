@@ -9,7 +9,7 @@ from __future__ import annotations
 
 from typing import Any
 
-from .base import BaseGenerator, _ContentFiltered, register
+from .base import BaseGenerator, register
 
 
 @register("flux2_max")

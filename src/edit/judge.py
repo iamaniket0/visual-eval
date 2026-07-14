@@ -22,11 +22,12 @@ import math
 from dataclasses import asdict, dataclass, field
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Any, Iterable
+from typing import Any
 
+from src.core.scoring import extract_yes_probability
+from src.core.scoring import soft_tifa_am as _am
+from src.core.scoring import soft_tifa_gm as _gm
 from src.core.utils import CostTracker, append_jsonl, get_api_key, get_logger, read_jsonl
-from src.core.scoring import extract_yes_probability, DEFAULT_LOGPROB_FLOOR
-from src.core.scoring import soft_tifa_am as _am, soft_tifa_gm as _gm
 from src.edit import OUTPUTS_DIR, load_settings
 
 log = get_logger("judge")
@@ -77,7 +78,7 @@ class JudgeResult:
         return asdict(self)
 
 
-class SoftTifaLogprobsUnavailable(RuntimeError):
+class SoftTifaLogprobsUnavailableError(RuntimeError):
     """Raised when the provider returns no logprobs."""
 
 
@@ -281,7 +282,7 @@ class TogetherQwen35SoftJudge:
         logp = choice.logprobs
         content_logprobs = getattr(logp, "content", None) if logp else None
         if not logp or not content_logprobs:
-            raise SoftTifaLogprobsUnavailable(
+            raise SoftTifaLogprobsUnavailableError(
                 f"Together returned no logprobs for model={self.model}. Soft-TIFA cannot proceed."
             )
         first = content_logprobs[0]

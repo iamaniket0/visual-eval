@@ -16,10 +16,10 @@ import argparse
 import asyncio
 import json
 
-from src.t2i.judge import judge_model_generations
-from src.t2i.prompt_loader import load_prompt_set
 from src.core.utils import CostTracker, get_logger
 from src.t2i import load_models_config, load_settings
+from src.t2i.judge import judge_model_generations
+from src.t2i.prompt_loader import load_prompt_set
 
 log = get_logger("run_judge")
 

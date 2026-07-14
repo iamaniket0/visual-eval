@@ -15,14 +15,13 @@ Categories:
 
 import argparse
 import asyncio
-import json
 from pathlib import Path
 
 import httpx
 
-from src.edit.prompt_loader import load_all_prompts
 from src.core.utils import get_api_key, get_logger
 from src.edit import PROMPTS_DIR
+from src.edit.prompt_loader import load_all_prompts
 
 log = get_logger("download_source_images")
 
@@ -119,7 +118,7 @@ async def download_pexels(
 async def download_placeholder(prompt_id: str, output_path: Path) -> bool:
     """Create a placeholder image when no API key is available."""
     try:
-        from PIL import Image, ImageDraw, ImageFont
+        from PIL import Image, ImageDraw
 
         img = Image.new("RGB", (1024, 1024), color=(200, 200, 200))
         draw = ImageDraw.Draw(img)

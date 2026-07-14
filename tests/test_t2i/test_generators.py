@@ -1,10 +1,8 @@
 """Tests for T2I generator base class (no API calls)."""
 
-import pytest
-
+from src.core.utils import CostTracker
 from src.t2i.generators import all_registered, get_generator
 from src.t2i.generators.base import GenerationStatus, looks_like_filter
-from src.core.utils import CostTracker
 
 
 def test_all_models_registered():
@@ -38,8 +36,8 @@ def test_filter_detection_negative():
 
 def test_missing_api_key_yields_skipped(monkeypatch):
     import asyncio
-    from pathlib import Path
     import tempfile
+    from pathlib import Path
 
     monkeypatch.delenv("OPENAI_API_KEY", raising=False)
     monkeypatch.delenv("OPENROUTER_API_KEY", raising=False)

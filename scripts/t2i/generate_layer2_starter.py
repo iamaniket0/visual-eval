@@ -45,7 +45,6 @@ import re
 from collections import Counter
 from pathlib import Path
 
-
 # ---------------------------------------------------------------------------
 # Helpers
 # ---------------------------------------------------------------------------
@@ -884,7 +883,7 @@ def _validate_cohort_targets(prompts):
     failures = []
 
     numeracy = [p for p in prompts if p["sub_category"] == "numeracy"]
-    spatial = [p for p in prompts if p["sub_category"] == "spatial_3d"]
+    [p for p in prompts if p["sub_category"] == "spatial_3d"]
     cmp_easy = [
         p
         for p in prompts

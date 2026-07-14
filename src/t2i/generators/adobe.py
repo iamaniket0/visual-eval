@@ -12,10 +12,9 @@ from __future__ import annotations
 
 import time
 
-import httpx
+from src.core.utils import get_api_key
 
 from .base import BaseGenerator, register
-from src.core.utils import get_api_key
 
 
 @register("adobe_firefly_5")

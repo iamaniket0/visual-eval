@@ -12,7 +12,6 @@ summary with the key tables.
 
 import argparse
 import json
-from pathlib import Path
 
 import pandas as pd
 
@@ -40,7 +39,7 @@ def main():
     psc = load_if_exists("per_subcategory.csv")
     pdim = load_if_exists("per_dimension.csv")
     lc = load_if_exists("layer_comparison.csv")
-    fa = load_if_exists("failure_analysis.csv")
+    load_if_exists("failure_analysis.csv")
     fr = load_if_exists("filter_rates.csv")
 
     summary_path = SCORES_DIR / "summary_stats.json"
