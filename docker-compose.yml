@@ -1,0 +1,23 @@
+services:
+  dashboard:
+    build: .
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./outputs:/app/outputs:ro
+      - ./config:/app/config:ro
+    env_file:
+      - .env
+    restart: unless-stopped
+
+  pipeline:
+    build: .
+    volumes:
+      - ./outputs:/app/outputs
+      - ./config:/app/config:ro
+      - ./prompts:/app/prompts:ro
+    env_file:
+      - .env
+    entrypoint: ["visual-eval"]
+    profiles:
+      - cli
