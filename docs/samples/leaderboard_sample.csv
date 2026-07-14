@@ -1,0 +1,8 @@
+model,overall_gm_covered,overall_am_covered,n_covered,n_total
+gpt_image_2,0.847,0.891,150,150
+flux2_max,0.831,0.876,150,150
+imagen_3,0.819,0.868,148,150
+xai_aurora,0.793,0.845,150,150
+sd_35_large,0.771,0.832,150,150
+canva_lucid_origin,0.764,0.821,147,150
+bria_fibo,0.742,0.809,150,150
