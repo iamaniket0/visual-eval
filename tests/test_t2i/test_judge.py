@@ -1,19 +1,16 @@
 """Tests for T2I judge (no API calls)."""
 
-import math
 import pytest
 
 from src.t2i.judge import (
-    JudgeResult,
-    _extract_json,
-    _format_questions,
     GPT4oHardJudge,
     GPT4oSoftJudge,
-    QwenSoftJudge,
-    TogetherQwen35SoftJudge,
-    SoftTifaLogprobsUnavailable,
-    judge_client_factory,
     JudgeClient,
+    JudgeResult,
+    TogetherQwen35SoftJudge,
+    _extract_json,
+    _format_questions,
+    judge_client_factory,
 )
 
 

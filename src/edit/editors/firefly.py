@@ -8,6 +8,7 @@ Requires Adobe IMS access token from client credentials flow.
 from __future__ import annotations
 
 from src.core.utils import get_api_key
+
 from .base import BaseEditor, register
 
 

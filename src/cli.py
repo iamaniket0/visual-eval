@@ -54,8 +54,8 @@ def generate(
     _run_module("scripts.t2i.run_generation", args)
 
 
-@t2i_app.command()
-def judge(
+@t2i_app.command("judge")
+def t2i_judge(
     models: str = typer.Option("", help="Comma-separated models to judge (empty=all)"),
 ):
     """Run MLLM judge on generated images."""
@@ -63,14 +63,14 @@ def judge(
     _run_module("scripts.t2i.run_judge", args)
 
 
-@t2i_app.command()
-def aggregate():
+@t2i_app.command("aggregate")
+def t2i_aggregate():
     """Aggregate judgment scores into leaderboard CSVs."""
     _run_module("scripts.t2i.run_aggregate")
 
 
-@t2i_app.command()
-def report():
+@t2i_app.command("report")
+def t2i_report():
     """Generate PDF reports and per-model scorecards."""
     _run_module("scripts.t2i.run_report")
 
@@ -102,20 +102,20 @@ def edit_run(
     _run_module("scripts.edit.run_edit", args)
 
 
-@edit_app.command()
-def judge():
+@edit_app.command("judge")
+def edit_judge():
     """Run dual-image MLLM judge on edited images."""
     _run_module("scripts.edit.run_judge")
 
 
-@edit_app.command()
-def aggregate():
+@edit_app.command("aggregate")
+def edit_aggregate():
     """Aggregate edit scores into leaderboard CSVs."""
     _run_module("scripts.edit.run_aggregate")
 
 
-@edit_app.command()
-def report():
+@edit_app.command("report")
+def edit_report():
     """Generate edit evaluation report."""
     _run_module("scripts.edit.run_report")
 

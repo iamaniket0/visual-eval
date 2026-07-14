@@ -20,7 +20,7 @@ from typing import Any
 import pandas as pd
 from sklearn.metrics import cohen_kappa_score
 
-from src.core.utils import get_logger, read_jsonl, append_jsonl
+from src.core.utils import append_jsonl, get_logger, read_jsonl
 from src.t2i import OUTPUTS_DIR, load_settings
 from src.t2i.prompt_loader import load_prompt_set
 

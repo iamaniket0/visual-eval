@@ -5,7 +5,6 @@ and report what image categories exist beyond adobe-human-image-editing.
 """
 
 import boto3
-from collections import Counter
 
 ENDPOINT = "https://s3.us-east-005.backblazeb2.com"
 BUCKET = "benchmark-source-images"

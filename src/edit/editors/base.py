@@ -167,7 +167,7 @@ class BaseEditor(ABC):
                 image_bytes, raw_meta = await self._edit_with_retry(
                     source_image_path, edit_instruction, mask_path
                 )
-            except _ContentFiltered as e:
+            except _ContentFilteredError as e:
                 return EditResult(
                     prompt_id=prompt_id,
                     model=self.model_id,
@@ -255,13 +255,13 @@ class BaseEditor(ABC):
         for attempt in range(max_retries):
             try:
                 return await self._do_edit(source_path, instruction, mask_path)
-            except _ContentFiltered:
+            except _ContentFilteredError:
                 raise
             except httpx.HTTPStatusError as e:
                 code = e.response.status_code
                 body_snippet = e.response.text[:500] if e.response is not None else ""
                 if looks_like_filter(body_snippet):
-                    raise _ContentFiltered(
+                    raise _ContentFilteredError(
                         f"Content filter: {body_snippet[:200]}", metadata={"status_code": code}
                     ) from e
                 if code in (429, 500, 502, 503, 504) and attempt < max_retries - 1:
@@ -291,7 +291,7 @@ class BaseEditor(ABC):
     async def _do_edit(
         self, source_image_path: str, instruction: str, mask_path: str | None = None
     ) -> tuple[bytes, dict]:
-        """Return (edited_image_bytes, raw_metadata). May raise _ContentFiltered."""
+        """Return (edited_image_bytes, raw_metadata). May raise _ContentFilteredError."""
 
     # ------------------------------------------------------------------
     # Helpers for subclasses
@@ -336,7 +336,7 @@ class BaseEditor(ABC):
             data = r.json()
             if failed_check and (reason := failed_check(data)):
                 if looks_like_filter(reason):
-                    raise _ContentFiltered(reason, metadata=data)
+                    raise _ContentFilteredError(reason, metadata=data)
                 raise RuntimeError(f"Job failed: {reason}")
             if ready_check(data):
                 return data
@@ -345,7 +345,7 @@ class BaseEditor(ABC):
         raise TimeoutError(f"Job did not complete within {max_wait}s")
 
 
-class _ContentFiltered(Exception):
+class _ContentFilteredError(Exception):
     def __init__(self, msg: str, metadata: dict | None = None):
         super().__init__(msg)
         self.metadata = metadata or {}
@@ -383,13 +383,13 @@ def all_registered() -> list[str]:
 
 
 from . import (  # noqa: E402,F401
-    flux_kontext,
-    flux2_flex,
     bria_edit,
+    canva_leonardo,
     firefly,
+    flux2_flex,
+    flux_kontext,
     photoroom,
     picsart,
-    canva_leonardo,
 )
 
 

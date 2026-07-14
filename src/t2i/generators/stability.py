@@ -6,7 +6,7 @@ Pattern: sync (multipart/form-data)
 
 from __future__ import annotations
 
-from .base import BaseGenerator, _ContentFiltered, looks_like_filter, register
+from .base import BaseGenerator, _ContentFilteredError, looks_like_filter, register
 
 
 @register("stable_image_ultra")
@@ -32,7 +32,7 @@ class StabilityGenerator(BaseGenerator):
             files=files,
         )
         if r.status_code == 403 and looks_like_filter(r.text):
-            raise _ContentFiltered(r.text[:300], metadata={"status": 403})
+            raise _ContentFilteredError(r.text[:300], metadata={"status": 403})
         r.raise_for_status()
         return r.content, {
             "content_type": r.headers.get("content-type"),

@@ -23,16 +23,15 @@ import math
 from pathlib import Path
 from typing import Any
 
-import numpy as np
 import pandas as pd
 
-from src.core.utils import get_logger, read_jsonl
 from src.core.scoring import (
+    DEFAULT_LOGPROB_FLOOR,
+    probabilities_from_answers,
     soft_tifa_am,
     soft_tifa_gm,
-    probabilities_from_answers,
-    DEFAULT_LOGPROB_FLOOR,
 )
+from src.core.utils import get_logger, read_jsonl
 from src.edit import OUTPUTS_DIR, PROMPTS_DIR
 
 log = get_logger("aggregator")

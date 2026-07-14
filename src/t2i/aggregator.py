@@ -25,20 +25,17 @@ Soft-TIFA migration:
 from __future__ import annotations
 
 import json
-import math
 from pathlib import Path
 from typing import Any
 
-import numpy as np
 import pandas as pd
 
-from src.core.utils import get_logger, read_jsonl
 from src.core.scoring import (
+    probabilities_from_answers,
     soft_tifa_am,
     soft_tifa_gm,
-    probabilities_from_answers,
-    DEFAULT_LOGPROB_FLOOR,
 )
+from src.core.utils import get_logger, read_jsonl
 from src.t2i import OUTPUTS_DIR, PROMPTS_DIR
 from src.t2i.prompt_loader import load_prompt_set
 

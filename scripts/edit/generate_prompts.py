@@ -163,7 +163,7 @@ def cm_medium_1(info):
 
 
 def cm_medium_2(info):
-    obj = _first_obj(info)
+    _first_obj(info)
     return (
         f"Convert all {_mat(info)} surfaces in the scene to polished marble, keeping object shapes",
         [
@@ -216,7 +216,7 @@ def oa_easy_1(info):
 
 
 def oa_medium_1(info):
-    desc = _desc(info)[:50]
+    _desc(info)[:50]
     items = [
         (
             "a red fire extinguisher on the floor to the left",
@@ -244,7 +244,7 @@ def oa_medium_1(info):
 
 def oa_hard_1(info):
     return (
-        f"Add a large ornate mirror leaning against the back wall, with correct reflections of the foreground objects and lighting visible in the mirror surface",
+        "Add a large ornate mirror leaning against the back wall, with correct reflections of the foreground objects and lighting visible in the mirror surface",
         [
             (
                 "instruction_following",
@@ -458,7 +458,7 @@ def bg_easy_1(info):
 
 def bg_medium_1(info):
     return (
-        f"Replace the background with a rainy urban street while keeping the foreground subject's edge detail sharp and lighting consistent",
+        "Replace the background with a rainy urban street while keeping the foreground subject's edge detail sharp and lighting consistent",
         [
             ("instruction_following", "instruction", "Is the background now a rainy urban street?"),
             ("visual_consistency", "preservation", "Is the foreground subject completely intact?"),
@@ -475,7 +475,7 @@ def bg_medium_1(info):
 
 def bg_hard_1(info):
     return (
-        f"Transport the entire scene to the surface of Mars: red rocky terrain replacing the ground, salmon-pink sky, distant mountains on the horizon, atmospheric haze, and all existing objects casting shadows consistent with a lower sun angle",
+        "Transport the entire scene to the surface of Mars: red rocky terrain replacing the ground, salmon-pink sky, distant mountains on the horizon, atmospheric haze, and all existing objects casting shadows consistent with a lower sun angle",
         [
             ("instruction_following", "instruction", "Is the ground now red Martian terrain?"),
             ("instruction_following", "instruction", "Is the sky salmon-pink?"),
@@ -515,7 +515,7 @@ def st_easy_1(info):
 
 def st_medium_1(info):
     return (
-        f"Convert to a 1970s Kodachrome film photograph look: warm color cast, slight grain, slightly faded shadows, high saturation reds and greens",
+        "Convert to a 1970s Kodachrome film photograph look: warm color cast, slight grain, slightly faded shadows, high saturation reds and greens",
         [
             (
                 "instruction_following",
@@ -532,7 +532,7 @@ def st_medium_1(info):
 
 def st_hard_1(info):
     return (
-        f"Transform into a Japanese Ukiyo-e woodblock print: flat color planes with no gradient shading, strong black outlines around all forms, traditional compositional rules with foreground/midground/background layers clearly separated, wave patterns in any water, and a cartouche with Japanese text in the upper corner",
+        "Transform into a Japanese Ukiyo-e woodblock print: flat color planes with no gradient shading, strong black outlines around all forms, traditional compositional rules with foreground/midground/background layers clearly separated, wave patterns in any water, and a cartouche with Japanese text in the upper corner",
         [
             (
                 "instruction_following",
@@ -583,7 +583,7 @@ def lw_easy_1(info):
 
 def lw_medium_1(info):
     return (
-        f"Change to golden hour lighting with warm tones, long shadows stretching to the right, and a warm color cast on all surfaces",
+        "Change to golden hour lighting with warm tones, long shadows stretching to the right, and a warm color cast on all surfaces",
         [
             (
                 "instruction_following",
@@ -600,7 +600,7 @@ def lw_medium_1(info):
 
 def lw_hard_1(info):
     return (
-        f"Add a heavy thunderstorm: dark overcast sky with visible lightning bolt, heavy rain streaks consistent with wind from the left, wet reflections on all flat surfaces, puddles forming in low areas, and all shadows softened to match diffused storm lighting",
+        "Add a heavy thunderstorm: dark overcast sky with visible lightning bolt, heavy rain streaks consistent with wind from the left, wet reflections on all flat surfaces, puddles forming in low areas, and all shadows softened to match diffused storm lighting",
         [
             ("instruction_following", "instruction", "Is the sky dark and overcast?"),
             ("instruction_following", "instruction", "Are rain streaks visible?"),
@@ -622,7 +622,7 @@ def lw_hard_1(info):
 
 def sp_easy_1(info):
     return (
-        f"Flip the image horizontally",
+        "Flip the image horizontally",
         [
             ("instruction_following", "instruction", "Is the image mirrored left-to-right?"),
             ("visual_consistency", "structure", "Are all objects intact after flipping?"),
@@ -651,7 +651,7 @@ def sp_medium_1(info):
 
 def sp_hard_1(info):
     return (
-        f"Shift the camera viewpoint 30 degrees to the right: reveal the hidden side of objects, adjust all perspective lines converging to the new vanishing point, update parallax between foreground and background layers, and ensure all shadows remain consistent with the same light source",
+        "Shift the camera viewpoint 30 degrees to the right: reveal the hidden side of objects, adjust all perspective lines converging to the new vanishing point, update parallax between foreground and background layers, and ensure all shadows remain consistent with the same light source",
         [
             (
                 "instruction_following",
@@ -716,7 +716,7 @@ def ai_medium_1(info):
     pt = _person_type(info)
     if pt == "portrait":
         return (
-            f"Change the person's hair to short silver-grey while keeping their face, expression, and skin tone unchanged",
+            "Change the person's hair to short silver-grey while keeping their face, expression, and skin tone unchanged",
             [
                 ("instruction_following", "instruction", "Is the hair now short and silver-grey?"),
                 ("visual_consistency", "identity", "Is the face unchanged?"),
@@ -727,7 +727,7 @@ def ai_medium_1(info):
         )
     else:
         return (
-            f"Change the person's outfit to a formal business suit while preserving their pose, body proportions, and face",
+            "Change the person's outfit to a formal business suit while preserving their pose, body proportions, and face",
             [
                 (
                     "instruction_following",
@@ -750,7 +750,7 @@ def ai_hard_1(info):
     pt = _person_type(info)
     if pt == "group":
         return (
-            f"Age everyone in the group by 30 years: add age-appropriate wrinkles, grey/white hair, slightly changed posture for each person, while preserving each individual's identity and their relative positions",
+            "Age everyone in the group by 30 years: add age-appropriate wrinkles, grey/white hair, slightly changed posture for each person, while preserving each individual's identity and their relative positions",
             [
                 ("instruction_following", "instruction", "Do all people appear ~30 years older?"),
                 (
@@ -775,7 +775,7 @@ def ai_hard_1(info):
         )
     else:
         return (
-            f"Age the person by 30 years with realistic aging: add wrinkles around eyes and mouth, grey hair with receding hairline, slight skin sagging, age spots on hands, while keeping their identity recognizable and clothing unchanged",
+            "Age the person by 30 years with realistic aging: add wrinkles around eyes and mouth, grey hair with receding hairline, slight skin sagging, age spots on hands, while keeping their identity recognizable and clothing unchanged",
             [
                 ("instruction_following", "instruction", "Does the person appear ~30 years older?"),
                 (
@@ -839,7 +839,7 @@ def ph_medium_1(info):
 
 def ph_hard_1(info):
     return (
-        f"Replace the still water in the scene with flowing rapids: add white foam at obstacles, motion blur in the water flow direction, elongated and distorted reflections of all bank-side objects, wet splash marks on nearby surfaces, and mist rising from the turbulent areas",
+        "Replace the still water in the scene with flowing rapids: add white foam at obstacles, motion blur in the water flow direction, elongated and distorted reflections of all bank-side objects, wet splash marks on nearby surfaces, and mist rising from the turbulent areas",
         [
             ("instruction_following", "instruction", "Does the water appear to be flowing rapids?"),
             ("instruction_following", "instruction", "Is white foam visible at obstacles?"),
@@ -874,7 +874,7 @@ def te_easy_1(info):
 
 def te_medium_1(info):
     return (
-        f"Replace the main visible text with 'GRAND OPENING' in the same font style, size, color, and perspective distortion as the original",
+        "Replace the main visible text with 'GRAND OPENING' in the same font style, size, color, and perspective distortion as the original",
         [
             ("instruction_following", "instruction", "Does the text now read 'GRAND OPENING'?"),
             ("detail_preservation", "quality", "Is the font style similar to the original?"),
@@ -891,7 +891,7 @@ def te_medium_1(info):
 
 def te_hard_1(info):
     return (
-        f"Change all visible text to Chinese characters: translate each piece of text, match the original font weight and style for each instance, follow the surface curvature and perspective of each sign/label, and ensure text rendering resolution matches the rest of the image",
+        "Change all visible text to Chinese characters: translate each piece of text, match the original font weight and style for each instance, follow the surface curvature and perspective of each sign/label, and ensure text rendering resolution matches the rest of the image",
         [
             (
                 "instruction_following",
@@ -1285,7 +1285,7 @@ def main(args):
     L1_OUTPUT.write_text(json.dumps(l1, indent=2))
     L2_OUTPUT.write_text(json.dumps(l2, indent=2))
 
-    print(f"\nSaved:")
+    print("\nSaved:")
     print(f"  L1 gold:        {len(l1)} prompts -> {L1_OUTPUT.name}")
     print(f"  L2 proprietary: {len(l2)} prompts -> {L2_OUTPUT.name}")
 

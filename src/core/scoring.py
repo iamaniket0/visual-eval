@@ -10,7 +10,8 @@ Reference: Kamath et al., GenEval 2, arXiv 2512.16853v1, Dec 2025.
 from __future__ import annotations
 
 import math
-from typing import Any, Iterable
+from collections.abc import Iterable
+from typing import Any
 
 DEFAULT_LOGPROB_FLOOR = -10.0
 

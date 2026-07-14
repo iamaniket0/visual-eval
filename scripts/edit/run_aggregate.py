@@ -4,8 +4,8 @@ Usage:
     python -m scripts.run_aggregate
 """
 
-from src.edit.aggregator import run_aggregation
 from src.core.utils import get_logger
+from src.edit.aggregator import run_aggregation
 
 log = get_logger("run_aggregate")
 

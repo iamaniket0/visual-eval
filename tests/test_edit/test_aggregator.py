@@ -2,7 +2,7 @@
 
 import math
 
-from src.core.scoring import soft_tifa_am, soft_tifa_gm, probabilities_from_answers
+from src.core.scoring import probabilities_from_answers, soft_tifa_am, soft_tifa_gm
 
 
 def test_am_basic():

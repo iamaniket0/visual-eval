@@ -1,7 +1,5 @@
 """Text-to-image evaluation pipeline."""
 
-from pathlib import Path
-
 from src.core.utils import ROOT, load_yaml
 
 CONFIG_DIR = ROOT / "config" / "t2i"
