@@ -319,9 +319,7 @@ class GPT4oSoftJudge:
         self.logprob_floor = float(logprob_floor)
         self._client = None
         settings = load_settings()
-        self.cost_per_judgment = settings.get("judge", {}).get(
-            "cost_per_judgment_estimate", 0.004
-        )
+        self.cost_per_judgment = settings.get("judge", {}).get("cost_per_judgment_estimate", 0.004)
         routing = settings.get("api_routing", {}).get("judge", "openrouter")
         if routing == "openrouter":
             self.api_key = get_api_key("OPENROUTER_API_KEY")
