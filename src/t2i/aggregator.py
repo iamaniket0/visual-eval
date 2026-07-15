@@ -365,7 +365,7 @@ def leaderboard(df: pd.DataFrame) -> pd.DataFrame:
     out["std_dev"] = out["std_dev_am"]
     if "seed_std_dev_am" in out.columns:
         out["seed_std_dev"] = out["seed_std_dev_am"]
-    return out
+    return out  # type: ignore[return-value]
 
 
 def per_subcategory(df: pd.DataFrame) -> pd.DataFrame:
@@ -644,7 +644,10 @@ def run_aggregation() -> dict[str, Path]:
     # Coverage map per model comes from the covered view of the same judgments
     # that feed the leaderboard, so the reliability row in filter_rates always
     # agrees with the leaderboard's n_covered/n_total columns.
-    covered_counts = merged[_covered_mask(merged)].groupby("model")["prompt_id"].nunique().to_dict()
+    covered_counts: dict[str, int] = {
+        str(k): int(v)
+        for k, v in merged[_covered_mask(merged)].groupby("model")["prompt_id"].nunique().items()
+    }
     n_prompts_total = len({p["prompt_id"] for p in prompts})
     fr = filter_rates(
         _load_generation_log(), covered_by_model=covered_counts, total_prompts=n_prompts_total

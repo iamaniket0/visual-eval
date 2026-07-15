@@ -131,7 +131,7 @@ def build_model_card(model: str, pitch_text: str | None = None) -> Path | None:
                 story.append(
                     Paragraph(
                         f"- <b>{r.theme}</b>: {getattr(r, score_col):.2f} "
-                        f"(n={int(r.n_prompts)}) &mdash; this model's "
+                        f"(n={int(r.n_prompts)}) &mdash; this model's "  # type: ignore[arg-type]
                         "best-performing theme, well ahead of its overall score.",
                         st["Normal"],
                     )
@@ -142,7 +142,7 @@ def build_model_card(model: str, pitch_text: str | None = None) -> Path | None:
                 story.append(
                     Paragraph(
                         f"- <b>{r.theme}</b>: {getattr(r, score_col):.2f} "
-                        f"(n={int(r.n_prompts)}) &mdash; candidate for targeted "
+                        f"(n={int(r.n_prompts)}) &mdash; candidate for targeted "  # type: ignore[arg-type]
                         "training data; see failure examples below.",
                         st["Normal"],
                     )

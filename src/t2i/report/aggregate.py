@@ -125,12 +125,10 @@ def build_aggregate_report() -> Path:
         )
         top_q = ordered_q.iloc[0]
         bot_q = ordered_q.iloc[-1]
-        top_q_val = float(
-            top_q.get(quality_col) if pd.notna(top_q.get(quality_col)) else top_q["overall_gm"]
-        )
-        bot_q_val = float(
-            bot_q.get(quality_col) if pd.notna(bot_q.get(quality_col)) else bot_q["overall_gm"]
-        )
+        _top_raw = top_q.get(quality_col) if pd.notna(top_q.get(quality_col)) else top_q["overall_gm"]
+        top_q_val = float(_top_raw)  # type: ignore[arg-type]
+        _bot_raw = bot_q.get(quality_col) if pd.notna(bot_q.get(quality_col)) else bot_q["overall_gm"]
+        bot_q_val = float(_bot_raw)  # type: ignore[arg-type]
         n_total = int(lb["n_total"].iloc[0])
         summary_head = (
             f"Across {n_total} benchmark prompts and "
@@ -175,7 +173,7 @@ def build_aggregate_report() -> Path:
         story.append(Paragraph("Quality vs. Reliability: Two Separate Stories", st["H2"]))
         lines = []
         for _, r in lb.sort_values(
-            lb["overall_gm_covered"].fillna(lb["overall_gm"]).name, ascending=False
+            str(lb["overall_gm_covered"].fillna(lb["overall_gm"]).name), ascending=False
         ).iterrows():
             n_cov = int(r["n_covered"])
             n_tot = int(r["n_total"])

@@ -42,7 +42,7 @@ def chart_leaderboard(lb: pd.DataFrame) -> Path:
         vals = ordered["overall_score"][::-1].values
         models = ordered["model"][::-1].values
         fig, ax = plt.subplots(figsize=(7.5, 0.6 * len(models) + 1.5))
-        ax.barh(range(len(models)), vals, color=GM_COLOR)
+        ax.barh(range(len(models)), list(vals), color=GM_COLOR)
         ax.set_yticks(range(len(models)))
         ax.set_yticklabels(models)
         ax.set_xlim(0, 1)
@@ -90,14 +90,14 @@ def chart_leaderboard(lb: pd.DataFrame) -> Path:
     # Covered = primary (solid). Full = reliability-discounted (hatched overlay).
     ax.barh(
         [i + 0.25 for i in y],
-        gms_cov,
+        list(gms_cov),
         height=0.28,
         color=GM_COLOR,
         label="GM on covered prompts (quality)",
     )
     ax.barh(
         [i + 0.25 for i in y],
-        gms_full,
+        list(gms_full),
         height=0.28,
         facecolor="none",
         edgecolor="#1f3d66",
@@ -107,14 +107,14 @@ def chart_leaderboard(lb: pd.DataFrame) -> Path:
     )
     ax.barh(
         [i - 0.10 for i in y],
-        ams_cov,
+        list(ams_cov),
         height=0.22,
         color=AM_COLOR,
         label="AM on covered (diagnostic)",
     )
     ax.barh(
         [i - 0.10 for i in y],
-        ams_full,
+        list(ams_full),
         height=0.22,
         facecolor="none",
         edgecolor="#6b4a1f",
