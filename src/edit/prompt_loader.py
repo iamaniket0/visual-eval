@@ -38,7 +38,7 @@ def load_layer1_gold(path: Path | None = None) -> list[dict[str, Any]]:
         log.warning("%s not found", p)
         return []
     with open(p) as f:
-        return json.load(f)
+        return json.load(f)  # type: ignore[no-any-return]
 
 
 def load_layer2_proprietary(path: Path | None = None) -> list[dict[str, Any]]:
@@ -47,7 +47,7 @@ def load_layer2_proprietary(path: Path | None = None) -> list[dict[str, Any]]:
         log.warning("%s not found", p)
         return []
     with open(p) as f:
-        return json.load(f)
+        return json.load(f)  # type: ignore[no-any-return]
 
 
 def load_all_prompts() -> list[dict[str, Any]]:
@@ -74,4 +74,4 @@ def resolve_source_image_path(prompt: dict[str, Any]) -> str:
     if not src:
         return ""
     p = PROMPTS_DIR / src
-    return str(p) if p.exists() else src
+    return str(p) if p.exists() else src  # type: ignore[no-any-return]

@@ -22,7 +22,10 @@ import math
 from dataclasses import asdict, dataclass, field
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Any
+from typing import TYPE_CHECKING, Any
+
+if TYPE_CHECKING:
+    from openai import AsyncOpenAI
 
 from src.core.scoring import extract_yes_probability
 from src.core.scoring import soft_tifa_am as _am
@@ -118,14 +121,14 @@ class TogetherQwen35SoftJudge:
         self.semaphore = asyncio.Semaphore(concurrency)
         self.logprob_floor = float(logprob_floor)
         self.api_key = get_api_key("TOGETHER_API_KEY")
-        self._client = None
+        self._client: AsyncOpenAI | None = None
         settings = load_settings()
         self.cost_per_judgment = settings.get("judge", {}).get(
             "cost_per_judgment_estimate",
             0.004,
         )
 
-    def _ensure_client(self):
+    def _ensure_client(self) -> None:
         if self._client is not None:
             return
         if not self.api_key:
@@ -195,6 +198,7 @@ class TogetherQwen35SoftJudge:
             )
 
         self._ensure_client()
+        assert self._client is not None
         source_b64 = _image_to_b64(Path(source_image_path))
         edited_b64 = _image_to_b64(Path(edited_image_path))
 
@@ -252,6 +256,7 @@ class TogetherQwen35SoftJudge:
         self, edit_instruction: str, atom: dict[str, str], source_b64: str, edited_b64: str
     ) -> tuple[float, str | None]:
         """Score a single atom with both images."""
+        assert self._client is not None
         user_text = SOFT_JUDGE_USER_TEMPLATE.format(
             edit_instruction=edit_instruction,
             question=atom["question"],
@@ -264,7 +269,7 @@ class TogetherQwen35SoftJudge:
 
         async with self.semaphore:
             try:
-                resp = await self._client.chat.completions.create(
+                resp = await self._client.chat.completions.create(  # type: ignore[call-overload]
                     model=self.model,
                     temperature=0.0,
                     max_tokens=1,
@@ -317,10 +322,12 @@ class GPT4oSoftJudge:
         self.cost_tracker = cost_tracker
         self.semaphore = asyncio.Semaphore(concurrency)
         self.logprob_floor = float(logprob_floor)
-        self._client = None
+        self._client: AsyncOpenAI | None = None
         settings = load_settings()
         self.cost_per_judgment = settings.get("judge", {}).get("cost_per_judgment_estimate", 0.004)
         routing = settings.get("api_routing", {}).get("judge", "openrouter")
+        self._base_url: str | None = None
+        self._extra_headers: dict[str, str] | None = None
         if routing == "openrouter":
             self.api_key = get_api_key("OPENROUTER_API_KEY")
             self._base_url = OPENROUTER_BASE_URL
@@ -329,24 +336,22 @@ class GPT4oSoftJudge:
             self._extra_headers = dict(OPENROUTER_HEADERS)
         else:
             self.api_key = get_api_key("OPENAI_API_KEY")
-            self._base_url = None
             self._key_env = "OPENAI_API_KEY"
             self.model = model
-            self._extra_headers = None
 
-    def _ensure_client(self):
+    def _ensure_client(self) -> None:
         if self._client is not None:
             return
         if not self.api_key:
             raise RuntimeError(f"{self._key_env} not set; cannot run judge")
         from openai import AsyncOpenAI
 
-        kwargs = {"api_key": self.api_key}
+        kwargs: dict[str, Any] = {"api_key": self.api_key}
         if self._base_url:
             kwargs["base_url"] = self._base_url
         if self._extra_headers:
             kwargs["default_headers"] = self._extra_headers
-        self._client = AsyncOpenAI(**kwargs)
+        self._client = AsyncOpenAI(**kwargs)  # type: ignore[arg-type]
 
     async def judge_edit(
         self,
@@ -404,6 +409,7 @@ class GPT4oSoftJudge:
             )
 
         self._ensure_client()
+        assert self._client is not None
         source_b64 = _image_to_b64(Path(source_image_path))
         edited_b64 = _image_to_b64(Path(edited_image_path))
 
@@ -457,6 +463,7 @@ class GPT4oSoftJudge:
     async def _score_atom(
         self, edit_instruction: str, atom: dict[str, str], source_b64: str, edited_b64: str
     ) -> tuple[float, str | None]:
+        assert self._client is not None
         user_text = SOFT_JUDGE_USER_TEMPLATE.format(
             edit_instruction=edit_instruction,
             question=atom["question"],
@@ -469,13 +476,13 @@ class GPT4oSoftJudge:
 
         async with self.semaphore:
             try:
-                resp = await self._client.chat.completions.create(
+                resp = await self._client.chat.completions.create(  # type: ignore[call-overload]
                     model=self.model,
                     temperature=0.0,
                     max_tokens=1,
                     messages=[
                         {"role": "system", "content": SOFT_JUDGE_SYSTEM},
-                        {"role": "user", "content": content},
+                        {"role": "user", "content": content},  # type: ignore[list-item,misc]
                     ],
                     logprobs=True,
                     top_logprobs=5,

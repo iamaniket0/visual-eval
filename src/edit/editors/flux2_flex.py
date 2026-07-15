@@ -21,6 +21,7 @@ class Flux2FlexEditor(BaseEditor):
     async def _do_edit(
         self, source_image_path: str, instruction: str, mask_path: str | None = None
     ) -> tuple[bytes, dict]:
+        assert self.api_key is not None
         headers = {
             "X-Key": self.api_key,
             "Content-Type": "application/json",

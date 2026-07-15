@@ -26,6 +26,7 @@ class BriaGenerator(BaseGenerator):
         return await self._do_generate_v1(prompt_text)
 
     async def _do_generate_v2(self, prompt_text: str) -> tuple[bytes, dict]:
+        assert self.api_key is not None
         headers = {"api_token": self.api_key, "Content-Type": "application/json"}
         body = {
             "prompt": prompt_text,
@@ -76,6 +77,7 @@ class BriaGenerator(BaseGenerator):
         raise RuntimeError(f"Bria v2 poll timed out after {max_wait}s")
 
     async def _do_generate_v1(self, prompt_text: str) -> tuple[bytes, dict]:
+        assert self.api_key is not None
         headers = {"api_token": self.api_key, "Content-Type": "application/json"}
         body = {
             "prompt": prompt_text,

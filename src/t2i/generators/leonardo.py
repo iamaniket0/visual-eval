@@ -48,7 +48,7 @@ class LeonardoGenerator(BaseGenerator):
         poll_url = f"{self.config['api_url']}/{gen_id}"
 
         def ready(d: dict) -> bool:
-            return d.get("generations_by_pk", {}).get("status") == "COMPLETE"
+            return d.get("generations_by_pk", {}).get("status") == "COMPLETE"  # type: ignore[no-any-return]
 
         def failed(d: dict) -> str | None:
             status = d.get("generations_by_pk", {}).get("status")

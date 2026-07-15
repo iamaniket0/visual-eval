@@ -34,7 +34,7 @@ Evaluated on **50 hard adversarial prompts** (L3) for T2I and **24 hard prompts*
   <img src="assets/t2i-scores.svg" alt="T2I Leaderboard" width="700"/>
 </p>
 
-> **Key finding**: Aurora leads on hard compositional prompts with **0.82 GM** across 50 prompts. All models maintain >0.90 AM — the gap between AM and GM reveals that models fail *completely* on specific atoms rather than performing poorly across the board. FLUX 2 Max filtered 27% of adversarial prompts via content moderation.
+> **Key finding**: Aurora leads on hard compositional prompts with **0.82 GM** across 50 prompts (95% CI: 0.78–0.86). All models maintain >0.90 AM — the gap between AM and GM reveals that models fail *completely* on specific atoms rather than performing poorly across the board. FLUX 2 Max filtered 27% of adversarial prompts via content moderation. Confidence intervals are bootstrap-resampled over prompts (10k iterations).
 
 ### Image Editing
 
@@ -42,7 +42,7 @@ Evaluated on **50 hard adversarial prompts** (L3) for T2I and **24 hard prompts*
   <img src="assets/edit-scores.svg" alt="Edit Leaderboard" width="700"/>
 </p>
 
-> **Key finding**: No model excels at all three dimensions simultaneously. Flux2 Flex leads on instruction following but struggles with visual consistency. Picsart preserves consistency but cannot follow edit instructions — a fundamental tension in current editing architectures.
+> **Key finding**: No model excels at all three dimensions simultaneously. Flux2 Flex leads on instruction following but struggles with visual consistency. Picsart preserves consistency but cannot follow edit instructions — a fundamental tension in current editing architectures. Rankings are directional — overlapping CIs at this sample size (24 prompts) mean differences between adjacent models may not be significant.
 
 <br/>
 
@@ -257,15 +257,17 @@ visual-eval/
 ```
 outputs/
 ├── t2i/
-│   ├── generations/{model}/{prompt_id}.png
+│   ├── generations/{model}/{prompt_id}.png   # not tracked in git
 │   ├── judgments/{model}.jsonl
 │   ├── scores/  (leaderboard.csv, per_subcategory.csv, layer_comparison.csv)
 │   └── reports/ (aggregate_report.pdf, {model}_card.pdf)
 └── edit/
-    ├── edits/{model}/{prompt_id}.png
+    ├── edits/{model}/{prompt_id}.png          # not tracked in git
     ├── judgments/{model}.jsonl
     └── scores/  (leaderboard.csv, per_dimension.csv, per_subcategory.csv)
 ```
+
+> Generated images and metadata logs are excluded from git (reproducible via the pipeline). For a lightweight clone: `git clone --filter=blob:none`.
 
 </details>
 

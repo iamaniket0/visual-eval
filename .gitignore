@@ -22,8 +22,11 @@ node_modules/
 outputs/generations/
 outputs/metadata/
 outputs/t2i/generations/
+outputs/t2i/metadata/
 outputs/t2i/reports/
 outputs/edit/edits/
+outputs/edit/metadata/
+outputs/validation/
 
 # External cloned repos (re-clone via git)
 external/

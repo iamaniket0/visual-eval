@@ -1,0 +1,602 @@
+[
+  {
+    "text": "Eight red cardinals perched on a snow-covered branch with three small acorns hanging below them",
+    "questions": [
+      [
+        "Are there cardinals in the image?",
+        "presence"
+      ],
+      [
+        "Are the cardinals red?",
+        "attribute"
+      ],
+      [
+        "Are there exactly 8 cardinals?",
+        "numeracy"
+      ],
+      [
+        "Is there a snow-covered branch?",
+        "presence"
+      ],
+      [
+        "Are the cardinals perched on the branch?",
+        "spatial"
+      ],
+      [
+        "Are there acorns below the cardinals?",
+        "spatial"
+      ],
+      [
+        "Are there exactly 3 acorns?",
+        "numeracy"
+      ]
+    ]
+  },
+  {
+    "text": "Five blue teacups and four green saucers stacked on a white marble countertop",
+    "questions": [
+      [
+        "Are there teacups?",
+        "presence"
+      ],
+      [
+        "Are the teacups blue?",
+        "attribute"
+      ],
+      [
+        "Are there exactly 5 teacups?",
+        "numeracy"
+      ],
+      [
+        "Are there saucers?",
+        "presence"
+      ],
+      [
+        "Are the saucers green?",
+        "attribute"
+      ],
+      [
+        "Are there exactly 4 saucers?",
+        "numeracy"
+      ],
+      [
+        "Is the countertop marble?",
+        "material"
+      ]
+    ]
+  },
+  {
+    "text": "Seven yellow rubber ducks and two black swans swimming in a circular fountain",
+    "questions": [
+      [
+        "Are there rubber ducks?",
+        "presence"
+      ],
+      [
+        "Are the ducks yellow?",
+        "attribute"
+      ],
+      [
+        "Are there exactly 7 ducks?",
+        "numeracy"
+      ],
+      [
+        "Are there swans?",
+        "presence"
+      ],
+      [
+        "Are the swans black?",
+        "attribute"
+      ],
+      [
+        "Are there exactly 2 swans?",
+        "numeracy"
+      ],
+      [
+        "Is the fountain circular?",
+        "attribute"
+      ]
+    ]
+  },
+  {
+    "text": "A row of six wooden crates where the third crate from the left is painted bright red and the others are unpainted",
+    "questions": [
+      [
+        "Are there wooden crates?",
+        "material"
+      ],
+      [
+        "Are there exactly 6 crates?",
+        "numeracy"
+      ],
+      [
+        "Are the crates arranged in a row?",
+        "spatial"
+      ],
+      [
+        "Is the third crate from the left painted red?",
+        "spatial"
+      ],
+      [
+        "Are the other crates unpainted?",
+        "attribute"
+      ]
+    ]
+  },
+  {
+    "text": "Four tall copper candlesticks holding nine dripping white candles on a long oak dining table",
+    "questions": [
+      [
+        "Are there candlesticks?",
+        "presence"
+      ],
+      [
+        "Are the candlesticks copper?",
+        "material"
+      ],
+      [
+        "Are there exactly 4 candlesticks?",
+        "numeracy"
+      ],
+      [
+        "Are there candles in the candlesticks?",
+        "spatial"
+      ],
+      [
+        "Are the candles white?",
+        "attribute"
+      ],
+      [
+        "Are there exactly 9 candles total?",
+        "numeracy"
+      ],
+      [
+        "Is the table oak?",
+        "material"
+      ]
+    ]
+  },
+  {
+    "text": "Twelve orange monarch butterflies resting on the petals of a single large white hibiscus flower",
+    "questions": [
+      [
+        "Are there butterflies?",
+        "presence"
+      ],
+      [
+        "Are the butterflies orange?",
+        "attribute"
+      ],
+      [
+        "Are there exactly 12 butterflies?",
+        "numeracy"
+      ],
+      [
+        "Is there a hibiscus flower?",
+        "presence"
+      ],
+      [
+        "Is the hibiscus white?",
+        "attribute"
+      ],
+      [
+        "Is there exactly 1 hibiscus flower?",
+        "numeracy"
+      ],
+      [
+        "Are the butterflies resting on the petals?",
+        "spatial"
+      ]
+    ]
+  },
+  {
+    "text": "Six smiling jack-o-lanterns and three black crows sitting on a wooden fence at dusk",
+    "questions": [
+      [
+        "Are there jack-o-lanterns?",
+        "presence"
+      ],
+      [
+        "Are there exactly 6 jack-o-lanterns?",
+        "numeracy"
+      ],
+      [
+        "Are there crows?",
+        "presence"
+      ],
+      [
+        "Are the crows black?",
+        "attribute"
+      ],
+      [
+        "Are there exactly 3 crows?",
+        "numeracy"
+      ],
+      [
+        "Are all of them on a wooden fence?",
+        "spatial"
+      ],
+      [
+        "Is the fence wooden?",
+        "material"
+      ]
+    ]
+  },
+  {
+    "text": "Eight golden retriever puppies and two adult golden retrievers lying together on a patterned rug",
+    "questions": [
+      [
+        "Are there puppies?",
+        "presence"
+      ],
+      [
+        "Are the puppies golden retrievers?",
+        "attribute"
+      ],
+      [
+        "Are there exactly 8 puppies?",
+        "numeracy"
+      ],
+      [
+        "Are there adult dogs?",
+        "presence"
+      ],
+      [
+        "Are there exactly 2 adult dogs?",
+        "numeracy"
+      ],
+      [
+        "Are all of them lying on the rug?",
+        "spatial"
+      ],
+      [
+        "Does the rug have a pattern?",
+        "attribute"
+      ]
+    ]
+  },
+  {
+    "text": "A line of seven marching penguins where the fifth penguin from the front wears a red bow tie and the others do not",
+    "questions": [
+      [
+        "Are there penguins?",
+        "presence"
+      ],
+      [
+        "Are there exactly 7 penguins?",
+        "numeracy"
+      ],
+      [
+        "Are the penguins in a line?",
+        "spatial"
+      ],
+      [
+        "Is the fifth penguin from the front wearing a red bow tie?",
+        "spatial"
+      ],
+      [
+        "Are the other penguins without bow ties?",
+        "attribute"
+      ]
+    ]
+  },
+  {
+    "text": "Ten identical silver forks, six identical knives, and four identical spoons arranged on a white linen tablecloth",
+    "questions": [
+      [
+        "Are there forks?",
+        "presence"
+      ],
+      [
+        "Are the forks silver?",
+        "material"
+      ],
+      [
+        "Are there exactly 10 forks?",
+        "numeracy"
+      ],
+      [
+        "Are there exactly 6 knives?",
+        "numeracy"
+      ],
+      [
+        "Are there exactly 4 spoons?",
+        "numeracy"
+      ],
+      [
+        "Is the tablecloth white linen?",
+        "material"
+      ]
+    ]
+  },
+  {
+    "text": "Four toddlers wearing red sneakers and four identical teddy bears sitting in a semicircle on a pastel blue rug",
+    "questions": [
+      [
+        "Are there toddlers?",
+        "presence"
+      ],
+      [
+        "Are there exactly 4 toddlers?",
+        "numeracy"
+      ],
+      [
+        "Are the toddlers wearing red sneakers?",
+        "attribute"
+      ],
+      [
+        "Are there teddy bears?",
+        "presence"
+      ],
+      [
+        "Are there exactly 4 teddy bears?",
+        "numeracy"
+      ],
+      [
+        "Are all of them arranged in a semicircle?",
+        "spatial"
+      ],
+      [
+        "Is the rug pastel blue?",
+        "attribute"
+      ]
+    ]
+  },
+  {
+    "text": "Seven red tulips, five white tulips, and three purple tulips bundled in a clear glass vase",
+    "questions": [
+      [
+        "Are there tulips?",
+        "presence"
+      ],
+      [
+        "Are there exactly 7 red tulips?",
+        "numeracy"
+      ],
+      [
+        "Are there exactly 5 white tulips?",
+        "numeracy"
+      ],
+      [
+        "Are there exactly 3 purple tulips?",
+        "numeracy"
+      ],
+      [
+        "Is the vase clear glass?",
+        "material"
+      ],
+      [
+        "Are the tulips inside the vase?",
+        "spatial"
+      ]
+    ]
+  },
+  {
+    "text": "Nine orange juggling pins mid-air above a smiling clown wearing a polka-dot costume",
+    "questions": [
+      [
+        "Are there juggling pins?",
+        "presence"
+      ],
+      [
+        "Are the pins orange?",
+        "attribute"
+      ],
+      [
+        "Are there exactly 9 pins?",
+        "numeracy"
+      ],
+      [
+        "Is there a clown?",
+        "presence"
+      ],
+      [
+        "Is the clown's costume polka-dotted?",
+        "attribute"
+      ],
+      [
+        "Are the pins above the clown?",
+        "spatial"
+      ]
+    ]
+  },
+  {
+    "text": "Four stacked books on a shelf where the second book from the bottom is visibly thicker than the other three",
+    "questions": [
+      [
+        "Are there books on a shelf?",
+        "presence"
+      ],
+      [
+        "Are there exactly 4 books?",
+        "numeracy"
+      ],
+      [
+        "Are the books stacked?",
+        "spatial"
+      ],
+      [
+        "Is the second book from the bottom thicker than the others?",
+        "spatial"
+      ],
+      [
+        "Are the other books similar in thickness to each other?",
+        "attribute"
+      ]
+    ]
+  },
+  {
+    "text": "Five tall wine glasses and four short shot glasses lined up on a mirrored bar",
+    "questions": [
+      [
+        "Are there wine glasses?",
+        "presence"
+      ],
+      [
+        "Are there exactly 5 wine glasses?",
+        "numeracy"
+      ],
+      [
+        "Are the wine glasses tall?",
+        "attribute"
+      ],
+      [
+        "Are there shot glasses?",
+        "presence"
+      ],
+      [
+        "Are there exactly 4 shot glasses?",
+        "numeracy"
+      ],
+      [
+        "Are the shot glasses short?",
+        "attribute"
+      ],
+      [
+        "Is the bar surface mirrored?",
+        "material"
+      ]
+    ]
+  },
+  {
+    "text": "Eight identical chess pawns and two kings arranged on a black-and-white checkered board",
+    "questions": [
+      [
+        "Are there chess pawns?",
+        "presence"
+      ],
+      [
+        "Are there exactly 8 pawns?",
+        "numeracy"
+      ],
+      [
+        "Are there kings?",
+        "presence"
+      ],
+      [
+        "Are there exactly 2 kings?",
+        "numeracy"
+      ],
+      [
+        "Is the board checkered black and white?",
+        "attribute"
+      ],
+      [
+        "Are all pieces on the board?",
+        "spatial"
+      ]
+    ]
+  },
+  {
+    "text": "Four children on bicycles and three children on scooters racing down a park path",
+    "questions": [
+      [
+        "Are there children on bicycles?",
+        "presence"
+      ],
+      [
+        "Are there exactly 4 children on bicycles?",
+        "numeracy"
+      ],
+      [
+        "Are there children on scooters?",
+        "presence"
+      ],
+      [
+        "Are there exactly 3 children on scooters?",
+        "numeracy"
+      ],
+      [
+        "Are they all on a park path?",
+        "spatial"
+      ]
+    ]
+  },
+  {
+    "text": "Seven green apples and six red apples arranged in a pyramid inside a woven basket",
+    "questions": [
+      [
+        "Are there apples?",
+        "presence"
+      ],
+      [
+        "Are there exactly 7 green apples?",
+        "numeracy"
+      ],
+      [
+        "Are there exactly 6 red apples?",
+        "numeracy"
+      ],
+      [
+        "Are the apples arranged in a pyramid?",
+        "spatial"
+      ],
+      [
+        "Is the basket woven?",
+        "material"
+      ],
+      [
+        "Are all the apples inside the basket?",
+        "spatial"
+      ]
+    ]
+  },
+  {
+    "text": "Six wooden pencils of increasing length lying parallel on a white sheet, with the fourth pencil from the left tipped in gold",
+    "questions": [
+      [
+        "Are there pencils?",
+        "presence"
+      ],
+      [
+        "Are there exactly 6 pencils?",
+        "numeracy"
+      ],
+      [
+        "Are the pencils wooden?",
+        "material"
+      ],
+      [
+        "Are the pencils parallel?",
+        "spatial"
+      ],
+      [
+        "Does each pencil increase in length from left to right?",
+        "spatial"
+      ],
+      [
+        "Is the fourth pencil from the left tipped in gold?",
+        "spatial"
+      ]
+    ]
+  },
+  {
+    "text": "Nine brown horses and four white horses grazing in a fenced meadow at midday",
+    "questions": [
+      [
+        "Are there brown horses?",
+        "presence"
+      ],
+      [
+        "Are there exactly 9 brown horses?",
+        "numeracy"
+      ],
+      [
+        "Are there white horses?",
+        "presence"
+      ],
+      [
+        "Are there exactly 4 white horses?",
+        "numeracy"
+      ],
+      [
+        "Are they grazing?",
+        "presence"
+      ],
+      [
+        "Is there a fence around the meadow?",
+        "spatial"
+      ]
+    ]
+  }
+]
