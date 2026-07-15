@@ -17,6 +17,7 @@ class FluxGenerator(BaseGenerator):
     provider = "bfl"
 
     async def _do_generate(self, prompt_text: str) -> tuple[bytes, dict]:
+        assert self.api_key is not None
         headers = {"x-key": self.api_key, "Content-Type": "application/json"}
         body: dict[str, Any] = {
             "prompt": prompt_text,
@@ -38,7 +39,7 @@ class FluxGenerator(BaseGenerator):
         def failed(d: dict) -> str | None:
             s = d.get("status", "")
             if s in ("Failed", "Error", "Content Moderated", "Request Moderated"):
-                return d.get("status") + ": " + str(d.get("details", ""))
+                return s + ": " + str(d.get("details", ""))  # type: ignore[no-any-return]
             return None
 
         final = await self._poll_until_ready(

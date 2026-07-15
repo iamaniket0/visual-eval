@@ -1,0 +1,482 @@
+[
+  {
+    "text": "A silver pocket watch partially hidden behind an open leather book on a desk, with a tall bookshelf filled with volumes receding into the background",
+    "questions": [
+      [
+        "Is there a silver pocket watch?",
+        "material"
+      ],
+      [
+        "Is there an open leather book?",
+        "material"
+      ],
+      [
+        "Is the pocket watch partially hidden behind the book?",
+        "spatial"
+      ],
+      [
+        "Is there a bookshelf behind the desk?",
+        "spatial"
+      ],
+      [
+        "Does the bookshelf appear farther from the camera than the book?",
+        "spatial"
+      ]
+    ]
+  },
+  {
+    "text": "A small gray mouse hiding behind the leg of a wooden chair with only its tail and whiskers visible",
+    "questions": [
+      [
+        "Is there a gray mouse?",
+        "presence"
+      ],
+      [
+        "Is there a wooden chair?",
+        "material"
+      ],
+      [
+        "Is the mouse mostly hidden behind the chair leg?",
+        "spatial"
+      ],
+      [
+        "Are only the mouse's tail and whiskers visible?",
+        "spatial"
+      ]
+    ]
+  },
+  {
+    "text": "A red canoe in the foreground, a fisherman standing knee-deep in water in the middle distance, and a line of pine trees on the far shore",
+    "questions": [
+      [
+        "Is there a red canoe?",
+        "presence"
+      ],
+      [
+        "Is the canoe in the foreground?",
+        "spatial"
+      ],
+      [
+        "Is there a fisherman in the middle distance?",
+        "spatial"
+      ],
+      [
+        "Are there pine trees on the far shore?",
+        "spatial"
+      ],
+      [
+        "Do the pine trees appear farthest from the camera?",
+        "spatial"
+      ]
+    ]
+  },
+  {
+    "text": "From the camera's viewpoint a crystal wine glass is closest, a lit candle is in the middle, and a ceramic vase is farthest, all on the same dinner table",
+    "questions": [
+      [
+        "Is there a wine glass?",
+        "presence"
+      ],
+      [
+        "Is there a lit candle?",
+        "presence"
+      ],
+      [
+        "Is there a ceramic vase?",
+        "material"
+      ],
+      [
+        "Is the wine glass closer to the camera than the candle?",
+        "spatial"
+      ],
+      [
+        "Is the candle closer to the camera than the vase?",
+        "spatial"
+      ]
+    ]
+  },
+  {
+    "text": "A child peeking out from behind a tall wooden door with only half their face visible",
+    "questions": [
+      [
+        "Is there a child?",
+        "presence"
+      ],
+      [
+        "Is there a tall wooden door?",
+        "material"
+      ],
+      [
+        "Is the child mostly behind the door?",
+        "spatial"
+      ],
+      [
+        "Is only half of the child's face visible?",
+        "spatial"
+      ]
+    ]
+  },
+  {
+    "text": "A tabby cat crouched behind a sofa stalking a rubber mouse on a rug in the foreground, with a glass-fronted fireplace at the far back of the room",
+    "questions": [
+      [
+        "Is there a tabby cat?",
+        "presence"
+      ],
+      [
+        "Is the cat crouched behind a sofa?",
+        "spatial"
+      ],
+      [
+        "Is there a rubber mouse on a rug in the foreground?",
+        "spatial"
+      ],
+      [
+        "Is there a glass-fronted fireplace at the back of the room?",
+        "spatial"
+      ],
+      [
+        "Does the fireplace appear farther from the camera than the sofa?",
+        "spatial"
+      ]
+    ]
+  },
+  {
+    "text": "From the photographer's angle a small bronze statue in the foreground appears larger than the marble government building behind it, due to forced perspective",
+    "questions": [
+      [
+        "Is there a bronze statue?",
+        "material"
+      ],
+      [
+        "Is there a marble building behind the statue?",
+        "material"
+      ],
+      [
+        "Is the statue in the foreground?",
+        "spatial"
+      ],
+      [
+        "Does the statue appear larger than the building from this angle?",
+        "spatial"
+      ]
+    ]
+  },
+  {
+    "text": "A yellow submarine partially obscured by a school of blue fish swimming in front of it underwater",
+    "questions": [
+      [
+        "Is there a yellow submarine?",
+        "presence"
+      ],
+      [
+        "Is there a school of blue fish?",
+        "presence"
+      ],
+      [
+        "Are the fish in front of the submarine?",
+        "spatial"
+      ],
+      [
+        "Is the submarine partially hidden by the fish?",
+        "spatial"
+      ]
+    ]
+  },
+  {
+    "text": "A child holding a red balloon in the foreground, a carousel turning in the middle distance, and a Ferris wheel silhouetted against the evening sky far behind",
+    "questions": [
+      [
+        "Is there a child holding a red balloon?",
+        "attribute"
+      ],
+      [
+        "Is there a carousel?",
+        "presence"
+      ],
+      [
+        "Is there a Ferris wheel?",
+        "presence"
+      ],
+      [
+        "Is the child closest to the camera?",
+        "spatial"
+      ],
+      [
+        "Is the carousel between the child and the Ferris wheel?",
+        "spatial"
+      ],
+      [
+        "Is the Ferris wheel farthest from the camera?",
+        "spatial"
+      ]
+    ]
+  },
+  {
+    "text": "A thief in a black mask peeking out from behind a brick pillar while watching a jeweler's shop window across the street",
+    "questions": [
+      [
+        "Is there a thief in a black mask?",
+        "attribute"
+      ],
+      [
+        "Is there a brick pillar?",
+        "material"
+      ],
+      [
+        "Is the thief partially hidden behind the pillar?",
+        "spatial"
+      ],
+      [
+        "Is there a jeweler's shop window?",
+        "presence"
+      ],
+      [
+        "Is the shop window in the direction the thief is looking?",
+        "spatial"
+      ]
+    ]
+  },
+  {
+    "text": "A black chess queen concealed behind a taller white rook on a wooden chessboard, from a low angle",
+    "questions": [
+      [
+        "Are there chess pieces?",
+        "presence"
+      ],
+      [
+        "Is there a black queen?",
+        "attribute"
+      ],
+      [
+        "Is there a white rook?",
+        "attribute"
+      ],
+      [
+        "Is the black queen behind the rook?",
+        "spatial"
+      ],
+      [
+        "Is the rook taller than the queen?",
+        "spatial"
+      ],
+      [
+        "Is the chessboard wooden?",
+        "material"
+      ]
+    ]
+  },
+  {
+    "text": "From a macro camera angle a bee hovers in the foreground, a single blooming daisy sits in the middle distance, and a wildflower meadow stretches toward the horizon behind them",
+    "questions": [
+      [
+        "Is there a bee?",
+        "presence"
+      ],
+      [
+        "Does the bee appear very close to the camera?",
+        "spatial"
+      ],
+      [
+        "Is there a blooming daisy in the middle distance?",
+        "spatial"
+      ],
+      [
+        "Is there a meadow stretching to the horizon?",
+        "spatial"
+      ],
+      [
+        "Does the meadow appear farthest from the camera?",
+        "spatial"
+      ]
+    ]
+  },
+  {
+    "text": "A ghostly figure mostly hidden behind a gauzy white curtain, with only the silhouette and outline visible through the fabric",
+    "questions": [
+      [
+        "Is there a figure?",
+        "presence"
+      ],
+      [
+        "Is there a white curtain?",
+        "attribute"
+      ],
+      [
+        "Is the curtain gauzy?",
+        "material"
+      ],
+      [
+        "Is the figure behind the curtain?",
+        "spatial"
+      ],
+      [
+        "Is only an outline of the figure visible?",
+        "spatial"
+      ]
+    ]
+  },
+  {
+    "text": "A horse-drawn carriage partially blocked by a row of tall hedges in the middle distance, with a castle rising in the far background",
+    "questions": [
+      [
+        "Is there a horse-drawn carriage?",
+        "presence"
+      ],
+      [
+        "Is there a row of tall hedges?",
+        "presence"
+      ],
+      [
+        "Are the hedges in front of the carriage?",
+        "spatial"
+      ],
+      [
+        "Is the carriage partially hidden by the hedges?",
+        "spatial"
+      ],
+      [
+        "Is there a castle in the far background?",
+        "spatial"
+      ]
+    ]
+  },
+  {
+    "text": "From the driver's seat of a car the steering wheel is in the foreground and a row of cars on the road ahead appears to recede into the distance",
+    "questions": [
+      [
+        "Is there a steering wheel?",
+        "presence"
+      ],
+      [
+        "Does the steering wheel appear in the foreground?",
+        "spatial"
+      ],
+      [
+        "Is there a road ahead with cars on it?",
+        "spatial"
+      ],
+      [
+        "Do the cars appear to recede into the distance?",
+        "spatial"
+      ]
+    ]
+  },
+  {
+    "text": "A small kitten hiding inside an open cardboard box with only its ears sticking out above the rim",
+    "questions": [
+      [
+        "Is there a kitten?",
+        "presence"
+      ],
+      [
+        "Is there an open cardboard box?",
+        "material"
+      ],
+      [
+        "Is the kitten mostly inside the box?",
+        "spatial"
+      ],
+      [
+        "Are the kitten's ears visible above the rim?",
+        "spatial"
+      ]
+    ]
+  },
+  {
+    "text": "A jogger mostly obscured by a passing city bus, with only the jogger's legs visible below the bus on the street",
+    "questions": [
+      [
+        "Is there a jogger?",
+        "presence"
+      ],
+      [
+        "Is there a city bus?",
+        "presence"
+      ],
+      [
+        "Is the jogger behind the bus from the camera's view?",
+        "spatial"
+      ],
+      [
+        "Are only the jogger's legs visible below the bus?",
+        "spatial"
+      ]
+    ]
+  },
+  {
+    "text": "A pinecone on a moss-covered log in the foreground, a deer standing alert in a clearing in the middle distance, and snow-capped mountains in the far background",
+    "questions": [
+      [
+        "Is there a pinecone on a log?",
+        "presence"
+      ],
+      [
+        "Is the log moss-covered?",
+        "attribute"
+      ],
+      [
+        "Is there a deer in the middle distance?",
+        "spatial"
+      ],
+      [
+        "Are there snow-capped mountains in the far distance?",
+        "spatial"
+      ],
+      [
+        "Does the deer appear closer to the camera than the mountains?",
+        "spatial"
+      ]
+    ]
+  },
+  {
+    "text": "A singer on stage with their lower body obscured by a large stage amp and part of their face hidden behind a tall microphone stand",
+    "questions": [
+      [
+        "Is there a singer on a stage?",
+        "presence"
+      ],
+      [
+        "Is there a stage amp in front of the singer?",
+        "spatial"
+      ],
+      [
+        "Is there a tall microphone stand?",
+        "presence"
+      ],
+      [
+        "Is the singer's lower body hidden by the amp?",
+        "spatial"
+      ],
+      [
+        "Is part of the singer's face hidden behind the microphone stand?",
+        "spatial"
+      ]
+    ]
+  },
+  {
+    "text": "A bowl of fruit in the foreground, a seated woman reading a book in the middle of the room, and a large bay window showing a garden beyond in the background",
+    "questions": [
+      [
+        "Is there a bowl of fruit?",
+        "presence"
+      ],
+      [
+        "Is the bowl in the foreground?",
+        "spatial"
+      ],
+      [
+        "Is there a seated woman reading?",
+        "presence"
+      ],
+      [
+        "Is there a bay window behind the woman?",
+        "spatial"
+      ],
+      [
+        "Is a garden visible through the window?",
+        "spatial"
+      ]
+    ]
+  }
+]

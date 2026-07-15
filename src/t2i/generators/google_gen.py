@@ -14,6 +14,7 @@ class GoogleGenerator(BaseGenerator):
     provider = "google"
 
     async def _do_generate(self, prompt_text: str) -> tuple[bytes, dict]:
+        assert self.api_key is not None
         url = f"{self.config['api_url']}:predict?key={self.api_key}"
         body = {
             "instances": [{"prompt": prompt_text}],

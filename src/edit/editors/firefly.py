@@ -19,6 +19,7 @@ class FireflyEditor(BaseEditor):
     async def _do_edit(
         self, source_image_path: str, instruction: str, mask_path: str | None = None
     ) -> tuple[bytes, dict]:
+        assert self.api_key is not None
         access_token = await self._get_access_token()
         headers = {
             "Authorization": f"Bearer {access_token}",
@@ -59,6 +60,7 @@ class FireflyEditor(BaseEditor):
         return img_bytes, data
 
     async def _get_access_token(self) -> str:
+        assert self.api_key is not None
         client_secret = get_api_key("ADOBE_CLIENT_SECRET")
         if not client_secret:
             raise RuntimeError("ADOBE_CLIENT_SECRET not set")
@@ -72,4 +74,4 @@ class FireflyEditor(BaseEditor):
             },
         )
         r.raise_for_status()
-        return r.json()["access_token"]
+        return r.json()["access_token"]  # type: ignore[no-any-return]

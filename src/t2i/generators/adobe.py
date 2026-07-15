@@ -25,6 +25,7 @@ class AdobeGenerator(BaseGenerator):
     _token_expiry: float = 0.0
 
     async def _ensure_token(self) -> str:
+        assert self.api_key is not None
         if self._token and time.time() < self._token_expiry - 60:
             return self._token
         client_secret = get_api_key("ADOBE_CLIENT_SECRET")
@@ -43,9 +44,10 @@ class AdobeGenerator(BaseGenerator):
         tok = r.json()
         self._token = tok["access_token"]
         self._token_expiry = time.time() + int(tok.get("expires_in", 3600))
-        return self._token
+        return self._token  # type: ignore[return-value]
 
     async def _do_generate(self, prompt_text: str) -> tuple[bytes, dict]:
+        assert self.api_key is not None
         token = await self._ensure_token()
         headers = {
             "Authorization": f"Bearer {token}",
