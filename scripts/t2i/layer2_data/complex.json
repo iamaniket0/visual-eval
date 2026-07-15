@@ -1,0 +1,532 @@
+{
+  "easy": [
+    {
+      "text": "A blue bicycle leaning against a white brick wall next to a red fire hydrant",
+      "questions": [
+        [
+          "Is there a blue bicycle?",
+          "attribute"
+        ],
+        [
+          "Is the wall white and made of brick?",
+          "material"
+        ],
+        [
+          "Is the bike next to a red fire hydrant?",
+          "spatial"
+        ]
+      ]
+    },
+    {
+      "text": "Two identical brown owls perched on a bare branch at dusk",
+      "questions": [
+        [
+          "Are there owls?",
+          "presence"
+        ],
+        [
+          "Are there exactly 2 owls?",
+          "numeracy"
+        ],
+        [
+          "Are the owls perched on a bare branch?",
+          "spatial"
+        ]
+      ]
+    },
+    {
+      "text": "A porcelain teapot on a wooden tray beside a steaming cup",
+      "questions": [
+        [
+          "Is there a porcelain teapot?",
+          "material"
+        ],
+        [
+          "Is the teapot on a wooden tray?",
+          "spatial"
+        ],
+        [
+          "Is there a steaming cup beside the teapot?",
+          "spatial"
+        ]
+      ]
+    },
+    {
+      "text": "Three fresh lemons next to a glass pitcher of water on a marble counter",
+      "questions": [
+        [
+          "Are there exactly 3 lemons?",
+          "numeracy"
+        ],
+        [
+          "Is there a glass pitcher of water beside the lemons?",
+          "spatial"
+        ],
+        [
+          "Is the counter marble?",
+          "material"
+        ]
+      ]
+    },
+    {
+      "text": "A golden retriever lying on a red carpet in front of a stone fireplace",
+      "questions": [
+        [
+          "Is there a golden retriever?",
+          "attribute"
+        ],
+        [
+          "Is the dog lying on a red carpet?",
+          "spatial"
+        ],
+        [
+          "Is the fireplace made of stone?",
+          "material"
+        ]
+      ]
+    },
+    {
+      "text": "A straw sunhat hanging on a metal hook above a wooden bench",
+      "questions": [
+        [
+          "Is there a straw sunhat?",
+          "material"
+        ],
+        [
+          "Is the sunhat hanging on a metal hook?",
+          "spatial"
+        ],
+        [
+          "Is the bench directly below the sunhat?",
+          "spatial"
+        ]
+      ]
+    }
+  ],
+  "medium": [
+    {
+      "text": "A chef holding three red tomatoes over a wooden cutting board in a bright kitchen next to a white stove",
+      "questions": [
+        [
+          "Is there a chef?",
+          "presence"
+        ],
+        [
+          "Are there exactly 3 red tomatoes?",
+          "numeracy"
+        ],
+        [
+          "Is the chef holding the tomatoes above a cutting board?",
+          "spatial"
+        ],
+        [
+          "Is the cutting board wooden?",
+          "material"
+        ],
+        [
+          "Is there a white stove beside the chef?",
+          "spatial"
+        ]
+      ]
+    },
+    {
+      "text": "Four schoolchildren in yellow raincoats walking through a puddle with a single red umbrella held above them",
+      "questions": [
+        [
+          "Are there children?",
+          "presence"
+        ],
+        [
+          "Are there exactly 4 children?",
+          "numeracy"
+        ],
+        [
+          "Are the children wearing yellow raincoats?",
+          "attribute"
+        ],
+        [
+          "Are the children walking through a puddle?",
+          "spatial"
+        ],
+        [
+          "Is a red umbrella held above the children?",
+          "spatial"
+        ]
+      ]
+    },
+    {
+      "text": "A woman in a blue silk dress standing in front of two tall marble columns with a single red rose at her feet",
+      "questions": [
+        [
+          "Is the woman's dress blue silk?",
+          "material"
+        ],
+        [
+          "Are there exactly 2 marble columns behind the woman?",
+          "numeracy"
+        ],
+        [
+          "Is the woman in front of the columns?",
+          "spatial"
+        ],
+        [
+          "Is there exactly 1 red rose at the woman's feet?",
+          "numeracy"
+        ],
+        [
+          "Is the rose red?",
+          "attribute"
+        ]
+      ]
+    },
+    {
+      "text": "An old fisherman with a gray beard holding a net containing five silver fish while standing knee-deep in green water",
+      "questions": [
+        [
+          "Is there an old fisherman with a gray beard?",
+          "attribute"
+        ],
+        [
+          "Is the fisherman holding a net?",
+          "presence"
+        ],
+        [
+          "Are there exactly 5 silver fish in the net?",
+          "numeracy"
+        ],
+        [
+          "Is the fisherman knee-deep in water?",
+          "spatial"
+        ],
+        [
+          "Is the water green?",
+          "attribute"
+        ]
+      ]
+    },
+    {
+      "text": "A baker placing three loaves of bread onto a wooden rack in a flour-dusted kitchen",
+      "questions": [
+        [
+          "Is there a baker?",
+          "presence"
+        ],
+        [
+          "Are there exactly 3 loaves of bread?",
+          "numeracy"
+        ],
+        [
+          "Is the rack made of wood?",
+          "material"
+        ],
+        [
+          "Is the baker placing the loaves onto the rack?",
+          "spatial"
+        ],
+        [
+          "Is there visible flour dust in the kitchen?",
+          "attribute"
+        ]
+      ]
+    },
+    {
+      "text": "A young girl with two long braids holding four yellow balloons in a park at golden hour",
+      "questions": [
+        [
+          "Is there a young girl?",
+          "presence"
+        ],
+        [
+          "Does the girl have exactly 2 long braids?",
+          "numeracy"
+        ],
+        [
+          "Is the girl holding balloons?",
+          "presence"
+        ],
+        [
+          "Are there exactly 4 yellow balloons?",
+          "numeracy"
+        ],
+        [
+          "Is the girl in a park?",
+          "spatial"
+        ]
+      ]
+    },
+    {
+      "text": "A musician sitting on a wooden stool playing an acoustic guitar with five copper-colored strings visible",
+      "questions": [
+        [
+          "Is there a musician?",
+          "presence"
+        ],
+        [
+          "Is the musician seated on a wooden stool?",
+          "spatial"
+        ],
+        [
+          "Is the guitar acoustic?",
+          "attribute"
+        ],
+        [
+          "Are there exactly 5 strings visible on the guitar?",
+          "numeracy"
+        ],
+        [
+          "Are the strings copper-colored?",
+          "attribute"
+        ]
+      ]
+    },
+    {
+      "text": "A potter shaping a clay vase on a spinning wheel with three finished vases on a shelf behind him",
+      "questions": [
+        [
+          "Is there a potter?",
+          "presence"
+        ],
+        [
+          "Is the potter shaping a vase?",
+          "presence"
+        ],
+        [
+          "Is the vase material clay?",
+          "material"
+        ],
+        [
+          "Are there exactly 3 finished vases on the shelf?",
+          "numeracy"
+        ],
+        [
+          "Is the shelf behind the potter?",
+          "spatial"
+        ]
+      ]
+    }
+  ],
+  "hard": [
+    {
+      "text": "A Victorian parlor with a brass chandelier hanging from the ceiling, a red velvet sofa holding four lace pillows, three gilt-framed portraits mounted on the wall behind the sofa, and two taxidermy peacocks on a mahogany side table",
+      "questions": [
+        [
+          "Is there a brass chandelier hanging from the ceiling?",
+          "material"
+        ],
+        [
+          "Is there a red velvet sofa?",
+          "attribute"
+        ],
+        [
+          "Is the sofa upholstered in velvet?",
+          "material"
+        ],
+        [
+          "Are there exactly 4 lace pillows on the sofa?",
+          "numeracy"
+        ],
+        [
+          "Are there exactly 3 gilt-framed portraits on the wall?",
+          "numeracy"
+        ],
+        [
+          "Are the portraits on the wall behind the sofa?",
+          "spatial"
+        ],
+        [
+          "Are there exactly 2 taxidermy peacocks on the side table?",
+          "numeracy"
+        ],
+        [
+          "Is the side table made of mahogany?",
+          "material"
+        ]
+      ]
+    },
+    {
+      "text": "A young knight in polished silver armor riding a brown horse across a stone bridge, holding a red banner with a golden lion on it, with five crows flying overhead and two gray wolves running behind the horse",
+      "questions": [
+        [
+          "Is there a knight in polished silver armor?",
+          "material"
+        ],
+        [
+          "Is the horse brown?",
+          "attribute"
+        ],
+        [
+          "Is the bridge made of stone?",
+          "material"
+        ],
+        [
+          "Is the knight holding a red banner?",
+          "attribute"
+        ],
+        [
+          "Is there a golden lion design on the banner?",
+          "attribute"
+        ],
+        [
+          "Are there exactly 5 crows flying overhead?",
+          "numeracy"
+        ],
+        [
+          "Are there exactly 2 gray wolves behind the horse?",
+          "numeracy"
+        ],
+        [
+          "Are the wolves behind the horse?",
+          "spatial"
+        ]
+      ]
+    },
+    {
+      "text": "A wooden-floored greenhouse with three tall terracotta pots of red geraniums lined up on the left, four identical ceramic pots of yellow marigolds on the right, a marble bust in the center, and a wrought-iron watering can hanging from a rusted hook",
+      "questions": [
+        [
+          "Is the greenhouse floor wooden?",
+          "material"
+        ],
+        [
+          "Are there exactly 3 terracotta pots of red geraniums?",
+          "numeracy"
+        ],
+        [
+          "Are the geranium pots on the left side of the greenhouse?",
+          "spatial"
+        ],
+        [
+          "Are there exactly 4 ceramic pots of yellow marigolds?",
+          "numeracy"
+        ],
+        [
+          "Are the marigold pots on the right side of the greenhouse?",
+          "spatial"
+        ],
+        [
+          "Is there a marble bust in the center?",
+          "material"
+        ],
+        [
+          "Is there a wrought-iron watering can?",
+          "material"
+        ],
+        [
+          "Is the hook rusted?",
+          "attribute"
+        ]
+      ]
+    },
+    {
+      "text": "A bustling farmers market stall with six wicker baskets of golden oranges on the top shelf, three wooden crates of red apples on the middle shelf, two tin buckets of green pears on the bottom shelf, and a chalkboard sign reading FRESH in the foreground",
+      "questions": [
+        [
+          "Are there exactly 6 wicker baskets of oranges on the top shelf?",
+          "numeracy"
+        ],
+        [
+          "Are the oranges golden in color?",
+          "attribute"
+        ],
+        [
+          "Are there exactly 3 wooden crates of red apples on the middle shelf?",
+          "numeracy"
+        ],
+        [
+          "Are the apples on the middle shelf?",
+          "spatial"
+        ],
+        [
+          "Are there exactly 2 tin buckets of green pears on the bottom shelf?",
+          "numeracy"
+        ],
+        [
+          "Are the pear buckets made of tin?",
+          "material"
+        ],
+        [
+          "Is there a chalkboard sign reading FRESH?",
+          "attribute"
+        ],
+        [
+          "Is the chalkboard sign in the foreground?",
+          "spatial"
+        ]
+      ]
+    },
+    {
+      "text": "A modern kitchen with a black granite countertop holding four copper saucepans of decreasing size, a wooden knife block with five knives visible, two crystal wine glasses to the right, and a silver tray of green grapes in the center",
+      "questions": [
+        [
+          "Is there a black granite countertop?",
+          "attribute"
+        ],
+        [
+          "Is the countertop made of granite?",
+          "material"
+        ],
+        [
+          "Are there exactly 4 copper saucepans?",
+          "numeracy"
+        ],
+        [
+          "Do the saucepans decrease in size from left to right?",
+          "spatial"
+        ],
+        [
+          "Are there exactly 5 knives in a wooden knife block?",
+          "numeracy"
+        ],
+        [
+          "Are there exactly 2 crystal wine glasses to the right?",
+          "numeracy"
+        ],
+        [
+          "Is the tray silver?",
+          "attribute"
+        ],
+        [
+          "Is the tray in the center of the countertop?",
+          "spatial"
+        ]
+      ]
+    },
+    {
+      "text": "A stone courtyard at twilight with three bronze statues standing in a triangle around a central fountain, four arched windows glowing yellow on the far wall, and two black cats sitting on opposite low walls",
+      "questions": [
+        [
+          "Is the courtyard made of stone?",
+          "material"
+        ],
+        [
+          "Are there exactly 3 bronze statues?",
+          "numeracy"
+        ],
+        [
+          "Are the statues arranged in a triangle around a central fountain?",
+          "spatial"
+        ],
+        [
+          "Are there exactly 4 arched windows on the far wall?",
+          "numeracy"
+        ],
+        [
+          "Are the windows glowing yellow?",
+          "attribute"
+        ],
+        [
+          "Are the windows behind the statues?",
+          "spatial"
+        ],
+        [
+          "Are there exactly 2 black cats?",
+          "numeracy"
+        ],
+        [
+          "Are the two cats on opposite walls?",
+          "spatial"
+        ]
+      ]
+    }
+  ]
+}

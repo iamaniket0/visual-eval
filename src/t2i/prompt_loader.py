@@ -173,7 +173,7 @@ def _extract_json(text: str) -> dict[str, Any]:
     match = re.search(r"\{.*\}", text, re.DOTALL)
     if not match:
         raise ValueError(f"No JSON object in response: {text[:200]}")
-    return json.loads(match.group(0))
+    return json.loads(match.group(0))  # type: ignore[no-any-return]
 
 
 OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
@@ -214,7 +214,7 @@ def _decompose_via_openrouter(
         ],
     )
     raw = resp.choices[0].message.content or ""
-    return _extract_json(raw).get("questions", [])
+    return _extract_json(raw).get("questions", [])  # type: ignore[no-any-return]
 
 
 def _decompose_via_anthropic(
@@ -245,8 +245,8 @@ def _decompose_via_anthropic(
             }
         ],
     )
-    raw = resp.content[0].text
-    return _extract_json(raw).get("questions", [])
+    raw = resp.content[0].text  # type: ignore[union-attr]
+    return _extract_json(raw).get("questions", [])  # type: ignore[no-any-return]
 
 
 def generate_decomposition(prompt_text: str, sub_category: str) -> list[dict[str, str]]:
@@ -314,7 +314,7 @@ def load_layer2_proprietary() -> list[dict[str, Any]]:
         log.warning("%s not found. Run scripts/generate_layer2_starter.py first.", path)
         return []
     with open(path) as f:
-        return json.load(f)
+        return json.load(f)  # type: ignore[no-any-return]
 
 
 # ---------------------------------------------------------------------------
@@ -388,4 +388,4 @@ def save_prompt_set(prompts: list[dict[str, Any]], path: Path | None = None) -> 
 def load_prompt_set(path: Path | None = None) -> list[dict[str, Any]]:
     path = path or (PROMPTS_DIR / "prompt_set.json")
     with open(path) as f:
-        return json.load(f)
+        return json.load(f)  # type: ignore[no-any-return]

@@ -38,7 +38,7 @@ def render_leaderboard(df: pd.DataFrame, title: str, gm_col: str, am_col: str):
     df_sorted.index.name = "Rank"
 
     fig = go.Figure()
-    fig.add_trace(go.Bar(
+    gm_trace_kwargs: dict = dict(
         y=df_sorted["model"][::-1],
         x=df_sorted[gm_col][::-1],
         orientation="h",
@@ -46,7 +46,15 @@ def render_leaderboard(df: pd.DataFrame, title: str, gm_col: str, am_col: str):
         marker_color="#4a90e2",
         text=[f"{v:.3f}" for v in df_sorted[gm_col][::-1]],
         textposition="outside",
-    ))
+    )
+    if "gm_ci_lower" in df_sorted.columns and "gm_ci_upper" in df_sorted.columns:
+        ci_lo = (df_sorted[gm_col] - df_sorted["gm_ci_lower"])[::-1]
+        ci_hi = (df_sorted["gm_ci_upper"] - df_sorted[gm_col])[::-1]
+        gm_trace_kwargs["error_x"] = dict(
+            type="data", symmetric=False,
+            array=ci_hi.tolist(), arrayminus=ci_lo.tolist(), visible=True,
+        )
+    fig.add_trace(go.Bar(**gm_trace_kwargs))
     fig.add_trace(go.Bar(
         y=df_sorted["model"][::-1],
         x=df_sorted[am_col][::-1],
@@ -69,15 +77,18 @@ def render_leaderboard(df: pd.DataFrame, title: str, gm_col: str, am_col: str):
     st.plotly_chart(fig, use_container_width=True)
 
     display_cols = ["model", gm_col, am_col]
+    if "gm_ci_lower" in df_sorted.columns:
+        display_cols.extend(["gm_ci_lower", "gm_ci_upper"])
     if "n_covered" in df_sorted.columns:
         display_cols.append("n_covered")
     if "n_total" in df_sorted.columns:
         display_cols.append("n_total")
     available = [c for c in display_cols if c in df_sorted.columns]
+    fmt_cols = {c: "{:.3f}" for c in available if c in [
+        gm_col, am_col, "gm_ci_lower", "gm_ci_upper",
+    ]}
     st.dataframe(
-        df_sorted[available].style.format(
-            {c: "{:.3f}" for c in available if c in [gm_col, am_col]}
-        ),
+        df_sorted[available].style.format(fmt_cols),
         use_container_width=True,
     )
 

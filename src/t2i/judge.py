@@ -183,7 +183,7 @@ def _extract_json(text: str) -> dict[str, Any]:
     m = re.search(r"\{.*\}", text, re.DOTALL)
     if not m:
         raise ValueError("no JSON object")
-    return json.loads(m.group(0))
+    return json.loads(m.group(0))  # type: ignore[no-any-return]
 
 
 def _image_to_b64(path: Path) -> str:
@@ -218,8 +218,8 @@ class _BaseOpenAICompatClient:
         self.model = model
         self.cost_tracker = cost_tracker
         self.semaphore = asyncio.Semaphore(concurrency)
-        self._client = None
-        self.api_key = None
+        self._client: Any = None
+        self.api_key: str | None = None
         self._base_url: str | None = None
         self._extra_headers: dict[str, str] | None = None
         self._key_env: str = "OPENAI_API_KEY"
@@ -317,6 +317,7 @@ class GPT4oHardJudge(_BaseOpenAICompatClient):
             )
 
         self._ensure_client()
+        assert self._client is not None
         img_b64 = _image_to_b64(Path(image_path))
 
         async with self.semaphore:
@@ -466,6 +467,7 @@ class _BaseSoftJudge(_BaseOpenAICompatClient):
             )
 
         self._ensure_client()
+        assert self._client is not None
         img_b64 = _image_to_b64(Path(image_path))
 
         # One API call per atomic question. Each call gets logprobs for the

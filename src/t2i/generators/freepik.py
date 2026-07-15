@@ -15,6 +15,7 @@ class FreepikGenerator(BaseGenerator):
     provider = "freepik"
 
     async def _do_generate(self, prompt_text: str) -> tuple[bytes, dict]:
+        assert self.api_key is not None
         headers = {
             "x-freepik-api-key": self.api_key,
             "Content-Type": "application/json",
@@ -36,7 +37,7 @@ class FreepikGenerator(BaseGenerator):
         poll_url = f"{self.config['api_url']}/{task_id}"
 
         def ready(d: dict) -> bool:
-            return d.get("data", {}).get("status") == "COMPLETED"
+            return d.get("data", {}).get("status") == "COMPLETED"  # type: ignore[no-any-return]
 
         def failed(d: dict) -> str | None:
             status = d.get("data", {}).get("status")

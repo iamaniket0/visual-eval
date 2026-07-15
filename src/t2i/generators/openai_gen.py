@@ -62,15 +62,15 @@ def _extract_openrouter_image_source(data: dict) -> str:
         if isinstance(iu, dict):
             url = iu.get("url")
             if url:
-                return url
+                return url  # type: ignore[no-any-return]
         elif isinstance(iu, str):
             return iu
         url = first.get("url")
         if url:
-            return url
+            return url  # type: ignore[no-any-return]
         b64 = first.get("b64_json")
         if b64:
-            return b64 if b64.startswith("data:") else f"data:image/png;base64,{b64}"
+            return b64 if b64.startswith("data:") else f"data:image/png;base64,{b64}"  # type: ignore[no-any-return]
     raise RuntimeError(f"Unrecognized image shape in OpenRouter response: {str(data)[:300]}")
 
 

@@ -269,7 +269,7 @@ class BaseGenerator(ABC):
     def _save_png(image_bytes: bytes, path: Path) -> None:
         img = Image.open(io.BytesIO(image_bytes))
         if img.mode not in ("RGB", "RGBA"):
-            img = img.convert("RGB")
+            img = img.convert("RGB")  # type: ignore[assignment]
         img.save(path, format="PNG")
 
     @staticmethod
@@ -307,7 +307,7 @@ class BaseGenerator(ABC):
                     raise _ContentFilteredError(reason, metadata=data)
                 raise RuntimeError(f"Job failed: {reason}")
             if ready_check(data):
-                return data
+                return data  # type: ignore[no-any-return]
             await asyncio.sleep(poll_interval)
             elapsed += poll_interval
         raise TimeoutError(f"Job did not complete within {max_wait}s")

@@ -23,8 +23,10 @@ import math
 from pathlib import Path
 from typing import Any
 
+import numpy as np
 import pandas as pd
 
+from src.core.bootstrap import _gm_stat, bootstrap_ci
 from src.core.scoring import (
     DEFAULT_LOGPROB_FLOOR,
     probabilities_from_answers,
@@ -204,6 +206,25 @@ def leaderboard(df: pd.DataFrame) -> pd.DataFrame:
     ]:
         if col in out.columns:
             out[col] = out[col].round(4)
+
+    ci_rows = []
+    for model_name in out["model"]:
+        model_scores = covered_df.loc[covered_df["model"] == model_name]
+        am_vals = model_scores["score_am"].tolist()
+        gm_vals = model_scores["score_gm"].tolist()
+        am_lo, am_hi = bootstrap_ci(am_vals, stat_fn=np.mean)  # type: ignore[arg-type]
+        gm_lo, gm_hi = bootstrap_ci(gm_vals, stat_fn=_gm_stat)
+        ci_rows.append(
+            {
+                "model": model_name,
+                "am_ci_lower": round(am_lo, 4),
+                "am_ci_upper": round(am_hi, 4),
+                "gm_ci_lower": round(gm_lo, 4),
+                "gm_ci_upper": round(gm_hi, 4),
+            }
+        )
+    ci_df = pd.DataFrame(ci_rows)
+    out = out.merge(ci_df, on="model", how="left")
 
     return out
 

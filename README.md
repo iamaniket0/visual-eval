@@ -64,7 +64,7 @@ Evaluated on **50 hard adversarial prompts** (L3) for T2I and **24 hard prompts*
 
 *\*Covered prompts only — FLUX 2 Max filtered 27% of adversarial prompts (content moderation + timeouts).*
 
-**Key finding**: Aurora leads on hard compositional prompts with 0.82 GM across 50 prompts. All models maintain >0.90 AM — the gap between AM and GM reveals that models fail completely on specific atoms rather than performing poorly across the board.
+> **Key finding**: Aurora leads on hard compositional prompts with **0.82 GM** across 50 prompts (95% CI: 0.78–0.86). All models maintain >0.90 AM — the gap between AM and GM reveals that models fail *completely* on specific atoms rather than performing poorly across the board. FLUX 2 Max filtered 27% of adversarial prompts via content moderation. Confidence intervals are bootstrap-resampled over prompts (10k iterations).
 
 ### Image Editing Leaderboard (Hard Prompts)
 
@@ -75,7 +75,7 @@ Evaluated on **50 hard adversarial prompts** (L3) for T2I and **24 hard prompts*
 | 3 | Flux Kontext | 0.344 | 0.411 | 0.312 |
 | 4 | Picsart | 0.000 | 0.785 | 0.083 |
 
-**Key finding**: No model excels at all three dimensions simultaneously. Flux2 Flex leads on instruction following but struggles with visual consistency. Picsart preserves visual consistency but fails at following edit instructions — revealing a fundamental tension in current editing architectures.
+> **Key finding**: No model excels at all three dimensions simultaneously. Flux2 Flex leads on instruction following but struggles with visual consistency. Picsart preserves consistency but cannot follow edit instructions — a fundamental tension in current editing architectures. Rankings are directional — overlapping CIs at this sample size (24 prompts) mean differences between adjacent models may not be significant.
 
 ---
 
@@ -323,55 +323,17 @@ visual-eval/
 ```
 outputs/
 ├── t2i/
-│   ├── generations/{model}/{prompt_id}.png    # Generated images
-│   ├── metadata/generation_log.jsonl          # Generation metadata + costs
-│   ├── judgments/{model}.jsonl                 # Per-image judge results
-│   ├── scores/
-│   │   ├── leaderboard.csv                    # Overall model ranking
-│   │   ├── per_subcategory.csv                # By adversarial category
-│   │   ├── layer_comparison.csv               # L1 vs L2 vs L3 divergence
-│   │   └── theme_breakdown.csv                # Fine-grained theme analysis
-│   └── reports/
-│       ├── aggregate_report.pdf               # Full benchmark report
-│       └── {model}_card.pdf                   # Per-model scorecards
-│
+│   ├── generations/{model}/{prompt_id}.png   # not tracked in git
+│   ├── judgments/{model}.jsonl
+│   ├── scores/  (leaderboard.csv, per_subcategory.csv, layer_comparison.csv)
+│   └── reports/ (aggregate_report.pdf, {model}_card.pdf)
 └── edit/
-    ├── edits/{model}/{prompt_id}.png          # Edited images
-    ├── metadata/edit_log.jsonl                # Edit metadata + costs
-    ├── judgments/{model}.jsonl                 # Per-image judge results
-    └── scores/
-        ├── leaderboard.csv                    # Overall model ranking
-        ├── per_subcategory.csv                # By edit category
-        └── per_dimension.csv                  # Instruction/visual/detail axes
+    ├── edits/{model}/{prompt_id}.png          # not tracked in git
+    ├── judgments/{model}.jsonl
+    └── scores/  (leaderboard.csv, per_dimension.csv, per_subcategory.csv)
 ```
 
----
-
-## Configuration
-
-<details>
-<summary><strong>T2I Config</strong> — <code>config/t2i/</code></summary>
-
-```yaml
-# models.yaml — model endpoints, costs, concurrency limits
-models:
-  flux2_max:
-    provider: bfl
-    model_id: flux-pro-1.1-ultra
-    cost_per_image: 0.06
-    max_concurrent: 5
-  gpt_image_15:
-    provider: openai
-    model_id: gpt-image-1
-    cost_per_image: 0.04
-
-# settings.yaml — judge and pipeline config
-judge:
-  backend: qwen_together_soft
-  model_slug: "Qwen/Qwen3.5-397B-A17B"
-seeds_per_prompt: 1
-hard_cap: 300  # USD
-```
+> Generated images and metadata logs are excluded from git (reproducible via the pipeline). For a lightweight clone: `git clone --filter=blob:none`.
 
 </details>
 

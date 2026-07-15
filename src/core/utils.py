@@ -10,7 +10,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
 
-import yaml
+import yaml  # type: ignore[import-untyped]
 from dotenv import load_dotenv
 
 ROOT = Path(__file__).resolve().parent.parent.parent
@@ -31,7 +31,7 @@ def get_logger(name: str) -> logging.Logger:
 
 def load_yaml(path: Path) -> dict[str, Any]:
     with open(path) as f:
-        return yaml.safe_load(f)
+        return yaml.safe_load(f)  # type: ignore[no-any-return]
 
 
 def get_api_key(env_var: str) -> str | None:
