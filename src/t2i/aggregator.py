@@ -365,7 +365,7 @@ def leaderboard(df: pd.DataFrame) -> pd.DataFrame:
     out["std_dev"] = out["std_dev_am"]
     if "seed_std_dev_am" in out.columns:
         out["seed_std_dev"] = out["seed_std_dev_am"]
-    return out  # type: ignore[return-value]
+    return out  # type: ignore[no-any-return]
 
 
 def per_subcategory(df: pd.DataFrame) -> pd.DataFrame:

@@ -125,9 +125,13 @@ def build_aggregate_report() -> Path:
         )
         top_q = ordered_q.iloc[0]
         bot_q = ordered_q.iloc[-1]
-        _top_raw = top_q.get(quality_col) if pd.notna(top_q.get(quality_col)) else top_q["overall_gm"]
+        _top_raw = (
+            top_q.get(quality_col) if pd.notna(top_q.get(quality_col)) else top_q["overall_gm"]
+        )
         top_q_val = float(_top_raw)  # type: ignore[arg-type]
-        _bot_raw = bot_q.get(quality_col) if pd.notna(bot_q.get(quality_col)) else bot_q["overall_gm"]
+        _bot_raw = (
+            bot_q.get(quality_col) if pd.notna(bot_q.get(quality_col)) else bot_q["overall_gm"]
+        )
         bot_q_val = float(_bot_raw)  # type: ignore[arg-type]
         n_total = int(lb["n_total"].iloc[0])
         summary_head = (
